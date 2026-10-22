@@ -483,7 +483,9 @@ const ARROW = d => `<svg viewBox="0 0 24 24"><path d="${d>0?'M9 5l7 7-7 7':'M15 
 
 /* ---------- sound ---------- */
 let deVoice=null;
-function pickVoice(){const v=speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang));deVoice=v.find(x=>/de-DE/i.test(x.lang))||v[0]||null}
+// Prefer the most natural German voice the browser offers (Edge "Natural"/neural, Google, Apple premium/enhanced).
+function pickVoice(){const v=speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang)),rank=x=>(/de-DE/i.test(x.lang)?1:0)+(/natural|neural|online/i.test(x.name)?8:0)+(/google/i.test(x.name)?4:0)+(/premium|enhanced/i.test(x.name)?6:0);
+  deVoice=v.sort((a,b)=>rank(b)-rank(a))[0]||null}
 if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
 function say(text,rate=.9,onend){if(!('speechSynthesis' in window)){onend&&onend();return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';if(deVoice)u.voice=deVoice;u.rate=rate;u.onend=u.onerror=()=>onend&&onend();speechSynthesis.speak(u)}
 function stopSay(){tipHush();if('speechSynthesis' in window)speechSynthesis.cancel()}
@@ -1038,11 +1040,64 @@ function sayAs(text,spk,onend){
   const v=SPK[spk]||SPK.erz,u=new SpeechSynthesisUtterance(speakable(text));
   u.lang='de-DE';if(deVoice)u.voice=deVoice;u.pitch=v[1];u.rate=v[2];u.onend=u.onerror=fin;speechSynthesis.speak(u);
 }
-function tipHush(){T.seq++;penTalk(-1)}
+/* Recorded voices: every line is pre-generated as audio/tipp/<key>.mp3 (see tools/make_voices.py).
+   A line can be split into reusable pieces (L.say) so game sentences are built from clips.
+   Any clip that fails to load falls back to the browser's own German voice for that line. */
+const CLIP_DIR='audio/tipp/';
+const clipKey=(spk,t)=>{const s=spk+'|'+speakable(t).replace(/\s+/g,' ').trim();let h=0x811c9dc5;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0}return h.toString(16).padStart(8,'0')};
+const PL={el:new Audio(),tok:0,bad:new Set()};
+PL.el.preload='auto';
+function playClips(keys,onend,onfail){
+  const tok=++PL.tok,el=PL.el;let i=0,timer;
+  const stop=()=>{clearTimeout(timer);el.onended=el.onerror=el.onplaying=null};
+  const fail=k=>{if(tok!==PL.tok)return;stop();PL.bad.add(k);onfail()};
+  const step=()=>{
+    if(tok!==PL.tok)return;
+    if(i>=keys.length){stop();onend();return}
+    const k=keys[i++];
+    el.onended=step;el.onerror=()=>fail(k);el.onplaying=()=>clearTimeout(timer);
+    clearTimeout(timer);timer=setTimeout(()=>fail(k),5000);   // never got going: use the browser voice
+    el.src=CLIP_DIR+k+'.mp3';
+    const p=el.play();if(p&&p.catch)p.catch(e=>{if(e&&e.name!=='AbortError')fail(k)});
+  };
+  step();
+}
+function sayLine(L,onend){
+  const keys=(L.say||[L.de]).map(t=>clipKey(L.s,t));
+  if(keys.some(k=>PL.bad.has(k))){sayAs(L.de,L.s,onend);return}
+  playClips(keys,onend,()=>sayAs(L.de,L.s,onend));
+}
+function tipHush(){T.seq++;PL.tok++;try{PL.el.pause()}catch(e){}penTalk(-1)}
 function speakSeq(lines,head,done){
+  tipHush();if('speechSynthesis' in window)speechSynthesis.cancel();
   const my=++T.seq;T.last={lines,head};penShow(lines,head);let i=0;
-  const next=()=>{if(my!==T.seq)return;if(i>=lines.length){penTalk(-1);done&&done();return}penTalk(i);const L=lines[i++];sayAs(L.de,L.s,next)};
+  const next=()=>{if(my!==T.seq)return;if(i>=lines.length){penTalk(-1);done&&done();return}penTalk(i);const L=lines[i++];sayLine(L,next)};
   next();
+}
+// Every spoken piece of a tip book (speaker + text). The voice generator reads this list.
+const PRAISE=['Richtig!','Super!','Toll!','Genau!','Prima!'];
+const FINISH={all:['Fantastisch! Alles richtig!','Fantastic! All correct!'],good:['Sehr gut!','Very good!'],ok:['Gut gemacht!','Well done!']};
+const ptsSay=(s,len)=>`Du hast ${s===0?'keinen Punkt':s===1?'einen Punkt':`${s} Punkte`} von ${len}.`;
+function tipAllLines(){
+  const out=new Map(),add=(s,t)=>{const k=clipKey(s,t);if(!out.has(k))out.set(k,{key:k,s,text:speakable(t).replace(/\s+/g,' ').trim()})};
+  const lineOf=L=>(L.say||[L.de]).forEach(t=>add(L.s,t));
+  TIPBOOKS.forEach(b=>{
+    [`Wir lesen zusammen das Buch: ${b.title}.`].forEach(t=>add('stift',t));
+    b.scenes.forEach(sc=>{
+      sc.story.forEach(lineOf);
+      for(const id in sc.hs){const h=sc.hs[id];
+        add('stift',h.w);add('stift',`Das ist ${h.w}.`);if(h.pl)add('stift',`${h.w}, ${h.pl}`);
+        if(ART(h.w)&&id[0]!=='_')add('stift',`Wo ist ${h.w}?`);
+        h.d.forEach(lineOf);h.k.forEach(lineOf);h.e.forEach(x=>x.forEach(lineOf))}
+      sc.qs.forEach(q=>add('stift',q.q));
+    });
+  });
+  ['Hallo! Ich bin dein Zauberstift.','Wähle oben auf der Seite ein Symbol und tippe dann auf die Bilder. Viel Spaß!',
+   ...PRAISE,'Nein.','Schau mal, hier!','Das hatten wir schon.','Super! Du hast alles auf dieser Seite entdeckt!','Tippe auf einen Würfel, dann spielst du noch einmal.',
+   ...Object.values(FINISH).map(x=>x[0]),...[0,1,2,3,4,5].map(s=>ptsSay(s,5)),
+   ...['der','die','das'].flatMap(a=>[`Finde etwas mit „${a}“!`,`Finde etwas anderes mit „${a}“!`])].forEach(t=>add('stift',t));
+  Object.values(MODE).forEach(x=>lineOf(ln(x,'stift')));Object.values(GAME).forEach(x=>lineOf(ln(x.intro,'stift')));Object.values(HELPSAY).forEach(x=>lineOf(ln(x,'stift')));
+  return [...out.values()];
 }
 
 /* ---------- the pen's display ---------- */
@@ -1144,20 +1199,20 @@ function gameTap(id){
   const sc=scene(G.sid),h=sc.hs[id],it=G.items[G.n],what=`Das ist ${h.w}.`,whatEn=`That is ${h.en}.`;
   let ok;
   if(G.g===2){ok=ART(h.w)===it.art;
-    if(ok&&G.used.has(id)){tone('no');speakSeq([{s:'stift',de:`${h.w} hatten wir schon. Finde etwas anderes mit „${it.art}“!`,en:`We already had ${h.en}. Find something else with "${it.art}"!`,w:1}],gameHead());return}}
+    if(ok&&G.used.has(id)){tone('no');const a=`Finde etwas anderes mit „${it.art}“!`;speakSeq([{s:'stift',de:`Das hatten wir schon. ${a}`,say:['Das hatten wir schon.',a],en:`We already had that. Find something else with "${it.art}"!`}],gameHead());return}}
   else ok=it.a.includes(id);
   if(ok){
     if(G.tries===0)G.score++;
     G.used.add(id);G.n++;G.wait=false;tone('ok');
-    const p=shuffle(['Richtig!','Super!','Toll!','Genau!','Prima!'])[0];
-    speakSeq([{s:'stift',de:`${p} ${what}`,en:`Right! ${whatEn}`,w:1}],gameHead(),ask);
+    const p=shuffle(PRAISE)[0];
+    speakSeq([{s:'stift',de:`${p} ${what}`,say:[p,what],en:`Right! ${whatEn}`,w:1}],gameHead(),ask);
   }else{
     G.tries++;tone('no');
-    if(G.tries<3)speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,en:`No. ${whatEn} ${it.en}`,w:1}],gameHead());
+    if(G.tries<3)speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,say:['Nein.',what,it.q],en:`No. ${whatEn} ${it.en}`,w:1}],gameHead());
     else{
       const ans=G.g===2?nounsOf(sc).find(x=>ART(sc.hs[x].w)===it.art&&!G.used.has(x)):it.a[0];
       G.used.add(ans);G.n++;G.wait=false;flash(ans,'hint');
-      speakSeq([{s:'stift',de:`Schau mal, hier! Das ist ${sc.hs[ans].w}.`,en:`Look, here! That is ${sc.hs[ans].en}.`,w:1}],gameHead(),ask);
+      speakSeq([{s:'stift',de:`Schau mal, hier! Das ist ${sc.hs[ans].w}.`,say:['Schau mal, hier!',`Das ist ${sc.hs[ans].w}.`],en:`Look, here! That is ${sc.hs[ans].en}.`,w:1}],gameHead(),ask);
     }
   }
 }
@@ -1165,10 +1220,9 @@ function finishGame(){
   const G=T.game;T.game=null;refreshSyms();
   const k=`${G.sid}.${G.g}`,s=G.score,len=G.items.length;
   if(!(k in T.best)||s>T.best[k]){T.best[k]=s;store.set('a2.tip.best',T.best)}
-  const pts=s===0?'keinen Punkt':s===1?'einen Punkt':`${s} Punkte`;
-  const [de,en]=s===len?['Fantastisch! Alles richtig!','Fantastic! All correct!']:s>=3?['Sehr gut!','Very good!']:['Gut gemacht!','Well done!'];
+  const [de,en]=s===len?FINISH.all:s>=3?FINISH.good:FINISH.ok,pts=ptsSay(s,len);
   tone('win');
-  speakSeq([{s:'stift',de:`${de} Du hast ${pts} von ${len}.`,en:`${en} You got ${s} of ${len} points.`},{s:'stift',de:'Tippe auf einen Würfel, dann spielst du noch einmal.',en:'Tap a dice to play again.'}],
+  speakSeq([{s:'stift',de:`${de} ${pts}`,say:[de,pts],en:`${en} You got ${s} of ${len} points.`},{s:'stift',de:'Tippe auf einen Würfel, dann spielst du noch einmal.',en:'Tap a dice to play again.'}],
     pchip(`Spiel ${G.g} · ${GAME[G.g].n}`,symOf('g'+G.g).c)+`<span class="pstars">${starStr(s)}</span>`);
 }
 
