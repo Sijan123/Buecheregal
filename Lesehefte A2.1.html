@@ -166,7 +166,104 @@ footer{text-align:center;margin-top:36px;font-size:13px;color:var(--muted)}
 @media (max-width:520px){.top .btn{padding:7px 12px;font-size:14px}.nav{gap:10px}.round{width:46px;height:46px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
-
+<style>
+/* ---------- Tipp-Bücher (tap-and-listen books) ---------- */
+.tipsec{margin-top:60px}
+.sechead{text-align:center}
+.sectitle{font-size:clamp(34px,6.5vw,52px);font-weight:700;line-height:1.1;color:var(--violet);-webkit-text-stroke:2px var(--shadow-ink);paint-order:stroke fill;text-shadow:3px 4px 0 var(--shadow-ink)}
+.sechead p{max-width:52ch;margin:12px auto 0;font-size:17px}
+.cover.soon{cursor:default;justify-content:center;min-height:220px;background:var(--page);border-style:dashed;box-shadow:none;opacity:.8}
+.cover.soon .spine{background:var(--stone)}
+.cover.soon:hover{transform:rotate(1.2deg)}
+.book.tipbook.wide{max-width:calc(100vh + 160px);margin-inline:auto}
+.pg.tip{padding:18px 20px 58px}
+.book.wide .pg.tip{min-height:0}
+.tiphead{display:flex;align-items:center;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;margin-bottom:12px;min-height:62px}
+.tiphead .runhead{margin:0}
+.strip{display:flex;gap:10px}
+.strip.all{width:100%;justify-content:space-between;gap:4px}
+.sym{display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:none;padding:0;cursor:pointer;font-size:11.5px;font-weight:600;line-height:1;color:var(--ink)}
+.sym .ic,.howrow .ic,.startbtn .ic{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:var(--k);color:#fff;border:2.5px solid var(--shadow-ink);box-shadow:2px 2px 0 var(--shadow-ink);transition:transform .15s,box-shadow .15s}
+.sym svg,.howrow svg,.startbtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.sym:hover .ic{transform:translateY(-2px)}
+.sym.on .ic{transform:scale(1.1);box-shadow:0 0 0 4px var(--mark),2px 2px 0 var(--shadow-ink)}
+.strip.all .lb{display:none}
+.strip.all .ic{width:38px;height:38px}
+.tipfig{position:relative;overflow:hidden;aspect-ratio:400/440;border:3px solid var(--shadow-ink);border-radius:16px;background:var(--sky);-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(35 16 16)'%3E%3Cpath d='M12 21 L16 30 L20 21Z' fill='%23FFE07A' stroke='%232B2340' stroke-width='2'/%3E%3Crect x='11' y='1' width='10' height='22' rx='5' fill='%23ffffff' stroke='%232B2340' stroke-width='2'/%3E%3Crect x='11.5' y='9' width='9' height='4' fill='%23FFC933'/%3E%3C/g%3E%3C/svg%3E") 8 28,pointer}
+.tipfig svg{display:block;width:100%;height:100%}
+.book.wide .pg.left .tipfig{margin-right:-20px;border-right:0;border-radius:16px 0 0 16px}
+.book.wide .pg.right .tipfig{margin-left:-20px;border-left:0;border-radius:0 16px 16px 0}
+.book.wide .pg.left .tipfig::after,.book.wide .pg.right .tipfig::after{content:"";position:absolute;top:0;bottom:0;width:44px;pointer-events:none}
+.book.wide .pg.left .tipfig::after{right:0;background:linear-gradient(to left,rgb(0 0 0 / .2),transparent)}
+.book.wide .pg.right .tipfig::after{left:0;background:linear-gradient(to right,rgb(0 0 0 / .2),transparent)}
+.tipfig .hs{outline:none}
+.tipfig .hs:not([data-h^="_"]):hover{filter:brightness(1.07)}
+.tipfig .hs:focus-visible{filter:drop-shadow(0 0 3px var(--r5)) drop-shadow(0 0 3px var(--r5))}
+.tipfig .hs.hit{animation:hit .7s ease-out}
+.tipfig .hs[data-h^="_"].hit{animation-name:hitbg}
+.tipfig .hs.hint{animation:hint .5s ease-in-out 4}
+@keyframes hit{0%{filter:brightness(1.25) drop-shadow(0 0 6px var(--mark)) drop-shadow(0 0 2px var(--mark))}100%{filter:none}}
+@keyframes hitbg{0%{filter:brightness(1.08)}100%{filter:none}}
+@keyframes hint{50%{opacity:.2}}
+.ripple{position:absolute;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;border:4px solid var(--mark);box-shadow:0 0 0 2px var(--shadow-ink),inset 0 0 0 2px var(--shadow-ink);pointer-events:none;animation:rip .55s ease-out forwards}
+@keyframes rip{from{transform:scale(.15);opacity:1}to{transform:scale(1.35);opacity:0}}
+.tipfoot{display:flex;margin-top:12px}
+.tipfoot.R{justify-content:flex-end}
+.tipfoot .fnd{font-size:14px}
+/* cover spread */
+.tiphow{gap:10px}
+.howlist{display:grid;gap:8px}
+.howrow{display:flex;align-items:center;gap:12px;text-align:left;cursor:pointer;background:color-mix(in srgb,var(--k) 12%,var(--page));border:2px solid var(--k);border-radius:16px;padding:6px 12px 6px 6px}
+.howrow .ic{width:40px;height:40px}
+.howrow b{display:block;font-size:16px;line-height:1.2}
+.howrow small{display:block;font-size:14px;color:var(--muted);line-height:1.3}
+.howrow:hover .ic{transform:translateY(-2px)}
+.startbtn{--k:var(--leaf);display:inline-flex;align-items:center;gap:12px;margin-top:10px;padding:6px 22px 6px 6px;border-radius:99px;border:3px solid var(--shadow-ink);background:var(--c);color:#fff;font-size:21px;font-weight:700;cursor:pointer;box-shadow:4px 4px 0 var(--shadow-ink)}
+.startbtn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--shadow-ink)}
+.startbtn .ic{animation:glow 1.6s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--leaf) 45%,transparent),2px 2px 0 var(--shadow-ink)}}
+/* album + words */
+.album{display:grid;gap:10px}
+.arow{background:color-mix(in srgb,var(--c) 10%,var(--page));border:2px solid var(--c);border-radius:14px;padding:8px 12px}
+.at{display:flex;justify-content:space-between;gap:8px;font-size:15px}
+.bar{height:12px;margin:6px 0;border-radius:99px;overflow:hidden;background:var(--page);border:2px solid var(--shadow-ink)}
+.bar i{display:block;height:100%;background:var(--c)}
+.astars{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.st,.pstars{letter-spacing:.06em;color:var(--muted)}
+.st b,.pstars b{color:var(--r3);-webkit-text-stroke:1px var(--shadow-ink);paint-order:stroke fill}
+.pstars{font-size:20px;line-height:1}
+.cert{margin-top:16px;padding:12px 14px;text-align:center;font-size:15px;border:3px dashed var(--c);border-radius:18px}
+.cert b{display:block;font-size:20px;color:var(--c)}
+.cert.on{border-style:solid;background:color-mix(in srgb,var(--mark) 35%,var(--page));box-shadow:4px 4px 0 var(--shadow-ink)}
+.wnote{margin:0 0 4px;font-size:15px;color:var(--muted)}
+.wgroup{margin-top:12px}
+.wgroup>b{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.wchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.wchip{font-family:var(--f-read);font-size:14px;line-height:1.5;padding:1px 10px;border-radius:99px;color:var(--ink);cursor:pointer;border:2px solid var(--k,var(--stone));background:color-mix(in srgb,var(--k,var(--stone)) 14%,var(--page))}
+.wchip.der{--k:var(--der)}.wchip.die{--k:var(--die)}.wchip.das{--k:var(--das)}
+.wchip.lock{cursor:default;color:var(--muted);border-style:dashed;letter-spacing:.12em}
+/* the pen's display */
+body.pen-open .wrap{padding-bottom:260px}
+.pen .in{align-items:center}
+.penic{position:relative;flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--violet);border:2.5px solid var(--shadow-ink)}
+.penic svg{width:32px;height:32px}
+.penic .led{position:absolute;top:0;right:0;width:13px;height:13px;border-radius:50%;background:var(--grey);border:2px solid var(--shadow-ink)}
+.pen.talk .led{background:#3BE37A;animation:led .45s ease-in-out infinite alternate}
+@keyframes led{to{box-shadow:0 0 10px 3px #3BE37A}}
+.p-head{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
+.pchip{font-size:12px;font-weight:700;padding:1px 10px;border-radius:99px;color:var(--ink);border:2px solid var(--k);background:color-mix(in srgb,var(--k) 18%,var(--page))}
+.p-lines{display:grid;gap:8px;max-height:34vh;overflow-y:auto;scrollbar-width:thin;padding-bottom:2px}
+.ln{display:flex;flex-direction:column;transition:opacity .2s}
+.pen.talk .ln:not(.now){opacity:.55}
+.ln .who{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ln .who::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--k);border:1.5px solid var(--shadow-ink)}
+.ln .de{font-family:var(--f-read);font-size:19px;line-height:1.45}
+.ln.word .de{font-size:22px;font-weight:700}
+.ln .en{font-size:15px;color:var(--muted)}
+.a-der{color:var(--der)}.a-die{color:var(--die)}.a-das{color:var(--das)}
+@media (max-width:520px){.ln .de{font-size:17px}.ln.word .de{font-size:20px}.pen .icon{width:40px;height:40px}.penic{width:40px;height:40px}.penic svg{width:26px;height:26px}.tiphead{min-height:0}}
+</style>
 <div class="wrap" id="app"></div>
 <div class="sheet" id="sheet" role="dialog" aria-label="Übersetzung">
   <div class="in">
@@ -377,7 +474,7 @@ Object.assign(COVERS,{
 const COLORS = {bodensee:'#14A6D6', montag:'#FF8A1F', berge:'#2FAE5A', markt:'#EC4C8B', hamburg:'#7A5CFA', otto:'#E53935', arzt:'#0F9D8C', mimi:'#C98A00', brot:'#8D5A3B', hase:'#3466E0'};
 const app = document.getElementById('app');
 const sheet = document.getElementById('sheet');
-const S = {story:null, page:0, en:false, sel:null};
+const S = {story:null, tip:null, page:0, en:false, sel:null};
 const store = {get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const esc = s => s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const wideMQ = matchMedia('(min-width: 860px)');
@@ -389,7 +486,7 @@ let deVoice=null;
 function pickVoice(){const v=speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang));deVoice=v.find(x=>/de-DE/i.test(x.lang))||v[0]||null}
 if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
 function say(text,rate=.9,onend){if(!('speechSynthesis' in window)){onend&&onend();return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='de-DE';if(deVoice)u.voice=deVoice;u.rate=rate;u.onend=u.onerror=()=>onend&&onend();speechSynthesis.speak(u)}
-function stopSay(){if('speechSynthesis' in window)speechSynthesis.cancel()}
+function stopSay(){tipHush();if('speechSynthesis' in window)speechSynthesis.cancel()}
 let actx=null, soundOn=store.get('a2.sound'); if(soundOn===null) soundOn=true;
 function swish(){
   if(!soundOn) return;
@@ -408,7 +505,7 @@ function swish(){
 function rainbow(t){const c=['--r1','--r2','--r3','--r4','--r5','--r6'];let k=0;
   return [...t].map((ch,i)=>ch===' '?'<span class="sp"> </span>':`<span style="color:var(${c[k++%6]});animation-delay:${i*.12}s">${ch}</span>`).join('')}
 function library(){
-  S.story=null; closeSheet(); stopSay();
+  S.story=null; S.tip=null; endGame(); closeSheet(); stopSay(); penHide();
   app.innerHTML = `
     <header class="hello">
       <span class="pill">Deutsch · Niveau A2.1</span>
@@ -423,6 +520,7 @@ function library(){
         <span class="chips"><span class="chip">${s.tense}</span><span class="chip">4 Seiten</span><span class="chip">${s.words} Wörter</span></span>
       </button>`).join('')}
     </div>
+    ${tipShelf()}
     <div class="howto">
       <div><b>Wort antippen</b>Du siehst die Grundform, den Artikel und das englische Wort.</div>
       <div><b>Umblättern</b>Tippe auf die Ecke unten, auf die Pfeile oder wische zur Seite.</div>
@@ -434,7 +532,7 @@ function library(){
 
 /* ---------- book pages ----------
    page index: 0 = title page, 1..n = story pages, n+1 = grammar & questions */
-function lastIdx(){return DATA[S.story].pages.length+1}
+function lastIdx(){return S.tip!=null?tipLast():DATA[S.story].pages.length+1}
 function tokensHTML(toks){return toks.map(t=>t[1]==null?esc(t[0]):`<span class="w" data-k="${t[1]}" tabindex="0" role="button">${esc(t[0])}</span>`).join('')}
 function corner(dir){return `<button class="corner ${dir>0?'next':'prev'}" data-act="${dir>0?'next':'prev'}" aria-label="${dir>0?'Umblättern':'Zurückblättern'}"></button>`}
 function pnum(n){return `<div class="pnum"><b>${n}</b></div>`}
@@ -497,7 +595,7 @@ function render(){
     </div>`;
 }
 
-function openStory(i){S.story=i;S.page=0;closeSheet();stopSay();render();window.scrollTo(0,0)}
+function openStory(i){S.tip=null;endGame();penHide();S.story=i;S.page=0;closeSheet();stopSay();render();window.scrollTo(0,0)}
 
 /* ---------- page turning ---------- */
 let turning=false;
@@ -508,13 +606,14 @@ function boxOn(el,ref,parent){Object.assign(el.style,{left:ref.offsetLeft+'px',t
 function face(content,back){const f=document.createElement('div');f.className='face'+(back?' back':'');if(content)f.appendChild(content);const sh=document.createElement('div');sh.className='shade';f.appendChild(sh);return f}
 
 function go(p){
-  if(S.story==null||turning) return;
+  if((S.story==null&&S.tip==null)||turning) return;
   if(p<0||p>lastIdx()||p===S.page) return;
   const dir=p>S.page?1:-1;
   const oldPages=[...document.querySelectorAll('#spread > .pg')].map(ghost);
   closeSheet(); stopSay();
   const top=document.getElementById('book').getBoundingClientRect().top;
-  S.page=p; render();
+  const was=S.tip!=null?curSceneId():null;
+  S.page=p; if(S.tip!=null){renderTip();tipTurned(was)}else render();
   if(top<0) document.getElementById('book').scrollIntoView({block:'start'});
   if(reduceMQ.matches||!oldPages.length) return;
   swish();
@@ -563,15 +662,17 @@ document.getElementById('s-say').onclick=()=>{if(S.sel)say(S.sel.word,.8)};
 /* ---------- events ---------- */
 app.addEventListener('click',e=>{
   const w=e.target.closest('.w'); if(w&&!w.closest('.ghost')){pick(w);return}
+  const hsel=e.target.closest('.hs'); if(hsel&&!hsel.closest('.ghost')){tipTap(hsel,e);return}
   const b=e.target.closest('[data-act]'); if(!b||b.closest('.ghost')) return;
   const act=b.dataset.act;
+  if(tipAct(act,b)) return;
   if(act==='open') openStory(+b.dataset.i);
   else if(act==='back') library();
   else if(act==='next') go(S.page+1);
   else if(act==='prev') go(S.page-1);
   else if(act==='go') go(+b.dataset.p);
   else if(act==='nextstory') openStory(S.story+1);
-  else if(act==='en'){S.en=!S.en;store.set('a2.en',S.en);closeSheet();render()}
+  else if(act==='en'){S.en=!S.en;store.set('a2.en',S.en);closeSheet();if(S.tip!=null)renderTip();else render();penRefresh()}
   else if(act==='sound'){soundOn=!soundOn;store.set('a2.sound',soundOn);b.classList.toggle('on',soundOn);b.setAttribute('aria-pressed',soundOn)}
   else if(act==='ans'){b.nextElementSibling.hidden=false;b.hidden=true}
   else if(act==='read'){
@@ -580,18 +681,593 @@ app.addEventListener('click',e=>{
     say(DATA[S.story].pages[S.page-1].de,.85,()=>{b.dataset.on='';b.textContent='Vorlesen';b.classList.remove('on')});
   }
 });
-app.addEventListener('keydown',e=>{const w=e.target.closest('.w');if(w&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(w)}});
+app.addEventListener('keydown',e=>{const w=e.target.closest('.w');if(w&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(w)}
+  const h=e.target.closest('.hs');if(h&&(e.key==='Enter'||e.key===' ')){e.preventDefault();tipTap(h,null)}});
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')closeSheet();
-  if(S.story==null||e.target.closest('.w'))return;
+  if(e.key==='Escape'){closeSheet();if(pen.classList.contains('open'))penClose()}
+  if((S.story==null&&S.tip==null)||e.target.closest('.w,.hs'))return;
   if(e.key==='ArrowRight')go(S.page+1);
   if(e.key==='ArrowLeft')go(S.page-1);
 });
 let tx=null,ty=0;
-app.addEventListener('touchstart',e=>{if(S.story==null||!e.target.closest('#book'))return;tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+app.addEventListener('touchstart',e=>{if((S.story==null&&S.tip==null)||!e.target.closest('#book'))return;tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
 app.addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;
   if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5)go(S.page+(dx<0?1:-1))},{passive:true});
-wideMQ.addEventListener('change',()=>{if(S.story!=null&&!turning)render()});
+wideMQ.addEventListener('change',()=>{if(S.story!=null&&!turning)render();else if(S.tip!=null&&!turning){S.page=wideMQ.matches?S.page>>1:S.page*2;renderTip()}});
+/* ================= Tipp-Bücher: tap-and-listen picture books =================
+   Each scene is one 800x440 picture that spans a two-page spread (each page shows one 400-wide half).
+   Every tappable thing is a <g class="hs" data-h="id">; what it says lives in TIPBOOKS[].scenes[].hs. */
+const hs=(id,b)=>`<g class="hs" data-h="${id}">${b}</g>`;
+const box=(x,y,w,h,f,rx=0,sw=3)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${I}" stroke-width="${sw}"/>`;
+const ray=(x,y,r)=>[...Array(8)].map((_,i)=>{const a=i*Math.PI/4,c=Math.cos(a),s=Math.sin(a);return `M${(x+c*(r+6)).toFixed(1)} ${(y+s*(r+6)).toFixed(1)} L${(x+c*(r+16)).toFixed(1)} ${(y+s*(r+16)).toFixed(1)}`}).join(' ');
+const sunR=(x,y,r)=>`<path d="${ray(x,y,r)}" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/><circle cx="${x}" cy="${y}" r="${r}" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><circle cx="${x-r*.35}" cy="${y-r*.1}" r="2.5" fill="${I}"/><circle cx="${x+r*.35}" cy="${y-r*.1}" r="2.5" fill="${I}"/><path d="M${x-r*.35} ${y+r*.3} Q${x} ${y+r*.6} ${x+r*.35} ${y+r*.3}" stroke="${I}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+const cloudB=(x,y,s=1)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-46 14 Q-58 -6 -36 -12 Q-34 -36 -8 -32 Q4 -52 28 -38 Q52 -42 52 -16 Q70 -8 58 14Z" fill="var(--cloud)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/></g>`;
+const keyS=(x,y,c)=>`<circle cx="${x}" cy="${y+9}" r="7" fill="none" stroke="${c}" stroke-width="4"/><path d="M${x} ${y+16} V${y+42} M${x} ${y+33} h7 M${x} ${y+40} h5" stroke="${c}" stroke-width="4" stroke-linecap="round"/>`;
+const apple=(x,y,c)=>`<circle cx="${x}" cy="${y}" r="9" fill="${c}" stroke="${I}" stroke-width="1.8"/><path d="M${x} ${y-9} l2 -5" stroke="${I}" stroke-width="2" stroke-linecap="round"/><ellipse cx="${x-3}" cy="${y-3}" rx="2" ry="3" fill="var(--paper2)" opacity=".55"/>`;
+const tomato=(x,y)=>`<circle cx="${x}" cy="${y}" r="8.5" fill="var(--red)" stroke="${I}" stroke-width="1.8"/><path d="M${x-5} ${y-7} L${x} ${y-4} L${x+5} ${y-7} M${x} ${y-4} v-4" stroke="var(--leaf)" stroke-width="2.4" stroke-linecap="round"/>`;
+const banana=(x,y)=>`<path d="M${x} ${y} Q${x+32} ${y+20} ${x+62} ${y-2} Q${x+32} ${y+9} ${x} ${y}Z" fill="var(--sun)" stroke="${I}" stroke-width="1.8" stroke-linejoin="round"/><path d="M${x-2} ${y+1} l-4 -3" stroke="var(--brown)" stroke-width="3" stroke-linecap="round"/>`;
+const carrot=(x,y)=>`<path d="M${x} ${y-6} L${x+46} ${y} L${x} ${y+6}Z" fill="var(--ginger)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/><path d="M${x} ${y} l-10 -7 M${x} ${y} l-12 0 M${x} ${y} l-10 7" stroke="var(--leaf)" stroke-width="3" stroke-linecap="round"/>`;
+const crate=(x,y,w,h)=>`${box(x,y,w,h,'var(--wood)',2,2.5)}<path d="M${x} ${y+h/2} H${x+w}" stroke="${I}" stroke-width="1.5" opacity=".5"/>`;
+const awning=(x,w,c1,c2,y=104)=>{const n=Math.round(w/45),sw=w/n;let s='';for(let i=0;i<n;i++)s+=`<path d="M${x+i*sw} ${y} h${sw} v36 q${-sw/2} 16 ${-sw} 0Z" fill="${i%2?c2:c1}" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/>`;return s};
+const house=(x,w,h,c,roof='var(--red)',base=270)=>{const t=base-h;let s=`<path d="M${x-6} ${t} L${x+w/2} ${t-w*.45} L${x+w+6} ${t}Z" fill="${roof}" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/>`+box(x,t,w,h,c,0,2.5);
+  for(let r=0;r<Math.floor((h-20)/48);r++)for(let k=0;k<Math.floor(w/40);k++)s+=box(x+12+k*40,t+16+r*48,20,26,'var(--sky)',2,2);return s};
+const dog=(x,y,s=1)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-30 -34 q-14 -14 -8 -26" stroke="var(--wood)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-30 -34 q-14 -14 -8 -26" stroke="${I}" stroke-width="1" fill="none" opacity=".4"/>${['-24','-12','12','22'].map(a=>`<rect x="${a}" y="-24" width="7" height="24" rx="3" fill="var(--wood)" stroke="${I}" stroke-width="1.6"/>`).join('')}<ellipse cx="0" cy="-30" rx="32" ry="14" fill="var(--wood)" stroke="${I}" stroke-width="2.2"/><circle cx="32" cy="-46" r="14" fill="var(--wood)" stroke="${I}" stroke-width="2.2"/><ellipse cx="44" cy="-40" rx="9" ry="6" fill="var(--sun-soft)" stroke="${I}" stroke-width="1.6"/><circle cx="51" cy="-42" r="3" fill="${I}"/><circle cx="34" cy="-50" r="2.2" fill="${I}"/><path d="M24 -56 q-10 6 -6 22 q8 -4 12 -16Z" fill="var(--brown)" stroke="${I}" stroke-width="1.6"/><path d="M20 -36 q8 6 18 2" stroke="var(--red)" stroke-width="3.5" fill="none"/></g>`;
+const duck=(x,y,f=1)=>`<g transform="translate(${x} ${y}) scale(${f} 1)"><path d="M-22 -4 Q-24 -20 -4 -18 L10 -18 Q20 -20 20 -6 Q14 4 -6 4 Q-18 4 -22 -4Z" fill="var(--paper2)" stroke="${I}" stroke-width="2"/><path d="M-12 -12 q10 -6 18 2" stroke="${I}" stroke-width="1.5" fill="none"/><circle cx="14" cy="-26" r="9" fill="var(--leaf)" stroke="${I}" stroke-width="2"/><path d="M22 -27 l11 3 l-11 3Z" fill="var(--sun)" stroke="${I}" stroke-width="1.5" stroke-linejoin="round"/><circle cx="16" cy="-29" r="1.8" fill="${I}"/><path d="M8 -18 h12" stroke="var(--paper2)" stroke-width="3"/></g>`;
+const pigeon=(x,y)=>`<g transform="translate(${x} ${y})"><path d="M-6 0 v-6 M4 0 v-6" stroke="var(--ginger)" stroke-width="2.5" stroke-linecap="round"/><path d="M-24 -18 Q-14 -32 6 -26 Q18 -22 16 -12 Q8 -4 -10 -6 Q-20 -8 -30 -16Z" fill="var(--grey)" stroke="${I}" stroke-width="2"/><path d="M-12 -20 q10 -4 18 4" stroke="${I}" stroke-width="1.5" fill="none"/><circle cx="16" cy="-30" r="8" fill="var(--grey)" stroke="${I}" stroke-width="2"/><path d="M10 -24 q6 3 12 -1" stroke="var(--teal)" stroke-width="3" fill="none"/><path d="M23 -31 l7 2 l-7 2Z" fill="var(--sun-soft)" stroke="${I}" stroke-width="1.2"/><circle cx="18" cy="-32" r="1.6" fill="${I}"/></g>`;
+const bloom=(x,y,c,h=26)=>`<path d="M${x} ${y} V${y-h}" stroke="var(--leaf)" stroke-width="3"/><path d="M${x} ${y-8} q8 -8 12 -2 q-6 6 -12 2Z" fill="var(--leaf)"/>${[0,72,144,216,288].map(a=>{const r=a*Math.PI/180;return `<circle cx="${(x+Math.cos(r)*6).toFixed(1)}" cy="${(y-h+Math.sin(r)*6).toFixed(1)}" r="5" fill="${c}" stroke="${I}" stroke-width="1.2"/>`}).join('')}<circle cx="${x}" cy="${y-h}" r="4" fill="var(--sun)" stroke="${I}" stroke-width="1.2"/>`;
+const sunflower=(x,y,h)=>`<path d="M${x} ${y} V${y-h}" stroke="var(--leaf)" stroke-width="4"/>${[...Array(10)].map((_,i)=>{const r=i*36*Math.PI/180;return `<ellipse cx="${(x+Math.cos(r)*11).toFixed(1)}" cy="${(y-h+Math.sin(r)*11).toFixed(1)}" rx="7" ry="4" transform="rotate(${i*36} ${(x+Math.cos(r)*11).toFixed(1)} ${(y-h+Math.sin(r)*11).toFixed(1)})" fill="var(--sun)" stroke="${I}" stroke-width="1.2"/>`}).join('')}<circle cx="${x}" cy="${y-h}" r="8" fill="var(--brown)" stroke="${I}" stroke-width="1.5"/>`;
+const pretzel=(x,y)=>`<g transform="translate(${x} ${y})"><path d="M0 -4 C-24 -34 -34 2 -10 6 C8 8 12 -22 0 -26 C-12 -22 -8 8 10 6 C34 2 24 -34 0 -4" fill="none" stroke="${I}" stroke-width="10" stroke-linecap="round"/><path d="M0 -4 C-24 -34 -34 2 -10 6 C8 8 12 -22 0 -26 C-12 -22 -8 8 10 6 C34 2 24 -34 0 -4" fill="none" stroke="var(--wood)" stroke-width="6" stroke-linecap="round"/><g fill="var(--paper2)"><circle cx="-16" cy="-14" r="1.4"/><circle cx="14" cy="-18" r="1.4"/><circle cx="-4" cy="0" r="1.4"/></g></g>`;
+const bike=(x,y,c='var(--r5)')=>`<g transform="translate(${x} ${y})" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="-26" cy="0" r="19" stroke="${I}" stroke-width="4"/><circle cx="30" cy="0" r="19" stroke="${I}" stroke-width="4"/><circle cx="-26" cy="0" r="3" fill="${I}"/><circle cx="30" cy="0" r="3" fill="${I}"/><path d="M-26 0 L-6 -26 L22 -26 L30 0 M-6 -26 L4 0 L22 -26 M4 0 L-26 0" stroke="${c}" stroke-width="4.5"/><path d="M-10 -30 h12" stroke="${I}" stroke-width="5"/><path d="M22 -26 l-4 -12 h10" stroke="${I}" stroke-width="3.5"/></g>`;
+const iceCone=(x,y,c)=>`<path d="M${x-9} ${y} L${x} ${y+22} L${x+9} ${y}Z" fill="var(--sun-soft)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="${x}" cy="${y-5}" r="9" fill="${c}" stroke="${I}" stroke-width="1.6"/>`;
+const svgT=(body,label,vb)=>`<svg viewBox="${vb}" role="img" aria-label="${label}">${body}</svg>`;
+
+const TIPART={
+kueche:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--wall)"/><path d="M0 24 H800" stroke="${I}" stroke-width="2" opacity=".12"/>`+
+  `<rect x="432" y="132" width="232" height="116" fill="var(--paper2)"/><path d="${[...Array(9)].map((_,i)=>`M${432+i*29} 132 V248`).join(' ')} M432 161 H664 M432 190 H664 M432 219 H664" stroke="var(--stone)" stroke-width="2"/>`+
+  `<rect y="360" width="800" height="80" fill="var(--wood)"/><path d="M0 360 H800" stroke="${I}" stroke-width="3"/><path d="${[...Array(10)].map((_,i)=>`M${i*96+30} 362 l-30 78`).join(' ')}" stroke="${I}" stroke-width="1.5" opacity=".22"/>`+
+  box(440,258,224,102,'var(--paper2)',0)+`<path d="M610 262 V356" stroke="${I}" stroke-width="2"/><rect x="596" y="300" width="5" height="22" rx="2" fill="var(--stone)"/><rect x="619" y="300" width="5" height="22" rx="2" fill="var(--stone)"/>`+box(430,244,238,14,'var(--stone)',3))+
+ hs('fenster',box(40,40,190,160,'var(--sky)',6,6)+cloudB(78,170,.55)+`<path d="M135 40 V200 M40 120 H230" stroke="${I}" stroke-width="5"/><path d="M48 50 l26 0 M48 58 l14 0" stroke="var(--paper2)" stroke-width="4" stroke-linecap="round" opacity=".7"/>`+box(26,198,218,13,'var(--paper2)',3,2.5))+
+ hs('sonne',sunR(186,80,18))+
+ hs('pflanze',`<path d="M98 150 Q70 120 66 92 Q92 108 100 146Z M102 150 Q110 108 132 96 Q130 130 106 152Z M100 150 Q96 112 104 80 Q118 116 104 150Z" fill="var(--leaf)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M76 198 L82 150 H122 L128 198Z" fill="var(--red)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M80 166 H124" stroke="${I}" stroke-width="2"/>`)+
+ hs('uhr',clock(322,92,38,9,30))+
+ hs('schluessel',box(292,152,62,11,'var(--wood)',4,2)+`<circle cx="308" cy="166" r="3" fill="${I}"/><circle cx="338" cy="166" r="3" fill="${I}"/>`+keyS(308,166,'var(--sun)')+keyS(338,166,'var(--teal)'))+
+ hs('lampe',`<path d="M246 0 V92" stroke="${I}" stroke-width="3"/><path d="M200 140 Q204 96 246 92 Q288 96 292 140Z" fill="var(--teal)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M200 140 H292" stroke="${I}" stroke-width="3"/><ellipse cx="246" cy="146" rx="13" ry="8" fill="var(--sun-soft)" stroke="${I}" stroke-width="2"/>`)+
+ hs('sijan',person(246,346,1.85,'sijan'))+
+ hs('tisch',`<rect x="104" y="300" width="12" height="104" rx="3" fill="var(--wood)" stroke="${I}" stroke-width="2.5"/><rect x="384" y="300" width="12" height="104" rx="3" fill="var(--wood)" stroke="${I}" stroke-width="2.5"/>`+box(80,286,340,15,'var(--paper2)',5)+`<path d="M84 300 H416 L410 326 Q250 342 90 326Z" fill="var(--violet)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M110 312 H140 M170 318 H200 M230 320 H260 M290 318 H320 M350 312 H380" stroke="var(--paper2)" stroke-width="4" stroke-linecap="round" opacity=".6"/>`)+
+ hs('broetchen',`<ellipse cx="152" cy="285" rx="44" ry="9" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/><ellipse cx="138" cy="274" rx="17" ry="11" fill="var(--wood)" stroke="${I}" stroke-width="2"/><ellipse cx="168" cy="274" rx="17" ry="11" fill="var(--wood)" stroke="${I}" stroke-width="2"/><path d="M130 270 q8 -4 16 0 M160 270 q8 -4 16 0" stroke="var(--sun-soft)" stroke-width="2.5" fill="none" stroke-linecap="round"/>`)+
+ hs('tasse',`<path d="M282 286 h30 v-22 q0 -8 -8 -8 h-14 q-8 0 -8 8Z" fill="var(--red)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M312 266 q12 0 12 9 q0 9 -12 9" fill="none" stroke="${I}" stroke-width="3"/><path d="M291 248 q-4 -8 0 -16 M303 248 q-4 -8 0 -16" stroke="${I}" stroke-width="2" fill="none" opacity=".6"/>`)+
+ hs('marmelade',`<rect x="346" y="254" width="34" height="32" rx="6" fill="var(--red)" stroke="${I}" stroke-width="2.5"/><rect x="343" y="247" width="40" height="9" rx="3" fill="var(--sun)" stroke="${I}" stroke-width="2"/><rect x="352" y="264" width="22" height="13" rx="2" fill="var(--paper2)"/><circle cx="363" cy="270" r="3.5" fill="var(--red)"/>`)+
+ hs('katze',cat(250,404,1.55,'var(--ginger)'))+
+ hs('herd',box(462,262,98,94,'var(--grey)',4)+box(474,288,74,52,'var(--night)',6,2.5)+`<path d="M480 300 h30" stroke="var(--paper2)" stroke-width="3" opacity=".4" stroke-linecap="round"/>${[480,498,516,534].map(c=>`<circle cx="${c+8}" cy="275" r="4.5" fill="var(--paper2)" stroke="${I}" stroke-width="1.6"/>`).join('')}<ellipse cx="486" cy="246" rx="18" ry="3.5" fill="${I}"/><ellipse cx="535" cy="246" rx="20" ry="3.5" fill="${I}"/>`)+
+ hs('topf',`<path d="M524 204 q-6 -10 0 -20 q6 -10 0 -20 M546 204 q-6 -10 0 -20 q6 -10 0 -20" stroke="var(--paper2)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M524 204 q-6 -10 0 -20 q6 -10 0 -20 M546 204 q-6 -10 0 -20 q6 -10 0 -20" stroke="${I}" stroke-width="1" fill="none" opacity=".4"/>`+box(511,214,48,30,'var(--red)',6,2.5)+box(506,207,58,9,'var(--red)',4,2)+`<path d="M501 222 h10 M559 222 h10" stroke="${I}" stroke-width="5" stroke-linecap="round"/><rect x="530" y="201" width="10" height="7" rx="3" fill="${I}"/>`)+
+ hs('kaffee',box(586,168,62,16,'var(--night)',5,2.5)+box(592,182,50,62,'var(--night)',3,2.5)+`<path d="M600 244 V216 Q600 208 608 208 H626 Q634 208 634 216 V244Z" fill="var(--water2)" stroke="${I}" stroke-width="2" opacity=".95"/><path d="M601 244 V228 H633 V244Z" fill="var(--brown)"/><circle cx="632" cy="194" r="3" fill="var(--leaf)"/>`)+
+ hs('kuehlschrank',box(664,92,116,270,'var(--paper2)',12)+`<path d="M664 176 H780" stroke="${I}" stroke-width="3"/><rect x="676" y="116" width="7" height="42" rx="3" fill="var(--stone)" stroke="${I}" stroke-width="1.5"/><rect x="676" y="190" width="7" height="72" rx="3" fill="var(--stone)" stroke="${I}" stroke-width="1.5"/><circle cx="760" cy="120" r="7" fill="var(--sun)" stroke="${I}" stroke-width="1.5"/><path d="M748 300 l12 -12 l12 12 v14 h-24Z" fill="var(--r5)" stroke="${I}" stroke-width="1.5"/>`)+
+ hs('liste',`<g transform="rotate(4 728 244)">${box(698,196,62,92,'var(--sun-soft)',2,2)}${['Brot','Käse','Äpfel','Tomaten'].map((t,i)=>`<path d="M705 ${216+i*19} h4" stroke="var(--red)" stroke-width="3" stroke-linecap="round"/>${txt(713,220+i*19,t,12,'var(--line-ink)',600)}`).join('')}<circle cx="729" cy="196" r="7" fill="var(--red)" stroke="${I}" stroke-width="1.5"/></g>`)+
+ hs('tasche',`<path d="M494 362 q-4 -26 6 -38 l6 4 q-8 12 -4 34Z" fill="var(--leaf)" stroke="${I}" stroke-width="1.8"/><path d="M458 370 q18 -40 40 0" fill="none" stroke="${I}" stroke-width="4"/><path d="M448 370 h62 l-6 54 h-50Z" fill="var(--teal)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M458 390 h42" stroke="var(--paper2)" stroke-width="3" opacity=".6"/>`)+
+ hs('shruti',person(604,424,1.85,'shruti')),
+
+markt:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/>`+cloudB(110,46,.8)+cloudB(700,40,.6)+
+  house(10,120,170,'var(--sun-soft)')+house(140,110,150,'var(--cheek)','var(--brown)')+house(262,130,180,'var(--water2)')+house(410,120,160,'var(--paper2)','var(--brown)')+house(650,140,175,'var(--sun-soft)','var(--hill2)')+
+  `<rect y="292" width="800" height="148" fill="var(--stone)"/><path d="M0 292 H800" stroke="${I}" stroke-width="3"/>`+
+  `<g fill="none" stroke="${I}" stroke-width="1.6" opacity=".25">${[...Array(4)].map((_,r)=>[...Array(14)].map((_,k)=>`<rect x="${k*60+(r%2)*30-10}" y="${306+r*34}" width="46" height="22" rx="8"/>`).join('')).join('')}</g>`)+
+ hs('kirche',box(560,40,62,240,'var(--paper2)',0,3)+`<path d="M552 44 L591 -4 L630 44Z" fill="var(--hill2)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/>`+clock(591,84,22,10,15)+`<path d="M578 150 v-18 q13 -16 26 0 v18Z" fill="var(--sky)" stroke="${I}" stroke-width="2"/>`)+
+ hs('stand',`<rect x="36" y="140" width="9" height="160" fill="var(--wood)" stroke="${I}" stroke-width="2"/><rect x="356" y="140" width="9" height="160" fill="var(--wood)" stroke="${I}" stroke-width="2"/>`+awning(20,360,'var(--red)','var(--paper2)'))+
+ hs('stand',`<rect x="432" y="140" width="9" height="160" fill="var(--wood)" stroke="${I}" stroke-width="2"/><rect x="760" y="140" width="9" height="160" fill="var(--wood)" stroke="${I}" stroke-width="2"/>`+awning(418,364,'var(--sun)','var(--paper2)'))+
+ hs('verkaeuferin',person(200,284,1.5,'sabine'))+
+ hs('baecker',person(652,284,1.5,'wagner'))+
+ hs('stand',box(30,250,342,72,'var(--wood)',4)+`<path d="M30 274 H372 M30 298 H372" stroke="${I}" stroke-width="1.6" opacity=".35"/>`)+
+ hs('stand',box(428,250,346,72,'var(--wood)',4)+`<path d="M428 274 H774 M428 298 H774" stroke="${I}" stroke-width="1.6" opacity=".35"/>`)+
+ hs('aepfel',crate(44,222,84,30)+[[56,'var(--red)'],[74,'var(--leaf)'],[92,'var(--red)'],[110,'var(--red)'],[65,'var(--red)'],[83,'var(--red)'],[101,'var(--leaf)']].map(([x,c],i)=>apple(x,i<4?216:204,c)).join(''))+
+ hs('preis',`<path d="M120 222 V196" stroke="${I}" stroke-width="2.5"/>`+box(84,168,72,30,'var(--paper2)',4,2.5)+txt(120,189,'2 € / kg',14,'var(--line-ink)',700,'middle'))+
+ hs('bananen',crate(138,222,76,30)+banana(146,206)+banana(144,214)+banana(148,220))+
+ hs('tomaten',crate(224,222,74,30)+[236,252,268,284,244,260,276].map((x,i)=>tomato(x,i<4?216:204)).join(''))+
+ hs('waage',box(306,224,54,26,'var(--paper2)',4,2.5)+`<circle cx="333" cy="237" r="8" fill="var(--sun-soft)" stroke="${I}" stroke-width="1.6"/><path d="M333 237 l4 -5" stroke="var(--red)" stroke-width="2"/><path d="M333 224 v-6" stroke="${I}" stroke-width="3"/><path d="M302 218 h62 l-6 -8 h-50Z" fill="var(--stone)" stroke="${I}" stroke-width="2.2" stroke-linejoin="round"/>`)+
+ hs('kaese',`<path d="M442 250 V222 Q442 208 494 208 Q546 208 546 222 V250Z" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><ellipse cx="494" cy="222" rx="52" ry="12" fill="var(--sun-soft)" stroke="${I}" stroke-width="2"/><circle cx="464" cy="238" r="4" fill="var(--sun-soft)" stroke="${I}" stroke-width="1"/><circle cx="510" cy="242" r="5" fill="var(--sun-soft)" stroke="${I}" stroke-width="1"/><circle cx="530" cy="232" r="3" fill="var(--sun-soft)" stroke="${I}" stroke-width="1"/><path d="M552 250 L552 228 L598 250Z" fill="var(--sun)" stroke="${I}" stroke-width="2.2" stroke-linejoin="round"/><circle cx="566" cy="242" r="3" fill="var(--sun-soft)"/>`)+
+ hs('brot',loaf(606,222,84,28)+loaf(620,198,58,24))+
+ hs('brezel',pretzel(722,244)+pretzel(752,232))+
+ hs('karotten',crate(22,350,108,38)+[0,1,2,3].map(i=>carrot(40+(i%2)*14,344-i*7)).join('')+carrot(70,340)+carrot(82,348))+
+ hs('hund',dog(196,424,1.1))+
+ hs('blumen',`<path d="M708 404 L700 352 H780 L772 404Z" fill="var(--stone)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M702 362 H778" stroke="${I}" stroke-width="2"/>`+sunflower(718,356,46)+sunflower(742,356,64)+sunflower(764,356,40))+
+ hs('shruti',person(316,428,1.85,'shruti'))+
+ hs('korb',`<path d="M348 374 q24 -38 48 0" fill="none" stroke="var(--brown)" stroke-width="5"/>`+apple(362,370,'var(--red)')+`<path d="M378 374 l14 -26" stroke="var(--sun-soft)" stroke-width="9" stroke-linecap="round"/><path d="M378 374 l14 -26" stroke="${I}" stroke-width="1.2" opacity=".6" stroke-linecap="round"/><path d="M342 374 h60 l-8 40 h-44Z" fill="var(--wood)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M346 388 h52 M348 400 h48" stroke="${I}" stroke-width="1.5" opacity=".4"/>`)+
+ hs('sijan',person(520,430,1.85,'sijan')),
+
+stadt:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/>`+cloudB(300,44,.7)+cloudB(580,30,.55)+
+  `<rect y="298" width="800" height="44" fill="var(--stone)"/><path d="M0 298 H800" stroke="${I}" stroke-width="2.5"/><rect y="340" width="800" height="100" fill="var(--storm)"/><path d="M0 340 H800" stroke="${I}" stroke-width="4"/><path d="M0 396 H800" stroke="var(--paper2)" stroke-width="5" stroke-dasharray="34 26"/>`)+
+ hs('post',box(16,92,190,206,'var(--sun)',0)+box(16,82,190,16,'var(--sun)',0,2.5)+box(36,108,150,32,'var(--paper2)',4,2.5)+txt(111,132,'POST',22,'var(--line-ink)',700,'middle')+box(36,160,40,44,'var(--sky)',3,2.5)+box(146,160,40,44,'var(--sky)',3,2.5)+box(90,226,44,72,'var(--wood)',3,2.5)+`<circle cx="125" cy="264" r="3" fill="${I}"/>`)+
+ hs('briefkasten',`<rect x="221" y="282" width="7" height="18" fill="${I}"/>`+box(206,234,38,50,'var(--sun)',7,2.5)+`<path d="M214 248 h22" stroke="${I}" stroke-width="3" stroke-linecap="round"/><path d="M216 266 q9 -10 18 0" stroke="${I}" stroke-width="2.5" fill="none"/><circle cx="225" cy="268" r="2.5" fill="${I}"/>`)+
+ hs('apotheke',box(252,110,140,188,'var(--paper2)',0)+box(252,100,140,14,'var(--leaf)',0,2.5)+box(292,124,48,48,'var(--red)',6,2.5)+txt(316,163,'A',38,'var(--paper2)',700,'middle')+txt(322,196,'Apotheke',15,'var(--leaf)',700,'middle')+box(262,210,30,40,'var(--water2)',3,2)+box(352,210,30,40,'var(--water2)',3,2)+box(302,222,40,76,'var(--water2)',3,2.5)+`<path d="M322 222 V298" stroke="${I}" stroke-width="2"/>`)+
+ hs('cafe',box(412,118,172,180,'var(--cheek)',0)+`<path d="M412 118 h172" stroke="${I}" stroke-width="3"/>`+txt(498,160,'Café',28,'var(--line-ink)',700,'middle')+awning(404,188,'var(--teal)','var(--paper2)',180)+box(426,234,144,58,'var(--sky)',4,2.5)+`<path d="M450 286 V268 Q450 262 470 262 Q490 262 490 268 V286Z" fill="var(--sun-soft)" stroke="${I}" stroke-width="2"/><ellipse cx="470" cy="268" rx="20" ry="5" fill="var(--wood)" stroke="${I}" stroke-width="1.5"/><path d="M510 286 V272 L548 264 V286Z" fill="var(--shruti)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/>`)+
+ hs('bank',`<path d="M598 104 L694 58 L790 104Z" fill="var(--grey)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/>`+txt(694,96,'BANK',18,'var(--line-ink)',700,'middle')+box(604,104,180,194,'var(--grey)',0)+[620,656,720,756].map(x=>box(x,120,16,160,'var(--paper2)',2,2)).join('')+box(674,214,38,84,'var(--wood)',3,2.5)+box(602,280,184,18,'var(--paper2)',0,2.5))+
+ hs('wegweiser',`<rect x="737" y="166" width="7" height="134" fill="${I}"/><path d="M690 172 H776 L792 186 L776 200 H690Z" fill="var(--paper2)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/>`+txt(732,192,'Bahnhof',14,'var(--line-ink)',700,'middle')+`<path d="M790 208 H704 L688 222 L704 236 H790Z" fill="var(--paper2)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/>`+txt(746,228,'Park',14,'var(--line-ink)',700,'middle'))+
+ hs('haltestelle',`<rect x="445" y="200" width="7" height="100" fill="${I}"/><circle cx="448" cy="196" r="22" fill="var(--sun)" stroke="var(--leaf)" stroke-width="5"/><circle cx="448" cy="196" r="24.5" fill="none" stroke="${I}" stroke-width="1.5"/>`+txt(448,205,'H',24,'var(--leaf)',700,'middle')+box(436,232,24,30,'var(--paper2)',2,2)+`<path d="M441 240 h14 M441 247 h14 M441 254 h10" stroke="${I}" stroke-width="1.5"/>`)+
+ hs('ampel',`<rect x="246" y="208" width="8" height="132" fill="${I}"/>`+box(232,130,36,82,'var(--night)',8,2.5)+`<circle cx="250" cy="150" r="10" fill="var(--red)" stroke="${I}" stroke-width="1.5"/><circle cx="250" cy="150" r="15" fill="var(--red)" opacity=".25"/><circle cx="250" cy="172" r="9" fill="var(--sun)" opacity=".3"/><circle cx="250" cy="194" r="9" fill="var(--leaf)" opacity=".3"/>`)+
+ hs('fahrrad',bike(320,316))+
+ hs('zebrastreifen',[0,1,2,3].map(i=>`<rect x="120" y="${348+i*23}" width="110" height="14" rx="2" fill="var(--paper2)"/>`).join(''))+
+ hs('sijan',person(128,336,1.55,'sijan'))+
+ hs('paket',`<g transform="rotate(-4 130 288)">${box(104,268,52,40,'var(--wood)',2,2.5)}<path d="M130 268 V308 M104 286 H156" stroke="var(--sun-soft)" stroke-width="5"/><rect x="138" y="292" width="14" height="10" fill="var(--paper2)" stroke="${I}" stroke-width="1"/></g>`)+
+ hs('shruti',person(524,338,1.55,'shruti'))+
+ hs('frau',person(612,338,1.55,'julia'))+
+ hs('bus',box(420,330,340,98,'var(--red)',16)+`<path d="M420 400 H760" stroke="var(--paper2)" stroke-width="5"/>${[436,486,536,586,636].map(x=>box(x,344,40,34,'var(--water2)',4,2)).join('')}`+box(690,344,54,48,'var(--water2)',6,2.5)+box(696,334,48,10,'var(--night)',2,1.5)+txt(720,343,'12 Bahnhof',8,'var(--sun)',700,'middle')+`<circle cx="480" cy="432" r="17" fill="${I}"/><circle cx="480" cy="432" r="7" fill="var(--grey)"/><circle cx="696" cy="432" r="17" fill="${I}"/><circle cx="696" cy="432" r="7" fill="var(--grey)"/><circle cx="752" cy="406" r="5" fill="var(--sun)" stroke="${I}" stroke-width="1.5"/>`),
+
+bahnhof:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--wall)"/><path d="M-20 40 Q400 -36 820 40" fill="none" stroke="var(--stone)" stroke-width="12"/><path d="M-20 40 Q400 -36 820 40" fill="none" stroke="${I}" stroke-width="2" opacity=".3"/>`+
+  `<rect y="246" width="800" height="92" fill="var(--storm)"/><path d="M0 246 H800" stroke="${I}" stroke-width="3"/><path d="${[...Array(27)].map((_,i)=>`M${i*30} 318 l-6 18`).join(' ')}" stroke="var(--brown)" stroke-width="7"/><path d="M0 318 H800 M0 330 H800" stroke="var(--grey)" stroke-width="4"/>`+
+  `<rect y="336" width="800" height="104" fill="var(--stone)"/><path d="M0 336 H800" stroke="${I}" stroke-width="3"/><rect y="338" width="800" height="7" fill="var(--paper2)"/><path d="M0 356 H800" stroke="var(--sun)" stroke-width="5" stroke-dasharray="10 6"/>`)+
+ hs('lautsprecher',`<path d="M80 0 V30" stroke="${I}" stroke-width="3"/><path d="M66 30 h22 l30 -18 v58 l-30 -18 h-22Z" fill="var(--grey)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M128 28 q10 13 0 26 M138 18 q18 23 0 46" stroke="${I}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`)+
+ hs('gleis',`<path d="M212 0 V32" stroke="${I}" stroke-width="3"/>`+box(184,30,56,56,'var(--r5)',8,3)+txt(212,73,'3',38,'#fff',700,'middle'))+
+ hs('uhr',`<path d="M470 0 V36" stroke="${I}" stroke-width="3"/>`+clock(470,72,34,2,5))+
+ hs('anzeige',box(540,26,248,108,'var(--night)',8,3)+txt(554,50,'Ankunft',15,'var(--paper2)',700)+txt(774,50,'Gleis',12,'var(--paper2)',600,'end')+[['14:00','ICE','München','3','+5'],['14:12','RE 7','Stuttgart','1',''],['14:30','S 2','Flughafen','4','']].map((r,i)=>{const y=76+i*22;return txt(554,y,r[0],13,'var(--sun)',600)+txt(598,y,r[1],13,'var(--sun)',600)+txt(644,y,r[2],13,'var(--sun)',600)+txt(724,y,r[4],13,'var(--cheek)',700)+txt(774,y,r[3],13,'var(--sun)',600,'end')}).join(''))+
+ hs('fahrplan',box(560,148,84,90,'var(--sun)',3,2.5)+txt(602,168,'Abfahrt',13,'var(--line-ink)',700,'middle')+`<path d="M570 180 h64 M570 192 h50 M570 204 h60 M570 216 h44 M570 228 h56" stroke="${I}" stroke-width="2" opacity=".6"/>`)+
+ hs('zug',`<path d="M478 150 H116 Q46 150 22 238 V318 H478Z" fill="var(--paper2)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M40 232 Q58 176 108 172 V232Z" fill="var(--water2)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><rect x="22" y="262" width="456" height="13" fill="var(--red)"/><path d="M22 262 H478 M22 275 H478" stroke="${I}" stroke-width="1.5"/>${[128,194,352,416].map(x=>box(x,178,50,40,'var(--water2)',6,2.5)).join('')}`+box(270,170,52,146,'var(--night)',4,2.5)+`<path d="M296 176 V310" stroke="var(--grey)" stroke-width="2" opacity=".5"/><rect x="30" y="300" width="14" height="8" rx="3" fill="var(--sun)" stroke="${I}" stroke-width="1.2"/>`+txt(160,250,'ICE',22,'var(--red)',700,'middle')+`<rect x="60" y="316" width="90" height="10" rx="4" fill="${I}"/><rect x="360" y="316" width="90" height="10" rx="4" fill="${I}"/>`)+
+ hs('bank',`<rect x="54" y="390" width="8" height="34" fill="${I}"/><rect x="192" y="390" width="8" height="34" fill="${I}"/>`+box(40,382,174,12,'var(--wood)',3,2.2)+box(40,354,174,10,'var(--wood)',3,2.2)+box(40,368,174,10,'var(--wood)',3,2.2)+`<rect x="60" y="350" width="6" height="34" fill="${I}"/><rect x="188" y="350" width="6" height="34" fill="${I}"/>`)+
+ hs('taube',pigeon(244,428))+
+ hs('lena',person(330,424,1.75,'lena'))+
+ hs('koffer',`<path d="M376 360 V330 H394 V360" fill="none" stroke="${I}" stroke-width="4" stroke-linejoin="round"/>`+box(360,358,52,62,'var(--r5)',8,3)+`<path d="M374 362 V416 M398 362 V416" stroke="${I}" stroke-width="2" opacity=".45"/><circle cx="368" cy="424" r="4.5" fill="${I}"/><circle cx="404" cy="424" r="4.5" fill="${I}"/>`)+
+ hs('shruti',person(548,424,1.75,'shruti')+`<path d="M569 338 l22 -34" stroke="var(--skin)" stroke-width="9" stroke-linecap="round"/><circle cx="593" cy="301" r="6" fill="var(--skin)" stroke="${I}" stroke-width="1.5"/><path d="M604 296 q6 6 0 12 M612 290 q10 12 0 24" stroke="${I}" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>`)+
+ hs('sijan',person(630,428,1.75,'sijan')+`<path d="M664 380 L654 346 M666 380 L668 340 M668 380 L684 350" stroke="var(--leaf)" stroke-width="3"/>${[[654,342],[668,334],[686,346]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="9" fill="var(--sun)" stroke="${I}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="4" fill="var(--brown)"/>`).join('')}<path d="M656 372 h22 l-6 18 h-10Z" fill="var(--paper2)" stroke="${I}" stroke-width="1.5" stroke-linejoin="round"/>`)+
+ hs('automat',box(704,250,74,176,'var(--red)',10)+box(716,266,50,40,'var(--water2)',4,2.5)+`<path d="M722 278 h30 M722 288 h22" stroke="${I}" stroke-width="2" opacity=".5"/>${[0,1,2].map(r=>[0,1,2].map(k=>`<rect x="${718+k*16}" y="${318+r*14}" width="12" height="10" rx="2" fill="var(--paper2)" stroke="${I}" stroke-width="1.2"/>`).join('')).join('')}<rect x="720" y="372" width="42" height="8" rx="3" fill="${I}"/><rect x="716" y="394" width="50" height="14" rx="3" fill="var(--night)"/>`),
+
+park:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/><path d="M0 232 Q160 196 360 222 T800 206 V440 H0Z" fill="var(--hill)" stroke="${I}" stroke-width="2.5"/><path d="M0 300 Q200 280 400 300 T800 290 V440 H0Z" fill="var(--leaf)" opacity=".35"/>`+[[40,260],[170,250],[350,270],[480,258],[560,300],[90,300],[400,320],[740,250]].map(([x,y])=>`<path d="M${x} ${y} l4 -10 l4 10 M${x+10} ${y} l3 -8 l3 8" stroke="var(--leaf)" stroke-width="2.5" fill="none" stroke-linecap="round"/>`).join(''))+
+ hs('sonne',sunR(730,64,30))+
+ hs('wolke',cloudB(300,72,1.25))+
+ hs('baum',box(64,170,30,124,'var(--wood)',4,3)+`<path d="M79 220 l-20 -18 M79 240 l18 -16" stroke="${I}" stroke-width="3" stroke-linecap="round"/><circle cx="34" cy="160" r="44" fill="var(--leaf)" stroke="${I}" stroke-width="3"/><circle cx="128" cy="160" r="44" fill="var(--leaf)" stroke="${I}" stroke-width="3"/><circle cx="80" cy="112" r="66" fill="var(--leaf)" stroke="${I}" stroke-width="3"/><path d="M40 168 q20 14 40 0 q20 14 40 0" stroke="${I}" stroke-width="2" fill="none" opacity=".35"/><circle cx="60" cy="96" r="5" fill="var(--red)" stroke="${I}"/><circle cx="104" cy="128" r="5" fill="var(--red)" stroke="${I}"/><circle cx="30" cy="150" r="5" fill="var(--red)" stroke="${I}"/>`)+
+ hs('eiswagen',person(262,262,1.3,'felix')+`<path d="M204 182 V148 M204 148 Q204 108 262 104 Q320 108 320 148Z" fill="var(--cheek)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M262 104 V230" stroke="${I}" stroke-width="3"/><path d="M204 148 Q262 136 320 148" fill="none" stroke="${I}" stroke-width="2.5"/>`+box(196,222,134,62,'var(--paper2)',8)+`<path d="M196 240 H330" stroke="var(--cheek)" stroke-width="8"/>`+iceCone(228,250,'var(--shruti)')+iceCone(254,250,'var(--sun-soft)')+iceCone(280,250,'var(--brown)')+txt(304,272,'EIS',14,'var(--line-ink)',700,'middle')+`<circle cx="218" cy="288" r="13" fill="${I}"/><circle cx="218" cy="288" r="5" fill="var(--grey)"/><circle cx="308" cy="288" r="13" fill="${I}"/><circle cx="308" cy="288" r="5" fill="var(--grey)"/>`)+
+ hs('teich',`<ellipse cx="226" cy="352" rx="172" ry="44" fill="var(--water)" stroke="${I}" stroke-width="3"/><path d="M110 344 h40 M180 366 h60 M290 340 h46 M140 376 h30 M300 372 h40" stroke="var(--water2)" stroke-width="4" stroke-linecap="round"/><path d="M80 330 q-6 -22 2 -34 M88 330 q4 -22 14 -30 M374 334 q4 -24 -4 -36" stroke="var(--leaf)" stroke-width="4" fill="none" stroke-linecap="round"/>`)+
+ hs('enten',duck(176,354)+duck(270,368,-1)+`<path d="M150 356 q-10 4 -20 0 M300 370 q10 4 20 0" stroke="var(--water2)" stroke-width="3" fill="none" stroke-linecap="round"/>`)+
+ hs('blumen',[[24,'var(--red)'],[50,'var(--violet)'],[78,'var(--paper2)'],[104,'var(--shruti)'],[132,'var(--r5)'],[40,'var(--sun)'],[118,'var(--red)']].map(([x,c],i)=>bloom(x,i>4?436:428,c,i>4?18:26)).join(''))+
+ hs('drachen',`<path d="M594 142 Q680 230 752 352" stroke="${I}" stroke-width="1.6" fill="none"/><path d="M594 142 q-14 20 2 34 q16 14 0 34 q-14 18 4 32" stroke="${I}" stroke-width="2" fill="none"/>${[[588,162],[600,194],[594,226]].map(([x,y],i)=>`<path d="M${x-8} ${y-6} l16 12 M${x+8} ${y-6} l-16 12" stroke="${['var(--sun)','var(--r5)','var(--red)'][i]}" stroke-width="6" stroke-linecap="round"/>`).join('')}<path d="M594 40 L632 92 L594 142 L556 92Z" fill="var(--red)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M594 40 L594 142 M556 92 H632" stroke="${I}" stroke-width="2"/><path d="M594 40 L632 92 L594 92Z M594 92 L556 92 L594 142Z" fill="var(--sun)"/><path d="M594 40 L632 92 L594 142 L556 92Z" fill="none" stroke="${I}" stroke-width="3" stroke-linejoin="round"/>`)+
+ hs('sijan',person(452,366,1.55,'sijan'))+
+ hs('shruti',person(530,370,1.55,'shruti'))+
+ hs('lena',person(610,366,1.55,'lena'))+
+ hs('kind',person(736,394,1.2,'tim'))+
+ hs('decke',`<path d="M424 376 H690 L722 438 H396Z" fill="var(--red)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M490 376 L478 438 M556 376 L558 438 M622 376 L638 438 M414 396 H698 M406 418 H710" stroke="var(--paper2)" stroke-width="8" opacity=".85"/><path d="M424 376 H690 L722 438 H396Z" fill="none" stroke="${I}" stroke-width="3" stroke-linejoin="round"/>`)+
+ hs('korb',`<path d="M446 402 q28 -36 56 0" fill="none" stroke="var(--brown)" stroke-width="5"/><path d="M440 400 h68 l-8 34 h-52Z" fill="var(--wood)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M438 398 h72" stroke="${I}" stroke-width="5" stroke-linecap="round"/><path d="M450 412 h48 M452 424 h44" stroke="${I}" stroke-width="1.5" opacity=".45"/>`+apple(466,394,'var(--red)')+apple(484,392,'var(--leaf)'))+
+ hs('kuchen',`<ellipse cx="604" cy="420" rx="46" ry="10" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/><path d="M570 418 V398 Q570 388 604 388 Q638 388 638 398 V418 Q604 428 570 418Z" fill="var(--sun-soft)" stroke="${I}" stroke-width="2.5"/><ellipse cx="604" cy="397" rx="34" ry="9" fill="var(--wood)" stroke="${I}" stroke-width="2"/><path d="M582 396 q6 -4 12 0 M600 400 q6 -4 12 0 M612 393 q6 -4 12 0" stroke="var(--sun-soft)" stroke-width="2.5" fill="none" stroke-linecap="round"/>`)+
+ hs('ball',`<circle cx="770" cy="418" r="18" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/><path d="M770 408 l7 5 l-3 8 h-8 l-3 -8Z" fill="${I}"/><path d="M770 408 v-10 M777 413 l10 -3 M774 421 l6 9 M766 421 l-6 9 M763 413 l-10 -3" stroke="${I}" stroke-width="1.5"/>`),
+};
+
+const TIPCOVER=()=>svg(sky()+sunR(352,44,18)+cloudB(60,40,.6)+
+ `<rect x="20" y="70" width="110" height="134" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><rect x="34" y="82" width="82" height="22" rx="3" fill="var(--paper2)" stroke="${I}" stroke-width="2"/>`+txt(75,99,'POST',15,'var(--line-ink)',700,'middle')+
+ `<rect x="138" y="96" width="96" height="108" fill="var(--cheek)" stroke="${I}" stroke-width="2.5"/>`+txt(186,124,'Café',17,'var(--line-ink)',700,'middle')+`<rect x="150" y="140" width="72" height="34" rx="3" fill="var(--sky)" stroke="${I}" stroke-width="2"/>`+
+ `<rect y="200" width="400" height="40" fill="var(--stone)"/><path d="M0 200 H400" stroke="${I}" stroke-width="2.5"/>`+
+ person(150,226,1.05,'shruti')+person(196,228,1.05,'sijan')+
+ `<g transform="translate(316 132) rotate(32)"><path d="M-17 50 L0 86 L17 50Z" fill="var(--paper2)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M-6 74 L0 86 L6 74Z" fill="${I}"/><rect x="-19" y="-82" width="38" height="136" rx="19" fill="var(--violet)" stroke="${I}" stroke-width="3"/><rect x="-19" y="-30" width="38" height="20" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><circle cx="0" cy="-58" r="7" fill="var(--leaf)" stroke="${I}" stroke-width="2"/><path d="M-8 20 h16" stroke="var(--paper2)" stroke-width="4" stroke-linecap="round" opacity=".6"/></g>`+
+ `<g fill="var(--sun)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round">${[[262,196,9],[244,170,6],[284,214,5]].map(([x,y,r])=>`<path d="M${x} ${y-r*2} L${x+r*.5} ${y-r*.5} L${x+r*2} ${y} L${x+r*.5} ${y+r*.5} L${x} ${y+r*2} L${x-r*.5} ${y+r*.5} L${x-r*2} ${y} L${x-r*.5} ${y-r*.5}Z"/>`).join('')}</g>`+
+ `<path d="M300 236 q16 -12 0 -26 M310 238 q26 -20 0 -44" stroke="${I}" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".55"/>`,'Shruti und Sijan in der Stadt mit dem Zauberstift');
+
+/* Content. Each hotspot: [word|english, plural, discover, story, knowledge].
+   discover/knowledge: "deutsch|english" (or a list). story: one exchange or a list; an exchange is lines
+   joined by " // ", each line "speaker: deutsch|english" (no speaker = narrator). Questions: [frage|question, "ids that count"]. */
+const TIPBOOKS=[{id:'samstag',title:'Ein Samstag in der Stadt',titleEn:'A Saturday in town',color:'#B83FD1',cast:'Shruti, Sijan und Lena',
+scenes:[
+{id:'kueche',title:'In der Küche',en:'In the kitchen',focus:'Wo? Wohin? · Präpositionen',
+ story:['Es ist Samstagmorgen. Shruti und Sijan frühstücken in der Küche.|It is Saturday morning. Shruti and Sijan are having breakfast in the kitchen.','Am Nachmittag kommt ihre Freundin Lena mit dem Zug. Dann machen alle zusammen ein Picknick im Park.|In the afternoon their friend Lena is coming by train. Then they will all have a picnic in the park together.','Aber der Kühlschrank ist fast leer. Zuerst müssen sie einkaufen.|But the fridge is almost empty. First they have to go shopping.'],
+ hs:{
+ _bg:['die Küche|the kitchen','die Küchen','In der Küche kocht und isst man.|In the kitchen you cook and eat.','Die Küche ist hell und gemütlich. Hier frühstücken Shruti und Sijan jeden Morgen.|The kitchen is bright and cosy. Shruti and Sijan have breakfast here every morning.','Eine Wohnung hat oft eine Küche, ein Bad, ein Wohnzimmer und ein Schlafzimmer.|A flat often has a kitchen, a bathroom, a living room and a bedroom.'],
+ fenster:['das Fenster|the window','die Fenster','Durch das Fenster sieht man den blauen Himmel.|Through the window you can see the blue sky.','shruti: Schau mal aus dem Fenster! Das Wetter ist super.|Look out of the window! The weather is great.','das Fenster, die Fenster: Viele Wörter auf -er haben im Plural keine Endung.|Many words ending in -er have no plural ending.'],
+ sonne:['die Sonne|the sun','','Die Sonne scheint. Heute wird es warm.|The sun is shining. It will be warm today.','sijan: Die Sonne scheint! Perfekt für ein Picknick.|The sun is shining! Perfect for a picnic.','die Sonne → sonnig, der Regen → regnerisch, der Wind → windig. So spricht man über das Wetter.|sun → sunny, rain → rainy, wind → windy. That is how you talk about the weather.'],
+ pflanze:['die Pflanze|the plant','die Pflanzen','Die Pflanze steht auf der Fensterbank.|The plant is on the windowsill.','shruti: Oh, die Pflanze braucht Wasser. Ich gieße sie später.|Oh, the plant needs water. I’ll water it later.','Stehen oder liegen? Die Pflanze steht, aber das Buch liegt. Hohe Dinge stehen, flache Dinge liegen.|Stand or lie? The plant stands, but the book lies. Tall things stand, flat things lie.'],
+ uhr:['die Uhr|the clock','die Uhren','Es ist halb zehn.|It is half past nine.','sijan: Schon halb zehn! Der Markt ist nur bis ein Uhr offen.|Already half past nine! The market is only open until one o’clock.','Halb zehn ist neun Uhr dreißig. Achtung: Man sagt „halb“ und die nächste Stunde.|Halb zehn is 9:30. Careful: you say "halb" plus the next hour.'],
+ schluessel:['der Schlüssel|the key','die Schlüssel','Die Schlüssel hängen an der Wand.|The keys are hanging on the wall.','shruti: Vergiss den Schlüssel nicht, Sijan!|Don’t forget the key, Sijan! // sijan: Keine Sorge, ich nehme ihn mit.|Don’t worry, I’ll take it with me.','Der Schlüssel hängt an der Wand: Wo? → Dativ. Ich hänge den Schlüssel an die Wand: Wohin? → Akkusativ.|The key hangs on the wall: where? → dative. I hang the key on the wall: where to? → accusative.'],
+ lampe:['die Lampe|the lamp','die Lampen','Die Lampe hängt über dem Tisch.|The lamp hangs above the table.','Die Lampe ist aus. Draußen ist es schon hell.|The lamp is off. It is already light outside.','über + Dativ: über dem Tisch, über der Tür, über dem Bett.|über + dative: above the table, above the door, above the bed.'],
+ tisch:['der Tisch|the table','die Tische','Auf dem Tisch stehen eine Tasse und ein Teller.|On the table there are a cup and a plate.','Shruti und Sijan frühstücken heute lange am Tisch.|Shruti and Sijan have a long breakfast at the table today.','am Tisch ist kurz für „an dem Tisch“. Aus „an dem“ wird „am“.|"am Tisch" is short for "an dem Tisch".'],
+ broetchen:['das Brötchen|the bread roll','die Brötchen','Auf dem Teller liegen zwei Brötchen.|There are two bread rolls on the plate.','sijan: Die Brötchen sind lecker. Aber das sind die letzten!|The rolls are tasty. But these are the last ones!','In Deutschland isst man zum Frühstück oft Brötchen mit Butter, Käse oder Marmelade.|In Germany people often eat bread rolls with butter, cheese or jam for breakfast.'],
+ tasse:['die Tasse|the cup','die Tassen','In der Tasse ist heißer Kaffee.|There is hot coffee in the cup.','sijan: Morgens trinke ich immer einen Kaffee mit Milch.|In the morning I always drink a coffee with milk.','eine Tasse Kaffee, ein Glas Wasser, eine Flasche Saft. Man sagt nicht „eine Tasse von Kaffee“.|a cup of coffee, a glass of water, a bottle of juice. You don’t say "eine Tasse von Kaffee".'],
+ marmelade:['die Marmelade|the jam','','Das ist Erdbeermarmelade.|This is strawberry jam.','shruti: Die Marmelade ist fast leer. Ich schreibe sie auf die Liste.|The jam is almost empty. I’ll write it on the list.','die Erdbeere und die Marmelade: die Erdbeermarmelade. Das letzte Wort bestimmt den Artikel.|strawberry + jam = strawberry jam. The last word decides the article.'],
+ katze:['die Katze|the cat','die Katzen','Die Katze sitzt unter dem Tisch.|The cat is sitting under the table.',['katze: Miau! Miau!|Meow! Meow!','Das ist Minka. Sie wartet unter dem Tisch auf ein Stück Käse.|This is Minka. She is waiting under the table for a piece of cheese.'],'Die Katze sitzt unter dem Tisch: Wo? → Dativ. Die Katze läuft unter den Tisch: Wohin? → Akkusativ.|The cat sits under the table: where? → dative. The cat runs under the table: where to? → accusative.'],
+ herd:['der Herd|the stove','die Herde','Auf dem Herd steht ein Topf.|There is a pot on the stove.','shruti: Ich koche Eier. Möchtest du auch ein Ei?|I’m boiling eggs. Would you like an egg too? // sijan: Ja, gern!|Yes, please!','kochen: ich koche, du kochst, er kocht. Kochen heißt „to cook“ und auch „to boil“.|kochen means "to cook" and also "to boil".'],
+ topf:['der Topf|the pot','die Töpfe','Im Topf kochen zwei Eier.|Two eggs are boiling in the pot.','Das Wasser im Topf ist heiß. Blubb, blubb!|The water in the pot is hot. Bubble, bubble!','der Topf, die Töpfe: Viele Nomen bekommen im Plural einen Umlaut, zum Beispiel der Apfel, die Äpfel.|Many nouns get an umlaut in the plural, for example Apfel – Äpfel.'],
+ kaffee:['die Kaffeemaschine|the coffee machine','die Kaffeemaschinen','Die Kaffeemaschine macht frischen Kaffee.|The coffee machine makes fresh coffee.','sijan: Ohne Kaffee kann ich morgens nicht denken!|Without coffee I can’t think in the morning!','Kaffee ist das Lieblingsgetränk der Deutschen.|Coffee is the Germans’ favourite drink.'],
+ kuehlschrank:['der Kühlschrank|the fridge','die Kühlschränke','Im Kühlschrank sind nur noch Milch und Butter.|There is only milk and butter left in the fridge.','shruti: Oh nein, der Kühlschrank ist fast leer!|Oh no, the fridge is almost empty! // sijan: Dann müssen wir heute einkaufen.|Then we have to go shopping today.','kühl und der Schrank: der Kühlschrank. Im Deutschen kann man Wörter zusammensetzen.|cool + cupboard = fridge. In German you can join words together.'],
+ liste:['die Einkaufsliste|the shopping list','die Einkaufslisten','Auf der Liste stehen Brot, Käse, Äpfel und Tomaten.|Bread, cheese, apples and tomatoes are on the list.','shruti: Brot, Käse, Äpfel, Tomaten … Fehlt noch etwas?|Bread, cheese, apples, tomatoes … Is anything missing? // sijan: Ja, ein Kuchen für das Picknick!|Yes, a cake for the picnic!','einkaufen und die Liste: die Einkaufsliste. Das „s“ in der Mitte verbindet die zwei Wörter.|shop + list = shopping list. The "s" in the middle links the two words.'],
+ tasche:['die Einkaufstasche|the shopping bag','die Einkaufstaschen','Die Tasche steht auf dem Boden.|The bag is on the floor.','shruti: Wir nehmen die Tasche mit. Dann brauchen wir keine Plastiktüte.|We’ll take the bag. Then we don’t need a plastic bag.','In Deutschland kostet eine Tüte im Geschäft Geld. Darum bringen viele Leute eine Tasche mit.|In Germany a bag costs money in shops. That’s why many people bring their own bag.'],
+ shruti:['Shruti|Shruti','','Das ist Shruti. Sie liest die Einkaufsliste.|This is Shruti. She is reading the shopping list.',['shruti: Guten Morgen, Sijan! Heute ist Samstag. Wir müssen einkaufen.|Good morning, Sijan! Today is Saturday. We have to go shopping.','shruti: Zuerst gehen wir auf den Markt und dann in die Stadt.|First we go to the market and then into town.'],'Am Samstag sind die Geschäfte in Deutschland offen. Am Sonntag sind fast alle Geschäfte zu.|On Saturday shops in Germany are open. On Sunday almost all shops are closed.'],
+ sijan:['Sijan|Sijan','','Das ist Sijan. Er trinkt Kaffee.|This is Sijan. He is drinking coffee.',['sijan: Guten Morgen! Heute habe ich frei. Wir können lange frühstücken.|Good morning! I have the day off today. We can have a long breakfast.','sijan: Wann kommt Lena?|When is Lena coming? // shruti: Um zwei Uhr am Bahnhof.|At two o’clock at the station.'],'er, sie, es: Sijan ist „er“, Shruti ist „sie“, das Kind ist „es“.|he, she, it: Sijan → er, Shruti → sie, the child → es.'],
+ },
+ qs:[['Was sitzt unter dem Tisch?|What is sitting under the table?','katze'],['Was hängt an der Wand und zeigt die Zeit?|What hangs on the wall and shows the time?','uhr'],['Was steht auf der Fensterbank?|What is on the windowsill?','pflanze'],['Wo steht, was Shruti und Sijan kaufen müssen?|Where does it say what Shruti and Sijan have to buy?','liste'],['Er ist kalt und weiß. Darin sind Milch und Butter. Was ist das?|It is cold and white. Milk and butter are inside. What is it?','kuehlschrank'],['Was braucht man für die Tür?|What do you need for the door?','schluessel'],['Was macht Kaffee?|What makes coffee?','kaffee'],['Was hängt über dem Tisch?|What hangs above the table?','lampe'],['Worin kochen die Eier?|What are the eggs boiling in?','topf']]},
+
+{id:'markt',title:'Auf dem Markt',en:'At the market',focus:'Einkaufen · Mengen und Preise',
+ story:['Auf dem Markt ist viel los. Es gibt Obst, Gemüse, Käse und Brot.|The market is busy. There is fruit, vegetables, cheese and bread.','Shruti hat die Einkaufsliste, und Sijan hat das Geld.|Shruti has the shopping list and Sijan has the money.','Sie kaufen alles für das Picknick.|They buy everything for the picnic.'],
+ hs:{
+ _bg:['der Markt|the market','die Märkte','Jeden Samstag ist hier Markt.|There is a market here every Saturday.','Auf dem Markt ist viel los. Viele Leute kaufen ein.|The market is busy. Lots of people are shopping.','Viele Städte haben einen Wochenmarkt. Dort gibt es frisches Obst und Gemüse aus der Region.|Many towns have a weekly market with fresh local fruit and vegetables.'],
+ stand:['der Marktstand|the market stall','die Marktstände','Auf dem Markt gibt es viele Stände.|There are many stalls at the market.','Die Verkäufer bauen ihre Stände schon um sechs Uhr morgens auf.|The sellers set up their stalls at six in the morning.','aufbauen ist trennbar: Sie bauen den Stand auf. Sie haben den Stand aufgebaut.|aufbauen is separable: they set up the stall. They have set up the stall.'],
+ aepfel:['der Apfel|the apple','die Äpfel','Die Äpfel sind rot und grün.|The apples are red and green.','shruti: Ich hätte gern ein Kilo Äpfel, bitte.|I’d like a kilo of apples, please. // huber: Gern. Die roten oder die grünen?|Sure. The red ones or the green ones? // shruti: Die roten, bitte.|The red ones, please.','der Apfel, die Äpfel: Im Plural kommt ein Umlaut dazu.|In the plural an umlaut is added.'],
+ bananen:['die Banane|the banana','die Bananen','Die Bananen sind gelb.|The bananas are yellow.','huber: Die Bananen sind heute im Angebot!|The bananas are on offer today!','im Angebot: Es ist billiger als normal.|on offer: it is cheaper than usual.'],
+ tomaten:['die Tomate|the tomato','die Tomaten','Die Tomaten sind rot und frisch.|The tomatoes are red and fresh.','sijan: Was kosten die Tomaten?|How much are the tomatoes? // huber: Ein Pfund kostet einen Euro fünfzig.|A pound costs one euro fifty.','ein Pfund sind fünfhundert Gramm. Auf dem Markt sagt man oft „ein Pfund Tomaten“.|A pound is 500 grams. At the market people often say "a pound of tomatoes".'],
+ karotten:['die Karotte|the carrot','die Karotten','Die Karotten liegen in einer Kiste vor dem Stand.|The carrots are in a crate in front of the stall.','huber: Die Karotten kommen direkt vom Bauernhof.|The carrots come straight from the farm.','Karotte oder Möhre? Beide Wörter sind richtig. Im Norden sagt man oft Möhre.|Karotte or Möhre? Both are correct. In the north people often say Möhre.'],
+ preis:['das Preisschild|the price tag','die Preisschilder','Ein Kilo Äpfel kostet zwei Euro.|A kilo of apples costs two euros.','sijan: Zwei Euro für ein Kilo. Das ist nicht teuer.|Two euros for a kilo. That’s not expensive.','teuer und billig: Auf dem Markt sind die Äpfel billiger als im Supermarkt.|expensive and cheap: at the market the apples are cheaper than in the supermarket.'],
+ waage:['die Waage|the scales','die Waagen','Mit der Waage wiegt man Obst und Gemüse.|You weigh fruit and vegetables with the scales.','huber: So, ein Kilo und hundert Gramm. Ist das okay?|There, one kilo and a hundred grams. Is that okay? // shruti: Ja, das ist okay.|Yes, that’s okay.','wiegen: Frau Huber wiegt die Äpfel. Ein Kilo hat tausend Gramm.|to weigh: Mrs Huber weighs the apples. A kilo has a thousand grams.'],
+ verkaeuferin:['die Verkäuferin|the saleswoman','die Verkäuferinnen','Das ist Frau Huber. Sie verkauft Obst und Gemüse.|This is Mrs Huber. She sells fruit and vegetables.',['huber: Guten Morgen! Was darf es sein?|Good morning! What can I get you?','huber: Darf es noch etwas sein?|Anything else? // shruti: Nein, danke. Das ist alles.|No, thank you. That’s everything.'],'der Verkäufer, die Verkäuferin: Mit -in wird ein Beruf weiblich.|With -in a job title becomes female.'],
+ kaese:['der Käse|the cheese','','Der Käse ist gelb und hat Löcher.|The cheese is yellow and has holes.','sijan: Ich hätte gern zweihundert Gramm Bergkäse, bitte.|I’d like two hundred grams of mountain cheese, please. // wagner: Möchten Sie mal probieren?|Would you like to try some? // sijan: Ja, gern. Mmh, lecker!|Yes, please. Mmm, delicious!','Käse sagt man meistens ohne Plural: ein Stück Käse, zweihundert Gramm Käse.|Cheese is usually used without a plural: a piece of cheese, 200 grams of cheese.'],
+ brot:['das Brot|the bread','die Brote','Das Brot ist frisch und noch warm.|The bread is fresh and still warm.','wagner: Das Vollkornbrot ist ganz frisch.|The wholemeal bread is very fresh. // shruti: Dann nehmen wir ein Vollkornbrot.|Then we’ll take a wholemeal loaf.','In Deutschland gibt es über dreitausend Brotsorten.|In Germany there are more than three thousand kinds of bread.'],
+ brezel:['die Brezel|the pretzel','die Brezeln','Die Brezel ist braun und hat Salz.|The pretzel is brown and has salt on it.','sijan: Und zwei Brezeln für das Picknick, bitte.|And two pretzels for the picnic, please.','Die Brezel kommt aus Süddeutschland. In Bayern sagt man auch „die Breze“.|The pretzel comes from southern Germany. In Bavaria people also say "die Breze".'],
+ baecker:['der Verkäufer|the salesman','die Verkäufer','Das ist Herr Wagner. Er verkauft Käse und Brot.|This is Mr Wagner. He sells cheese and bread.',['wagner: Guten Morgen! Was möchten Sie?|Good morning! What would you like?','wagner: Das macht zusammen neun Euro achtzig.|That’s nine euros eighty altogether. // sijan: Hier sind zehn Euro. Stimmt so!|Here are ten euros. Keep the change!'],'„Stimmt so!“ sagt man, wenn der Verkäufer den Rest als Trinkgeld behalten darf.|You say "Stimmt so!" when the seller can keep the rest as a tip.'],
+ korb:['der Korb|the basket','die Körbe','Der Korb ist schon fast voll.|The basket is already almost full.','shruti: Der Korb ist schwer! Kannst du ihn tragen?|The basket is heavy! Can you carry it? // sijan: Na klar!|Of course!','der Korb, die Körbe: Aus o wird im Plural oft ö.|In the plural, o often becomes ö.'],
+ blumen:['die Blume|the flower','die Blumen','Die Sonnenblumen stehen in einem Eimer.|The sunflowers are in a bucket.','sijan: Schau mal, Sonnenblumen! Die kaufen wir für Lena.|Look, sunflowers! We’ll buy them for Lena.','Wenn man Freunde besucht oder abholt, bringt man oft Blumen mit.|When you visit or pick up friends, you often bring flowers.'],
+ hund:['der Hund|the dog','die Hunde','Der Hund ist klein und braun.|The dog is small and brown.',['hund: Wuff! Wuff!|Woof! Woof!','Der Hund riecht den Käse. Er hat Hunger!|The dog smells the cheese. He is hungry!'],'der Hund, die Katze, der Vogel: Das sind Haustiere.|dog, cat, bird: these are pets.'],
+ kirche:['die Kirche|the church','die Kirchen','Die Kirchturmuhr zeigt Viertel nach zehn.|The church clock shows quarter past ten.','Die Glocken läuten. Ding, dong!|The bells are ringing. Ding, dong!','Viertel nach zehn ist zehn Uhr fünfzehn. Viertel vor elf ist zehn Uhr fünfundvierzig.|Quarter past ten is 10:15. Quarter to eleven is 10:45.'],
+ shruti:['Shruti|Shruti','','Shruti hat die Einkaufsliste.|Shruti has the shopping list.','shruti: Äpfel, Tomaten, Käse, Brot … Was fehlt noch?|Apples, tomatoes, cheese, bread … What’s still missing? // sijan: Der Kuchen! Den kaufen wir später im Café.|The cake! We’ll buy that later at the café.','„Ich hätte gern …“ ist sehr höflich. Man sagt es oft beim Einkaufen.|"Ich hätte gern …" is very polite. People often say it when shopping.'],
+ sijan:['Sijan|Sijan','','Sijan bezahlt.|Sijan is paying.','sijan: Kann ich mit Karte bezahlen?|Can I pay by card? // wagner: Ja, natürlich.|Yes, of course.','bar bezahlen oder mit Karte bezahlen? Auf dem Markt bezahlen viele Leute bar.|Pay cash or by card? At the market many people pay cash.'],
+ },
+ qs:[['Was ist gelb und krumm?|What is yellow and curved?','bananen'],['Was liegt in einer Kiste vor dem Stand?|What is in a crate in front of the stall?','karotten'],['Was kostet zwei Euro pro Kilo?|What costs two euros per kilo?','aepfel preis'],['Womit wiegt Frau Huber das Obst?|What does Mrs Huber weigh the fruit with?','waage'],['Was kauft Sijan für Lena?|What does Sijan buy for Lena?','blumen'],['Wer verkauft Käse und Brot?|Who sells cheese and bread?','baecker'],['Sie ist braun, hat Salz und kommt aus Süddeutschland. Was ist das?|It is brown, has salt and comes from southern Germany. What is it?','brezel'],['Wo ist die Uhr? Sie zeigt Viertel nach zehn.|Where is the clock? It shows quarter past ten.','kirche'],['Was macht „wuff, wuff“?|What goes "woof, woof"?','hund']]},
+
+{id:'stadt',title:'In der Stadt',en:'In town',focus:'Wegbeschreibung · zu + Dativ',
+ story:['Jetzt sind Shruti und Sijan in der Stadt.|Now Shruti and Sijan are in town.','Sijan bringt ein Paket für seine Oma zur Post. Shruti kauft Sonnencreme in der Apotheke und einen Kuchen im Café.|Sijan takes a parcel for his grandma to the post office. Shruti buys sun cream at the pharmacy and a cake at the café.','Dann fragt Shruti eine Frau nach dem Weg zum Bahnhof.|Then Shruti asks a woman the way to the station.'],
+ hs:{
+ _bg:['die Stadt|the town','die Städte','In der Stadt gibt es viele Geschäfte.|There are lots of shops in town.','In der Stadt ist es laut. Autos, Busse und Fahrräder fahren vorbei.|It is noisy in town. Cars, buses and bikes go past.','Eine große Stadt ist eine Großstadt, eine kleine Stadt ist eine Kleinstadt.|A big town is a "Großstadt", a small town is a "Kleinstadt".'],
+ post:['die Post|the post office','','Bei der Post kann man Briefe und Pakete schicken.|At the post office you can send letters and parcels.','sijan: Ich gehe zur Post. Das Paket ist für meine Oma.|I’m going to the post office. The parcel is for my grandma.','zu + Dativ: zu der Post wird zur Post, zu dem Bahnhof wird zum Bahnhof.|zu + dative: zu der → zur, zu dem → zum.'],
+ briefkasten:['der Briefkasten|the postbox','die Briefkästen','Der Briefkasten ist gelb.|The postbox is yellow.','shruti: Ich werfe noch schnell eine Postkarte in den Briefkasten.|I’ll quickly post a postcard in the postbox.','In Deutschland sind die Briefkästen gelb. In England sind sie rot.|In Germany postboxes are yellow. In England they are red.'],
+ paket:['das Paket|the parcel','die Pakete','Das Paket ist groß und schwer.|The parcel is big and heavy.','sijan: Im Paket sind Tee, Schokolade und Fotos. Meine Oma hat nächste Woche Geburtstag.|In the parcel there are tea, chocolate and photos. My grandma has her birthday next week.','Ich schicke meiner Oma ein Paket. Wem? Meiner Oma, das ist Dativ. Was? Ein Paket, das ist Akkusativ.|I send my grandma a parcel. To whom? → dative. What? → accusative.'],
+ apotheke:['die Apotheke|the pharmacy','die Apotheken','In der Apotheke kauft man Medikamente.|You buy medicine at the pharmacy.','shruti: Ich brauche noch Sonnencreme. Die kaufe ich in der Apotheke.|I still need sun cream. I’ll buy it at the pharmacy.','Das rote „A“ zeigt in Deutschland: Hier ist eine Apotheke.|In Germany the red "A" shows: here is a pharmacy.'],
+ ampel:['die Ampel|the traffic light','die Ampeln','Die Ampel ist rot. Wir müssen warten.|The light is red. We have to wait.','shruti: Stopp, Sijan! Die Ampel ist rot!|Stop, Sijan! The light is red! // sijan: Oh, Entschuldigung! Ich warte.|Oh, sorry! I’ll wait.','Rot heißt stehen, grün heißt gehen. In Deutschland warten die Leute an der roten Ampel, auch ohne Autos.|Red means stop, green means go. In Germany people wait at a red light, even with no cars.'],
+ zebrastreifen:['der Zebrastreifen|the zebra crossing','die Zebrastreifen','Am Zebrastreifen kann man über die Straße gehen.|At the zebra crossing you can cross the street.','Am Zebrastreifen halten die Autos an.|At the zebra crossing the cars stop.','über die Straße gehen: Wohin? → Akkusativ.|to go across the street: where to? → accusative.'],
+ fahrrad:['das Fahrrad|the bicycle','die Fahrräder','Das Fahrrad steht vor der Apotheke.|The bicycle is in front of the pharmacy.','sijan: Nächstes Mal fahren wir mit dem Fahrrad in die Stadt.|Next time we’ll cycle into town.','mit + Dativ: mit dem Fahrrad, mit dem Bus, mit dem Zug. Aber: zu Fuß.|with + dative: by bike, by bus, by train. But: on foot.'],
+ cafe:['das Café|the café','die Cafés','Im Café gibt es Kaffee und Kuchen.|At the café there is coffee and cake.','shruti: Hier kaufen wir den Kuchen für das Picknick. Einen Apfelkuchen, bitte!|We’ll buy the cake for the picnic here. An apple cake, please!','Kaffee und Kuchen: Am Nachmittag, so um drei Uhr, essen viele Deutsche gern Kuchen.|Coffee and cake: in the afternoon, around three, many Germans like to eat cake.'],
+ haltestelle:['die Haltestelle|the bus stop','die Haltestellen','An der Haltestelle wartet man auf den Bus.|At the bus stop you wait for the bus.','Der Bus Nummer zwölf fährt zum Bahnhof.|Bus number twelve goes to the station.','Das grüne „H“ auf dem gelben Schild bedeutet: Haltestelle.|The green "H" on the yellow sign means: bus stop.'],
+ bus:['der Bus|the bus','die Busse','Der Bus ist rot. Er fährt zum Bahnhof.|The bus is red. It goes to the station.','sijan: Nehmen wir den Bus?|Shall we take the bus? // shruti: Nein, wir gehen zu Fuß. Es ist nicht weit.|No, we’ll walk. It’s not far.','Eine Fahrkarte kauft man am Automaten, im Bus oder mit dem Handy.|You buy a ticket at the machine, on the bus or with your phone.'],
+ bank:['die Bank|the bank','die Banken','Bei der Bank kann man Geld abheben.|At the bank you can withdraw money.','sijan: Ich brauche noch Bargeld. Da drüben ist eine Bank.|I still need cash. There’s a bank over there.','Achtung: die Bank für Geld, Plural die Banken. Aber die Bank zum Sitzen, Plural die Bänke!|Careful: bank (money) → Banken. But bench → Bänke!'],
+ wegweiser:['der Wegweiser|the signpost','die Wegweiser','Der Wegweiser zeigt: Zum Bahnhof geht es nach rechts.|The signpost shows: the station is to the right.','Bahnhof: fünfhundert Meter. Park: ein Kilometer.|Station: five hundred metres. Park: one kilometre.','nach rechts, nach links, geradeaus: So zeigt man den Weg.|to the right, to the left, straight on: that’s how you give directions.'],
+ frau:['die Frau|the woman','die Frauen','Die Frau ist freundlich. Sie hilft Shruti.|The woman is friendly. She helps Shruti.',['frau: Zum Bahnhof? Gehen Sie hier geradeaus und dann an der Ampel rechts.|To the station? Go straight on here and then right at the traffic lights.','frau: Es ist nicht weit, nur fünf Minuten zu Fuß.|It’s not far, only five minutes on foot.'],'„Gehen Sie geradeaus!“ Der Imperativ mit „Sie“ ist höflich: zuerst das Verb, dann „Sie“.|The imperative with "Sie" is polite: verb first, then "Sie".'],
+ shruti:['Shruti|Shruti','','Shruti fragt nach dem Weg.|Shruti asks the way.',['shruti: Entschuldigung, wie komme ich zum Bahnhof?|Excuse me, how do I get to the station?','shruti: Vielen Dank! Einen schönen Tag noch!|Thank you very much! Have a nice day!'],'„Entschuldigung …“ sagt man, wenn man eine fremde Person etwas fragt.|You say "Entschuldigung …" when you ask a stranger something.'],
+ sijan:['Sijan|Sijan','','Sijan trägt ein Paket.|Sijan is carrying a parcel.','sijan: Ich gehe schnell zur Post. Wartest du auf mich?|I’ll quickly go to the post office. Will you wait for me? // shruti: Ja, ich warte vor dem Café.|Yes, I’ll wait in front of the café.','warten auf + Akkusativ: Ich warte auf dich. Wir warten auf den Bus.|wait for + accusative: I wait for you. We wait for the bus.'],
+ },
+ qs:[['Wo kann man ein Paket schicken?|Where can you send a parcel?','post'],['Wo kauft Shruti Sonnencreme?|Where does Shruti buy sun cream?','apotheke'],['Er ist gelb und hat Briefe im Bauch. Was ist das?|It is yellow and has letters in its belly. What is it?','briefkasten'],['Sie ist rot, gelb oder grün. Was ist das?|It is red, yellow or green. What is it?','ampel'],['Wo wartet man auf den Bus?|Where do you wait for the bus?','haltestelle'],['Wo kann man Geld abheben?|Where can you withdraw money?','bank'],['Wer erklärt Shruti den Weg?|Who explains the way to Shruti?','frau'],['Was steht vor der Apotheke?|What is in front of the pharmacy?','fahrrad'],['Wo kauft Shruti den Kuchen?|Where does Shruti buy the cake?','cafe']]},
+
+{id:'bahnhof',title:'Am Bahnhof',en:'At the station',focus:'Uhrzeit · trennbare Verben',
+ story:['Am Bahnhof warten Shruti und Sijan auf Lena.|At the station Shruti and Sijan are waiting for Lena.','Ihr Zug kommt aus München. Er hat fünf Minuten Verspätung.|Her train is coming from Munich. It is five minutes late.','Endlich fährt der Zug ein, und Lena steigt aus. Sie hat einen großen Koffer.|Finally the train pulls in and Lena gets off. She has a big suitcase.'],
+ hs:{
+ _bg:['der Bahnhof|the station','die Bahnhöfe','Am Bahnhof fahren die Züge ab und kommen an.|At the station trains depart and arrive.','Der Bahnhof ist voll. Am Wochenende fahren viele Leute weg.|The station is full. At the weekend lots of people go away.','abfahren und ankommen sind trennbar: Der Zug fährt um zehn Uhr ab. Er kommt um zwei Uhr an.|abfahren and ankommen are separable: the train departs at ten. It arrives at two.'],
+ zug:['der Zug|the train','die Züge','Das ist ein ICE. Er fährt sehr schnell.|This is an ICE. It goes very fast.','Der Zug aus München ist da. Die Türen gehen auf.|The train from Munich is here. The doors open.','ICE heißt Intercity-Express. Er fährt bis zu dreihundert Kilometer pro Stunde.|ICE means Intercity Express. It goes up to 300 kilometres per hour.'],
+ gleis:['das Gleis|the platform','die Gleise','Der Zug kommt auf Gleis drei an.|The train arrives at platform three.','sijan: Gleis drei! Hier sind wir richtig.|Platform three! We’re in the right place.','Am Bahnhof sagt man: Der Zug fährt auf Gleis drei ab. Das Wort ist sächlich: das Gleis.|At the station you say: the train leaves from platform three. The word is neuter.'],
+ uhr:['die Bahnhofsuhr|the station clock','die Bahnhofsuhren','Es ist fünf nach zwei.|It is five past two.','shruti: Schon fünf nach zwei. Wo bleibt der Zug?|Already five past two. Where is the train?','Offiziell sagt man „vierzehn Uhr fünf“. Im Alltag sagt man „fünf nach zwei“.|Officially you say "14:05". In everyday life you say "five past two".'],
+ anzeige:['die Anzeigetafel|the arrivals board','die Anzeigetafeln','Auf der Anzeigetafel stehen die Züge und die Zeiten.|The trains and times are on the board.','sijan: Da steht: ICE aus München, plus fünf. Der Zug hat Verspätung.|It says: ICE from Munich, plus five. The train is late.','Verspätung haben: Der Zug hat fünf Minuten Verspätung.|to be late: the train is five minutes late.'],
+ lautsprecher:['der Lautsprecher|the loudspeaker','die Lautsprecher','Aus dem Lautsprecher kommt eine Durchsage.|An announcement comes from the loudspeaker.',['durchsage: Achtung an Gleis drei: Der ICE aus München fährt ein. Bitte Vorsicht bei der Einfahrt!|Attention on platform three: the ICE from Munich is arriving. Please take care as the train comes in!','durchsage: Wir bitten um Entschuldigung für die Verspätung.|We apologise for the delay.'],'die Durchsage: So heißen die Informationen aus dem Lautsprecher.|Announcements from the loudspeaker are called "Durchsagen".'],
+ automat:['der Fahrkartenautomat|the ticket machine','die Fahrkartenautomaten','Am Automaten kauft man Fahrkarten.|You buy tickets at the machine.','sijan: Wir brauchen keine Fahrkarte. Wir holen Lena nur ab.|We don’t need a ticket. We’re just picking Lena up.','die Fahrkarte und der Automat: der Fahrkartenautomat. Heute kaufen viele Leute ihr Ticket mit einer App.|ticket + machine = ticket machine. Today many people buy their ticket with an app.'],
+ fahrplan:['der Fahrplan|the timetable','die Fahrpläne','Auf dem gelben Fahrplan stehen die Abfahrten.|The departures are on the yellow timetable.','Der nächste Zug nach Hamburg fährt um fünfzehn Uhr.|The next train to Hamburg leaves at 3 pm.','Am Bahnhof ist der Plan für die Abfahrten gelb und der Plan für die Ankünfte weiß.|At the station the departures timetable is yellow and the arrivals timetable is white.'],
+ bank:['die Bank|the bench','die Bänke','Auf der Bank kann man sitzen und warten.|You can sit and wait on the bench.','shruti: Komm, wir setzen uns auf die Bank.|Come on, let’s sit on the bench.','Ein Wort, zwei Bedeutungen: die Bank zum Sitzen, die Bänke, und die Bank für Geld, die Banken.|One word, two meanings: bench (Bänke) and bank (Banken).'],
+ taube:['die Taube|the pigeon','die Tauben','Die Taube sucht Krümel.|The pigeon is looking for crumbs.','taube: Gurr, gurr!|Coo, coo!','Tauben füttern ist in vielen Städten verboten.|Feeding pigeons is forbidden in many cities.'],
+ koffer:['der Koffer|the suitcase','die Koffer','Lenas Koffer ist blau und groß.|Lena’s suitcase is blue and big.','lena: Mein Koffer ist so schwer!|My suitcase is so heavy! // sijan: Gib her, ich trage ihn.|Give it here, I’ll carry it.','Lenas Koffer: Bei Namen schreibt man das „s“ ohne Apostroph.|With names, you write the "s" without an apostrophe.'],
+ lena:['Lena|Lena','','Das ist Lena. Sie kommt aus München.|This is Lena. She comes from Munich.',['lena: Hallo, ihr zwei! Endlich bin ich da!|Hello, you two! I’m finally here!','lena: Die Fahrt war lang, weil der Zug Verspätung hatte.|The journey was long because the train was late.','lena: Oh, Blumen für mich? Wie schön! Danke!|Oh, flowers for me? How lovely! Thank you!'],'Nach „weil“ steht das Verb am Ende: … weil der Zug Verspätung hatte.|After "weil" the verb goes to the end.'],
+ shruti:['Shruti|Shruti','','Shruti winkt Lena.|Shruti waves to Lena.',['shruti: Lena! Hier sind wir!|Lena! We’re over here!','shruti: Wie war die Reise?|How was the journey?'],'„war“ ist das Präteritum von „sein“: Wie war die Reise? Die Reise war lang.|"war" is the simple past of "sein".'],
+ sijan:['Sijan|Sijan','','Sijan hat Blumen für Lena.|Sijan has flowers for Lena.','sijan: Herzlich willkommen, Lena! Die Blumen sind für dich.|Welcome, Lena! The flowers are for you.','für + Akkusativ: für dich, für mich, für Lena.|für + accusative: for you, for me, for Lena.'],
+ },
+ qs:[['Wo stehen die Züge und die Zeiten?|Where are the trains and times shown?','anzeige fahrplan'],['Er ist blau und groß und gehört Lena. Was ist das?|It is blue and big and belongs to Lena. What is it?','koffer'],['Wo kann man sitzen?|Where can you sit?','bank'],['Wo kauft man eine Fahrkarte?|Where do you buy a ticket?','automat'],['Woher kommt die Durchsage?|Where does the announcement come from?','lautsprecher'],['Wer kommt aus München?|Who comes from Munich?','lena'],['Wie spät ist es? Tippe auf die Uhr!|What time is it? Tap the clock!','uhr'],['Was macht „gurr, gurr“?|What goes "coo, coo"?','taube'],['Auf welchem Gleis kommt Lena an? Tippe auf das Schild!|Which platform does Lena arrive at? Tap the sign!','gleis']]},
+
+{id:'park',title:'Im Park',en:'In the park',focus:'Perfekt · Wetter',
+ story:['Endlich sind alle im Park. Die Sonne scheint, und es ist warm.|Finally everyone is in the park. The sun is shining and it is warm.','Shruti, Sijan und Lena machen ein Picknick. Sie essen Brot, Käse und Kuchen.|Shruti, Sijan and Lena have a picnic. They eat bread, cheese and cake.','Was für ein schöner Samstag!|What a lovely Saturday!'],
+ hs:{
+ _bg:['der Park|the park','die Parks','Im Park ist es grün und ruhig.|The park is green and quiet.','Am Wochenende sind viele Familien im Park.|At the weekend many families are in the park.','im Park: Wo? → Dativ. In den Park: Wohin? → Akkusativ.|in the park (where?) vs into the park (where to?).'],
+ sonne:['die Sonne|the sun','','Die Sonne scheint. Es ist fünfundzwanzig Grad.|The sun is shining. It is 25 degrees.','lena: Was für ein tolles Wetter!|What great weather! // shruti: Zum Glück habe ich Sonnencreme gekauft.|Luckily I bought sun cream.','Wetter mit „es“: Es ist sonnig. Es ist warm. Es regnet.|Weather with "es": it is sunny, it is warm, it is raining.'],
+ wolke:['die Wolke|the cloud','die Wolken','Am Himmel ist nur eine kleine Wolke.|There is only one small cloud in the sky.','shruti: Schau mal, die Wolke sieht aus wie ein Hase!|Look, the cloud looks like a rabbit!','die Wolke → wolkig. Heute ist es nicht wolkig, sondern sonnig.|cloud → cloudy. Today it is not cloudy but sunny.'],
+ drachen:['der Drachen|the kite','die Drachen','Der Drachen fliegt hoch am Himmel.|The kite is flying high in the sky.','tim: Schaut mal! Mein Drachen fliegt ganz hoch!|Look! My kite is flying really high!','der Drachen ist zum Spielen, der Drache ist ein Monster. Ein kleiner Unterschied!|Drachen = kite, Drache = dragon. A small difference!'],
+ baum:['der Baum|the tree','die Bäume','Der Baum ist groß und grün.|The tree is big and green.','lena: Später setzen wir uns in den Schatten unter den Baum.|Later we’ll sit in the shade under the tree.','der Baum, die Bäume: Aus „au“ wird im Plural „äu“.|In the plural "au" becomes "äu".'],
+ eiswagen:['der Eiswagen|the ice cream cart','die Eiswagen','Am Eiswagen gibt es Eis in vielen Sorten.|At the ice cream cart there are lots of flavours.','eismann: Eis! Leckeres Eis! Eine Kugel kostet einen Euro achtzig.|Ice cream! Delicious ice cream! One scoop costs one euro eighty. // lena: Ich nehme zwei Kugeln: Schokolade und Erdbeere.|I’ll have two scoops: chocolate and strawberry.','eine Kugel, zwei Kugeln: So bestellt man Eis in Deutschland.|one scoop, two scoops: that’s how you order ice cream in Germany.'],
+ teich:['der Teich|the pond','die Teiche','Der Teich ist klein. Das Wasser ist blau.|The pond is small. The water is blue.','Im Teich schwimmen zwei Enten und viele kleine Fische.|Two ducks and lots of little fish are swimming in the pond.','der Teich, der See, das Meer: klein, groß, sehr groß.|pond, lake, sea: small, big, very big.'],
+ enten:['die Ente|the duck','die Enten','Die Enten schwimmen im Teich.|The ducks are swimming in the pond.',['ente: Quak, quak!|Quack, quack!','tim: Darf ich die Enten mit Brot füttern?|Can I feed the ducks with bread? // sijan: Nein, Brot ist nicht gut für Enten.|No, bread is not good for ducks.'],'In vielen Parks steht ein Schild: „Bitte nicht füttern!“|In many parks there is a sign: "Please do not feed!"'],
+ decke:['die Picknickdecke|the picnic blanket','die Picknickdecken','Die Decke ist rot und weiß.|The blanket is red and white.','shruti: Wir legen die Decke hier auf die Wiese.|We’ll put the blanket here on the grass.','Ich lege die Decke auf die Wiese: Akkusativ. Die Decke liegt auf der Wiese: Dativ.|I put the blanket on the grass (accusative). The blanket lies on the grass (dative).'],
+ korb:['der Picknickkorb|the picnic basket','die Picknickkörbe','Im Korb sind Brot, Käse, Äpfel und Tomaten.|In the basket there are bread, cheese, apples and tomatoes.','sijan: Wir haben alles vom Markt mitgebracht.|We’ve brought everything from the market.','mitbringen ist trennbar: Ich bringe Brot mit. Ich habe Brot mitgebracht.|mitbringen is separable: I bring bread. I have brought bread.'],
+ kuchen:['der Kuchen|the cake','die Kuchen','Das ist ein Apfelkuchen aus dem Café.|This is an apple cake from the café.','lena: Mmh, der Kuchen ist lecker! Habt ihr ihn selbst gebacken?|Mmm, the cake is delicious! Did you bake it yourselves? // shruti: Nein, wir haben ihn im Café gekauft.|No, we bought it at the café.','Perfekt: backen wird „hat gebacken“, kaufen wird „hat gekauft“.|Perfect tense: bake → hat gebacken, buy → hat gekauft.'],
+ ball:['der Ball|the ball','die Bälle','Der Ball ist schwarz und weiß.|The ball is black and white.','tim: Wer spielt mit mir Fußball?|Who will play football with me? // sijan: Ich! Aber erst nach dem Kuchen.|Me! But after the cake.','der Ball, die Bälle. Fußball ist in Deutschland der beliebteste Sport.|Football is the most popular sport in Germany.'],
+ kind:['das Kind|the child','die Kinder','Das ist Tim. Er lässt einen Drachen steigen.|This is Tim. He is flying a kite.','tim: Hallo! Ich bin Tim. Ich bin acht Jahre alt.|Hello! I’m Tim. I’m eight years old.','das Kind ist sächlich: Das Kind spielt. Es ist acht Jahre alt.|"Kind" is neuter: es.'],
+ blumen:['die Blume|the flower','die Blumen','Auf der Wiese wachsen viele Blumen.|Lots of flowers grow in the meadow.','lena: Die Blumen sind so schön, gelb, rot und blau!|The flowers are so beautiful, yellow, red and blue!','Im Park darf man die Blumen oft nicht pflücken.|In the park you are often not allowed to pick the flowers.'],
+ lena:['Lena|Lena','','Lena ist zu Besuch.|Lena is visiting.',['lena: Danke für den schönen Tag! Das Picknick ist super.|Thanks for the lovely day! The picnic is great.','lena: Nächsten Samstag besucht ihr mich in München, okay?|Next Saturday you visit me in Munich, okay? // sijan: Gute Idee!|Good idea!'],'„nächsten Samstag“: Zeitangaben ohne Präposition stehen im Akkusativ.|Time expressions without a preposition are in the accusative.'],
+ shruti:['Shruti|Shruti','','Shruti ist glücklich.|Shruti is happy.','shruti: Was für ein Tag! Wir haben eingekauft, Lena abgeholt, und jetzt machen wir Picknick.|What a day! We went shopping, picked Lena up, and now we’re having a picnic.','Perfekt mit trennbaren Verben: einkaufen wird eingekauft, abholen wird abgeholt.|Perfect tense with separable verbs: the ge- goes in the middle.'],
+ sijan:['Sijan|Sijan','','Sijan hat Hunger.|Sijan is hungry.','sijan: Ich habe so einen Hunger! Wer möchte Brot mit Käse?|I’m so hungry! Who wants bread and cheese?','Hunger haben, Durst haben: Ich habe Hunger. Ich habe Durst.|to be hungry, to be thirsty: German uses "haben".'],
+ },
+ qs:[['Was fliegt am Himmel?|What is flying in the sky?','drachen'],['Wo schwimmen die Enten?|Where are the ducks swimming?','teich'],['Wo kann man Eis kaufen?|Where can you buy ice cream?','eiswagen'],['Was hat Shruti im Café gekauft?|What did Shruti buy at the café?','kuchen'],['Er ist groß und grün und hat viele Blätter. Was ist das?|It is big and green and has lots of leaves. What is it?','baum'],['Wer ist acht Jahre alt?|Who is eight years old?','kind'],['Womit spielt Tim Fußball?|What does Tim play football with?','ball'],['Was macht „quak, quak“?|What goes "quack, quack"?','enten'],['Was sieht aus wie ein Hase?|What looks like a rabbit?','wolke']]},
+]}];
+
+/* ---------- Tipp-Buch: voices, parsing ---------- */
+// speaker: [name, pitch, rate, colour]
+const SPK={erz:['Erzähler',1,.9,'var(--muted)'],stift:['Zauberstift',1.1,.95,'var(--violet)'],shruti:['Shruti',1.3,.95,'var(--shruti)'],sijan:['Sijan',.8,.9,'var(--sijan)'],lena:['Lena',1.45,1,'var(--leaf)'],
+ huber:['Frau Huber',1.15,.9,'var(--teal)'],wagner:['Herr Wagner',.65,.85,'var(--red)'],frau:['Passantin',1.2,.95,'var(--ginger)'],durchsage:['Durchsage',.95,.85,'var(--r5)'],tim:['Tim',1.6,1.05,'var(--sun)'],
+ eismann:['Eisverkäufer',.75,.95,'var(--cheek)'],katze:['Minka',1.9,.8,'var(--ginger)'],hund:['Hund',.6,.9,'var(--brown)'],taube:['Taube',1.4,.8,'var(--grey)'],ente:['Ente',1.7,.9,'var(--leaf)']};
+const ln=(str,dflt='erz')=>{const m=str.match(/^([a-z]+): ([\s\S]*)$/),own=m&&SPK[m[1]];const [de,en='']=(own?m[2]:str).split('|');return {s:own?m[1]:dflt,de,en}};
+const asList=x=>Array.isArray(x)?x:[x];
+TIPBOOKS.forEach(b=>b.scenes.forEach(sc=>{
+  sc.story=sc.story.map(x=>ln(x));
+  for(const id in sc.hs){const [w,pl,d,e,k]=sc.hs[id],[wd,we]=w.split('|');
+    sc.hs[id]={w:wd,en:we,pl,d:asList(d).map(x=>ln(x,'stift')),e:asList(e).map(x=>x.split(' // ').map(y=>ln(y))),k:asList(k).map(x=>ln(x,'stift'))}}
+  sc.qs=sc.qs.map(([q,a])=>{const [de,en]=q.split('|');return {q:de,en,a:a.split(' ')}});
+}));
+const ART=w=>{const m=/^(der|die|das) /.exec(w);return m&&m[1]};
+const nounsOf=sc=>Object.keys(sc.hs).filter(id=>id[0]!=='_'&&ART(sc.hs[id].w));
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+const T={mode:'entdecken',game:null,last:null,seq:0,cnt:{},found:store.get('a2.tip.found')||{},best:store.get('a2.tip.best')||{}};
+const TB=()=>TIPBOOKS[S.tip];
+const scene=id=>TB().scenes.find(s=>s.id===id);
+
+/* ---------- symbols ---------- */
+const DOTS={1:[[12,12]],2:[[9,9],[15,15]],3:[[8,8],[12,12],[16,16]]};
+const dice=n=>'<rect x="4" y="4" width="16" height="16" rx="4"/>'+DOTS[n].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.7" fill="currentColor"/>`).join('');
+const ICON={
+ entdecken:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+ erzaehlen:'<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/>',
+ wissen:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ g1:dice(1),g2:dice(2),g3:dice(3),
+ stopp:'<rect x="7" y="7" width="10" height="10" rx="1.5" fill="currentColor"/>',
+ start:'<path d="M9 6l9 6-9 6z" fill="currentColor"/>'};
+const SYM=[{k:'entdecken',n:'Entdecken',c:'var(--r5)'},{k:'erzaehlen',n:'Erzählen',c:'var(--r4)'},{k:'wissen',n:'Wissen',c:'var(--r2)'},
+ {k:'g1',n:'Spiel 1',c:'var(--r1)'},{k:'g2',n:'Spiel 2',c:'var(--r6)'},{k:'g3',n:'Spiel 3',c:'var(--teal)'},{k:'stopp',n:'Stopp',c:'var(--shadow-ink)'}];
+const symOf=k=>SYM.find(s=>s.k===k);
+const ico=k=>`<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>`;
+const MODE={
+ entdecken:'Entdecken! Tippe auf alles, was du siehst. Tippe noch einmal, dann hörst du mehr.|Discover! Tap everything you see. Tap again to hear more.',
+ erzaehlen:'Erzählen! Hör die Geschichte. Dann tippe auf die Personen und Dinge.|Story! Listen to the story. Then tap the people and things.',
+ wissen:'Wissen! Tippe auf ein Bild. Ich erkläre dir Grammatik und Kultur.|Knowledge! Tap a picture. I explain grammar and culture.'};
+const GAME={1:{n:'Finde es!',intro:'Spiel eins: Finde es! Ich sage ein Wort. Tippe auf das richtige Bild.|Game 1: Find it! I say a word. Tap the right picture.'},
+ 2:{n:'Der, die, das',intro:'Spiel zwei: Der, die oder das? Ich sage einen Artikel. Finde ein passendes Wort.|Game 2: der, die or das? I say an article. Find a word that matches.'},
+ 3:{n:'Rätsel',intro:'Spiel drei: Rätsel! Hör gut zu und tippe auf die Antwort.|Game 3: Riddles! Listen carefully and tap the answer.'}};
+const HELP={entdecken:'Wörter mit Artikel und Plural',erzaehlen:'Geschichte und Dialoge',wissen:'Grammatik und Kultur',g1:'Finde das Wort im Bild',g2:'Der, die oder das?',g3:'Rätsel und Fragen',stopp:'Der Stift ist still'};
+const HELPSAY={g1:'Spiel eins: Ich sage ein Wort, und du findest es im Bild.|Game 1: I say a word and you find it in the picture.',
+ g2:'Spiel zwei: Ich sage der, die oder das. Du findest ein passendes Wort.|Game 2: I say der, die or das. You find a matching word.',
+ g3:'Spiel drei: Ich stelle eine Frage oder ein Rätsel. Du tippst auf die Antwort.|Game 3: I ask a question or a riddle. You tap the answer.',
+ stopp:'Mit Stopp bin ich sofort still.|With Stop I am quiet straight away.'};
+const pchip=(t,c)=>`<span class="pchip" style="--k:${c||'var(--c)'}">${t}</span>`;
+const starsOf=s=>s==null?0:s>=5?3:s>=3?2:s>=1?1:0;
+const starStr=s=>{const n=starsOf(s);return '<b>'+'★'.repeat(n)+'</b>'+'☆'.repeat(3-n)};
+function modeHead(){const m=symOf(T.mode);return pchip(m.n,m.c)}
+function gameHead(){const G=T.game,m=symOf('g'+G.g);return pchip(`Spiel ${G.g} · ${GAME[G.g].n}`,m.c)+pchip(`Frage ${Math.min(G.n+1,G.items.length)} / ${G.items.length}`)+pchip(`Punkte: ${G.score}`)}
+
+/* ---------- sound + speech ---------- */
+function tone(kind){
+  if(!soundOn) return;
+  try{
+    actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    const seqs={tap:[[1046,.05]],ok:[[660,.09],[880,.09],[1320,.18]],no:[[220,.12],[165,.22]],win:[[523,.1],[659,.1],[784,.1],[1047,.32]],start:[[440,.08],[660,.08],[880,.14]]};
+    let at=actx.currentTime;
+    for(const [f,d] of seqs[kind]){const o=actx.createOscillator(),g=actx.createGain();o.type=kind==='no'?'square':'triangle';o.frequency.value=f;
+      g.gain.setValueAtTime(.0001,at);g.gain.exponentialRampToValueAtTime(kind==='no'?.045:.13,at+.015);g.gain.exponentialRampToValueAtTime(.0001,at+d);
+      o.connect(g).connect(actx.destination);o.start(at);o.stop(at+d+.03);at+=d*.9}
+  }catch(e){}
+}
+const speakable=t=>t.replace(/→/g,', ').replace(/[„“"«»]/g,'').replace(/…/g,', ').replace(/\s[–-]\s/g,', ');
+function sayAs(text,spk,onend){
+  let done=false,timer,checks=0;
+  const fin=()=>{if(done)return;done=true;clearTimeout(timer);onend&&onend()};
+  const arm=ms=>{timer=setTimeout(()=>{if('speechSynthesis' in window&&speechSynthesis.speaking&&checks++<30)arm(800);else fin()},ms)};
+  arm(1800+text.length*90);   // fallback in case the browser never fires onend
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const v=SPK[spk]||SPK.erz,u=new SpeechSynthesisUtterance(speakable(text));
+  u.lang='de-DE';if(deVoice)u.voice=deVoice;u.pitch=v[1];u.rate=v[2];u.onend=u.onerror=fin;speechSynthesis.speak(u);
+}
+function tipHush(){T.seq++;penTalk(-1)}
+function speakSeq(lines,head,done){
+  const my=++T.seq;T.last={lines,head};penShow(lines,head);let i=0;
+  const next=()=>{if(my!==T.seq)return;if(i>=lines.length){penTalk(-1);done&&done();return}penTalk(i);const L=lines[i++];sayAs(L.de,L.s,next)};
+  next();
+}
+
+/* ---------- the pen's display ---------- */
+const PENSVG=`<svg viewBox="0 0 32 32" aria-hidden="true"><g transform="rotate(35 16 16)"><path d="M12 21 L16 30 L20 21Z" fill="#FFE07A" stroke="#2B2340" stroke-width="2" stroke-linejoin="round"/><rect x="11" y="1" width="10" height="22" rx="5" fill="#fff" stroke="#2B2340" stroke-width="2"/><rect x="11.5" y="9" width="9" height="4" fill="#FFC933"/></g></svg>`;
+document.body.insertAdjacentHTML('beforeend',`<div class="sheet pen" id="pen" role="region" aria-label="Zauberstift" aria-live="polite"><div class="in">
+  <div class="penic">${PENSVG}<span class="led"></span></div>
+  <div class="body"><div class="p-head" id="p-head"></div><div class="p-lines" id="p-lines"></div></div>
+  <button class="icon" id="p-again" aria-label="Noch einmal hören"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v5h5"/></svg></button>
+  <button class="icon" id="p-close" aria-label="Stift stoppen"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>`);
+const pen=document.getElementById('pen');
+function lineHTML(L,i){
+  const who=L.s!=='erz'&&L.s!=='stift'?`<span class="who" style="--k:${SPK[L.s][3]}">${SPK[L.s][0]}</span>`:'';
+  const de=L.w?esc(L.de).replace(/(^|[\s(,])(der|die|das)(?=\s)/g,'$1<b class="a-$2">$2</b>'):esc(L.de);
+  return `<div class="ln${L.w?' word':''}" data-i="${i}">${who}<span class="de" lang="de">${de}</span>${S.en&&L.en?`<span class="en" lang="en">${esc(L.en)}</span>`:''}</div>`}
+function penShow(lines,head){
+  document.getElementById('p-head').innerHTML=head||'';
+  document.getElementById('p-lines').innerHTML=lines.map(lineHTML).join('');
+  pen.classList.add('open');document.body.classList.add('pen-open');
+}
+function penTalk(i){
+  pen.classList.toggle('talk',i>=0);
+  pen.querySelectorAll('.ln').forEach(l=>l.classList.toggle('now',+l.dataset.i===i));
+  const cur=pen.querySelector('.ln.now');if(cur)cur.scrollIntoView({block:'nearest'});
+}
+function penHide(){pen.classList.remove('open','talk');document.body.classList.remove('pen-open')}
+function penClose(){stopSay();endGame();penHide()}
+function penRefresh(){if(pen.classList.contains('open')&&T.last)document.getElementById('p-lines').innerHTML=T.last.lines.map(lineHTML).join('')}
+document.getElementById('p-close').onclick=penClose;
+document.getElementById('p-again').onclick=()=>{if(T.game)ask();else if(T.last)speakSeq(T.last.lines,T.last.head)};
+
+/* ---------- discovering ---------- */
+function markFound(sid,id){
+  const a=T.found[sid]||(T.found[sid]=[]);if(a.includes(id))return false;
+  a.push(id);store.set('a2.tip.found',T.found);
+  document.querySelectorAll(`.fnd[data-s="${sid}"]`).forEach(e=>e.textContent=countFound(sid));
+  return true}
+const countFound=sid=>{const sc=scene(sid);return (T.found[sid]||[]).filter(id=>id in sc.hs).length};
+const totalOf=sid=>Object.keys(scene(sid).hs).length;
+function flash(id,cls){
+  document.querySelectorAll(`#spread .hs[data-h="${id}"]`).forEach(g=>{g.classList.remove(cls);g.getBoundingClientRect();g.classList.add(cls)});
+  setTimeout(()=>document.querySelectorAll(`.hs.${cls}`).forEach(g=>g.classList.remove(cls)),cls==='hint'?2100:750);
+}
+function ripple(ev,el){
+  const fig=el.closest('.tipfig');if(!fig)return;
+  const r=fig.getBoundingClientRect();let x,y;
+  if(ev&&(ev.clientX||ev.clientY)){x=ev.clientX;y=ev.clientY}else{const b=el.getBoundingClientRect();x=Math.max(r.left,Math.min(r.right,b.left+b.width/2));y=Math.max(r.top,Math.min(r.bottom,b.top+b.height/2))}
+  const s=document.createElement('span');s.className='ripple';s.style.left=(x-r.left)+'px';s.style.top=(y-r.top)+'px';fig.appendChild(s);setTimeout(()=>s.remove(),600);
+}
+function tipTap(el,ev){
+  const sid=el.closest('svg').dataset.s,sc=scene(sid),id=el.dataset.h,h=sc.hs[id];if(!h)return;
+  ripple(ev,el);flash(id,'hit');
+  const fresh=markFound(sid,id);
+  if(T.game&&T.game.sid!==sid)endGame();
+  if(T.game){gameTap(id);return}
+  tone('tap');
+  const key=`${sid}.${id}.${T.mode}`,c=T.cnt[key]||0;T.cnt[key]=c+1;
+  let lines;
+  if(T.mode==='erzaehlen')lines=h.e[c%h.e.length];
+  else if(T.mode==='wissen')lines=[h.k[c%h.k.length]];
+  else{const opts=[{s:'stift',de:h.w,en:h.en,w:1},...h.d];if(h.pl)opts.push({s:'stift',de:`${h.w}, ${h.pl}`,en:`${h.en} – one and many`,w:1});lines=[opts[c%opts.length]]}
+  if(fresh&&countFound(sid)===totalOf(sid)){lines=[...lines,{s:'stift',de:'Super! Du hast alles auf dieser Seite entdeckt!',en:'Great! You have discovered everything on this page!'}];setTimeout(()=>tone('win'),180)}
+  speakSeq(lines,modeHead());
+}
+function refreshSyms(){
+  document.querySelectorAll('.sym').forEach(b=>{const k=b.dataset.k,on=T.game?k==='g'+T.game.g:k===T.mode;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+}
+function symTap(k,sid){
+  if(k==='stopp'){penClose();return}
+  if(k[0]==='g'){if(sid)startGame(sid,+k[1]);return}
+  endGame();T.mode=k;refreshSyms();tone('tap');
+  const intro=ln(MODE[k],'stift');
+  speakSeq(k==='erzaehlen'&&sid?[intro,...scene(sid).story]:[intro],modeHead());
+}
+
+/* ---------- games ---------- */
+function startGame(sid,g){
+  const sc=scene(sid);let items;
+  if(g===1)items=shuffle(nounsOf(sc)).slice(0,5).map(id=>({q:`Wo ist ${sc.hs[id].w}?`,en:`Where is ${sc.hs[id].en}?`,a:[id]}));
+  else if(g===2)items=[...Array(5)].map(()=>({}));
+  else items=shuffle(sc.qs).slice(0,5).map(x=>({...x}));
+  stopSay();
+  T.game={sid,g,items,n:0,score:0,tries:0,asked:-1,used:new Set(),wait:false};
+  refreshSyms();tone('start');
+  speakSeq([ln(GAME[g].intro,'stift')],gameHead(),ask);
+}
+function endGame(){if(T.game){T.game=null;refreshSyms()}}
+function ask(){
+  const G=T.game;if(!G)return;
+  if(G.n>=G.items.length){finishGame();return}
+  const it=G.items[G.n];
+  if(G.g===2&&!it.art){const sc=scene(G.sid),left=['der','die','das'].filter(a=>nounsOf(sc).some(id=>ART(sc.hs[id].w)===a&&!G.used.has(id))),a=left[Math.random()*left.length|0];
+    Object.assign(it,{art:a,q:`Finde etwas mit „${a}“!`,en:`Find something with "${a}"!`})}
+  if(G.asked!==G.n){G.tries=0;G.asked=G.n}
+  G.wait=true;
+  speakSeq([{s:'stift',de:it.q,en:it.en}],gameHead());
+}
+function gameTap(id){
+  const G=T.game;if(!G.wait){tone('tap');return}
+  const sc=scene(G.sid),h=sc.hs[id],it=G.items[G.n],what=`Das ist ${h.w}.`,whatEn=`That is ${h.en}.`;
+  let ok;
+  if(G.g===2){ok=ART(h.w)===it.art;
+    if(ok&&G.used.has(id)){tone('no');speakSeq([{s:'stift',de:`${h.w} hatten wir schon. Finde etwas anderes mit „${it.art}“!`,en:`We already had ${h.en}. Find something else with "${it.art}"!`,w:1}],gameHead());return}}
+  else ok=it.a.includes(id);
+  if(ok){
+    if(G.tries===0)G.score++;
+    G.used.add(id);G.n++;G.wait=false;tone('ok');
+    const p=shuffle(['Richtig!','Super!','Toll!','Genau!','Prima!'])[0];
+    speakSeq([{s:'stift',de:`${p} ${what}`,en:`Right! ${whatEn}`,w:1}],gameHead(),ask);
+  }else{
+    G.tries++;tone('no');
+    if(G.tries<3)speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,en:`No. ${whatEn} ${it.en}`,w:1}],gameHead());
+    else{
+      const ans=G.g===2?nounsOf(sc).find(x=>ART(sc.hs[x].w)===it.art&&!G.used.has(x)):it.a[0];
+      G.used.add(ans);G.n++;G.wait=false;flash(ans,'hint');
+      speakSeq([{s:'stift',de:`Schau mal, hier! Das ist ${sc.hs[ans].w}.`,en:`Look, here! That is ${sc.hs[ans].en}.`,w:1}],gameHead(),ask);
+    }
+  }
+}
+function finishGame(){
+  const G=T.game;T.game=null;refreshSyms();
+  const k=`${G.sid}.${G.g}`,s=G.score,len=G.items.length;
+  if(!(k in T.best)||s>T.best[k]){T.best[k]=s;store.set('a2.tip.best',T.best)}
+  const pts=s===0?'keinen Punkt':s===1?'einen Punkt':`${s} Punkte`;
+  const [de,en]=s===len?['Fantastisch! Alles richtig!','Fantastic! All correct!']:s>=3?['Sehr gut!','Very good!']:['Gut gemacht!','Well done!'];
+  tone('win');
+  speakSeq([{s:'stift',de:`${de} Du hast ${pts} von ${len}.`,en:`${en} You got ${s} of ${len} points.`},{s:'stift',de:'Tippe auf einen Würfel, dann spielst du noch einmal.',en:'Tap a dice to play again.'}],
+    pchip(`Spiel ${G.g} · ${GAME[G.g].n}`,symOf('g'+G.g).c)+`<span class="pstars">${starStr(s)}</span>`);
+}
+
+/* ---------- pages ----------
+   A tip book is a row of spreads: cover, one per scene, album. Wide screens show a spread per page index;
+   narrow screens show one half per index (cover reversed so the title comes first). */
+function tipN(){return TB().scenes.length+2}
+function tipLast(){return wideMQ.matches?tipN()-1:tipN()*2-1}
+function tipAt(p,wide){if(wide)return [p,null];const sp=p>>1,first=!(p&1);return [sp,sp===0?(first?'R':'L'):(first?'L':'R')]}
+function curSceneId(){const [sp]=tipAt(S.page,wideMQ.matches),n=TB().scenes.length;return sp>0&&sp<=n?TB().scenes[sp-1].id:null}
+const symBtn=(s,sid)=>`<button class="sym" data-act="sym" data-k="${s.k}" data-s="${sid}" style="--k:${s.c}" aria-label="${s.n}" title="${s.n}"><span class="ic">${ico(s.k)}</span><span class="lb">${s.n}</span></button>`;
+const strip=(sid,side)=>`<div class="strip${side?'':' all'}">${(side==='L'?SYM.slice(0,3):side==='R'?SYM.slice(3):SYM).map(s=>symBtn(s,sid)).join('')}</div>`;
+function tipFig(sc,half){
+  const vb=half==='L'?'0 0 400 440':half==='R'?'400 0 400 440':'0 0 800 440';
+  const body=TIPART[sc.id]().replace(/<g class="hs" data-h="(\w+)">/g,(m,id)=>`<g class="hs" data-h="${id}" tabindex="0" role="button" aria-label="${esc(sc.hs[id]?sc.hs[id].w:id)}">`);
+  return `<div class="tipfig"><svg viewBox="${vb}" data-s="${sc.id}" role="group" aria-label="${esc(sc.title)}">${body}</svg></div>`}
+function howtoHTML(){
+  return `<div class="intro tiphow"><h3>So spielst du</h3><p>Der Zauberstift liest dir vor. Wähle oben auf der Seite ein Symbol und tippe dann auf das Bild. Hier kannst du jedes Symbol ausprobieren:</p>
+    <div class="howlist">${SYM.map(s=>`<button class="howrow" data-act="help" data-k="${s.k}" style="--k:${s.c}"><span class="ic">${ico(s.k)}</span><span><b>${s.n}</b><small>${HELP[s.k]}</small></span></button>`).join('')}</div></div>`}
+function titleHTML(){const b=TB();
+  return `<div class="titlepage"><div class="num">Tipp-Buch ${S.tip+1} · Niveau A2</div><h2 class="booktitle">${b.title}</h2><div class="sub">${b.titleEn}</div>
+    <div class="figure">${TIPCOVER()}</div><button class="startbtn" data-act="start"><span class="ic">${ico('start')}</span>Start</button><div class="by">mit ${b.cast}</div></div>`}
+function albumHTML(){
+  const sc=TB().scenes;let f=0,t=0,st=0;
+  const rows=sc.map((s,i)=>{const a=countFound(s.id),b=totalOf(s.id);f+=a;t+=b;[1,2,3].forEach(g=>st+=starsOf(T.best[s.id+'.'+g]));
+    return `<div class="arow"><div class="at"><b>${i+1} · ${s.title}</b><span>${a} / ${b}</span></div><div class="bar"><i style="width:${a/b*100}%"></i></div>
+      <div class="astars">${[1,2,3].map(g=>`<span>Spiel ${g} <span class="st">${starStr(T.best[s.id+'.'+g])}</span></span>`).join('')}</div></div>`}).join('');
+  const max=sc.length*9,done=f===t&&st>=sc.length*6;
+  return `<h3>Mein Sammelalbum</h3><div class="album">${rows}</div>
+    <div class="cert${done?' on':''}">${done?`<b>Urkunde</b>Du kennst dich in der Stadt aus! Herzlichen Glückwunsch!`:`<b>Deine Urkunde</b>Entdecke alles und hol in jedem Spiel zwei Sterne.<br>Entdeckt: ${f} / ${t} · Sterne: ${st} / ${max}`}</div>
+    <div class="finish"><button class="btn" data-act="tipreset">Neu anfangen</button></div>`}
+function wordsHTML(){
+  return `<h3>Meine Wörter</h3><p class="wnote">Tippe auf ein Wort und hör zu. Neue Wörter findest du mit „Entdecken“.</p>${TB().scenes.map(sc=>`<div class="wgroup"><b>${sc.title}</b><div class="wchips">${nounsOf(sc).map(id=>{const h=sc.hs[id];
+    return (T.found[sc.id]||[]).includes(id)?`<button class="wchip ${ART(h.w)}" data-act="sayw" data-t="${esc(h.w)}" data-e="${esc(h.en)}">${esc(h.w)}</button>`:'<span class="wchip lock" title="noch nicht entdeckt">? ? ?</span>'}).join('')}</div></div>`).join('')}
+    <div class="finish"><button class="btn on" data-act="back">Zum Bücherregal</button></div>`}
+function tipPage(sp,side,wide){
+  const n=TB().scenes.length,p=S.page,last=tipLast();
+  const prev=wide?side==='L'&&sp>0:p>0, next=wide?side==='R'&&sp<n+1:p<last;
+  const corners=(prev?corner(-1):'')+(next?corner(1):'');
+  if(sp===0)return (side==='L'?howtoHTML():titleHTML())+corners;
+  if(sp===n+1)return (side==='L'?albumHTML():wordsHTML())+corners;
+  const sc=TB().scenes[sp-1],L=side==='L';
+  const head=`<div class="runhead">${L||!wide?`${sp} · ${sc.title}`:sc.en}</div>`;
+  const foot=L?`<span class="chip">${sc.focus}</span>`:`<span class="chip"><b class="fnd" data-s="${sc.id}">${countFound(sc.id)}</b> / ${totalOf(sc.id)} entdeckt</span>`;
+  return `<div class="tiphead">${head}${strip(sc.id,wide?side:null)}</div>${tipFig(sc,side)}<div class="tipfoot ${side}">${foot}</div>${pnum((sp-1)*2+(L?1:2))}${corners}`;
+}
+function renderTip(){
+  const b=TB(),wide=wideMQ.matches,idx=S.page,[sp,side]=tipAt(idx,wide),last=tipLast();
+  const pages=wide?`<div class="pg left tip">${tipPage(sp,'L',true)}</div><div class="pg right tip">${tipPage(sp,'R',true)}</div>`:`<div class="pg single tip">${tipPage(sp,side,false)}</div>`;
+  app.innerHTML=`
+    <div class="top" style="--c:${b.color}">
+      <button class="btn" data-act="back">${ARROW(-1)} Bücherregal</button>
+      <div class="tools">
+        <button class="btn ${S.en?'on':''}" data-act="en" aria-pressed="${S.en}">Englisch</button>
+        <button class="btn ${soundOn?'on':''}" data-act="sound" aria-pressed="${soundOn}">Ton</button>
+      </div>
+    </div>
+    <div class="book tipbook ${wide?'wide':'narrow'}" style="--c:${b.color}" id="book"><div class="spread" id="spread">${pages}</div></div>
+    <div class="nav" style="--c:${b.color}">
+      <button class="round" data-act="prev" aria-label="Zurückblättern" ${idx===0?'disabled':''}>${ARROW(-1)}</button>
+      <div class="dots">${[...Array(last+1)].map((_,j)=>`<button class="dot ${j===idx?'cur':''}" data-act="go" data-p="${j}" aria-label="Seite ${j+1}"></button>`).join('')}</div>
+      <button class="round" data-act="next" aria-label="Umblättern" ${idx===last?'disabled':''}>${ARROW(1)}</button>
+    </div>`;
+  // a hotspot that lies outside this half-page's viewBox leaves the tab order
+  document.querySelectorAll('#spread svg[data-s]').forEach(svg=>{const [x0,,w]=svg.getAttribute('viewBox').split(' ').map(Number);
+    svg.querySelectorAll('.hs').forEach(g=>{try{const bb=g.getBBox();if(bb.x+bb.width<x0+10||bb.x>x0+w-10)g.setAttribute('tabindex','-1')}catch(e){}})});
+  refreshSyms();
+}
+function openTip(i){S.tip=i;S.story=null;S.page=0;T.mode='entdecken';T.game=null;closeSheet();stopSay();penHide();renderTip();window.scrollTo(0,0)}
+function tipShelf(){
+  return `<section class="tipsec" aria-labelledby="tiph">
+    <div class="sechead"><span class="pill">Neu · mit Zauberstift</span><h2 class="sectitle" id="tiph">Tipp-Bücher</h2>
+      <p>Bücher zum Antippen: Wähle ein Symbol, tippe auf die Bilder und hör zu. Wörter, Geschichten, Wissen und drei Spiele auf jeder Seite.</p></div>
+    <div class="shelf">${TIPBOOKS.map((b,i)=>`
+      <button class="cover" data-act="opentip" data-i="${i}" style="--c:${b.color}">
+        <span class="spine"></span>
+        <span class="art">${TIPCOVER()}</span>
+        <span class="label"><span class="num">Tipp-Buch ${i+1}</span><span class="t">${b.title}</span><span class="en">${b.titleEn}</span></span>
+        <span class="chips"><span class="chip">${b.scenes.length} Bildseiten</span><span class="chip">3 Spiele pro Seite</span><span class="chip">${b.scenes.reduce((a,s)=>a+Object.keys(s.hs).length,0)} Dinge zum Antippen</span></span>
+      </button>`).join('')}
+      <div class="cover soon" aria-hidden="true"><span class="spine"></span><span class="label"><span class="num">Tipp-Buch ${TIPBOOKS.length+1}</span><span class="t">Kommt bald …</span></span></div>
+    </div>
+  </section>`}
+function tipAct(act,b){
+  if(act==='opentip')openTip(+b.dataset.i);
+  else if(act==='sym')symTap(b.dataset.k,b.dataset.s);
+  else if(act==='help'){const k=b.dataset.k;if(MODE[k])symTap(k,null);else if(k==='stopp')penClose();else{endGame();tone('tap');speakSeq([ln(HELPSAY[k],'stift')],pchip(symOf(k).n,symOf(k).c))}}
+  else if(act==='start'){endGame();T.mode='entdecken';refreshSyms();tone('start');
+    speakSeq(['Hallo! Ich bin dein Zauberstift.|Hello! I am your magic pen.',`Wir lesen zusammen das Buch: ${TB().title}.|Let’s read the book together: ${TB().titleEn}.`,'Wähle oben auf der Seite ein Symbol und tippe dann auf die Bilder. Viel Spaß!|Choose a symbol at the top of the page and then tap the pictures. Have fun!'].map(x=>ln(x,'stift')),pchip('Start','var(--leaf)'))}
+  else if(act==='sayw'){tone('tap');speakSeq([{s:'stift',de:b.dataset.t,en:b.dataset.e,w:1}],pchip('Meine Wörter'))}
+  else if(act==='tipreset'){
+    if(!b.dataset.sure){b.dataset.sure='1';b.textContent='Wirklich alles löschen?';return}
+    T.found={};T.best={};store.set('a2.tip.found',{});store.set('a2.tip.best',{});renderTip();
+  }
+  else return false;
+  return true;
+}
+// after a page turn: a game keeps going while the same scene is open, otherwise it ends
+function tipTurned(was){const now=curSceneId();if(now!==was){endGame();penHide()}else if(T.game)setTimeout(ask,350)}
 
 S.en=!!store.get('a2.en');
 library();
