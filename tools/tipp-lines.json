@@ -3210,6 +3210,3266 @@
   "text": "Was sieht aus wie ein Hase?"
  },
  {
+  "key": "741f41a1",
+  "s": "stift",
+  "text": "Wir lesen zusammen das Buch: Das Jahr in Deutschland."
+ },
+ {
+  "key": "7342faf4",
+  "s": "erz",
+  "text": "Ein Jahr hat zwölf Monate, zweiundfünfzig Wochen und vier Jahreszeiten."
+ },
+ {
+  "key": "14f231f7",
+  "s": "erz",
+  "text": "Eine Woche hat sieben Tage: fünf Arbeitstage und das Wochenende."
+ },
+ {
+  "key": "ff55d95f",
+  "s": "erz",
+  "text": "Tippe auf die Monate, die Tage und die Jahreszeiten!"
+ },
+ {
+  "key": "be1cbf1a",
+  "s": "stift",
+  "text": "der Kalender"
+ },
+ {
+  "key": "9bc48950",
+  "s": "stift",
+  "text": "Das ist der Kalender."
+ },
+ {
+  "key": "a02f002a",
+  "s": "stift",
+  "text": "der Kalender, die Kalender"
+ },
+ {
+  "key": "246bcd7e",
+  "s": "stift",
+  "text": "Im Kalender stehen die Tage, die Wochen und die Monate."
+ },
+ {
+  "key": "cd381fea",
+  "s": "stift",
+  "text": "In Deutschland beginnt die Woche im Kalender mit dem Montag, nicht mit dem Sonntag."
+ },
+ {
+  "key": "1ac83412",
+  "s": "sie",
+  "text": "Ich schreibe den Termin in meinen Kalender."
+ },
+ {
+  "key": "3e176af2",
+  "s": "stift",
+  "text": "das Jahr"
+ },
+ {
+  "key": "a9781d78",
+  "s": "stift",
+  "text": "Das ist das Jahr."
+ },
+ {
+  "key": "72a3f506",
+  "s": "stift",
+  "text": "das Jahr, die Jahre"
+ },
+ {
+  "key": "58023087",
+  "s": "stift",
+  "text": "Ein Jahr hat zwölf Monate und vier Jahreszeiten."
+ },
+ {
+  "key": "6055360f",
+  "s": "stift",
+  "text": "Ein Jahr hat dreihundertfünfundsechzig Tage. Ein Schaltjahr hat dreihundertsechsundsechzig."
+ },
+ {
+  "key": "a2160288",
+  "s": "er",
+  "text": "Wie alt bist du?"
+ },
+ {
+  "key": "2dd296af",
+  "s": "kind",
+  "text": "Ich bin acht Jahre alt."
+ },
+ {
+  "key": "c67d4021",
+  "s": "stift",
+  "text": "der Winter"
+ },
+ {
+  "key": "96801159",
+  "s": "stift",
+  "text": "Das ist der Winter."
+ },
+ {
+  "key": "0a398b06",
+  "s": "stift",
+  "text": "der Winter, die Winter"
+ },
+ {
+  "key": "f79f7316",
+  "s": "stift",
+  "text": "Der Winter: Dezember, Januar und Februar."
+ },
+ {
+  "key": "1597f975",
+  "s": "stift",
+  "text": "Im Winter wird es schon um halb fünf dunkel."
+ },
+ {
+  "key": "220e46bf",
+  "s": "er",
+  "text": "Brr, ist das kalt!"
+ },
+ {
+  "key": "b4e8b818",
+  "s": "stift",
+  "text": "der Frühling"
+ },
+ {
+  "key": "7f9d3376",
+  "s": "stift",
+  "text": "Das ist der Frühling."
+ },
+ {
+  "key": "cff701d1",
+  "s": "stift",
+  "text": "der Frühling, die Frühlinge"
+ },
+ {
+  "key": "56b0dc75",
+  "s": "stift",
+  "text": "Der Frühling: März, April und Mai."
+ },
+ {
+  "key": "722fd735",
+  "s": "stift",
+  "text": "Im Frühling werden die Tage länger und wärmer."
+ },
+ {
+  "key": "6c822db0",
+  "s": "sie",
+  "text": "Endlich ist der Frühling da!"
+ },
+ {
+  "key": "341bec8f",
+  "s": "stift",
+  "text": "der Sommer"
+ },
+ {
+  "key": "2fa355df",
+  "s": "stift",
+  "text": "Das ist der Sommer."
+ },
+ {
+  "key": "bc58adbe",
+  "s": "stift",
+  "text": "der Sommer, die Sommer"
+ },
+ {
+  "key": "a2486f63",
+  "s": "stift",
+  "text": "Der Sommer: Juni, Juli und August."
+ },
+ {
+  "key": "a35d1076",
+  "s": "stift",
+  "text": "Im Sommer kann es in Deutschland über dreißig Grad heiß werden."
+ },
+ {
+  "key": "562b4c9d",
+  "s": "kind",
+  "text": "Ich liebe den Sommer!"
+ },
+ {
+  "key": "5e9f0e00",
+  "s": "stift",
+  "text": "der Herbst"
+ },
+ {
+  "key": "22b661c6",
+  "s": "stift",
+  "text": "Das ist der Herbst."
+ },
+ {
+  "key": "80fd398d",
+  "s": "stift",
+  "text": "der Herbst, die Herbste"
+ },
+ {
+  "key": "73df43c6",
+  "s": "stift",
+  "text": "Der Herbst: September, Oktober und November."
+ },
+ {
+  "key": "cc2e4681",
+  "s": "stift",
+  "text": "Ende Oktober stellt man die Uhr eine Stunde zurück. Dann ist Winterzeit."
+ },
+ {
+  "key": "25b7d8e7",
+  "s": "sie",
+  "text": "Es wird kühler. Zieh eine Jacke an!"
+ },
+ {
+  "key": "74b0ed3f",
+  "s": "stift",
+  "text": "der Januar"
+ },
+ {
+  "key": "62c3facf",
+  "s": "stift",
+  "text": "Das ist der Januar."
+ },
+ {
+  "key": "1294a76d",
+  "s": "stift",
+  "text": "Der Januar ist der erste Monat. Er hat einunddreißig Tage."
+ },
+ {
+  "key": "b7766edd",
+  "s": "stift",
+  "text": "Im Januar ist es oft kalt, manchmal unter null Grad."
+ },
+ {
+  "key": "12735dad",
+  "s": "sie",
+  "text": "Frohes neues Jahr!"
+ },
+ {
+  "key": "04d02bbb",
+  "s": "stift",
+  "text": "der Februar"
+ },
+ {
+  "key": "d3241dab",
+  "s": "stift",
+  "text": "Das ist der Februar."
+ },
+ {
+  "key": "f08453be",
+  "s": "stift",
+  "text": "Der Februar ist der kürzeste Monat. Er hat achtundzwanzig Tage, im Schaltjahr neunundzwanzig."
+ },
+ {
+  "key": "d707216d",
+  "s": "stift",
+  "text": "Karneval, Fasching oder Fastnacht: Das Fest hat in jeder Region einen anderen Namen."
+ },
+ {
+  "key": "f2da9bc8",
+  "s": "er",
+  "text": "Helau! Alaaf! Im Februar ist oft Karneval."
+ },
+ {
+  "key": "bfa22ba9",
+  "s": "stift",
+  "text": "der März"
+ },
+ {
+  "key": "70d52751",
+  "s": "stift",
+  "text": "Das ist der März."
+ },
+ {
+  "key": "1799e5dc",
+  "s": "stift",
+  "text": "Der März ist der dritte Monat. Im März beginnt der Frühling."
+ },
+ {
+  "key": "01b7d079",
+  "s": "stift",
+  "text": "Am letzten Sonntag im März stellt man die Uhr eine Stunde vor. Dann beginnt die Sommerzeit."
+ },
+ {
+  "key": "e34c73f3",
+  "s": "sie",
+  "text": "Endlich wird es wärmer!"
+ },
+ {
+  "key": "3c699fa4",
+  "s": "stift",
+  "text": "der April"
+ },
+ {
+  "key": "7fa0d17a",
+  "s": "stift",
+  "text": "Das ist der April."
+ },
+ {
+  "key": "c595bbdb",
+  "s": "stift",
+  "text": "Im April ist das Wetter oft wechselhaft: Sonne, Regen und manchmal Schnee."
+ },
+ {
+  "key": "5a2abdc1",
+  "s": "stift",
+  "text": "Am ersten April macht man Witze. Dann ruft man: April, April!"
+ },
+ {
+  "key": "40498729",
+  "s": "er",
+  "text": "April, April, der macht, was er will!"
+ },
+ {
+  "key": "cd096ac9",
+  "s": "stift",
+  "text": "der Mai"
+ },
+ {
+  "key": "4aa16621",
+  "s": "stift",
+  "text": "Das ist der Mai."
+ },
+ {
+  "key": "6dd44e49",
+  "s": "stift",
+  "text": "Im Mai blühen viele Blumen und Bäume."
+ },
+ {
+  "key": "c25b5c49",
+  "s": "stift",
+  "text": "Der erste Mai ist der Tag der Arbeit. Viele Leute machen einen Ausflug."
+ },
+ {
+  "key": "2ade3d9b",
+  "s": "sie",
+  "text": "Der erste Mai ist ein Feiertag. Wir haben frei!"
+ },
+ {
+  "key": "86541f04",
+  "s": "stift",
+  "text": "der Juni"
+ },
+ {
+  "key": "a3bdc49a",
+  "s": "stift",
+  "text": "Das ist der Juni."
+ },
+ {
+  "key": "b5f9d841",
+  "s": "stift",
+  "text": "Im Juni beginnt der Sommer. Die Tage sind sehr lang."
+ },
+ {
+  "key": "bf4db620",
+  "s": "stift",
+  "text": "Um den einundzwanzigsten Juni ist der längste Tag des Jahres."
+ },
+ {
+  "key": "e2cb574a",
+  "s": "kind",
+  "text": "Es ist schon zehn Uhr abends und noch hell!"
+ },
+ {
+  "key": "aa4e4782",
+  "s": "stift",
+  "text": "der Juli"
+ },
+ {
+  "key": "aab60e00",
+  "s": "stift",
+  "text": "Das ist der Juli."
+ },
+ {
+  "key": "27b055dd",
+  "s": "stift",
+  "text": "Im Juli ist es oft heiß. Viele Kinder haben Sommerferien."
+ },
+ {
+  "key": "88eec718",
+  "s": "stift",
+  "text": "Die Sommerferien sind in jedem Bundesland zu einer anderen Zeit."
+ },
+ {
+  "key": "c291a353",
+  "s": "sie",
+  "text": "Schöne Ferien!"
+ },
+ {
+  "key": "ceadd491",
+  "s": "stift",
+  "text": "der August"
+ },
+ {
+  "key": "b03bb4e9",
+  "s": "stift",
+  "text": "Das ist der August."
+ },
+ {
+  "key": "85528dfb",
+  "s": "stift",
+  "text": "Der August ist der achte Monat. Viele Leute machen Urlaub."
+ },
+ {
+  "key": "f25bf700",
+  "s": "stift",
+  "text": "Viele Deutsche fahren im Urlaub ans Meer, in die Berge oder nach Italien und Spanien."
+ },
+ {
+  "key": "78e80809",
+  "s": "er",
+  "text": "Wohin fahrt ihr in den Urlaub?"
+ },
+ {
+  "key": "c3a44b4b",
+  "s": "stift",
+  "text": "der September"
+ },
+ {
+  "key": "02d91cfb",
+  "s": "stift",
+  "text": "Das ist der September."
+ },
+ {
+  "key": "c302ff72",
+  "s": "stift",
+  "text": "Im September beginnt der Herbst. Die Schule fängt wieder an."
+ },
+ {
+  "key": "eebe085d",
+  "s": "stift",
+  "text": "Am ersten Schultag bekommen Kinder in Deutschland eine Schultüte mit Süßigkeiten."
+ },
+ {
+  "key": "14e48ed2",
+  "s": "sie",
+  "text": "Viel Glück am ersten Schultag!"
+ },
+ {
+  "key": "a5fbd80c",
+  "s": "stift",
+  "text": "der Oktober"
+ },
+ {
+  "key": "fa760bea",
+  "s": "stift",
+  "text": "Das ist der Oktober."
+ },
+ {
+  "key": "d6869b18",
+  "s": "stift",
+  "text": "Im Oktober werden die Blätter bunt."
+ },
+ {
+  "key": "f6b2136e",
+  "s": "stift",
+  "text": "Am dritten Oktober feiert Deutschland die Wiedervereinigung von neunzehnhundertneunzig."
+ },
+ {
+  "key": "91d6005e",
+  "s": "er",
+  "text": "Der dritte Oktober ist ein Feiertag."
+ },
+ {
+  "key": "ec37a9ae",
+  "s": "stift",
+  "text": "der November"
+ },
+ {
+  "key": "2dedd32c",
+  "s": "stift",
+  "text": "Das ist der November."
+ },
+ {
+  "key": "bc524345",
+  "s": "stift",
+  "text": "Der November ist oft grau, nass und neblig."
+ },
+ {
+  "key": "98ad3d8d",
+  "s": "stift",
+  "text": "Am elften November ist Sankt Martin. Kinder gehen mit Laternen durch die Straßen und singen."
+ },
+ {
+  "key": "edc30520",
+  "s": "kind",
+  "text": "Ich gehe mit meiner Laterne!"
+ },
+ {
+  "key": "004019f6",
+  "s": "stift",
+  "text": "der Dezember"
+ },
+ {
+  "key": "fe2760bc",
+  "s": "stift",
+  "text": "Das ist der Dezember."
+ },
+ {
+  "key": "9a856e9f",
+  "s": "stift",
+  "text": "Der Dezember ist der letzte Monat. Er hat einunddreißig Tage."
+ },
+ {
+  "key": "698c06a6",
+  "s": "stift",
+  "text": "Am vierundzwanzigsten Dezember ist Heiligabend. Dann gibt es Geschenke."
+ },
+ {
+  "key": "716b73df",
+  "s": "sie",
+  "text": "Frohe Weihnachten!"
+ },
+ {
+  "key": "eb834ec2",
+  "s": "stift",
+  "text": "der Montag"
+ },
+ {
+  "key": "ed6ceb88",
+  "s": "stift",
+  "text": "Das ist der Montag."
+ },
+ {
+  "key": "c463e49d",
+  "s": "stift",
+  "text": "der Montag, die Montage"
+ },
+ {
+  "key": "5d392e11",
+  "s": "stift",
+  "text": "Der Montag ist der erste Tag der Woche."
+ },
+ {
+  "key": "0e551ed4",
+  "s": "stift",
+  "text": "am Montag heißt an dem Montag. Bei Tagen benutzt man immer am."
+ },
+ {
+  "key": "67493bcf",
+  "s": "er",
+  "text": "Am Montag fängt die Arbeit wieder an."
+ },
+ {
+  "key": "e84b64d7",
+  "s": "stift",
+  "text": "der Dienstag"
+ },
+ {
+  "key": "1794cd9f",
+  "s": "stift",
+  "text": "Das ist der Dienstag."
+ },
+ {
+  "key": "d68aba71",
+  "s": "stift",
+  "text": "der Dienstag, die Dienstage"
+ },
+ {
+  "key": "652799a5",
+  "s": "stift",
+  "text": "Der Dienstag ist der zweite Tag der Woche."
+ },
+ {
+  "key": "a5cc3afe",
+  "s": "stift",
+  "text": "dienstags heißt: jeden Dienstag. Ich habe dienstags Deutschkurs."
+ },
+ {
+  "key": "f0ffd417",
+  "s": "sie",
+  "text": "Hast du am Dienstag Zeit?"
+ },
+ {
+  "key": "9aca0023",
+  "s": "stift",
+  "text": "der Mittwoch"
+ },
+ {
+  "key": "5337e6db",
+  "s": "stift",
+  "text": "Das ist der Mittwoch."
+ },
+ {
+  "key": "4d70847d",
+  "s": "stift",
+  "text": "der Mittwoch, die Mittwoche"
+ },
+ {
+  "key": "4bbc408f",
+  "s": "stift",
+  "text": "Der Mittwoch ist in der Mitte der Woche."
+ },
+ {
+  "key": "aa01c50f",
+  "s": "stift",
+  "text": "Mittwoch kommt von Mitte der Woche."
+ },
+ {
+  "key": "312e6f89",
+  "s": "er",
+  "text": "Mittwoch! Die halbe Woche ist geschafft."
+ },
+ {
+  "key": "2b49ee51",
+  "s": "stift",
+  "text": "der Donnerstag"
+ },
+ {
+  "key": "9957cc81",
+  "s": "stift",
+  "text": "Das ist der Donnerstag."
+ },
+ {
+  "key": "23f8ca25",
+  "s": "stift",
+  "text": "der Donnerstag, die Donnerstage"
+ },
+ {
+  "key": "8cd0c466",
+  "s": "stift",
+  "text": "Der Donnerstag ist der vierte Tag der Woche."
+ },
+ {
+  "key": "08cc3a8c",
+  "s": "stift",
+  "text": "Donnerstag kommt von Donar, dem alten Gott des Donners."
+ },
+ {
+  "key": "4dd999d9",
+  "s": "sie",
+  "text": "Am Donnerstag habe ich einen Termin beim Arzt."
+ },
+ {
+  "key": "418476a2",
+  "s": "stift",
+  "text": "der Freitag"
+ },
+ {
+  "key": "0ea8ec18",
+  "s": "stift",
+  "text": "Das ist der Freitag."
+ },
+ {
+  "key": "23382b6d",
+  "s": "stift",
+  "text": "der Freitag, die Freitage"
+ },
+ {
+  "key": "bc3dbe1c",
+  "s": "stift",
+  "text": "Am Freitag ist die Arbeitswoche fast vorbei."
+ },
+ {
+  "key": "38fb0389",
+  "s": "stift",
+  "text": "Am Freitagabend gehen viele Leute aus: ins Kino, ins Restaurant oder zu Freunden."
+ },
+ {
+  "key": "339e20fb",
+  "s": "er",
+  "text": "Endlich Freitag! Schönes Wochenende!"
+ },
+ {
+  "key": "e2781564",
+  "s": "stift",
+  "text": "der Samstag"
+ },
+ {
+  "key": "6b1d861a",
+  "s": "stift",
+  "text": "Das ist der Samstag."
+ },
+ {
+  "key": "0ad265a9",
+  "s": "stift",
+  "text": "der Samstag, die Samstage"
+ },
+ {
+  "key": "f8d3772e",
+  "s": "stift",
+  "text": "Am Samstag sind die Geschäfte offen."
+ },
+ {
+  "key": "f9c76ce7",
+  "s": "stift",
+  "text": "Im Norden sagt man oft Sonnabend, im Süden Samstag."
+ },
+ {
+  "key": "7c2b0a5d",
+  "s": "sie",
+  "text": "Am Samstag gehe ich einkaufen."
+ },
+ {
+  "key": "3b7c8196",
+  "s": "stift",
+  "text": "der Sonntag"
+ },
+ {
+  "key": "cd5518d4",
+  "s": "stift",
+  "text": "Das ist der Sonntag."
+ },
+ {
+  "key": "d03b927d",
+  "s": "stift",
+  "text": "der Sonntag, die Sonntage"
+ },
+ {
+  "key": "556b6a63",
+  "s": "stift",
+  "text": "Am Sonntag haben die meisten Leute frei."
+ },
+ {
+  "key": "ddb0ab6e",
+  "s": "stift",
+  "text": "Am Sonntag sind fast alle Geschäfte zu. Bäckereien sind oft am Morgen offen."
+ },
+ {
+  "key": "9245e3ab",
+  "s": "er",
+  "text": "Was machst du am Sonntag?"
+ },
+ {
+  "key": "37c3378f",
+  "s": "stift",
+  "text": "das Wochenende"
+ },
+ {
+  "key": "85d22ce7",
+  "s": "stift",
+  "text": "Das ist das Wochenende."
+ },
+ {
+  "key": "8b87b7bf",
+  "s": "stift",
+  "text": "das Wochenende, die Wochenenden"
+ },
+ {
+  "key": "98272e02",
+  "s": "stift",
+  "text": "Samstag und Sonntag sind das Wochenende."
+ },
+ {
+  "key": "a93675b1",
+  "s": "stift",
+  "text": "Am Freitag sagt man zum Abschied oft: Schönes Wochenende!"
+ },
+ {
+  "key": "965d65f7",
+  "s": "sie",
+  "text": "Schönes Wochenende!"
+ },
+ {
+  "key": "70c06239",
+  "s": "stift",
+  "text": "der Feiertag"
+ },
+ {
+  "key": "07439739",
+  "s": "stift",
+  "text": "Das ist der Feiertag."
+ },
+ {
+  "key": "0e0b16a1",
+  "s": "stift",
+  "text": "der Feiertag, die Feiertage"
+ },
+ {
+  "key": "770e5035",
+  "s": "stift",
+  "text": "Der dritte Oktober ist ein Feiertag."
+ },
+ {
+  "key": "7c42e6a8",
+  "s": "stift",
+  "text": "An Feiertagen sind die Geschäfte und Ämter geschlossen."
+ },
+ {
+  "key": "49e4fc14",
+  "s": "er",
+  "text": "Morgen ist Feiertag. Ich muss nicht arbeiten!"
+ },
+ {
+  "key": "354f2584",
+  "s": "stift",
+  "text": "der Geburtstag"
+ },
+ {
+  "key": "feaa0c5a",
+  "s": "stift",
+  "text": "Das ist der Geburtstag."
+ },
+ {
+  "key": "7f42c4fd",
+  "s": "stift",
+  "text": "der Geburtstag, die Geburtstage"
+ },
+ {
+  "key": "4abdab11",
+  "s": "stift",
+  "text": "Der Kuchen ist für einen Geburtstag."
+ },
+ {
+  "key": "1b56c9ee",
+  "s": "stift",
+  "text": "Ordinalzahlen: am ersten, am zweiten, am dritten, am zwölften Mai."
+ },
+ {
+  "key": "5420c299",
+  "s": "stift",
+  "text": "In Deutschland gratuliert man nicht vor dem Geburtstag. Das bringt Unglück."
+ },
+ {
+  "key": "562f931d",
+  "s": "sie",
+  "text": "Alles Gute zum Geburtstag!"
+ },
+ {
+  "key": "02f34948",
+  "s": "er",
+  "text": "Wann hast du Geburtstag?"
+ },
+ {
+  "key": "7d5aaee3",
+  "s": "sie",
+  "text": "Am zwölften Mai."
+ },
+ {
+  "key": "38ff9cff",
+  "s": "stift",
+  "text": "Finde die drei Wintermonate!"
+ },
+ {
+  "key": "bcf62b81",
+  "s": "stift",
+  "text": "Finde die drei Sommermonate!"
+ },
+ {
+  "key": "4b52d4f4",
+  "s": "stift",
+  "text": "Finde die zwei Tage vom Wochenende!"
+ },
+ {
+  "key": "8d024a3d",
+  "s": "stift",
+  "text": "Finde die drei Frühlingsmonate!"
+ },
+ {
+  "key": "a8e4f734",
+  "s": "stift",
+  "text": "Finde die drei Herbstmonate!"
+ },
+ {
+  "key": "3cf3d04c",
+  "s": "stift",
+  "text": "Finde die drei Monate mit J!"
+ },
+ {
+  "key": "fde9cf12",
+  "s": "stift",
+  "text": "Ein Jahr hat zwölf Monate."
+ },
+ {
+  "key": "b5774b2b",
+  "s": "stift",
+  "text": "Der Februar hat einunddreißig Tage."
+ },
+ {
+  "key": "3eecd3e8",
+  "s": "stift",
+  "text": "Nach dem Dienstag kommt der Mittwoch."
+ },
+ {
+  "key": "a1714750",
+  "s": "stift",
+  "text": "Der Juli ist ein Wintermonat."
+ },
+ {
+  "key": "9f3da649",
+  "s": "stift",
+  "text": "Der dritte Oktober ist ein Feiertag in Deutschland."
+ },
+ {
+  "key": "9714ebf7",
+  "s": "stift",
+  "text": "Die Woche hat acht Tage."
+ },
+ {
+  "key": "a2320d4e",
+  "s": "stift",
+  "text": "Der Frühling beginnt im März."
+ },
+ {
+  "key": "30cec478",
+  "s": "stift",
+  "text": "Dieser Monat kommt nach dem April und vor dem Juni."
+ },
+ {
+  "key": "7c96126c",
+  "s": "stift",
+  "text": "An diesem Tag sagt man: Alles Gute! Es gibt Kuchen mit Kerzen."
+ },
+ {
+  "key": "17dc83c0",
+  "s": "stift",
+  "text": "Diese Jahreszeit ist kalt. Oft liegt Schnee."
+ },
+ {
+  "key": "263da063",
+  "s": "stift",
+  "text": "Das ist der erste Tag der Woche. Viele Leute fangen wieder an zu arbeiten."
+ },
+ {
+  "key": "0130a065",
+  "s": "stift",
+  "text": "In diesem Monat ist Weihnachten. Es ist der letzte Monat im Jahr."
+ },
+ {
+  "key": "052eef5e",
+  "s": "stift",
+  "text": "Dieser Tag ist zwischen Mittwoch und Freitag."
+ },
+ {
+  "key": "dea037a4",
+  "s": "stift",
+  "text": "In diesem Monat fängt die Schule wieder an, und der Herbst kommt."
+ },
+ {
+  "key": "120f340b",
+  "s": "stift",
+  "text": "Nein. Der Februar hat achtundzwanzig oder neunundzwanzig Tage."
+ },
+ {
+  "key": "7f061f22",
+  "s": "stift",
+  "text": "Nein. Der Juli ist ein Sommermonat."
+ },
+ {
+  "key": "c2aedfab",
+  "s": "stift",
+  "text": "Nein. Die Woche hat sieben Tage."
+ },
+ {
+  "key": "de72c57d",
+  "s": "erz",
+  "text": "Im Frühling wird es wärmer. Die Tage werden länger."
+ },
+ {
+  "key": "1cdf3aa2",
+  "s": "erz",
+  "text": "Die Bäume blühen, die Vögel bauen Nester, und im Garten wachsen Blumen."
+ },
+ {
+  "key": "956d4a75",
+  "s": "erz",
+  "text": "Das Wetter wechselt oft: Sonne, Regen und manchmal ein Regenbogen."
+ },
+ {
+  "key": "ab403941",
+  "s": "stift",
+  "text": "der Garten"
+ },
+ {
+  "key": "a61802f9",
+  "s": "stift",
+  "text": "Das ist der Garten."
+ },
+ {
+  "key": "45c7d12d",
+  "s": "stift",
+  "text": "der Garten, die Gärten"
+ },
+ {
+  "key": "d6c8a9e4",
+  "s": "stift",
+  "text": "Im Garten wachsen Blumen, Obst und Gemüse."
+ },
+ {
+  "key": "827760ca",
+  "s": "stift",
+  "text": "In der Stadt mieten viele Leute einen kleinen Garten. Er heißt Schrebergarten."
+ },
+ {
+  "key": "438c6093",
+  "s": "sie",
+  "text": "Im Frühling arbeite ich gern im Garten."
+ },
+ {
+  "key": "b2db83f4",
+  "s": "stift",
+  "text": "Die Sonne scheint schon wärmer."
+ },
+ {
+  "key": "a9cb6424",
+  "s": "stift",
+  "text": "Im Frühling steht die Sonne jeden Tag ein bisschen höher."
+ },
+ {
+  "key": "e6083038",
+  "s": "er",
+  "text": "Heute ist es schön warm. Endlich keine dicke Jacke mehr!"
+ },
+ {
+  "key": "6b89cd51",
+  "s": "stift",
+  "text": "der Regen"
+ },
+ {
+  "key": "f3dc4081",
+  "s": "stift",
+  "text": "Das ist der Regen."
+ },
+ {
+  "key": "d4d3f98a",
+  "s": "stift",
+  "text": "Aus der Wolke kommt Regen."
+ },
+ {
+  "key": "cc793932",
+  "s": "stift",
+  "text": "Beim Wetter benutzt man es: Es regnet, es schneit, es donnert."
+ },
+ {
+  "key": "c31e89ca",
+  "s": "er",
+  "text": "Es regnet schon wieder! Gut, dass ich einen Regenschirm habe."
+ },
+ {
+  "key": "ecfc54f0",
+  "s": "stift",
+  "text": "der Regenbogen"
+ },
+ {
+  "key": "6136b926",
+  "s": "stift",
+  "text": "Das ist der Regenbogen."
+ },
+ {
+  "key": "3be8a2d7",
+  "s": "stift",
+  "text": "der Regenbogen, die Regenbögen"
+ },
+ {
+  "key": "b649d3eb",
+  "s": "stift",
+  "text": "Der Regenbogen hat sieben Farben."
+ },
+ {
+  "key": "8e3058b0",
+  "s": "stift",
+  "text": "Einen Regenbogen sieht man, wenn die Sonne scheint und es gleichzeitig regnet."
+ },
+ {
+  "key": "fb49387c",
+  "s": "kind",
+  "text": "Schau mal, ein Regenbogen! Wie schön!"
+ },
+ {
+  "key": "5ac5ff1b",
+  "s": "stift",
+  "text": "der Kirschbaum"
+ },
+ {
+  "key": "2be9598b",
+  "s": "stift",
+  "text": "Das ist der Kirschbaum."
+ },
+ {
+  "key": "7577cb58",
+  "s": "stift",
+  "text": "der Kirschbaum, die Kirschbäume"
+ },
+ {
+  "key": "9b4e13e3",
+  "s": "stift",
+  "text": "Der Kirschbaum blüht rosa und weiß."
+ },
+ {
+  "key": "2dcc1ebf",
+  "s": "stift",
+  "text": "Aus den Blüten werden im Sommer Kirschen."
+ },
+ {
+  "key": "f8cda587",
+  "s": "sie",
+  "text": "Riech mal! Die Blüten duften so gut."
+ },
+ {
+  "key": "a0d6164b",
+  "s": "stift",
+  "text": "das Nest"
+ },
+ {
+  "key": "be9efa5b",
+  "s": "stift",
+  "text": "Das ist das Nest."
+ },
+ {
+  "key": "5ccc2948",
+  "s": "stift",
+  "text": "das Nest, die Nester"
+ },
+ {
+  "key": "81a4782c",
+  "s": "stift",
+  "text": "Im Nest liegen zwei blaue Eier."
+ },
+ {
+  "key": "9fc38652",
+  "s": "stift",
+  "text": "Vögel bauen ihre Nester im Frühling aus kleinen Ästen und Gras."
+ },
+ {
+  "key": "6c64bbc8",
+  "s": "kind",
+  "text": "Bald schlüpfen die Vogelbabys!"
+ },
+ {
+  "key": "5b7d1551",
+  "s": "stift",
+  "text": "der Vogel"
+ },
+ {
+  "key": "288c2e29",
+  "s": "stift",
+  "text": "Das ist der Vogel."
+ },
+ {
+  "key": "63250e1d",
+  "s": "stift",
+  "text": "der Vogel, die Vögel"
+ },
+ {
+  "key": "5deca454",
+  "s": "stift",
+  "text": "Der Vogel fliegt zum Nest."
+ },
+ {
+  "key": "dbf9a701",
+  "s": "stift",
+  "text": "Viele Vögel fliegen im Herbst in den Süden und kommen im Frühling zurück."
+ },
+ {
+  "key": "f4ebf50f",
+  "s": "kind",
+  "text": "Hör mal, der Vogel singt!"
+ },
+ {
+  "key": "451a2763",
+  "s": "stift",
+  "text": "die Tulpe"
+ },
+ {
+  "key": "9d76eaeb",
+  "s": "stift",
+  "text": "Das ist die Tulpe."
+ },
+ {
+  "key": "843660a5",
+  "s": "stift",
+  "text": "die Tulpe, die Tulpen"
+ },
+ {
+  "key": "0f1c1f03",
+  "s": "stift",
+  "text": "Die Tulpen sind rot, gelb und lila."
+ },
+ {
+  "key": "dcc71bd5",
+  "s": "stift",
+  "text": "Tulpen sind typische Frühlingsblumen. Viele kommen aus den Niederlanden."
+ },
+ {
+  "key": "302eb9da",
+  "s": "sie",
+  "text": "Ich kaufe einen Strauß Tulpen für meine Mutter."
+ },
+ {
+  "key": "19904810",
+  "s": "stift",
+  "text": "die Biene"
+ },
+ {
+  "key": "cafc3306",
+  "s": "stift",
+  "text": "Das ist die Biene."
+ },
+ {
+  "key": "ebda4ae3",
+  "s": "stift",
+  "text": "die Biene, die Bienen"
+ },
+ {
+  "key": "d9e6d02d",
+  "s": "stift",
+  "text": "Die Biene sammelt Nektar von den Blumen."
+ },
+ {
+  "key": "b964b02e",
+  "s": "stift",
+  "text": "Bienen machen Honig. Ohne Bienen gibt es auch weniger Obst."
+ },
+ {
+  "key": "93a3cb00",
+  "s": "kind",
+  "text": "Hilfe, eine Biene!"
+ },
+ {
+  "key": "2a6dbf35",
+  "s": "sie",
+  "text": "Keine Angst, sie tut dir nichts."
+ },
+ {
+  "key": "c17a3967",
+  "s": "stift",
+  "text": "der Schmetterling"
+ },
+ {
+  "key": "0452dadf",
+  "s": "stift",
+  "text": "Das ist der Schmetterling."
+ },
+ {
+  "key": "c6136f9f",
+  "s": "stift",
+  "text": "der Schmetterling, die Schmetterlinge"
+ },
+ {
+  "key": "4e06500c",
+  "s": "stift",
+  "text": "Der Schmetterling hat bunte Flügel."
+ },
+ {
+  "key": "9b89b1f1",
+  "s": "stift",
+  "text": "Ein Schmetterling war zuerst eine Raupe."
+ },
+ {
+  "key": "2785e526",
+  "s": "kind",
+  "text": "Der Schmetterling fliegt von Blume zu Blume."
+ },
+ {
+  "key": "aceea014",
+  "s": "stift",
+  "text": "das Osterei"
+ },
+ {
+  "key": "51a5cbda",
+  "s": "stift",
+  "text": "Das ist das Osterei."
+ },
+ {
+  "key": "0e35f206",
+  "s": "stift",
+  "text": "das Osterei, die Ostereier"
+ },
+ {
+  "key": "0839525f",
+  "s": "stift",
+  "text": "Die Ostereier sind bunt bemalt."
+ },
+ {
+  "key": "b3079ad3",
+  "s": "stift",
+  "text": "Zu Ostern bemalt man Eier und versteckt sie im Garten. Die Kinder suchen sie."
+ },
+ {
+  "key": "3f5d5786",
+  "s": "kind",
+  "text": "Ich habe drei Ostereier gefunden!"
+ },
+ {
+  "key": "d0b73442",
+  "s": "stift",
+  "text": "der Osterhase"
+ },
+ {
+  "key": "f2087f28",
+  "s": "stift",
+  "text": "Das ist der Osterhase."
+ },
+ {
+  "key": "1c7dd18c",
+  "s": "stift",
+  "text": "der Osterhase, die Osterhasen"
+ },
+ {
+  "key": "fcc0bc75",
+  "s": "stift",
+  "text": "Der Osterhase bringt die Eier."
+ },
+ {
+  "key": "72deb267",
+  "s": "stift",
+  "text": "Ostern ist im März oder im April. Das Datum ist jedes Jahr anders."
+ },
+ {
+  "key": "225d01ce",
+  "s": "sie",
+  "text": "Frohe Ostern!"
+ },
+ {
+  "key": "d0c4e993",
+  "s": "stift",
+  "text": "der Nachbar"
+ },
+ {
+  "key": "d4541d63",
+  "s": "stift",
+  "text": "Das ist der Nachbar."
+ },
+ {
+  "key": "a0f2058e",
+  "s": "stift",
+  "text": "der Nachbar, die Nachbarn"
+ },
+ {
+  "key": "6fd5972e",
+  "s": "stift",
+  "text": "Der Nachbar steht im Regen."
+ },
+ {
+  "key": "3e15bc59",
+  "s": "stift",
+  "text": "der Nachbar, die Nachbarin: die Person, die neben dir wohnt."
+ },
+ {
+  "key": "d737902d",
+  "s": "er",
+  "text": "Guten Morgen! Schönes Wetter heute, oder? Na ja, ein bisschen nass."
+ },
+ {
+  "key": "760b8a2d",
+  "s": "stift",
+  "text": "der Regenschirm"
+ },
+ {
+  "key": "9296e595",
+  "s": "stift",
+  "text": "Das ist der Regenschirm."
+ },
+ {
+  "key": "27b9a78f",
+  "s": "stift",
+  "text": "der Regenschirm, die Regenschirme"
+ },
+ {
+  "key": "262a650f",
+  "s": "stift",
+  "text": "Der Regenschirm ist rot und offen."
+ },
+ {
+  "key": "931d039e",
+  "s": "stift",
+  "text": "der Regen und der Schirm: der Regenschirm. Gegen die Sonne gibt es den Sonnenschirm."
+ },
+ {
+  "key": "40143f32",
+  "s": "sie",
+  "text": "Nimm einen Regenschirm mit! Im April weiß man nie."
+ },
+ {
+  "key": "4b7a8a6f",
+  "s": "stift",
+  "text": "der Gummistiefel"
+ },
+ {
+  "key": "db59f1b7",
+  "s": "stift",
+  "text": "Das ist der Gummistiefel."
+ },
+ {
+  "key": "f161f146",
+  "s": "stift",
+  "text": "der Gummistiefel, die Gummistiefel"
+ },
+ {
+  "key": "d4ccd106",
+  "s": "stift",
+  "text": "Die Gummistiefel sind gelb."
+ },
+ {
+  "key": "57429bcf",
+  "s": "stift",
+  "text": "Für zwei Schuhe sagt man ein Paar: ein Paar Gummistiefel, ein Paar Socken."
+ },
+ {
+  "key": "072fb5c4",
+  "s": "kind",
+  "text": "Juhu, Pfützen! Mit Gummistiefeln kann ich springen."
+ },
+ {
+  "key": "0d514336",
+  "s": "stift",
+  "text": "die Oma"
+ },
+ {
+  "key": "9ec0d9fc",
+  "s": "stift",
+  "text": "Das ist die Oma."
+ },
+ {
+  "key": "395a75ec",
+  "s": "stift",
+  "text": "die Oma, die Omas"
+ },
+ {
+  "key": "d3de63cf",
+  "s": "stift",
+  "text": "Die Oma gießt die Blumen."
+ },
+ {
+  "key": "704a86aa",
+  "s": "stift",
+  "text": "Die Oma heißt auch Großmutter. Der Opa heißt auch Großvater."
+ },
+ {
+  "key": "4912fddf",
+  "s": "sie",
+  "text": "Die Blumen haben Durst. Ich gieße sie jeden Morgen."
+ },
+ {
+  "key": "ccda222a",
+  "s": "stift",
+  "text": "die Gießkanne"
+ },
+ {
+  "key": "0c3c54c0",
+  "s": "stift",
+  "text": "Das ist die Gießkanne."
+ },
+ {
+  "key": "cb16084b",
+  "s": "stift",
+  "text": "die Gießkanne, die Gießkannen"
+ },
+ {
+  "key": "77dca534",
+  "s": "stift",
+  "text": "Die Gießkanne ist voll Wasser."
+ },
+ {
+  "key": "9c9a9808",
+  "s": "stift",
+  "text": "gießen und die Kanne: die Gießkanne. Mit der Gießkanne gießt man Blumen."
+ },
+ {
+  "key": "895c5f77",
+  "s": "sie",
+  "text": "Kannst du mir bitte die Gießkanne geben?"
+ },
+ {
+  "key": "75807079",
+  "s": "stift",
+  "text": "Finde vier Tiere!"
+ },
+ {
+  "key": "17e6d385",
+  "s": "stift",
+  "text": "Finde zwei Dinge für Ostern!"
+ },
+ {
+  "key": "60082eae",
+  "s": "stift",
+  "text": "Finde zwei Dinge für den Regen!"
+ },
+ {
+  "key": "8ba500a6",
+  "s": "stift",
+  "text": "Finde drei Dinge zum Wetter!"
+ },
+ {
+  "key": "a784feff",
+  "s": "stift",
+  "text": "Finde zwei Personen!"
+ },
+ {
+  "key": "aa1459e9",
+  "s": "stift",
+  "text": "Im Frühling werden die Tage länger."
+ },
+ {
+  "key": "01a58263",
+  "s": "stift",
+  "text": "Der Regenbogen hat drei Farben."
+ },
+ {
+  "key": "d1833274",
+  "s": "stift",
+  "text": "Ostern ist immer im Dezember."
+ },
+ {
+  "key": "9cc0ed9b",
+  "s": "stift",
+  "text": "Bienen machen Honig."
+ },
+ {
+  "key": "39bca45c",
+  "s": "stift",
+  "text": "Ein Schmetterling war zuerst ein Vogel."
+ },
+ {
+  "key": "a09eaa43",
+  "s": "stift",
+  "text": "Mit Gummistiefeln bleiben die Füße trocken."
+ },
+ {
+  "key": "a09fe13d",
+  "s": "stift",
+  "text": "Sie ist klein, gelb und schwarz. Sie fliegt von Blume zu Blume und macht Honig."
+ },
+ {
+  "key": "d54e9a6a",
+  "s": "stift",
+  "text": "Er hat lange Ohren und bringt zu Ostern die Eier."
+ },
+ {
+  "key": "cc4adf1d",
+  "s": "stift",
+  "text": "Man braucht ihn, wenn es regnet. Man hält ihn über den Kopf."
+ },
+ {
+  "key": "259eede0",
+  "s": "stift",
+  "text": "Damit gießt man die Blumen im Garten."
+ },
+ {
+  "key": "e5be11d4",
+  "s": "stift",
+  "text": "Er hat sieben Farben. Man sieht ihn nach dem Regen am Himmel."
+ },
+ {
+  "key": "dbd71005",
+  "s": "stift",
+  "text": "Darin liegen kleine blaue Eier. Ein Vogel hat es gebaut."
+ },
+ {
+  "key": "cf7da16b",
+  "s": "stift",
+  "text": "Nein. Der Regenbogen hat sieben Farben."
+ },
+ {
+  "key": "05fdf9f9",
+  "s": "stift",
+  "text": "Nein. Ostern ist im März oder im April."
+ },
+ {
+  "key": "2aae2e71",
+  "s": "stift",
+  "text": "Nein. Ein Schmetterling war zuerst eine Raupe."
+ },
+ {
+  "key": "23b65c8c",
+  "s": "erz",
+  "text": "Im Sommer ist es warm, oft sogar heiß."
+ },
+ {
+  "key": "86530e39",
+  "s": "erz",
+  "text": "Viele Leute gehen ins Freibad, essen Eis und liegen in der Sonne."
+ },
+ {
+  "key": "bb3e10f8",
+  "s": "erz",
+  "text": "Aber Vorsicht: Am Nachmittag kommt manchmal ein Gewitter."
+ },
+ {
+  "key": "9b216b12",
+  "s": "stift",
+  "text": "das Freibad"
+ },
+ {
+  "key": "40c78528",
+  "s": "stift",
+  "text": "Das ist das Freibad."
+ },
+ {
+  "key": "a3f48a5f",
+  "s": "stift",
+  "text": "das Freibad, die Freibäder"
+ },
+ {
+  "key": "5797037a",
+  "s": "stift",
+  "text": "Das Freibad ist im Sommer geöffnet."
+ },
+ {
+  "key": "9544da05",
+  "s": "stift",
+  "text": "Ein Freibad ist draußen, ein Hallenbad ist drinnen."
+ },
+ {
+  "key": "c58c7b83",
+  "s": "er",
+  "text": "Zwei Erwachsene und ein Kind, bitte."
+ },
+ {
+  "key": "9d2523fe",
+  "s": "stift",
+  "text": "Die Sonne ist heute sehr stark."
+ },
+ {
+  "key": "e5287da6",
+  "s": "stift",
+  "text": "Zwischen zwölf und drei Uhr ist die Sonne am stärksten."
+ },
+ {
+  "key": "487e915c",
+  "s": "sie",
+  "text": "Bleib im Schatten! Die Sonne ist zu stark."
+ },
+ {
+  "key": "0c77e252",
+  "s": "stift",
+  "text": "das Gewitter"
+ },
+ {
+  "key": "5a51da38",
+  "s": "stift",
+  "text": "Das ist das Gewitter."
+ },
+ {
+  "key": "589251db",
+  "s": "stift",
+  "text": "das Gewitter, die Gewitter"
+ },
+ {
+  "key": "ef3b5793",
+  "s": "stift",
+  "text": "Dunkle Wolken, Blitz und Donner: Ein Gewitter kommt."
+ },
+ {
+  "key": "420ffd58",
+  "s": "stift",
+  "text": "Bei Gewitter muss man sofort aus dem Wasser gehen."
+ },
+ {
+  "key": "7ee5967e",
+  "s": "er",
+  "text": "Alle raus aus dem Wasser! Ein Gewitter kommt!"
+ },
+ {
+  "key": "ed0203b3",
+  "s": "stift",
+  "text": "das Schwimmbecken"
+ },
+ {
+  "key": "13a57e93",
+  "s": "stift",
+  "text": "Das ist das Schwimmbecken."
+ },
+ {
+  "key": "689227cb",
+  "s": "stift",
+  "text": "das Schwimmbecken, die Schwimmbecken"
+ },
+ {
+  "key": "1abfb650",
+  "s": "stift",
+  "text": "Das Wasser im Becken ist blau und kühl."
+ },
+ {
+  "key": "6ab0b2a6",
+  "s": "stift",
+  "text": "In Deutschland lernen Kinder oft in der Grundschule schwimmen."
+ },
+ {
+  "key": "7bc1fc11",
+  "s": "kind",
+  "text": "Das Wasser ist kalt! Aber super!"
+ },
+ {
+  "key": "2bc32313",
+  "s": "stift",
+  "text": "das Sprungbrett"
+ },
+ {
+  "key": "4f246303",
+  "s": "stift",
+  "text": "Das ist das Sprungbrett."
+ },
+ {
+  "key": "150e2a78",
+  "s": "stift",
+  "text": "das Sprungbrett, die Sprungbretter"
+ },
+ {
+  "key": "56626aeb",
+  "s": "stift",
+  "text": "Vom Sprungbrett springt man ins Wasser."
+ },
+ {
+  "key": "98e04ad9",
+  "s": "stift",
+  "text": "springen bildet das Perfekt mit sein: Ich bin ins Wasser gesprungen."
+ },
+ {
+  "key": "48412399",
+  "s": "kind",
+  "text": "Eins, zwei, drei , und los!"
+ },
+ {
+  "key": "7c35e363",
+  "s": "stift",
+  "text": "der Bademeister"
+ },
+ {
+  "key": "45cda5eb",
+  "s": "stift",
+  "text": "Das ist der Bademeister."
+ },
+ {
+  "key": "48a752dc",
+  "s": "stift",
+  "text": "der Bademeister, die Bademeister"
+ },
+ {
+  "key": "37329db8",
+  "s": "stift",
+  "text": "Der Bademeister passt auf alle auf."
+ },
+ {
+  "key": "707be82a",
+  "s": "stift",
+  "text": "Der Bademeister hat eine Pfeife. Wenn er pfeift, muss man hören."
+ },
+ {
+  "key": "40ad4530",
+  "s": "er",
+  "text": "Bitte nicht vom Beckenrand springen!"
+ },
+ {
+  "key": "ab8cbd79",
+  "s": "stift",
+  "text": "der Sonnenschirm"
+ },
+ {
+  "key": "bd8b0241",
+  "s": "stift",
+  "text": "Das ist der Sonnenschirm."
+ },
+ {
+  "key": "820f549d",
+  "s": "stift",
+  "text": "der Sonnenschirm, die Sonnenschirme"
+ },
+ {
+  "key": "6c11900c",
+  "s": "stift",
+  "text": "Unter dem Sonnenschirm ist Schatten."
+ },
+ {
+  "key": "b47a00b6",
+  "s": "stift",
+  "text": "Komm unter den Schirm! Wohin? Akkusativ. Ich sitze unter dem Schirm. Wo? Dativ."
+ },
+ {
+  "key": "44baa69c",
+  "s": "sie",
+  "text": "Komm unter den Sonnenschirm, hier ist es kühler."
+ },
+ {
+  "key": "172f6e54",
+  "s": "stift",
+  "text": "der Liegestuhl"
+ },
+ {
+  "key": "dbf35942",
+  "s": "stift",
+  "text": "Das ist der Liegestuhl."
+ },
+ {
+  "key": "67092ae4",
+  "s": "stift",
+  "text": "der Liegestuhl, die Liegestühle"
+ },
+ {
+  "key": "9c055091",
+  "s": "stift",
+  "text": "Auf dem Liegestuhl kann man sich ausruhen."
+ },
+ {
+  "key": "b133e5fc",
+  "s": "stift",
+  "text": "liegen und der Stuhl: der Liegestuhl."
+ },
+ {
+  "key": "3aebe247",
+  "s": "er",
+  "text": "Ah, jetzt erst mal ausruhen."
+ },
+ {
+  "key": "bb953210",
+  "s": "stift",
+  "text": "das Handtuch"
+ },
+ {
+  "key": "8d28561e",
+  "s": "stift",
+  "text": "Das ist das Handtuch."
+ },
+ {
+  "key": "d8ca104f",
+  "s": "stift",
+  "text": "das Handtuch, die Handtücher"
+ },
+ {
+  "key": "80b9d2f1",
+  "s": "stift",
+  "text": "Das Handtuch liegt auf der Wiese."
+ },
+ {
+  "key": "dce30757",
+  "s": "stift",
+  "text": "das Handtuch, die Handtücher: Aus u wird im Plural ü."
+ },
+ {
+  "key": "b8906fbb",
+  "s": "sie",
+  "text": "Vergiss dein Handtuch nicht!"
+ },
+ {
+  "key": "e9187b78",
+  "s": "stift",
+  "text": "die Sonnenbrille"
+ },
+ {
+  "key": "96e424de",
+  "s": "stift",
+  "text": "Das ist die Sonnenbrille."
+ },
+ {
+  "key": "c2d4c729",
+  "s": "stift",
+  "text": "die Sonnenbrille, die Sonnenbrillen"
+ },
+ {
+  "key": "afec2c12",
+  "s": "stift",
+  "text": "Die Sonnenbrille liegt auf dem Handtuch."
+ },
+ {
+  "key": "f3aad7c3",
+  "s": "stift",
+  "text": "Achtung: die Brille ist im Deutschen Singular. Auf Englisch sagt man glasses, im Plural."
+ },
+ {
+  "key": "f611759f",
+  "s": "kind",
+  "text": "Wo ist meine Sonnenbrille?"
+ },
+ {
+  "key": "96beea68",
+  "s": "stift",
+  "text": "die Sonnencreme"
+ },
+ {
+  "key": "77640e06",
+  "s": "stift",
+  "text": "Das ist die Sonnencreme."
+ },
+ {
+  "key": "7a987f62",
+  "s": "stift",
+  "text": "Die Sonnencreme schützt die Haut."
+ },
+ {
+  "key": "a773880a",
+  "s": "stift",
+  "text": "Man soll sich alle zwei Stunden neu eincremen, besonders nach dem Schwimmen."
+ },
+ {
+  "key": "c363f028",
+  "s": "sie",
+  "text": "Hast du dich schon eingecremt?"
+ },
+ {
+  "key": "14bb2d84",
+  "s": "stift",
+  "text": "die Wassermelone"
+ },
+ {
+  "key": "52cab4fa",
+  "s": "stift",
+  "text": "Das ist die Wassermelone."
+ },
+ {
+  "key": "1ce569e9",
+  "s": "stift",
+  "text": "die Wassermelone, die Wassermelonen"
+ },
+ {
+  "key": "88b7aa92",
+  "s": "stift",
+  "text": "Die Wassermelone ist rot, süß und saftig."
+ },
+ {
+  "key": "49e7d870",
+  "s": "stift",
+  "text": "Eine Wassermelone besteht zu über neunzig Prozent aus Wasser."
+ },
+ {
+  "key": "509e63ca",
+  "s": "kind",
+  "text": "Darf ich noch ein Stück Melone?"
+ },
+ {
+  "key": "d10ac4a3",
+  "s": "stift",
+  "text": "der Kiosk"
+ },
+ {
+  "key": "1c76ada3",
+  "s": "stift",
+  "text": "Das ist der Kiosk."
+ },
+ {
+  "key": "980939df",
+  "s": "stift",
+  "text": "der Kiosk, die Kioske"
+ },
+ {
+  "key": "f97a3c79",
+  "s": "stift",
+  "text": "Am Kiosk gibt es Eis, Pommes und Getränke."
+ },
+ {
+  "key": "1762104c",
+  "s": "stift",
+  "text": "Pommes kommt von Pommes frites. Das ist Französisch."
+ },
+ {
+  "key": "a78137b7",
+  "s": "kind",
+  "text": "Eine Portion Pommes mit Ketchup, bitte!"
+ },
+ {
+  "key": "b4e1fa44",
+  "s": "stift",
+  "text": "der Wasserball"
+ },
+ {
+  "key": "418d45da",
+  "s": "stift",
+  "text": "Das ist der Wasserball."
+ },
+ {
+  "key": "ff644a04",
+  "s": "stift",
+  "text": "der Wasserball, die Wasserbälle"
+ },
+ {
+  "key": "c4e6d528",
+  "s": "stift",
+  "text": "Der Wasserball schwimmt im Becken."
+ },
+ {
+  "key": "0daee59f",
+  "s": "stift",
+  "text": "werfen: ich werfe, du wirfst, er wirft. Der Imperativ ist: Wirf!"
+ },
+ {
+  "key": "c1331cb3",
+  "s": "kind",
+  "text": "Wirf den Ball zu mir!"
+ },
+ {
+  "key": "792e4eb9",
+  "s": "stift",
+  "text": "der Schwimmreifen"
+ },
+ {
+  "key": "5bfde4d1",
+  "s": "stift",
+  "text": "Das ist der Schwimmreifen."
+ },
+ {
+  "key": "e60e29ac",
+  "s": "stift",
+  "text": "der Schwimmreifen, die Schwimmreifen"
+ },
+ {
+  "key": "6fd82a66",
+  "s": "stift",
+  "text": "Das Kind schwimmt mit einem Schwimmreifen."
+ },
+ {
+  "key": "b672dafb",
+  "s": "stift",
+  "text": "Kleine Kinder tragen oft Schwimmflügel an den Armen."
+ },
+ {
+  "key": "0e9dbc0d",
+  "s": "kind",
+  "text": "Ich kann schon ein bisschen schwimmen!"
+ },
+ {
+  "key": "eeb367e7",
+  "s": "stift",
+  "text": "das Thermometer"
+ },
+ {
+  "key": "a0119b67",
+  "s": "stift",
+  "text": "Das ist das Thermometer."
+ },
+ {
+  "key": "b794f4a3",
+  "s": "stift",
+  "text": "das Thermometer, die Thermometer"
+ },
+ {
+  "key": "0eabafb9",
+  "s": "stift",
+  "text": "Das Thermometer zeigt zweiunddreißig Grad."
+ },
+ {
+  "key": "b0630b8d",
+  "s": "stift",
+  "text": "In Deutschland misst man die Temperatur in Grad Celsius."
+ },
+ {
+  "key": "7390868a",
+  "s": "er",
+  "text": "Puh, zweiunddreißig Grad! Das ist ja eine Hitze!"
+ },
+ {
+  "key": "459030f0",
+  "s": "stift",
+  "text": "Finde drei Dinge gegen die Sonne!"
+ },
+ {
+  "key": "60261c79",
+  "s": "stift",
+  "text": "Finde zwei Dinge im Wasser!"
+ },
+ {
+  "key": "ef5abbba",
+  "s": "stift",
+  "text": "Finde zwei Dinge zum Liegen!"
+ },
+ {
+  "key": "83854cf4",
+  "s": "stift",
+  "text": "Im Sommer ist es in Deutschland oft heiß."
+ },
+ {
+  "key": "ed9233b8",
+  "s": "stift",
+  "text": "Bei Gewitter darf man weiter schwimmen."
+ },
+ {
+  "key": "662e9cf0",
+  "s": "stift",
+  "text": "Ein Hallenbad ist draußen."
+ },
+ {
+  "key": "44f15315",
+  "s": "stift",
+  "text": "Eine Wassermelone besteht fast nur aus Wasser."
+ },
+ {
+  "key": "881219ca",
+  "s": "stift",
+  "text": "Der Bademeister verkauft Eis."
+ },
+ {
+  "key": "ff50855b",
+  "s": "stift",
+  "text": "Er sitzt hoch oben und passt auf die Schwimmer auf."
+ },
+ {
+  "key": "c666bdb6",
+  "s": "stift",
+  "text": "Man trägt sie vor den Augen, wenn die Sonne scheint."
+ },
+ {
+  "key": "297c421a",
+  "s": "stift",
+  "text": "Hier kann man Pommes, Eis und Getränke kaufen."
+ },
+ {
+  "key": "adeb5a7f",
+  "s": "stift",
+  "text": "Es zeigt, wie warm oder kalt es ist. Heute zeigt es zweiunddreißig Grad."
+ },
+ {
+  "key": "159fc54b",
+  "s": "stift",
+  "text": "Von hier springt man ins Wasser. Es ist hoch und lang."
+ },
+ {
+  "key": "565a0a21",
+  "s": "stift",
+  "text": "Sie ist groß, grün und rund. Innen ist sie rot und süß."
+ },
+ {
+  "key": "987d9dd8",
+  "s": "stift",
+  "text": "Nein. Bei Gewitter muss man sofort aus dem Wasser gehen."
+ },
+ {
+  "key": "3d35200b",
+  "s": "stift",
+  "text": "Nein. Ein Hallenbad ist drinnen. Das Freibad ist draußen."
+ },
+ {
+  "key": "2c4a595e",
+  "s": "stift",
+  "text": "Nein. Der Bademeister passt auf. Eis gibt es am Kiosk."
+ },
+ {
+  "key": "1e4d4f6f",
+  "s": "erz",
+  "text": "Im Herbst werden die Tage kürzer und kühler."
+ },
+ {
+  "key": "64e5072a",
+  "s": "erz",
+  "text": "Die Blätter werden bunt und fallen von den Bäumen. Auf den Feldern ist Erntezeit."
+ },
+ {
+  "key": "593759ea",
+  "s": "erz",
+  "text": "Viele Tiere sammeln jetzt Futter für den Winter."
+ },
+ {
+  "key": "9a1645de",
+  "s": "stift",
+  "text": "die Wiese"
+ },
+ {
+  "key": "86870d1c",
+  "s": "stift",
+  "text": "Das ist die Wiese."
+ },
+ {
+  "key": "eaa1dae7",
+  "s": "stift",
+  "text": "die Wiese, die Wiesen"
+ },
+ {
+  "key": "63b17549",
+  "s": "stift",
+  "text": "Auf der Wiese liegen viele bunte Blätter."
+ },
+ {
+  "key": "fbc7c7f4",
+  "s": "stift",
+  "text": "Wenn im Oktober noch die Sonne scheint, sagt man: der goldene Oktober."
+ },
+ {
+  "key": "9b0366e5",
+  "s": "er",
+  "text": "Komm, wir machen einen Herbstspaziergang!"
+ },
+ {
+  "key": "379e268b",
+  "s": "stift",
+  "text": "der Zugvogel"
+ },
+ {
+  "key": "eb1ea0f3",
+  "s": "stift",
+  "text": "Das ist der Zugvogel."
+ },
+ {
+  "key": "94d299cf",
+  "s": "stift",
+  "text": "der Zugvogel, die Zugvögel"
+ },
+ {
+  "key": "8906d8ed",
+  "s": "stift",
+  "text": "Die Zugvögel fliegen nach Süden."
+ },
+ {
+  "key": "612a14b0",
+  "s": "stift",
+  "text": "Störche und Kraniche fliegen im Herbst nach Afrika. Dort ist es warm."
+ },
+ {
+  "key": "e37ad4d5",
+  "s": "kind",
+  "text": "Tschüss, Vögel! Bis zum Frühling!"
+ },
+ {
+  "key": "e5760a66",
+  "s": "stift",
+  "text": "der Wind"
+ },
+ {
+  "key": "70f63b0c",
+  "s": "stift",
+  "text": "Das ist der Wind."
+ },
+ {
+  "key": "bfa77bb5",
+  "s": "stift",
+  "text": "der Wind, die Winde"
+ },
+ {
+  "key": "d2b8a9ca",
+  "s": "stift",
+  "text": "Der Wind weht die Blätter durch die Luft."
+ },
+ {
+  "key": "08e92592",
+  "s": "stift",
+  "text": "der Wind wird zu windig. Ein Sturm ist ein sehr starker Wind."
+ },
+ {
+  "key": "57562cb3",
+  "s": "sie",
+  "text": "Heute ist es aber windig! Halt deine Mütze fest!"
+ },
+ {
+  "key": "88a57414",
+  "s": "stift",
+  "text": "der Nebel"
+ },
+ {
+  "key": "518d3df2",
+  "s": "stift",
+  "text": "Das ist der Nebel."
+ },
+ {
+  "key": "8326fa1e",
+  "s": "stift",
+  "text": "Am Morgen liegt Nebel über dem Feld."
+ },
+ {
+  "key": "7989eb98",
+  "s": "stift",
+  "text": "der Nebel wird zu neblig: Heute ist es neblig."
+ },
+ {
+  "key": "2ade5b99",
+  "s": "er",
+  "text": "Fahr vorsichtig! Bei Nebel sieht man nicht viel."
+ },
+ {
+  "key": "c40e2139",
+  "s": "stift",
+  "text": "Der Baum hat rote, gelbe und orange Blätter."
+ },
+ {
+  "key": "958520f5",
+  "s": "stift",
+  "text": "Im Herbst bekommen die Bäume weniger Licht. Darum werden die Blätter bunt."
+ },
+ {
+  "key": "a3e1e6fe",
+  "s": "kind",
+  "text": "Der Baum sieht aus wie Feuer!"
+ },
+ {
+  "key": "c5e4d73e",
+  "s": "stift",
+  "text": "das Blatt"
+ },
+ {
+  "key": "995f9c04",
+  "s": "stift",
+  "text": "Das ist das Blatt."
+ },
+ {
+  "key": "b643bbcd",
+  "s": "stift",
+  "text": "das Blatt, die Blätter"
+ },
+ {
+  "key": "bae52662",
+  "s": "stift",
+  "text": "Die Blätter liegen auf dem Boden."
+ },
+ {
+  "key": "960f394c",
+  "s": "stift",
+  "text": "das Blatt, die Blätter. Ein Blatt Papier ist auch ein Blatt!"
+ },
+ {
+  "key": "4561beb5",
+  "s": "kind",
+  "text": "Hurra! Ich springe in den Blätterhaufen!"
+ },
+ {
+  "key": "92deeca6",
+  "s": "stift",
+  "text": "das Eichhörnchen"
+ },
+ {
+  "key": "1439e604",
+  "s": "stift",
+  "text": "Das ist das Eichhörnchen."
+ },
+ {
+  "key": "daf8f5cf",
+  "s": "stift",
+  "text": "das Eichhörnchen, die Eichhörnchen"
+ },
+ {
+  "key": "93d30119",
+  "s": "stift",
+  "text": "Das Eichhörnchen hat eine Nuss."
+ },
+ {
+  "key": "63cc62e4",
+  "s": "stift",
+  "text": "Eichhörnchen verstecken im Herbst Nüsse. Im Winter suchen sie sie wieder."
+ },
+ {
+  "key": "c57d4191",
+  "s": "kind",
+  "text": "Schau, das Eichhörnchen versteckt Nüsse!"
+ },
+ {
+  "key": "c581ebd5",
+  "s": "stift",
+  "text": "der Pilz"
+ },
+ {
+  "key": "9ba8c8b5",
+  "s": "stift",
+  "text": "Das ist der Pilz."
+ },
+ {
+  "key": "22b82341",
+  "s": "stift",
+  "text": "der Pilz, die Pilze"
+ },
+ {
+  "key": "2d82b324",
+  "s": "stift",
+  "text": "Der Pilz ist rot mit weißen Punkten."
+ },
+ {
+  "key": "a90aa50f",
+  "s": "stift",
+  "text": "Der rote Pilz mit Punkten heißt Fliegenpilz. Er ist giftig."
+ },
+ {
+  "key": "d152fbe8",
+  "s": "sie",
+  "text": "Nicht anfassen! Der Pilz ist giftig."
+ },
+ {
+  "key": "29b25db9",
+  "s": "stift",
+  "text": "die Kastanie"
+ },
+ {
+  "key": "249c2d09",
+  "s": "stift",
+  "text": "Das ist die Kastanie."
+ },
+ {
+  "key": "a156fc35",
+  "s": "stift",
+  "text": "die Kastanie, die Kastanien"
+ },
+ {
+  "key": "0cb75960",
+  "s": "stift",
+  "text": "Die Kastanien sind braun und glänzen."
+ },
+ {
+  "key": "ee564f5e",
+  "s": "stift",
+  "text": "Im Herbst basteln Kinder in Deutschland gern Figuren aus Kastanien."
+ },
+ {
+  "key": "854a6844",
+  "s": "kind",
+  "text": "Ich sammle Kastanien. Daraus bastle ich Tiere."
+ },
+ {
+  "key": "0c9ff4f5",
+  "s": "stift",
+  "text": "der Igel"
+ },
+ {
+  "key": "9cd3afb5",
+  "s": "stift",
+  "text": "Das ist der Igel."
+ },
+ {
+  "key": "b5008c46",
+  "s": "stift",
+  "text": "der Igel, die Igel"
+ },
+ {
+  "key": "b1597c83",
+  "s": "stift",
+  "text": "Der Igel hat viele Stacheln."
+ },
+ {
+  "key": "2dbffab8",
+  "s": "stift",
+  "text": "Igel schlafen im Winter. Das nennt man Winterschlaf."
+ },
+ {
+  "key": "7abc4328",
+  "s": "kind",
+  "text": "Psst, leise! Da ist ein Igel."
+ },
+ {
+  "key": "908b3313",
+  "s": "stift",
+  "text": "der Kürbis"
+ },
+ {
+  "key": "18a801bb",
+  "s": "stift",
+  "text": "Das ist der Kürbis."
+ },
+ {
+  "key": "0e551582",
+  "s": "stift",
+  "text": "der Kürbis, die Kürbisse"
+ },
+ {
+  "key": "2e2aab38",
+  "s": "stift",
+  "text": "Die Kürbisse sind groß und orange."
+ },
+ {
+  "key": "1a5db527",
+  "s": "stift",
+  "text": "der Kürbis, die Kürbisse: Nach kurzem i verdoppelt man das s im Plural."
+ },
+ {
+  "key": "1df64b93",
+  "s": "sie",
+  "text": "Heute koche ich Kürbissuppe."
+ },
+ {
+  "key": "58aed40b",
+  "s": "stift",
+  "text": "der Traktor"
+ },
+ {
+  "key": "76dff5eb",
+  "s": "stift",
+  "text": "Das ist der Traktor."
+ },
+ {
+  "key": "aff3e453",
+  "s": "stift",
+  "text": "der Traktor, die Traktoren"
+ },
+ {
+  "key": "7b9dc915",
+  "s": "stift",
+  "text": "Der Traktor fährt über das Feld."
+ },
+ {
+  "key": "fbb31e5e",
+  "s": "stift",
+  "text": "Im Herbst feiern viele Dörfer Erntedank. Man sagt Danke für die Ernte."
+ },
+ {
+  "key": "4538a7c1",
+  "s": "er",
+  "text": "Die Ernte ist fast fertig."
+ },
+ {
+  "key": "514bbd0b",
+  "s": "stift",
+  "text": "Das Kind hält eine Laterne."
+ },
+ {
+  "key": "e8820a5b",
+  "s": "stift",
+  "text": "Das ist ein bekanntes Laternenlied. Kinder singen es an Sankt Martin."
+ },
+ {
+  "key": "9d556b0f",
+  "s": "kind",
+  "text": "Laterne, Laterne, Sonne, Mond und Sterne!"
+ },
+ {
+  "key": "09e3be72",
+  "s": "stift",
+  "text": "die Laterne"
+ },
+ {
+  "key": "b29138c0",
+  "s": "stift",
+  "text": "Das ist die Laterne."
+ },
+ {
+  "key": "06fbf84f",
+  "s": "stift",
+  "text": "die Laterne, die Laternen"
+ },
+ {
+  "key": "c5ffc76f",
+  "s": "stift",
+  "text": "In der Laterne ist ein kleines Licht."
+ },
+ {
+  "key": "f61d0164",
+  "s": "stift",
+  "text": "Am elften November ist Sankt Martin. Kinder gehen mit Laternen durch die Straßen."
+ },
+ {
+  "key": "99f297c4",
+  "s": "kind",
+  "text": "Meine Laterne habe ich selbst gebastelt."
+ },
+ {
+  "key": "2344aa5b",
+  "s": "stift",
+  "text": "der Apfelbaum"
+ },
+ {
+  "key": "4c0efb0b",
+  "s": "stift",
+  "text": "Das ist der Apfelbaum."
+ },
+ {
+  "key": "e2d62dba",
+  "s": "stift",
+  "text": "der Apfelbaum, die Apfelbäume"
+ },
+ {
+  "key": "60f5482b",
+  "s": "stift",
+  "text": "Am Apfelbaum hängen rote Äpfel."
+ },
+ {
+  "key": "d2fc35b8",
+  "s": "stift",
+  "text": "Im Herbst ist Erntezeit: Äpfel, Birnen, Kürbisse und Kartoffeln."
+ },
+ {
+  "key": "b5c23d05",
+  "s": "er",
+  "text": "Die Äpfel sind reif. Wir können sie pflücken."
+ },
+ {
+  "key": "91e7601e",
+  "s": "stift",
+  "text": "die Leiter"
+ },
+ {
+  "key": "e1e7b12c",
+  "s": "stift",
+  "text": "Das ist die Leiter."
+ },
+ {
+  "key": "f34bc319",
+  "s": "stift",
+  "text": "die Leiter, die Leitern"
+ },
+ {
+  "key": "463dbd05",
+  "s": "stift",
+  "text": "Die Leiter steht am Apfelbaum."
+ },
+ {
+  "key": "f45c4c82",
+  "s": "stift",
+  "text": "Achtung: die Leiter ist die Leiter zum Steigen. Der Leiter ist der Chef!"
+ },
+ {
+  "key": "bccaa087",
+  "s": "sie",
+  "text": "Halt bitte die Leiter fest!"
+ },
+ {
+  "key": "bf8b0b11",
+  "s": "stift",
+  "text": "Der Korb ist voller Äpfel."
+ },
+ {
+  "key": "f6d0566f",
+  "s": "stift",
+  "text": "voller Äpfel heißt: voll mit Äpfeln."
+ },
+ {
+  "key": "550e72b2",
+  "s": "er",
+  "text": "Ein Korb voll Äpfel! Daraus backen wir einen Apfelkuchen."
+ },
+ {
+  "key": "5f0c081f",
+  "s": "stift",
+  "text": "Finde drei Tiere!"
+ },
+ {
+  "key": "a788d093",
+  "s": "stift",
+  "text": "Finde zwei Dinge zum Wetter!"
+ },
+ {
+  "key": "d8fbd824",
+  "s": "stift",
+  "text": "Was kann man im Wald sammeln? Finde drei Dinge!"
+ },
+ {
+  "key": "a5e59069",
+  "s": "stift",
+  "text": "Finde drei Dinge für die Apfelernte!"
+ },
+ {
+  "key": "3eb46972",
+  "s": "stift",
+  "text": "Finde zwei Dinge für Sankt Martin!"
+ },
+ {
+  "key": "58201ff9",
+  "s": "stift",
+  "text": "Im Herbst werden die Tage länger."
+ },
+ {
+  "key": "474d163d",
+  "s": "stift",
+  "text": "Igel schlafen im Winter."
+ },
+ {
+  "key": "04445ade",
+  "s": "stift",
+  "text": "Der Fliegenpilz ist gesund und lecker."
+ },
+ {
+  "key": "c2acf757",
+  "s": "stift",
+  "text": "Sankt Martin ist am elften November."
+ },
+ {
+  "key": "54b15835",
+  "s": "stift",
+  "text": "Die Zugvögel fliegen im Herbst nach Norden."
+ },
+ {
+  "key": "ca04f6ca",
+  "s": "stift",
+  "text": "Im Herbst werden die Blätter bunt."
+ },
+ {
+  "key": "e49fa697",
+  "s": "stift",
+  "text": "Eichhörnchen verstecken Nüsse für den Winter."
+ },
+ {
+  "key": "816950be",
+  "s": "stift",
+  "text": "Er ist klein und hat viele Stacheln. Im Winter hält er Winterschlaf."
+ },
+ {
+  "key": "d8ca0480",
+  "s": "stift",
+  "text": "Man steigt darauf, um die Äpfel oben am Baum zu pflücken."
+ },
+ {
+  "key": "bc7d9cb9",
+  "s": "stift",
+  "text": "Sie hat ein kleines Licht. Kinder tragen sie im November durch die Straßen."
+ },
+ {
+  "key": "a274f0f4",
+  "s": "stift",
+  "text": "Er ist groß, rund und orange. Man kann Suppe daraus kochen."
+ },
+ {
+  "key": "34b7f0ad",
+  "s": "stift",
+  "text": "Es hat einen langen, buschigen Schwanz und sammelt Nüsse."
+ },
+ {
+  "key": "ad56deba",
+  "s": "stift",
+  "text": "Er ist grau, und man sieht nicht weit. Am Morgen liegt er über dem Feld."
+ },
+ {
+  "key": "0e1beef5",
+  "s": "stift",
+  "text": "Nein. Im Herbst werden die Tage kürzer."
+ },
+ {
+  "key": "17c27de7",
+  "s": "stift",
+  "text": "Nein. Der Fliegenpilz ist giftig."
+ },
+ {
+  "key": "abc34ebd",
+  "s": "stift",
+  "text": "Nein. Sie fliegen nach Süden, zum Beispiel nach Afrika."
+ },
+ {
+  "key": "cd9617a6",
+  "s": "erz",
+  "text": "Im Winter ist es kalt. Manchmal schneit es."
+ },
+ {
+  "key": "174e110e",
+  "s": "erz",
+  "text": "Im Dezember gibt es in vielen Städten einen Weihnachtsmarkt."
+ },
+ {
+  "key": "96df571e",
+  "s": "erz",
+  "text": "Und an Silvester, am einunddreißigsten Dezember, feiert man mit Feuerwerk das neue Jahr."
+ },
+ {
+  "key": "3fc26181",
+  "s": "stift",
+  "text": "der Weihnachtsmarkt"
+ },
+ {
+  "key": "3f8003c1",
+  "s": "stift",
+  "text": "Das ist der Weihnachtsmarkt."
+ },
+ {
+  "key": "080de9b4",
+  "s": "stift",
+  "text": "der Weihnachtsmarkt, die Weihnachtsmärkte"
+ },
+ {
+  "key": "81e67b4c",
+  "s": "stift",
+  "text": "Auf dem Weihnachtsmarkt riecht es nach Zimt und Plätzchen."
+ },
+ {
+  "key": "2fc98c03",
+  "s": "stift",
+  "text": "Den Weihnachtsmarkt in Dresden gibt es schon seit fast sechshundert Jahren."
+ },
+ {
+  "key": "95ce2ca0",
+  "s": "sie",
+  "text": "Wollen wir heute Abend auf den Weihnachtsmarkt gehen?"
+ },
+ {
+  "key": "4c351f79",
+  "s": "stift",
+  "text": "der Weihnachtsbaum"
+ },
+ {
+  "key": "51dafc71",
+  "s": "stift",
+  "text": "Das ist der Weihnachtsbaum."
+ },
+ {
+  "key": "5c98eff4",
+  "s": "stift",
+  "text": "der Weihnachtsbaum, die Weihnachtsbäume"
+ },
+ {
+  "key": "89becbf1",
+  "s": "stift",
+  "text": "Der Weihnachtsbaum hat Kugeln, Lichter und einen Stern."
+ },
+ {
+  "key": "09c2d86b",
+  "s": "stift",
+  "text": "Der Weihnachtsbaum kommt aus Deutschland. Heute gibt es ihn auf der ganzen Welt."
+ },
+ {
+  "key": "c190a521",
+  "s": "kind",
+  "text": "Oh, ist der Baum schön!"
+ },
+ {
+  "key": "f84f41fb",
+  "s": "stift",
+  "text": "das Geschenk"
+ },
+ {
+  "key": "a16494f3",
+  "s": "stift",
+  "text": "Das ist das Geschenk."
+ },
+ {
+  "key": "88a1df2a",
+  "s": "stift",
+  "text": "das Geschenk, die Geschenke"
+ },
+ {
+  "key": "1e33fff7",
+  "s": "stift",
+  "text": "Unter dem Baum liegen Geschenke."
+ },
+ {
+  "key": "3fa43740",
+  "s": "stift",
+  "text": "In Deutschland öffnet man die Geschenke meistens am Abend vom vierundzwanzigsten Dezember."
+ },
+ {
+  "key": "2bc30e05",
+  "s": "kind",
+  "text": "Ist das Geschenk für mich?"
+ },
+ {
+  "key": "794ba156",
+  "s": "sie",
+  "text": "Ja, aber du darfst es erst an Heiligabend öffnen."
+ },
+ {
+  "key": "cd058bd8",
+  "s": "stift",
+  "text": "der Schneemann"
+ },
+ {
+  "key": "bc8448de",
+  "s": "stift",
+  "text": "Das ist der Schneemann."
+ },
+ {
+  "key": "99523406",
+  "s": "stift",
+  "text": "der Schneemann, die Schneemänner"
+ },
+ {
+  "key": "27d194ed",
+  "s": "stift",
+  "text": "Der Schneemann hat eine Karottennase."
+ },
+ {
+  "key": "81616737",
+  "s": "stift",
+  "text": "der Mann, die Männer. Der Schneemann, die Schneemänner."
+ },
+ {
+  "key": "e90718ca",
+  "s": "kind",
+  "text": "Komm, wir bauen einen Schneemann!"
+ },
+ {
+  "key": "a08633a5",
+  "s": "stift",
+  "text": "die Schneeflocke"
+ },
+ {
+  "key": "d5095dc5",
+  "s": "stift",
+  "text": "Das ist die Schneeflocke."
+ },
+ {
+  "key": "cac1036d",
+  "s": "stift",
+  "text": "die Schneeflocke, die Schneeflocken"
+ },
+ {
+  "key": "fc078e37",
+  "s": "stift",
+  "text": "Die Schneeflocken fallen leise vom Himmel."
+ },
+ {
+  "key": "64b5c1a1",
+  "s": "stift",
+  "text": "Jede Schneeflocke hat sechs Spitzen."
+ },
+ {
+  "key": "f75a5217",
+  "s": "kind",
+  "text": "Es schneit! Es schneit!"
+ },
+ {
+  "key": "f98ce1ed",
+  "s": "stift",
+  "text": "die Bude"
+ },
+ {
+  "key": "bc2a7b1d",
+  "s": "stift",
+  "text": "Das ist die Bude."
+ },
+ {
+  "key": "547a6cfd",
+  "s": "stift",
+  "text": "die Bude, die Buden"
+ },
+ {
+  "key": "3840e97b",
+  "s": "stift",
+  "text": "In der Bude gibt es Plätzchen und Punsch."
+ },
+ {
+  "key": "992ea79a",
+  "s": "stift",
+  "text": "Auf dem Weihnachtsmarkt heißen die kleinen Holzhäuser Buden."
+ },
+ {
+  "key": "3ee894b2",
+  "s": "er",
+  "text": "Was darf es sein?"
+ },
+ {
+  "key": "bab16fa7",
+  "s": "sie",
+  "text": "Zwei Kinderpunsch, bitte."
+ },
+ {
+  "key": "fd079831",
+  "s": "stift",
+  "text": "das Plätzchen"
+ },
+ {
+  "key": "38b34ba1",
+  "s": "stift",
+  "text": "Das ist das Plätzchen."
+ },
+ {
+  "key": "bd51c6a7",
+  "s": "stift",
+  "text": "das Plätzchen, die Plätzchen"
+ },
+ {
+  "key": "5534c42f",
+  "s": "stift",
+  "text": "Die Plätzchen haben die Form von Sternen."
+ },
+ {
+  "key": "d9525f99",
+  "s": "stift",
+  "text": "Im Advent backen viele Familien zusammen Plätzchen."
+ },
+ {
+  "key": "201c9cef",
+  "s": "kind",
+  "text": "Darf ich ein Plätzchen probieren?"
+ },
+ {
+  "key": "13f4856a",
+  "s": "stift",
+  "text": "der Kinderpunsch"
+ },
+ {
+  "key": "6353ff70",
+  "s": "stift",
+  "text": "Das ist der Kinderpunsch."
+ },
+ {
+  "key": "ef040083",
+  "s": "stift",
+  "text": "Der Punsch ist heiß und süß."
+ },
+ {
+  "key": "971ae999",
+  "s": "stift",
+  "text": "Erwachsene trinken oft Glühwein. Für Kinder gibt es Kinderpunsch ohne Alkohol."
+ },
+ {
+  "key": "5440e9b6",
+  "s": "sie",
+  "text": "Vorsicht, heiß!"
+ },
+ {
+  "key": "e76d11a5",
+  "s": "stift",
+  "text": "der Adventskranz"
+ },
+ {
+  "key": "3e1af3cd",
+  "s": "stift",
+  "text": "Das ist der Adventskranz."
+ },
+ {
+  "key": "b7b70448",
+  "s": "stift",
+  "text": "der Adventskranz, die Adventskränze"
+ },
+ {
+  "key": "a9e55ced",
+  "s": "stift",
+  "text": "Der Adventskranz hat vier Kerzen."
+ },
+ {
+  "key": "95641aed",
+  "s": "stift",
+  "text": "Der Advent sind die vier Sonntage vor Weihnachten. Jeden Sonntag brennt eine Kerze mehr."
+ },
+ {
+  "key": "18d4fc3e",
+  "s": "sie",
+  "text": "Heute ist der zweite Advent. Wir zünden zwei Kerzen an."
+ },
+ {
+  "key": "ac7279e7",
+  "s": "stift",
+  "text": "das Feuerwerk"
+ },
+ {
+  "key": "f7632d97",
+  "s": "stift",
+  "text": "Das ist das Feuerwerk."
+ },
+ {
+  "key": "88c39162",
+  "s": "stift",
+  "text": "das Feuerwerk, die Feuerwerke"
+ },
+ {
+  "key": "b34a1b3b",
+  "s": "stift",
+  "text": "Das Feuerwerk ist bunt und laut."
+ },
+ {
+  "key": "bb4f8e7f",
+  "s": "stift",
+  "text": "An Silvester, am einunddreißigsten Dezember, feiert man um Mitternacht mit Feuerwerk."
+ },
+ {
+  "key": "49c227db",
+  "s": "er",
+  "text": "Drei, zwei, eins , Frohes neues Jahr!"
+ },
+ {
+  "key": "41c37344",
+  "s": "stift",
+  "text": "Das Kind ist warm angezogen."
+ },
+ {
+  "key": "d00d111a",
+  "s": "stift",
+  "text": "Mir ist kalt: Bei kalt und warm benutzt man den Dativ."
+ },
+ {
+  "key": "c9e02903",
+  "s": "kind",
+  "text": "Mir ist überhaupt nicht kalt!"
+ },
+ {
+  "key": "906bdfbf",
+  "s": "stift",
+  "text": "die Mütze"
+ },
+ {
+  "key": "38317d97",
+  "s": "stift",
+  "text": "Das ist die Mütze."
+ },
+ {
+  "key": "ad8b3529",
+  "s": "stift",
+  "text": "die Mütze, die Mützen"
+ },
+ {
+  "key": "27c8f5d6",
+  "s": "stift",
+  "text": "Die Mütze ist rot und warm."
+ },
+ {
+  "key": "08eadb63",
+  "s": "stift",
+  "text": "Kleidung im Akkusativ: Ich trage einen Schal, eine Mütze und ein Paar Handschuhe."
+ },
+ {
+  "key": "7be2bfb8",
+  "s": "sie",
+  "text": "Setz deine Mütze auf! Es ist kalt."
+ },
+ {
+  "key": "531c4f47",
+  "s": "stift",
+  "text": "der Schal"
+ },
+ {
+  "key": "73bdedc7",
+  "s": "stift",
+  "text": "Das ist der Schal."
+ },
+ {
+  "key": "0a527f91",
+  "s": "stift",
+  "text": "der Schal, die Schals"
+ },
+ {
+  "key": "b6af319b",
+  "s": "stift",
+  "text": "Der Schal ist lang und gestreift."
+ },
+ {
+  "key": "3f37ed0f",
+  "s": "stift",
+  "text": "der Schal, die Schals: Einige Wörter bekommen im Plural ein s."
+ },
+ {
+  "key": "a6460da2",
+  "s": "kind",
+  "text": "Mama, mein Schal kratzt!"
+ },
+ {
+  "key": "e49028f0",
+  "s": "stift",
+  "text": "der Handschuh"
+ },
+ {
+  "key": "367fcf96",
+  "s": "stift",
+  "text": "Das ist der Handschuh."
+ },
+ {
+  "key": "dfe4afd9",
+  "s": "stift",
+  "text": "der Handschuh, die Handschuhe"
+ },
+ {
+  "key": "d1e849da",
+  "s": "stift",
+  "text": "Die Handschuhe halten die Hände warm."
+ },
+ {
+  "key": "8a769913",
+  "s": "stift",
+  "text": "die Hand und der Schuh: der Handschuh. Ein Schuh für die Hand!"
+ },
+ {
+  "key": "4de644aa",
+  "s": "sie",
+  "text": "Zieh die Handschuhe an, sonst frieren deine Finger."
+ },
+ {
+  "key": "1f5ff358",
+  "s": "stift",
+  "text": "der Stiefel"
+ },
+ {
+  "key": "a588fcae",
+  "s": "stift",
+  "text": "Das ist der Stiefel."
+ },
+ {
+  "key": "1fc01bc2",
+  "s": "stift",
+  "text": "der Stiefel, die Stiefel"
+ },
+ {
+  "key": "185cbf3a",
+  "s": "stift",
+  "text": "Die Stiefel sind warm und wasserdicht."
+ },
+ {
+  "key": "a8e6f3e3",
+  "s": "stift",
+  "text": "anziehen und ausziehen sind trennbar: Ich ziehe die Stiefel an. Ich ziehe sie aus."
+ },
+ {
+  "key": "d58be894",
+  "s": "kind",
+  "text": "Meine Stiefel sind voller Schnee!"
+ },
+ {
+  "key": "c4510326",
+  "s": "stift",
+  "text": "der Schlitten"
+ },
+ {
+  "key": "a39103d4",
+  "s": "stift",
+  "text": "Das ist der Schlitten."
+ },
+ {
+  "key": "b2e2386a",
+  "s": "stift",
+  "text": "der Schlitten, die Schlitten"
+ },
+ {
+  "key": "543376ae",
+  "s": "stift",
+  "text": "Der Schlitten ist aus Holz."
+ },
+ {
+  "key": "745aa676",
+  "s": "stift",
+  "text": "Man sagt Schlitten fahren, auch ohne Motor."
+ },
+ {
+  "key": "81589c5e",
+  "s": "kind",
+  "text": "Ich will Schlitten fahren! Zieh mich, bitte!"
+ },
+ {
+  "key": "de115439",
+  "s": "stift",
+  "text": "Finde vier Dinge zum Anziehen!"
+ },
+ {
+  "key": "49db827a",
+  "s": "stift",
+  "text": "Finde zwei Dinge zum Essen und Trinken!"
+ },
+ {
+  "key": "00a9c32d",
+  "s": "stift",
+  "text": "Finde drei Dinge für Weihnachten!"
+ },
+ {
+  "key": "336d6cef",
+  "s": "stift",
+  "text": "Finde zwei Dinge aus Schnee!"
+ },
+ {
+  "key": "4b2624d8",
+  "s": "stift",
+  "text": "Silvester ist am ersten Januar."
+ },
+ {
+  "key": "0faf7eca",
+  "s": "stift",
+  "text": "Kinderpunsch hat Alkohol."
+ },
+ {
+  "key": "e1f8616e",
+  "s": "stift",
+  "text": "In Deutschland öffnet man die Geschenke meistens am vierundzwanzigsten Dezember."
+ },
+ {
+  "key": "dfca18f5",
+  "s": "stift",
+  "text": "Handschuhe trägt man an den Füßen."
+ },
+ {
+  "key": "c83de8db",
+  "s": "stift",
+  "text": "Der Weihnachtsbaum kommt aus Deutschland."
+ },
+ {
+  "key": "7e6fce71",
+  "s": "stift",
+  "text": "Er ist weiß, hat eine Karottennase und schmilzt in der Sonne."
+ },
+ {
+  "key": "68ea84dd",
+  "s": "stift",
+  "text": "Er hat vier Kerzen. Jeden Sonntag im Advent zündet man eine mehr an."
+ },
+ {
+  "key": "b97ce0b2",
+  "s": "stift",
+  "text": "Man setzt sie auf den Kopf, damit die Ohren warm bleiben."
+ },
+ {
+  "key": "52352aad",
+  "s": "stift",
+  "text": "Darauf sitzt man und fährt den Berg hinunter."
+ },
+ {
+  "key": "e6d1ec8c",
+  "s": "stift",
+  "text": "Es ist bunt und laut. Man sieht es an Silvester am Himmel."
+ },
+ {
+  "key": "8e1e4aac",
+  "s": "stift",
+  "text": "Sie sind klein und süß und haben oft die Form von Sternen."
+ },
+ {
+  "key": "1645833a",
+  "s": "stift",
+  "text": "Nein. Silvester ist am einunddreißigsten Dezember."
+ },
+ {
+  "key": "26a87bee",
+  "s": "stift",
+  "text": "Nein. Kinderpunsch hat keinen Alkohol."
+ },
+ {
+  "key": "7326ec24",
+  "s": "stift",
+  "text": "Nein. Handschuhe trägt man an den Händen."
+ },
+ {
   "key": "fd17daec",
   "s": "stift",
   "text": "Hallo! Ich bin dein Zauberstift."
@@ -3250,6 +6510,11 @@
   "text": "Nein."
  },
  {
+  "key": "2de5f447",
+  "s": "stift",
+  "text": "Ja!"
+ },
+ {
   "key": "4c293b10",
   "s": "stift",
   "text": "Schau mal, hier!"
@@ -3260,14 +6525,24 @@
   "text": "Das hatten wir schon."
  },
  {
-  "key": "2eb552a4",
+  "key": "1afbf471",
   "s": "stift",
-  "text": "Super! Du hast alles auf dieser Seite entdeckt!"
+  "text": "Noch eins!"
  },
  {
-  "key": "729aea8a",
+  "key": "429d80dd",
   "s": "stift",
-  "text": "Tippe auf einen Würfel, dann spielst du noch einmal."
+  "text": "Noch zwei!"
+ },
+ {
+  "key": "04c178ae",
+  "s": "stift",
+  "text": "Noch drei!"
+ },
+ {
+  "key": "ea23310c",
+  "s": "stift",
+  "text": "Noch vier!"
  },
  {
   "key": "ef8670c8",
@@ -3283,6 +6558,51 @@
   "key": "71be2923",
   "s": "stift",
   "text": "Gut gemacht!"
+ },
+ {
+  "key": "1ff18636",
+  "s": "stift",
+  "text": "Du hast keinen Punkt von 3."
+ },
+ {
+  "key": "1afcbd5f",
+  "s": "stift",
+  "text": "Du hast einen Punkt von 3."
+ },
+ {
+  "key": "e01749c5",
+  "s": "stift",
+  "text": "Du hast 2 Punkte von 3."
+ },
+ {
+  "key": "9f694c9a",
+  "s": "stift",
+  "text": "Du hast 3 Punkte von 3."
+ },
+ {
+  "key": "01ef1865",
+  "s": "stift",
+  "text": "Du hast keinen Punkt von 4."
+ },
+ {
+  "key": "1909862c",
+  "s": "stift",
+  "text": "Du hast einen Punkt von 4."
+ },
+ {
+  "key": "fe19b796",
+  "s": "stift",
+  "text": "Du hast 2 Punkte von 4."
+ },
+ {
+  "key": "a17a98e1",
+  "s": "stift",
+  "text": "Du hast 3 Punkte von 4."
+ },
+ {
+  "key": "b66a6578",
+  "s": "stift",
+  "text": "Du hast 4 Punkte von 4."
  },
  {
   "key": "9fec3f88",
@@ -3345,6 +6665,46 @@
   "text": "Finde etwas anderes mit das!"
  },
  {
+  "key": "95c4974d",
+  "s": "stift",
+  "text": "Tippe unten auf Richtig oder Falsch!"
+ },
+ {
+  "key": "12c3f41b",
+  "s": "stift",
+  "text": "Das hast du schon."
+ },
+ {
+  "key": "37396b11",
+  "s": "stift",
+  "text": "Super! Alle gefunden."
+ },
+ {
+  "key": "61882ce8",
+  "s": "stift",
+  "text": "Leider nicht."
+ },
+ {
+  "key": "469d6b49",
+  "s": "stift",
+  "text": "Das stimmt."
+ },
+ {
+  "key": "2eb552a4",
+  "s": "stift",
+  "text": "Super! Du hast alles auf dieser Seite entdeckt!"
+ },
+ {
+  "key": "ce146929",
+  "s": "stift",
+  "text": "Mit Stopp bin ich sofort still."
+ },
+ {
+  "key": "fb4604c2",
+  "s": "stift",
+  "text": "Tippe noch einmal auf das Spiel, dann spielst du noch einmal."
+ },
+ {
   "key": "d0c563b7",
   "s": "stift",
   "text": "Entdecken! Tippe auf alles, was du siehst. Tippe noch einmal, dann hörst du mehr."
@@ -3360,38 +6720,38 @@
   "text": "Wissen! Tippe auf ein Bild. Ich erkläre dir Grammatik und Kultur."
  },
  {
-  "key": "b4e2f17c",
+  "key": "f78cfa12",
   "s": "stift",
-  "text": "Spiel eins: Finde es! Ich sage ein Wort. Tippe auf das richtige Bild."
+  "text": "Sagen! Tippe auf ein Bild. Du hörst, was man im Alltag dazu sagt."
  },
  {
-  "key": "5caa2624",
+  "key": "7fd86342",
   "s": "stift",
-  "text": "Spiel zwei: Der, die oder das? Ich sage einen Artikel. Finde ein passendes Wort."
+  "text": "Finde es! Ich sage ein Wort. Tippe auf das richtige Bild."
  },
  {
-  "key": "9cb1f9fe",
+  "key": "56dc1902",
   "s": "stift",
-  "text": "Spiel drei: Rätsel! Hör gut zu und tippe auf die Antwort."
+  "text": "Der, die oder das? Ich sage einen Artikel. Finde ein passendes Wort."
  },
  {
-  "key": "3f170e33",
+  "key": "bb710e37",
   "s": "stift",
-  "text": "Spiel eins: Ich sage ein Wort, und du findest es im Bild."
+  "text": "Rätsel! Hör gut zu und tippe auf die Antwort."
  },
  {
-  "key": "c56b1842",
+  "key": "7ff90b65",
   "s": "stift",
-  "text": "Spiel zwei: Ich sage der, die oder das. Du findest ein passendes Wort."
+  "text": "Sammle alle! Ich nenne eine Gruppe. Finde alle Dinge, die dazu gehören."
  },
  {
-  "key": "01264955",
+  "key": "165e141d",
   "s": "stift",
-  "text": "Spiel drei: Ich stelle eine Frage oder ein Rätsel. Du tippst auf die Antwort."
+  "text": "Richtig oder falsch? Hör den Satz gut an. Dann tippe unten auf Richtig oder Falsch."
  },
  {
-  "key": "ce146929",
+  "key": "70b82273",
   "s": "stift",
-  "text": "Mit Stopp bin ich sofort still."
+  "text": "Hör genau! Ich beschreibe etwas, aber du siehst den Text nicht. Tippe auf das richtige Bild."
  }
 ]

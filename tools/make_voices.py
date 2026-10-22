@@ -37,6 +37,10 @@ VOICES = {
     "hund":      ("de-DE-ConradNeural",                "-10%", "-30Hz"),
     "taube":     ("de-DE-KatjaNeural",                 "-20%", "+20Hz"),
     "ente":      ("de-DE-KillianNeural",               "+0%",  "+60Hz"),
+    # Tipp-Buch 2 speakers
+    "sie":       ("de-DE-KatjaNeural",                 "+0%",  "+0Hz"),
+    "er":        ("de-DE-ConradNeural",                "+0%",  "+0Hz"),
+    "kind":      ("de-DE-KillianNeural",               "+8%",  "+45Hz"),
 }
 
 

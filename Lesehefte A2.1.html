@@ -262,6 +262,14 @@ body.pen-open .wrap{padding-bottom:260px}
 .ln.word .de{font-size:22px;font-weight:700}
 .ln .en{font-size:15px;color:var(--muted)}
 .a-der{color:var(--der)}.a-die{color:var(--die)}.a-das{color:var(--das)}
+.p-ans{display:flex;gap:10px;margin-top:10px}
+.ansbtn{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:99px;border:2.5px solid var(--shadow-ink);font:inherit;font-size:17px;font-weight:700;cursor:pointer;color:#fff;box-shadow:3px 3px 0 var(--shadow-ink)}
+.ansbtn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow-ink)}
+.ansbtn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ansbtn.yes{background:#1E9E55}.ansbtn.no{background:#D6334A}
+.ln.hidden .de{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-style:italic}
+.ln.hidden svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.ln.reveal{border-left:4px solid var(--c);padding-left:10px}
 @media (max-width:520px){.ln .de{font-size:17px}.ln.word .de{font-size:20px}.pen .icon{width:40px;height:40px}.penic{width:40px;height:40px}.penic svg{width:26px;height:26px}.tiphead{min-height:0}}
 </style>
 <div class="wrap" id="app"></div>
@@ -833,19 +841,164 @@ park:()=>
  hs('ball',`<circle cx="770" cy="418" r="18" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/><path d="M770 408 l7 5 l-3 8 h-8 l-3 -8Z" fill="${I}"/><path d="M770 408 v-10 M777 413 l10 -3 M774 421 l6 9 M766 421 l-6 9 M763 413 l-10 -3" stroke="${I}" stroke-width="1.5"/>`),
 };
 
-const TIPCOVER=()=>svg(sky()+sunR(352,44,18)+cloudB(60,40,.6)+
+const TIPCOVERS={samstag:()=>svg(sky()+sunR(352,44,18)+cloudB(60,40,.6)+
  `<rect x="20" y="70" width="110" height="134" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><rect x="34" y="82" width="82" height="22" rx="3" fill="var(--paper2)" stroke="${I}" stroke-width="2"/>`+txt(75,99,'POST',15,'var(--line-ink)',700,'middle')+
  `<rect x="138" y="96" width="96" height="108" fill="var(--cheek)" stroke="${I}" stroke-width="2.5"/>`+txt(186,124,'Café',17,'var(--line-ink)',700,'middle')+`<rect x="150" y="140" width="72" height="34" rx="3" fill="var(--sky)" stroke="${I}" stroke-width="2"/>`+
  `<rect y="200" width="400" height="40" fill="var(--stone)"/><path d="M0 200 H400" stroke="${I}" stroke-width="2.5"/>`+
  person(150,226,1.05,'shruti')+person(196,228,1.05,'sijan')+
  `<g transform="translate(316 132) rotate(32)"><path d="M-17 50 L0 86 L17 50Z" fill="var(--paper2)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M-6 74 L0 86 L6 74Z" fill="${I}"/><rect x="-19" y="-82" width="38" height="136" rx="19" fill="var(--violet)" stroke="${I}" stroke-width="3"/><rect x="-19" y="-30" width="38" height="20" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><circle cx="0" cy="-58" r="7" fill="var(--leaf)" stroke="${I}" stroke-width="2"/><path d="M-8 20 h16" stroke="var(--paper2)" stroke-width="4" stroke-linecap="round" opacity=".6"/></g>`+
  `<g fill="var(--sun)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round">${[[262,196,9],[244,170,6],[284,214,5]].map(([x,y,r])=>`<path d="M${x} ${y-r*2} L${x+r*.5} ${y-r*.5} L${x+r*2} ${y} L${x+r*.5} ${y+r*.5} L${x} ${y+r*2} L${x-r*.5} ${y+r*.5} L${x-r*2} ${y} L${x-r*.5} ${y-r*.5}Z"/>`).join('')}</g>`+
- `<path d="M300 236 q16 -12 0 -26 M310 238 q26 -20 0 -44" stroke="${I}" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".55"/>`,'Shruti und Sijan in der Stadt mit dem Zauberstift');
+ `<path d="M300 236 q16 -12 0 -26 M310 238 q26 -20 0 -44" stroke="${I}" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".55"/>`,'Shruti und Sijan in der Stadt mit dem Zauberstift')};
 
+
+/* ---------- Tipp-Buch 2: Das Jahr in Deutschland ---------- */
+Object.assign(CHARS,{bm:{hair:'short',hc:'var(--hair)',skin:'var(--skin3)',top:'var(--red)'},wkind:{hair:'short',hc:'var(--ginger)',skin:'var(--skin2)',top:'var(--r5)'}});
+const pt=(cx,cy,r,a)=>[cx+r*Math.cos(a*Math.PI/180),cy+r*Math.sin(a*Math.PI/180)].map(v=>+v.toFixed(1));
+const ring=(cx,cy,r1,r2,a0,a1)=>{const [x1,y1]=pt(cx,cy,r2,a0),[x2,y2]=pt(cx,cy,r2,a1),[x3,y3]=pt(cx,cy,r1,a1),[x4,y4]=pt(cx,cy,r1,a0);return `M${x1} ${y1} A${r2} ${r2} 0 0 1 ${x2} ${y2} L${x3} ${y3} A${r1} ${r1} 0 0 0 ${x4} ${y4}Z`};
+const tint=(c,p)=>`style="fill:color-mix(in srgb,${c} ${p}%,var(--paper2))"`;
+const flake=(x,y,r,c='var(--snow)',sw=2.5)=>`<g stroke="${c}" stroke-width="${sw}" stroke-linecap="round">${[0,60,120,180,240,300].map(a=>{const [ex,ey]=pt(x,y,r,a),[mx,my]=pt(x,y,r*.55,a),[b1x,b1y]=pt(mx,my,r*.35,a-50),[b2x,b2y]=pt(mx,my,r*.35,a+50);return `<path d="M${x} ${y}L${ex} ${ey}M${mx} ${my}L${b1x} ${b1y}M${mx} ${my}L${b2x} ${b2y}"/>`}).join('')}</g>`;
+const star5=(x,y,r,c)=>`<path d="${[...Array(10)].map((_,i)=>{const [px,py]=pt(x,y,i%2?r*.45:r,-90+i*36);return (i?'L':'M')+px+' '+py}).join('')}Z" fill="${c}" stroke="${I}" stroke-width="1.5" stroke-linejoin="round"/>`;
+const leafS=(x,y,a,c,s=1)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})"><path d="M0 -12 Q10 -4 0 12 Q-10 -4 0 -12Z" fill="${c}" stroke="${I}" stroke-width="1.4"/><path d="M0 -10 V12" stroke="${I}" stroke-width="1" opacity=".5"/></g>`;
+const tulip=(x,y,c,h=40)=>`<path d="M${x} ${y} V${y-h}" stroke="var(--leaf)" stroke-width="3.5"/><path d="M${x} ${y-8} q-16 -6 -14 -26 q10 8 14 22Z" fill="var(--leaf)" stroke="${I}" stroke-width="1.2"/><path d="M${x-10} ${y-h} q0 -18 4 -20 l6 8 l6 -8 q4 2 4 20 q-10 8 -20 0Z" fill="${c}" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/>`;
+const egg=(x,y,c,c2)=>`<ellipse cx="${x}" cy="${y}" rx="11" ry="14" fill="${c}" stroke="${I}" stroke-width="2"/><path d="M${x-10} ${y} l5 -4 l5 4 l5 -4 l5 4" stroke="${c2}" stroke-width="2.5" fill="none" stroke-linejoin="round"/>`;
+const burst=(x,y,r,c)=>`<g stroke="${c}" stroke-width="3" stroke-linecap="round">${[...Array(12)].map((_,i)=>{const [ax,ay]=pt(x,y,r*.3,i*30),[bx,by]=pt(x,y,r,i*30);return `<path d="M${ax} ${ay}L${bx} ${by}"/><circle cx="${bx}" cy="${by}" r="2.6" fill="${c}" stroke="none"/>`}).join('')}</g>`;
+const DAYIC=[
+ (x,y)=>`<rect x="${x-12}" y="${y-7}" width="24" height="16" rx="3" fill="var(--wood)" stroke="${I}" stroke-width="1.8"/><path d="M${x-5} ${y-7} v-4 h10 v4" fill="none" stroke="${I}" stroke-width="1.8"/>`,
+ (x,y)=>`<path d="M${x} ${y-8} q-7 -3 -13 0 v18 q6 -3 13 0 q7 -3 13 0 v-18 q-6 -3 -13 0Z M${x} ${y-8} v18" fill="var(--paper2)" stroke="${I}" stroke-width="1.8" stroke-linejoin="round"/>`,
+ (x,y)=>`<circle cx="${x}" cy="${y}" r="11" fill="var(--paper2)" stroke="${I}" stroke-width="1.8"/><path d="M${x} ${y-11} A11 11 0 0 1 ${x} ${y+11}Z" fill="var(--r5)"/><circle cx="${x}" cy="${y}" r="11" fill="none" stroke="${I}" stroke-width="1.8"/>`,
+ (x,y)=>`<path d="M${x+3} ${y-13} L${x-7} ${y+2} H${x} L${x-3} ${y+13} L${x+8} ${y-3} H${x+1}Z" fill="var(--sun)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/>`,
+ (x,y)=>star5(x,y,12,'var(--shruti)'),
+ (x,y)=>`<path d="M${x-10} ${y-5} h20 l-2 17 h-16Z" fill="var(--teal)" stroke="${I}" stroke-width="1.8" stroke-linejoin="round"/><path d="M${x-5} ${y-5} q5 -10 10 0" fill="none" stroke="${I}" stroke-width="1.8"/>`,
+ (x,y)=>`<path d="${ray(x,y,7).replace(/\d+\.?\d*/g,m=>m)}" stroke="var(--sun)" stroke-width="2.5" stroke-linecap="round" transform="translate(${x} ${y}) scale(.75) translate(${-x} ${-y})"/><circle cx="${x}" cy="${y}" r="8" fill="var(--sun)" stroke="${I}" stroke-width="1.6"/>`];
+const SEASON_IC={
+ winter:(x,y)=>flake(x,y,10,'var(--line-ink)',2),
+ fruehling:(x,y)=>[0,72,144,216,288].map(a=>{const [px,py]=pt(x,y,6,a);return `<circle cx="${px}" cy="${py}" r="5" fill="var(--paper2)" stroke="${I}" stroke-width="1.2"/>`}).join('')+`<circle cx="${x}" cy="${y}" r="4" fill="var(--sun)" stroke="${I}" stroke-width="1.2"/>`,
+ sommer:(x,y)=>`<path d="${ray(x,y,7)}" stroke="var(--line-ink)" stroke-width="2" stroke-linecap="round" transform="translate(${x} ${y}) scale(.7) translate(${-x} ${-y})"/><circle cx="${x}" cy="${y}" r="7" fill="var(--paper2)" stroke="${I}" stroke-width="1.6"/>`,
+ herbst:(x,y)=>leafS(x,y,30,'var(--sun)',.9)};
+
+Object.assign(TIPART,{
+kalender:()=>{
+  const cx=205,cy=224,SE=[['winter','Winter','var(--water2)',-90],['fruehling','Frühling','var(--hill)',0],['sommer','Sommer','var(--sun)',90],['herbst','Herbst','var(--ginger)',180]];
+  const MON=['januar','februar','maerz','april','mai','juni','juli','august','september','oktober','november','dezember'],MN=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  const sOf=i=>[0,0,1,1,1,2,2,2,3,3,3,0][i];
+  let s=hs('_bg',`<rect width="800" height="440" fill="var(--wall)"/><g fill="var(--line-ink)" opacity=".07">${[...Array(60)].map((_,i)=>`<circle cx="${(i*67)%800+10}" cy="${(i*41)%440+8}" r="3"/>`).join('')}</g><circle cx="${cx+7}" cy="${cy+9}" r="192" fill="${I}" opacity=".18"/>`+
+    txt(426,72,'Die Woche',22,'var(--ink)',700)+box(600,338,200,12,'var(--wood)',2,2.5));
+  MON.forEach((id,i)=>{const c=-90+i*30,[tx,ty]=pt(cx,cy,156,c);
+    s+=hs(id,`<path d="${ring(cx,cy,124,188,c-15,c+15)}" ${tint(SE[sOf(i)][2],38)} stroke="${I}" stroke-width="2.5"/>`+txt(tx,ty+4.5,MN[i],12.5,'var(--line-ink)',700,'middle'))});
+  SE.forEach(([id,name,col,c])=>{const [tx,ty]=pt(cx,cy,93,c);
+    s+=hs(id,`<path d="${ring(cx,cy,62,124,c-45,c+45)}" fill="${col}" stroke="${I}" stroke-width="3"/>`+SEASON_IC[id](tx,ty-10)+txt(tx,ty+16,name,13.5,'var(--line-ink)',700,'middle'))});
+  s+=hs('jahr',`<circle cx="${cx}" cy="${cy}" r="62" fill="var(--paper2)" stroke="${I}" stroke-width="3"/>`+txt(cx,cy+2,'das Jahr',19,'var(--line-ink)',700,'middle')+txt(cx,cy+22,'12 Monate',12,'var(--line-ink)',600,'middle'));
+  [['montag','Mo'],['dienstag','Di'],['mittwoch','Mi'],['donnerstag','Do'],['freitag','Fr'],['samstag','Sa'],['sonntag','So']].forEach(([id,ab],i)=>{const x=426+i*52,we=i>4;
+    s+=hs(id,box(x,92,46,76,'var(--paper2)',8,2.5)+`<path d="M${x} 100 q0 -8 8 -8 h30 q8 0 8 8 v14 h-46Z" fill="${we?'var(--r1)':'var(--r5)'}" stroke="${I}" stroke-width="2.5"/>`+txt(x+23,109,ab,14,'#fff',700,'middle')+DAYIC[i](x+23,142))});
+  s+=hs('wochenende',`<rect x="684" y="50" width="102" height="36" fill="transparent"/><path d="M688 86 v-8 h94 v8" fill="none" stroke="var(--r1)" stroke-width="3" stroke-linejoin="round"/>`+txt(735,70,'Wochenende',13,'var(--r1)',700,'middle'));
+  s+=hs('feiertag',box(432,204,160,148,'var(--paper2)',8,3)+`<path d="M432 212 q0 -8 8 -8 h144 q8 0 8 8 v26 h-160Z" fill="var(--red)" stroke="${I}" stroke-width="3"/>`+txt(512,230,'OKTOBER',15,'#fff',700,'middle')+
+    [462,512,562].map(x=>`<rect x="${x-3}" y="194" width="6" height="18" rx="3" fill="${I}"/>`).join('')+txt(512,300,'3',58,'var(--red)',700,'middle')+txt(512,322,'Tag der Deutschen',11.5,'var(--line-ink)',700,'middle')+txt(512,337,'Einheit',11.5,'var(--line-ink)',700,'middle')+
+    `<rect x="446" y="250" width="26" height="6" fill="${I}"/><rect x="446" y="256" width="26" height="6" fill="var(--red)"/><rect x="446" y="262" width="26" height="6" fill="var(--sun)"/><rect x="446" y="250" width="26" height="18" fill="none" stroke="${I}" stroke-width="1.2"/>`);
+  s+=hs('geburtstag',balloon(626,204,'var(--r1)')+balloon(774,204,'var(--r5)')+txt(696,232,'Alles Gute!',15,'var(--red)',700,'middle')+cake(700,338,1.75));
+  return s},
+
+fruehling:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/>`)+
+ hs('regenbogen',['var(--red)','var(--r2)','var(--sun)','var(--hill)','var(--r5)','var(--violet)'].map((c,i)=>{const r=162-i*12;return `<path d="M${612-r} 262 A${r} ${r} 0 0 1 ${612+r} 262" fill="none" stroke="${c}" stroke-width="12"/>`}).join(''))+
+ hs('_bg',`<g fill="var(--paper2)" stroke="${I}" stroke-width="2">${[...Array(25)].map((_,i)=>`<path d="M${i*33+4} 272 V222 l7 -9 l7 9 V272Z"/>`).join('')}</g><path d="M0 232 H800 M0 256 H800" stroke="${I}" stroke-width="2"/><path d="M0 232 H800 M0 256 H800" stroke="var(--paper2)" stroke-width="5" opacity=".9"/>`+
+   `<path d="M0 262 Q200 240 400 258 T800 252 V440 H0Z" fill="var(--hill)" stroke="${I}" stroke-width="2.5"/>`+[[60,300],[220,290],[420,300],[600,296],[760,310],[300,360],[140,350]].map(([x,y])=>`<path d="M${x} ${y} l4 -10 l4 10 M${x+10} ${y} l3 -8 l3 8" stroke="var(--leaf)" stroke-width="2.5" fill="none" stroke-linecap="round"/>`).join('')+
+   [[380,300,'var(--paper2)'],[250,272,'var(--sun)'],[650,288,'var(--paper2)'],[760,280,'var(--sun)']].map(([x,y,c])=>`<circle cx="${x}" cy="${y}" r="4" fill="${c}" stroke="${I}" stroke-width="1"/>`).join(''))+
+ hs('sonne',sunR(738,62,28))+
+ hs('regen',`<g stroke="var(--water)" stroke-width="3" stroke-linecap="round">${[...Array(16)].map((_,i)=>{const x=490+(i%8)*16+(i>7?8:0),y=110+(i>7?46:0)+(i%3)*14;return `<path d="M${x} ${y} l-5 18"/>`}).join('')}</g>`+cloudB(532,74,1.2).replace('var(--cloud)','var(--stone)'))+
+ hs('baum',`<path d="M98 300 L104 196 L70 150 M104 214 L150 160 M102 236 L60 206" stroke="var(--wood)" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M98 300 L104 196 L70 150 M104 214 L150 160 M102 236 L60 206" stroke="${I}" stroke-width="1.5" fill="none" opacity=".35"/>`+
+   [[62,124,44],[132,98,48],[96,58,40],[168,148,38],[36,170,34],[112,150,36]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="var(--cheek)" stroke="${I}" stroke-width="2.5"/>`).join('')+
+   `<g fill="var(--paper2)">${[[50,110],[80,130],[120,80],[150,110],[100,50],[170,150],[40,170],[125,150],[150,70],[70,90]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4.5"/>`).join('')}</g>`)+
+ hs('nest',`<ellipse cx="160" cy="188" rx="12" ry="9" fill="var(--water2)" stroke="${I}" stroke-width="1.5"/><ellipse cx="176" cy="186" rx="11" ry="8" fill="var(--water2)" stroke="${I}" stroke-width="1.5"/><path d="M140 186 Q168 214 196 186 Q168 200 140 186Z" fill="var(--brown)" stroke="${I}" stroke-width="2.5"/><path d="M146 192 l10 4 M168 198 l12 -2 M184 192 l8 -4" stroke="var(--wood)" stroke-width="2"/>`)+
+ hs('vogel',`<g transform="translate(262 118)"><path d="M-22 4 Q0 -14 22 2 Q4 14 -22 4Z" fill="var(--r5)" stroke="${I}" stroke-width="2"/><path d="M-4 0 Q4 -30 18 -26 Q8 -10 6 2Z" fill="var(--r5)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><circle cx="22" cy="-2" r="9" fill="var(--r5)" stroke="${I}" stroke-width="2"/><path d="M30 -3 l9 2 l-9 3Z" fill="var(--sun)" stroke="${I}" stroke-width="1.2"/><circle cx="24" cy="-4" r="1.8" fill="${I}"/><path d="M-22 4 l-12 -6 l2 12Z" fill="var(--r5)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/></g>`)+
+ hs('schmetterling',`<g transform="translate(316 222) rotate(-12)"><ellipse cx="-12" cy="-8" rx="13" ry="10" fill="var(--r2)" stroke="${I}" stroke-width="2"/><ellipse cx="12" cy="-8" rx="13" ry="10" fill="var(--r2)" stroke="${I}" stroke-width="2"/><ellipse cx="-9" cy="8" rx="9" ry="7" fill="var(--violet)" stroke="${I}" stroke-width="2"/><ellipse cx="9" cy="8" rx="9" ry="7" fill="var(--violet)" stroke="${I}" stroke-width="2"/><circle cx="-12" cy="-8" r="3.5" fill="var(--paper2)"/><circle cx="12" cy="-8" r="3.5" fill="var(--paper2)"/><rect x="-2.5" y="-14" width="5" height="28" rx="2.5" fill="${I}"/><path d="M-1 -14 q-6 -8 -8 -10 M1 -14 q6 -8 8 -10" stroke="${I}" stroke-width="1.5" fill="none"/></g>`)+
+ hs('biene',`<g transform="translate(240 322)"><ellipse cx="-4" cy="-14" rx="9" ry="11" fill="var(--paper2)" opacity=".85" stroke="${I}" stroke-width="1.5"/><ellipse cx="8" cy="-13" rx="8" ry="10" fill="var(--paper2)" opacity=".85" stroke="${I}" stroke-width="1.5"/><ellipse cx="0" cy="0" rx="17" ry="11" fill="var(--sun)" stroke="${I}" stroke-width="2"/><path d="M-6 -10 v20 M3 -11 v22" stroke="${I}" stroke-width="4"/><circle cx="17" cy="-2" r="7" fill="${I}"/><path d="M-17 0 l-7 0" stroke="${I}" stroke-width="2.5"/><circle cx="19" cy="-4" r="1.8" fill="var(--paper2)"/></g>`)+
+ hs('tulpen',`<ellipse cx="110" cy="426" rx="104" ry="14" fill="var(--brown)" stroke="${I}" stroke-width="2"/>`+[['var(--red)',30,44],['var(--sun)',56,36],['var(--violet)',82,48],['var(--red)',108,40],['var(--sun)',134,46],['var(--violet)',160,38],['var(--red)',186,44]].map(([c,x,h])=>tulip(x,422,c,h)).join(''))+
+ hs('ostereier',egg(246,424,'var(--r5)','var(--sun)')+egg(278,430,'var(--shruti)','var(--paper2)')+egg(306,420,'var(--sun)','var(--r1)')+`<path d="M232 436 l4 -10 l4 10 M292 438 l3 -8 l3 8" stroke="var(--leaf)" stroke-width="2.5" fill="none"/>`)+
+ hs('osterhase',hare(356,424,1.7))+
+ hs('nachbar',person(520,422,1.5,'thomas'))+
+ hs('gummistiefel',`<path d="M504 392 h14 v28 h4 v4 h-22 v-4 h4Z M522 392 h14 v28 h4 v4 h-22 v-4 h4Z" fill="var(--sun)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M504 398 h14 M522 398 h14" stroke="${I}" stroke-width="1.5" opacity=".6"/>`)+
+ hs('regenschirm',`<path d="M556 204 V376" stroke="${I}" stroke-width="4"/><path d="M556 376 q0 10 -9 10" stroke="${I}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M480 270 Q486 204 556 200 Q626 204 632 270 q-12 -10 -25 0 q-13 -10 -25 0 q-13 -10 -26 0 q-13 -10 -25 0 q-13 -10 -25 0 q-12 -10 -25 0Z" fill="var(--r1)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M556 200 Q536 230 530 270 M556 200 Q576 230 582 270 M556 200 Q506 220 505 270 M556 200 Q606 220 607 270" stroke="${I}" stroke-width="1.6" fill="none" opacity=".55"/><circle cx="556" cy="198" r="4" fill="${I}"/>`)+
+ hs('oma',person(690,424,1.6,'hilde'))+
+ hs('giesskanne',`<path d="M754 384 L786 364" stroke="var(--leaf)" stroke-width="7" stroke-linecap="round"/><path d="M754 384 L786 364" stroke="${I}" stroke-width="1.2" opacity=".5"/><rect x="782" y="356" width="10" height="14" rx="3" transform="rotate(-32 787 363)" fill="var(--leaf)" stroke="${I}" stroke-width="1.6"/><path d="M722 372 h34 l-4 42 h-26Z" fill="var(--leaf)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M726 372 q13 -24 26 0" fill="none" stroke="${I}" stroke-width="3"/><g fill="var(--water2)">${[[794,382],[790,396],[798,404]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="2.5" ry="4"/>`).join('')}</g>`),
+
+sommer:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/><rect y="250" width="800" height="190" fill="var(--hill)"/><path d="M0 250 H800" stroke="${I}" stroke-width="2.5"/>`+[[40,300],[150,440],[230,290],[120,280]].map(([x,y])=>`<path d="M${x} ${y-4} l4 -10 l4 10 M${x+10} ${y-4} l3 -8 l3 8" stroke="var(--leaf)" stroke-width="2.5" fill="none" stroke-linecap="round"/>`).join('')+
+   `<rect x="300" y="280" width="500" height="160" fill="var(--stone)" stroke="${I}" stroke-width="2.5"/><g stroke="${I}" stroke-width="1.2" opacity=".25">${[...Array(10)].map((_,i)=>`<path d="M${300+i*50} 280 V440"/>`).join('')}<path d="M300 300 H800 M300 330 H800"/></g>`)+
+ hs('sonne',`<circle cx="78" cy="66" r="52" fill="var(--sun-soft)" opacity=".55"/>`+sunR(78,66,32))+
+ hs('gewitter',`<path d="M622 98 L600 140 H618 L602 178 L640 128 H620 L636 98Z" fill="var(--sun)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/>`+cloudB(640,74,1.3).replace('var(--cloud)','var(--cloud-dark)')+`<g stroke="var(--water)" stroke-width="3" stroke-linecap="round">${[668,690,712].map(x=>`<path d="M${x} 100 l-4 14"/>`).join('')}</g>`)+
+ hs('kiosk',box(24,150,108,104,'var(--cheek)',0)+box(34,118,88,26,'var(--paper2)',4,2.5)+txt(78,137,'KIOSK',15,'var(--line-ink)',700,'middle')+awning(24,108,'var(--red)','var(--paper2)',150)+box(36,192,84,40,'var(--sky)',3,2)+iceCone(58,206,'var(--shruti)')+iceCone(78,206,'var(--sun-soft)')+iceCone(98,206,'var(--brown)')+box(20,232,116,10,'var(--paper2)',2,2))+
+ hs('thermometer',`<rect x="173" y="160" width="6" height="96" fill="${I}"/>`+box(156,62,40,104,'var(--paper2)',20,2.5)+`<rect x="171" y="76" width="10" height="72" rx="5" fill="var(--paper2)" stroke="${I}" stroke-width="1.6"/><rect x="173" y="96" width="6" height="56" fill="var(--red)"/><circle cx="176" cy="152" r="10" fill="var(--red)" stroke="${I}" stroke-width="1.8"/>${[84,96,108,120,132].map(y=>`<path d="M184 ${y} h6" stroke="${I}" stroke-width="1.5"/>`).join('')}`+txt(176,52,'32 °C',16,'var(--red)',700,'middle'))+
+ hs('sonnenschirm',`<path d="M262 206 V330" stroke="${I}" stroke-width="4"/><path d="M182 212 Q262 136 342 212Z" fill="var(--r2)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M262 160 L222 212 M262 160 L302 212" stroke="var(--paper2)" stroke-width="10"/><path d="M182 212 Q262 136 342 212Z" fill="none" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><circle cx="262" cy="156" r="5" fill="${I}"/>`)+
+ hs('liegestuhl',`<path d="M246 324 L238 342 M318 324 L326 342 M282 324 V342" stroke="var(--wood)" stroke-width="5" stroke-linecap="round"/><path d="M214 262 L240 324 L320 324 L320 312 L250 312 L226 260Z" fill="var(--r5)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M226 276 l8 18 M260 312 V324 M290 312 V324" stroke="var(--paper2)" stroke-width="3"/>`)+
+ hs('handtuch',`<path d="M28 372 L150 360 L170 414 L46 428Z" fill="var(--r6)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M36 392 L158 380 M42 410 L164 398" stroke="var(--paper2)" stroke-width="5"/>`)+
+ hs('sonnenbrille',`<g transform="translate(96 392) rotate(-6)"><ellipse cx="-13" cy="0" rx="12" ry="9" fill="var(--night)" stroke="${I}" stroke-width="2"/><ellipse cx="13" cy="0" rx="12" ry="9" fill="var(--night)" stroke="${I}" stroke-width="2"/><path d="M-2 -2 q2 -3 4 0" stroke="${I}" stroke-width="2" fill="none"/><path d="M-25 -2 l-10 -6 M25 -2 l10 -6" stroke="${I}" stroke-width="2.5"/><path d="M-18 -4 l5 -2" stroke="var(--paper2)" stroke-width="2" opacity=".6"/></g>`)+
+ hs('sonnencreme',box(186,358,28,46,'var(--sun)',8,2.5)+box(192,346,16,14,'var(--r1)',3,2)+`<circle cx="200" cy="382" r="9" fill="var(--paper2)" stroke="${I}" stroke-width="1.5"/>`+txt(200,386,'50',9,'var(--line-ink)',700,'middle'))+
+ hs('wassermelone',`<path d="M216 404 A36 36 0 0 0 288 404Z" fill="var(--leaf)" stroke="${I}" stroke-width="2.5"/><path d="M223 404 A29 29 0 0 0 281 404Z" fill="var(--red)"/><path d="M216 404 H288" stroke="${I}" stroke-width="2.5"/><g fill="${I}">${[[238,412],[252,420],[266,412],[252,408]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="2" ry="3"/>`).join('')}</g>`)+
+ hs('becken',`<rect x="386" y="296" width="386" height="144" fill="var(--water)" stroke="${I}" stroke-width="4"/><path d="M386 336 H772 M386 376 H772 M386 416 H772" stroke="var(--sun)" stroke-width="4" stroke-dasharray="10 8"/><path d="M410 316 h30 M520 356 h40 M660 320 h36 M450 400 h30 M700 396 h40" stroke="var(--water2)" stroke-width="4" stroke-linecap="round"/>`)+
+ hs('bademeister',`<path d="M326 300 L338 190 M370 300 L358 190 M330 260 H366 M334 226 H362" stroke="var(--paper2)" stroke-width="6" stroke-linecap="round"/><path d="M326 300 L338 190 M370 300 L358 190" stroke="${I}" stroke-width="1.5" opacity=".5"/>`+box(330,182,36,10,'var(--paper2)',3,2)+person(348,184,.9,'bm')+`<circle cx="364" cy="146" r="3.5" fill="var(--sun)" stroke="${I}"/>`)+
+ hs('sprungbrett',`<rect x="772" y="210" width="22" height="90" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/>${[226,246,266,286].map(y=>`<path d="M772 ${y} h22" stroke="${I}" stroke-width="2"/>`).join('')}<rect x="676" y="202" width="122" height="10" rx="3" fill="var(--r5)" stroke="${I}" stroke-width="2.5"/>`)+
+ hs('wasserball',`<circle cx="520" cy="350" r="22" fill="var(--paper2)" stroke="${I}" stroke-width="2.5"/><path d="M520 328 Q506 350 520 372 Q510 350 520 328Z M520 328 Q540 340 542 350 Q530 344 520 328Z M498 350 Q510 362 520 372 Q504 368 498 350Z" fill="var(--red)"/><path d="M520 328 Q534 350 520 372 Q528 350 520 328Z" fill="var(--sun)"/><path d="M542 350 Q530 364 520 372 Q536 370 542 350Z" fill="var(--r5)"/><circle cx="520" cy="350" r="22" fill="none" stroke="${I}" stroke-width="2.5"/><circle cx="520" cy="350" r="4" fill="var(--paper2)" stroke="${I}" stroke-width="1.2"/>`)+
+ hs('schwimmreifen',`<circle cx="640" cy="372" r="14" fill="var(--skin2)" stroke="${I}" stroke-width="2"/><path d="M626 368 Q628 354 640 354 Q652 354 654 368 Q646 360 640 362 Q632 360 626 368Z" fill="var(--hair)"/><circle cx="635" cy="372" r="1.8" fill="${I}"/><circle cx="645" cy="372" r="1.8" fill="${I}"/><path d="M636 378 q4 3 8 0" stroke="${I}" stroke-width="1.6" fill="none"/><path d="M640 382 m-30 10 a30 14 0 1 0 60 0 a30 14 0 1 0 -60 0Z" fill="var(--red)" stroke="${I}" stroke-width="2.5"/><path d="M640 392 m-14 -2 a14 6 0 1 0 28 0" fill="var(--water)" stroke="${I}" stroke-width="2"/><path d="M616 386 l-6 8 M664 386 l6 8 M640 404 v8" stroke="var(--paper2)" stroke-width="6"/>`),
+
+herbst:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--sky)"/><path d="M0 232 Q120 176 260 212 T520 202 T800 192 V270 H0Z" fill="var(--hill2)" stroke="${I}" stroke-width="2"/>`+
+   `<path d="M0 252 Q200 232 400 248 T800 240 V440 H0Z" fill="var(--sun-soft)" stroke="${I}" stroke-width="2.5"/><path d="M420 262 L360 330 M520 258 L500 330 M620 254 L640 326 M720 250 L780 320" stroke="var(--wood)" stroke-width="2" opacity=".6"/>`+
+   `<path d="M0 332 Q200 312 400 328 T800 320 V440 H0Z" fill="var(--hill)" stroke="${I}" stroke-width="2.5"/>`+[[420,370,0,'var(--ginger)'],[560,430,60,'var(--red)'],[700,400,-30,'var(--sun)'],[230,360,20,'var(--r2)'],[380,430,-50,'var(--red)']].map(([x,y,a,c])=>leafS(x,y,a,c,.8)).join(''))+
+ hs('nebel',`<g fill="var(--paper2)" opacity=".78">${[[-20,206,280],[40,226,300],[-10,246,240]].map(([x,y,w])=>`<rect x="${x}" y="${y}" width="${w}" height="16" rx="8"/>`).join('')}</g>`)+
+ hs('zugvoegel',`<g fill="none" stroke="${I}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">${[[260,56],[240,68],[280,68],[220,80],[300,80],[200,92],[320,92]].map(([x,y])=>`<path d="M${x-10} ${y} q5 -7 10 0 q5 -7 10 0"/>`).join('')}</g>`)+
+ hs('traktor',`<g transform="translate(560 234)">${box(-34,-20,44,18,'var(--red)',3,2)}${box(0,-38,24,36,'var(--red)',3,2)}<rect x="4" y="-34" width="16" height="14" fill="var(--sky)" stroke="${I}" stroke-width="1.5"/><path d="M-26 -20 v-10" stroke="${I}" stroke-width="3"/><circle cx="14" cy="2" r="13" fill="${I}"/><circle cx="14" cy="2" r="5" fill="var(--sun)"/><circle cx="-26" cy="6" r="7" fill="${I}"/><circle cx="-26" cy="6" r="2.5" fill="var(--sun)"/></g>`)+
+ hs('wind',`<g fill="none" stroke="var(--paper2)" stroke-width="4" stroke-linecap="round"><path d="M430 130 q40 -20 80 0 t80 0 q20 8 10 22 q-12 10 -20 -2"/><path d="M460 168 q36 -14 72 0 t60 -4"/></g><g fill="none" stroke="${I}" stroke-width="1" opacity=".35"><path d="M430 130 q40 -20 80 0 t80 0 q20 8 10 22 q-12 10 -20 -2"/><path d="M460 168 q36 -14 72 0 t60 -4"/></g>`+leafS(476,112,40,'var(--red)')+leafS(560,150,-30,'var(--sun)')+leafS(620,110,70,'var(--ginger)'))+
+ hs('baum',`<path d="M130 334 L132 200 M132 250 L84 196 M132 226 L186 176 M132 280 L178 240" stroke="var(--wood)" stroke-width="20" stroke-linecap="round" fill="none"/><path d="M130 334 L132 200 M132 250 L84 196 M132 226 L186 176 M132 280 L178 240" stroke="${I}" stroke-width="1.5" fill="none" opacity=".3"/>`+
+   [[80,150,52,'var(--ginger)'],[178,140,50,'var(--red)'],[130,88,58,'var(--sun)'],[54,206,32,'var(--r2)'],[204,200,34,'var(--ginger)']].map(([x,y,r,c])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" stroke="${I}" stroke-width="2.5"/>`).join('')+
+   [[110,70,20,'var(--red)'],[150,120,-30,'var(--ginger)'],[70,130,60,'var(--sun)'],[190,170,10,'var(--sun)'],[60,190,-20,'var(--red)']].map(([x,y,a,c])=>leafS(x,y,a,c,.8)).join(''))+
+ hs('eichhoernchen',`<g transform="translate(200 214)"><path d="M-12 6 Q-40 0 -34 -26 Q-30 -46 -12 -40 Q-24 -30 -22 -16 Q-20 0 -6 4Z" fill="var(--ginger)" stroke="${I}" stroke-width="2"/><ellipse cx="0" cy="0" rx="12" ry="14" fill="var(--ginger)" stroke="${I}" stroke-width="2"/><circle cx="8" cy="-16" r="10" fill="var(--ginger)" stroke="${I}" stroke-width="2"/><path d="M2 -24 l1 -9 l5 7 M10 -25 l3 -8 l3 8" fill="var(--ginger)" stroke="${I}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="-18" r="1.8" fill="${I}"/><circle cx="17" cy="-13" r="1.6" fill="${I}"/><circle cx="12" cy="2" r="5" fill="var(--brown)" stroke="${I}" stroke-width="1.5"/></g>`)+
+ hs('blaetter',`<path d="M30 352 Q120 300 220 352Z" fill="var(--r2)" stroke="${I}" stroke-width="2"/>`+[[50,344,10,'var(--red)'],[80,330,-40,'var(--sun)'],[110,322,30,'var(--ginger)'],[140,330,-10,'var(--red)'],[170,336,50,'var(--sun)'],[196,346,-60,'var(--ginger)'],[96,344,70,'var(--red)'],[150,348,0,'var(--sun)'],[240,260,30,'var(--red)'],[30,250,-40,'var(--sun)']].map(([x,y,a,c])=>leafS(x,y,a,c)).join(''))+
+ hs('pilz',[[246,412,1],[278,420,.8]].map(([x,y,s])=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-6 0 q-2 -18 0 -22 h12 q2 4 0 22Z" fill="var(--paper2)" stroke="${I}" stroke-width="2"/><path d="M-22 -20 Q-20 -44 0 -44 Q20 -44 22 -20Z" fill="var(--red)" stroke="${I}" stroke-width="2.2"/><g fill="var(--paper2)"><circle cx="-10" cy="-30" r="3.5"/><circle cx="4" cy="-37" r="3"/><circle cx="12" cy="-26" r="3.5"/><circle cx="-2" cy="-25" r="2.5"/></g></g>`).join(''))+
+ hs('kastanien',`<g transform="translate(64 414)"><path d="M-30 4 a16 14 0 0 1 32 0Z" fill="var(--leaf)" stroke="${I}" stroke-width="2"/><path d="M-28 2 l-5 -4 M-22 -6 l-3 -6 M-14 -10 v-7 M-6 -8 l3 -6 M0 -2 l5 -4" stroke="var(--leaf)" stroke-width="2.5" stroke-linecap="round"/><circle cx="-14" cy="-2" r="8" fill="var(--brown)" stroke="${I}" stroke-width="1.8"/>${[[14,6],[32,0],[22,-12]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="10" fill="var(--brown)" stroke="${I}" stroke-width="2"/><ellipse cx="${x-3}" cy="${y-4}" rx="3" ry="2" fill="var(--paper2)" opacity=".5"/>`).join('')}</g>`)+
+ hs('igel',`<g transform="translate(334 414)"><path d="M-36 4 L-34 -8 L-28 -4 L-26 -18 L-18 -10 L-14 -24 L-6 -14 L0 -28 L6 -14 L14 -24 L16 -10 L24 -18 L24 -4 Z" fill="var(--brown)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M-36 4 Q-32 -12 0 -12 Q22 -12 30 0 Q36 4 40 6 Q30 12 0 10 Q-30 10 -36 4Z" fill="var(--wood)" stroke="${I}" stroke-width="2"/><circle cx="26" cy="-2" r="2" fill="${I}"/><circle cx="41" cy="6" r="3" fill="${I}"/></g>`)+
+ hs('kuerbis',[[468,408,1],[530,418,.7]].map(([x,y,s])=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-2 -30 q2 -12 10 -14" stroke="var(--brown)" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="0" cy="0" rx="40" ry="30" fill="var(--r2)" stroke="${I}" stroke-width="2.5"/><path d="M-14 -28 Q-26 0 -14 28 M14 -28 Q26 0 14 28 M0 -30 V30" stroke="${I}" stroke-width="1.8" fill="none" opacity=".55"/><path d="M8 -36 q12 -6 18 2 q-10 4 -18 -2Z" fill="var(--leaf)" stroke="${I}" stroke-width="1.2"/></g>`).join(''))+
+ hs('kind',person(598,414,1.35,'paul'))+
+ hs('laterne',`<path d="M624 372 L676 316" stroke="var(--wood)" stroke-width="4" stroke-linecap="round"/><path d="M676 316 v14" stroke="${I}" stroke-width="1.5"/><circle cx="676" cy="352" r="30" fill="var(--sun-soft)" opacity=".5"/><rect x="660" y="330" width="32" height="40" rx="12" fill="var(--sun)" stroke="${I}" stroke-width="2.5"/><path d="M660 340 h32 M660 360 h32" stroke="var(--r1)" stroke-width="3"/>${star5(676,350,6,'var(--paper2)')}<rect x="664" y="326" width="24" height="5" rx="2" fill="var(--r1)" stroke="${I}" stroke-width="1.2"/><rect x="664" y="369" width="24" height="5" rx="2" fill="var(--r1)" stroke="${I}" stroke-width="1.2"/>`)+
+ hs('apfelbaum',`<rect x="722" y="190" width="24" height="142" rx="6" fill="var(--wood)" stroke="${I}" stroke-width="2.5"/><circle cx="734" cy="150" r="66" fill="var(--leaf)" stroke="${I}" stroke-width="3"/><circle cx="690" cy="196" r="30" fill="var(--leaf)" stroke="${I}" stroke-width="2.5"/>`+[[700,120],[760,110],[734,170],[780,170],[700,190],[740,90],[680,160]].map(([x,y])=>apple(x,y,'var(--red)')).join(''))+
+ hs('leiter',`<path d="M666 336 L702 156 M690 336 L726 156" stroke="var(--wood)" stroke-width="6" stroke-linecap="round"/><path d="M666 336 L702 156 M690 336 L726 156" stroke="${I}" stroke-width="1.2" opacity=".4"/>${[0,1,2,3,4,5,6].map(i=>{const t=.08+i*.135,x1=666+36*t,y=336-180*t;return `<path d="M${x1} ${y} h24" stroke="var(--wood)" stroke-width="5" stroke-linecap="round"/>`}).join('')}`)+
+ hs('korb',`<path d="M748 344 q22 -34 44 0" fill="none" stroke="var(--brown)" stroke-width="5"/>`+apple(758,340,'var(--red)')+apple(776,338,'var(--red)')+apple(767,330,'var(--leaf)')+`<path d="M742 342 h56 l-7 34 h-42Z" fill="var(--wood)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/><path d="M746 354 h48 M748 366 h44" stroke="${I}" stroke-width="1.5" opacity=".45"/>`),
+
+winter:()=>
+ hs('_bg',`<rect width="800" height="440" fill="var(--night)"/><g fill="var(--sun-soft)">${[[30,30],[350,24],[420,90],[230,20],[120,110],[380,150],[520,170]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2"/>`).join('')}</g>`+
+   [[0,90,'var(--stone)'],[96,110,'var(--cheek)'],[650,96,'var(--water2)'],[752,70,'var(--stone)']].map(([x,w,c],i)=>{const h=[120,100,110,130][i],t=300-h;return `<rect x="${x}" y="${t}" width="${w}" height="${h}" fill="${c}" stroke="${I}" stroke-width="2"/><path d="M${x-4} ${t} L${x+w/2} ${t-34} L${x+w+4} ${t}Z" fill="var(--snow)" stroke="${I}" stroke-width="2"/>${[0,1].map(k=>`<rect x="${x+14+k*(w/2)}" y="${t+20}" width="${w/4}" height="22" fill="var(--sun)" stroke="${I}" stroke-width="1.5"/>`).join('')}`}).join('')+
+   `<path d="M0 300 Q200 284 400 298 T800 292 V440 H0Z" fill="var(--snow)" stroke="${I}" stroke-width="2.5"/><path d="M60 360 q30 -6 60 0 M500 400 q40 -8 80 0 M260 420 q30 -6 60 0" stroke="var(--stone)" stroke-width="3" fill="none" stroke-linecap="round"/>`)+
+ hs('feuerwerk',`<path d="M640 300 Q636 200 640 78 M732 300 Q736 220 730 116" stroke="var(--sun-soft)" stroke-width="1.5" stroke-dasharray="4 6" fill="none"/>`+burst(640,70,40,'var(--r1)')+burst(730,112,32,'var(--sun)')+burst(560,54,24,'var(--r5)'))+
+ hs('schneeflocke',flake(62,56,14)+flake(170,96,10)+flake(300,46,13)+flake(458,128,10)+flake(470,44,12))+
+ hs('schneemann',snowman(112,418,1.05,{scarf:1,hat:1}))+
+ hs('weihnachtsbaum',`<rect x="280" y="326" width="20" height="30" fill="var(--wood)" stroke="${I}" stroke-width="2"/>`+[[150,224,240],[198,208,300],[250,196,348]].map(([y0,w2,y1])=>`<path d="M290 ${y0} L${290-w2/2+12} ${y1-8} Q290 ${y1+6} ${290+w2/2-12} ${y1-8}Z" fill="var(--leaf)" stroke="${I}" stroke-width="2.5" stroke-linejoin="round"/>`).join('')+
+   [[268,230,'var(--r1)'],[310,252,'var(--sun)'],[250,290,'var(--r5)'],[330,300,'var(--r1)'],[290,280,'var(--violet)'],[300,206,'var(--r5)'],[226,330,'var(--sun)'],[356,334,'var(--r5)']].map(([x,y,c])=>`<circle cx="${x}" cy="${y}" r="7" fill="${c}" stroke="${I}" stroke-width="1.6"/>`).join('')+
+   `<path d="M262 196 Q292 214 318 200 M240 252 Q292 272 340 254 M222 306 Q292 330 360 306" stroke="var(--sun)" stroke-width="2.5" fill="none" stroke-dasharray="2 7" stroke-linecap="round"/>`+star5(290,146,16,'var(--sun)'))+
+ hs('geschenke',box(206,352,42,34,'var(--r1)',3,2.2)+`<path d="M227 352 V386 M206 368 H248" stroke="var(--sun)" stroke-width="5"/><path d="M227 352 q-10 -12 -14 -2 q6 4 14 2 q10 -12 14 -2 q-6 4 -14 2" fill="var(--sun)" stroke="${I}" stroke-width="1.4"/>`+
+   box(318,358,46,30,'var(--violet)',3,2.2)+`<path d="M341 358 V388 M318 372 H364" stroke="var(--paper2)" stroke-width="5"/>`+box(252,368,32,22,'var(--r5)',3,2)+`<path d="M268 368 V390" stroke="var(--r1)" stroke-width="4"/>`)+
+ hs('stand',`<path d="M416 200 L536 140 L656 200Z" fill="var(--brown)" stroke="${I}" stroke-width="3" stroke-linejoin="round"/><path d="M416 200 L536 140 L656 200 L646 206 Q600 190 580 208 Q556 190 536 206 Q510 190 490 208 Q462 190 426 206Z" fill="var(--snow)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/>`+box(430,204,212,124,'var(--wood)',0)+box(446,220,180,72,'var(--night)',3,2.5)+person(536,312,1.05,'braun')+
+   `<path d="M430 210 Q480 226 536 210 Q590 226 642 210" stroke="${I}" stroke-width="1.5" fill="none"/>${[[446,215,'var(--r1)'],[470,220,'var(--sun)'],[496,219,'var(--r5)'],[522,213,'var(--sun)'],[548,213,'var(--r1)'],[574,219,'var(--sun)'],[600,220,'var(--r5)'],[626,215,'var(--r1)']].map(([x,y,c])=>`<circle cx="${x}" cy="${y}" r="4" fill="${c}"/>`).join('')}`+box(424,290,224,16,'var(--paper2)',3,2.5)+box(436,306,200,22,'var(--wood)',0,2.5))+
+ hs('plaetzchen',`<ellipse cx="468" cy="290" rx="26" ry="6" fill="var(--paper2)" stroke="${I}" stroke-width="2"/>`+star5(458,282,9,'var(--sun-soft)')+star5(476,280,9,'var(--wood)')+star5(467,272,8,'var(--sun-soft)'))+
+ hs('punsch',mug(522,290)+mug(556,290))+
+ hs('adventskranz',`<ellipse cx="610" cy="286" rx="30" ry="9" fill="none" stroke="var(--leaf)" stroke-width="9"/><ellipse cx="610" cy="286" rx="30" ry="9" fill="none" stroke="${I}" stroke-width="1.4" stroke-dasharray="3 5"/>${[[588,262,1],[604,258,1],[620,258,0],[634,262,0]].map(([x,y,lit])=>`<rect x="${x-4}" y="${y}" width="8" height="24" rx="2" fill="var(--red)" stroke="${I}" stroke-width="1.4"/>${lit?`<path d="M${x} ${y-12} q5 6 0 10 q-5 -4 0 -10Z" fill="var(--sun)" stroke="${I}" stroke-width="1"/>`:''}`).join('')}<circle cx="584" cy="290" r="3" fill="var(--red)"/><circle cx="636" cy="290" r="3" fill="var(--red)"/>`)+
+ hs('kind',person(722,422,1.5,'wkind'))+
+ hs('stiefel',`<path d="M707 394 h11 v26 h4 v4 h-20 v-4 h5Z M725 394 h11 v26 h5 v4 h-20 v-4 h4Z" fill="var(--brown)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M707 398 h11 M725 398 h11" stroke="var(--paper2)" stroke-width="2.5"/>`)+
+ hs('handschuhe',[[692,378],[752,378]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="8" ry="9" fill="var(--r6)" stroke="${I}" stroke-width="2"/><ellipse cx="${x+(x<722?7:-7)}" cy="${y-4}" rx="3.5" ry="5" fill="var(--r6)" stroke="${I}" stroke-width="1.6"/><path d="M${x-8} ${y-6} h16" stroke="var(--paper2)" stroke-width="2.5"/>`).join(''))+
+ hs('schal',`<path d="M702 338 q20 10 40 0 l0 11 q-20 10 -40 0Z" fill="var(--sun)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M730 346 l6 36 l11 -3 l-5 -34Z" fill="var(--sun)" stroke="${I}" stroke-width="2" stroke-linejoin="round"/><path d="M712 342 v9 M722 344 v9 M732 342 v9 M734 360 l9 -2 M736 372 l9 -2" stroke="var(--r1)" stroke-width="3"/>`)+
+ hs('muetze',`<path d="M700 320 Q700 290 722 288 Q744 290 744 320Z" fill="var(--r1)" stroke="${I}" stroke-width="2.2"/><rect x="698" y="312" width="48" height="11" rx="5" fill="var(--paper2)" stroke="${I}" stroke-width="2"/><circle cx="722" cy="284" r="8" fill="var(--paper2)" stroke="${I}" stroke-width="2"/><path d="M712 296 v14 M722 292 v18 M732 296 v14" stroke="${I}" stroke-width="1.2" opacity=".4"/>`)+
+ hs('schlitten',`<path d="M688 378 Q650 392 610 400" stroke="${I}" stroke-width="1.8" fill="none"/><path d="M596 420 H684 q12 0 12 -10" stroke="var(--red)" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M596 420 H684 q12 0 12 -10" stroke="${I}" stroke-width="1.2" fill="none" opacity=".5"/><path d="M610 420 v-12 M670 420 v-12" stroke="var(--red)" stroke-width="5"/>${box(600,398,86,10,'var(--wood)',3,2)}`),
+});
+
+TIPCOVERS.jahr=()=>svg(`<rect width="200" height="120" fill="var(--sky)"/><rect x="200" width="200" height="120" fill="var(--sun-soft)"/><rect y="120" width="200" height="120" fill="var(--sky)"/><rect x="200" y="120" width="200" height="120" fill="var(--night)"/>`+
+ `<path d="M0 96 Q100 80 200 94 V120 H0Z" fill="var(--hill)" stroke="${I}" stroke-width="2"/>`+[['var(--red)',30],['var(--sun)',56],['var(--violet)',82],['var(--red)',150],['var(--sun)',176]].map(([c,x])=>tulip(x,112,c,30)).join('')+cloudB(110,34,.5)+
+ sunR(300,46,22)+`<rect x="200" y="92" width="200" height="28" fill="var(--water)" stroke="${I}" stroke-width="2"/><path d="M220 104 h24 M300 110 h30 M350 100 h20" stroke="var(--water2)" stroke-width="3" stroke-linecap="round"/>`+
+ `<path d="M0 220 Q100 206 200 218 V240 H0Z" fill="var(--hill)" stroke="${I}" stroke-width="2"/><rect x="60" y="170" width="14" height="52" fill="var(--wood)" stroke="${I}" stroke-width="2"/>`+[[50,160,26,'var(--ginger)'],[86,154,24,'var(--red)'],[68,138,24,'var(--sun)']].map(([x,y,r,c])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" stroke="${I}" stroke-width="2"/>`).join('')+leafS(140,170,30,'var(--red)')+leafS(170,200,-40,'var(--sun)')+leafS(120,206,60,'var(--ginger)')+
+ `<path d="M200 214 Q300 204 400 212 V240 H200Z" fill="var(--snow)" stroke="${I}" stroke-width="2"/>`+snowman(340,232,.58,{scarf:1,hat:1})+flake(240,150,9)+flake(276,186,7)+flake(380,150,8)+
+ `<path d="M200 0 V240 M0 120 H400" stroke="${I}" stroke-width="3"/><circle cx="200" cy="120" r="40" fill="var(--paper2)" stroke="${I}" stroke-width="3"/>`+txt(200,124,'12',26,'var(--line-ink)',700,'middle')+txt(200,142,'Monate',11,'var(--line-ink)',700,'middle'),'Die vier Jahreszeiten');
 /* Content. Each hotspot: [word|english, plural, discover, story, knowledge].
    discover/knowledge: "deutsch|english" (or a list). story: one exchange or a list; an exchange is lines
    joined by " // ", each line "speaker: deutsch|english" (no speaker = narrator). Questions: [frage|question, "ids that count"]. */
-const TIPBOOKS=[{id:'samstag',title:'Ein Samstag in der Stadt',titleEn:'A Saturday in town',color:'#B83FD1',cast:'Shruti, Sijan und Lena',
+const TIPBOOKS=[{id:'samstag',title:'Ein Samstag in der Stadt',titleEn:'A Saturday in town',color:'#B83FD1',kind:'Bildergeschichte',by:'mit Shruti, Sijan und Lena',
+ modes:['entdecken','erzaehlen','wissen'],games:['finde','artikel','raetsel'],storyMode:'erzaehlen',cert:'Du kennst dich in der Stadt aus!',
 scenes:[
 {id:'kueche',title:'In der Küche',en:'In the kitchen',focus:'Wo? Wohin? · Präpositionen',
  story:['Es ist Samstagmorgen. Shruti und Sijan frühstücken in der Küche.|It is Saturday morning. Shruti and Sijan are having breakfast in the kitchen.','Am Nachmittag kommt ihre Freundin Lena mit dem Zug. Dann machen alle zusammen ein Picknick im Park.|In the afternoon their friend Lena is coming by train. Then they will all have a picnic in the park together.','Aber der Kühlschrank ist fast leer. Zuerst müssen sie einkaufen.|But the fridge is almost empty. First they have to go shopping.'],
@@ -964,58 +1117,222 @@ scenes:[
  qs:[['Was fliegt am Himmel?|What is flying in the sky?','drachen'],['Wo schwimmen die Enten?|Where are the ducks swimming?','teich'],['Wo kann man Eis kaufen?|Where can you buy ice cream?','eiswagen'],['Was hat Shruti im Café gekauft?|What did Shruti buy at the café?','kuchen'],['Er ist groß und grün und hat viele Blätter. Was ist das?|It is big and green and has lots of leaves. What is it?','baum'],['Wer ist acht Jahre alt?|Who is eight years old?','kind'],['Womit spielt Tim Fußball?|What does Tim play football with?','ball'],['Was macht „quak, quak“?|What goes "quack, quack"?','enten'],['Was sieht aus wie ein Hase?|What looks like a rabbit?','wolke']]},
 ]}];
 
+
+/* Tipp-Buch 2: a non-fiction book. Hotspots use the same five fields, but the fourth is what people say
+   ("Sagen" mode). groups: [task, "ids"] for Sammle alle!, tf: [statement, true?, "ids", correction] for
+   Richtig oder falsch?, hoer: [description, "ids"] for Hör genau! */
+TIPBOOKS.push({id:'jahr',title:'Das Jahr in Deutschland',titleEn:'The year in Germany',color:'#0B7285',kind:'Sachbuch',by:'Ein Sachbuch zum Hören und Lernen',
+ modes:['entdecken','sagen','wissen'],games:['sammeln','wahr','hoeren'],storyMode:'wissen',voice:'stift',cert:'Du kennst das deutsche Jahr!',
+scenes:[
+{id:'kalender',title:'Der Kalender',en:'The calendar',focus:'Monate · Wochentage · Datum',
+ story:['Ein Jahr hat zwölf Monate, zweiundfünfzig Wochen und vier Jahreszeiten.|A year has twelve months, fifty-two weeks and four seasons.','Eine Woche hat sieben Tage: fünf Arbeitstage und das Wochenende.|A week has seven days: five working days and the weekend.','Tippe auf die Monate, die Tage und die Jahreszeiten!|Tap the months, the days and the seasons!'],
+ hs:{
+ _bg:['der Kalender|the calendar','die Kalender','Im Kalender stehen die Tage, die Wochen und die Monate.|The days, weeks and months are in the calendar.','sie: Ich schreibe den Termin in meinen Kalender.|I’ll write the appointment in my calendar.','In Deutschland beginnt die Woche im Kalender mit dem Montag, nicht mit dem Sonntag.|In Germany the calendar week starts on Monday, not Sunday.'],
+ jahr:['das Jahr|the year','die Jahre','Ein Jahr hat zwölf Monate und vier Jahreszeiten.|A year has twelve months and four seasons.','er: Wie alt bist du?|How old are you? // kind: Ich bin acht Jahre alt.|I am eight years old.','Ein Jahr hat dreihundertfünfundsechzig Tage. Ein Schaltjahr hat dreihundertsechsundsechzig.|A year has 365 days. A leap year has 366.'],
+ winter:['der Winter|winter','die Winter','Der Winter: Dezember, Januar und Februar.|Winter: December, January and February.','er: Brr, ist das kalt!|Brr, it’s cold!','Im Winter wird es schon um halb fünf dunkel.|In winter it gets dark at half past four.'],
+ fruehling:['der Frühling|spring','die Frühlinge','Der Frühling: März, April und Mai.|Spring: March, April and May.','sie: Endlich ist der Frühling da!|Spring is finally here!','Im Frühling werden die Tage länger und wärmer.|In spring the days get longer and warmer.'],
+ sommer:['der Sommer|summer','die Sommer','Der Sommer: Juni, Juli und August.|Summer: June, July and August.','kind: Ich liebe den Sommer!|I love summer!','Im Sommer kann es in Deutschland über dreißig Grad heiß werden.|In summer it can get hotter than thirty degrees in Germany.'],
+ herbst:['der Herbst|autumn','die Herbste','Der Herbst: September, Oktober und November.|Autumn: September, October and November.','sie: Es wird kühler. Zieh eine Jacke an!|It’s getting cooler. Put on a jacket!','Ende Oktober stellt man die Uhr eine Stunde zurück. Dann ist Winterzeit.|At the end of October the clocks go back an hour.'],
+ januar:['der Januar|January','','Der Januar ist der erste Monat. Er hat einunddreißig Tage.|January is the first month. It has thirty-one days.','sie: Frohes neues Jahr!|Happy New Year!','Im Januar ist es oft kalt, manchmal unter null Grad.|In January it is often cold, sometimes below zero.'],
+ februar:['der Februar|February','','Der Februar ist der kürzeste Monat. Er hat achtundzwanzig Tage, im Schaltjahr neunundzwanzig.|February is the shortest month. It has 28 days, 29 in a leap year.','er: Helau! Alaaf! Im Februar ist oft Karneval.|Helau! Alaaf! Carnival is often in February.','Karneval, Fasching oder Fastnacht: Das Fest hat in jeder Region einen anderen Namen.|Carnival has a different name in each region.'],
+ maerz:['der März|March','','Der März ist der dritte Monat. Im März beginnt der Frühling.|March is the third month. Spring starts in March.','sie: Endlich wird es wärmer!|At last it’s getting warmer!','Am letzten Sonntag im März stellt man die Uhr eine Stunde vor. Dann beginnt die Sommerzeit.|On the last Sunday in March the clocks go forward an hour.'],
+ april:['der April|April','','Im April ist das Wetter oft wechselhaft: Sonne, Regen und manchmal Schnee.|In April the weather is changeable: sun, rain and sometimes snow.','er: April, April, der macht, was er will!|April, April, does whatever it wants!','Am ersten April macht man Witze. Dann ruft man: April, April!|On the first of April people play jokes and shout: April fool!'],
+ mai:['der Mai|May','','Im Mai blühen viele Blumen und Bäume.|In May many flowers and trees blossom.','sie: Der erste Mai ist ein Feiertag. Wir haben frei!|The first of May is a holiday. We have the day off!','Der erste Mai ist der Tag der Arbeit. Viele Leute machen einen Ausflug.|The first of May is Labour Day. Many people go on an outing.'],
+ juni:['der Juni|June','','Im Juni beginnt der Sommer. Die Tage sind sehr lang.|Summer starts in June. The days are very long.','kind: Es ist schon zehn Uhr abends und noch hell!|It’s already ten in the evening and still light!','Um den einundzwanzigsten Juni ist der längste Tag des Jahres.|Around the twenty-first of June is the longest day of the year.'],
+ juli:['der Juli|July','','Im Juli ist es oft heiß. Viele Kinder haben Sommerferien.|In July it is often hot. Many children have summer holidays.','sie: Schöne Ferien!|Have a nice holiday!','Die Sommerferien sind in jedem Bundesland zu einer anderen Zeit.|Summer holidays are at a different time in each federal state.'],
+ august:['der August|August','','Der August ist der achte Monat. Viele Leute machen Urlaub.|August is the eighth month. Many people go on holiday.','er: Wohin fahrt ihr in den Urlaub?|Where are you going on holiday?','Viele Deutsche fahren im Urlaub ans Meer, in die Berge oder nach Italien und Spanien.|Many Germans go to the sea, the mountains or to Italy and Spain on holiday.'],
+ september:['der September|September','','Im September beginnt der Herbst. Die Schule fängt wieder an.|Autumn starts in September. School starts again.','sie: Viel Glück am ersten Schultag!|Good luck on your first day of school!','Am ersten Schultag bekommen Kinder in Deutschland eine Schultüte mit Süßigkeiten.|On their first school day children in Germany get a cone full of sweets.'],
+ oktober:['der Oktober|October','','Im Oktober werden die Blätter bunt.|In October the leaves turn colourful.','er: Der dritte Oktober ist ein Feiertag.|The third of October is a public holiday.','Am dritten Oktober feiert Deutschland die Wiedervereinigung von neunzehnhundertneunzig.|On the third of October Germany celebrates reunification in 1990.'],
+ november:['der November|November','','Der November ist oft grau, nass und neblig.|November is often grey, wet and foggy.','kind: Ich gehe mit meiner Laterne!|I’m going with my lantern!','Am elften November ist Sankt Martin. Kinder gehen mit Laternen durch die Straßen und singen.|On the eleventh of November it’s St Martin’s Day. Children walk with lanterns and sing.'],
+ dezember:['der Dezember|December','','Der Dezember ist der letzte Monat. Er hat einunddreißig Tage.|December is the last month. It has thirty-one days.','sie: Frohe Weihnachten!|Merry Christmas!','Am vierundzwanzigsten Dezember ist Heiligabend. Dann gibt es Geschenke.|The twenty-fourth of December is Christmas Eve. That’s when there are presents.'],
+ montag:['der Montag|Monday','die Montage','Der Montag ist der erste Tag der Woche.|Monday is the first day of the week.','er: Am Montag fängt die Arbeit wieder an.|On Monday work starts again.','am Montag heißt „an dem Montag“. Bei Tagen benutzt man immer „am“.|With days you always use "am".'],
+ dienstag:['der Dienstag|Tuesday','die Dienstage','Der Dienstag ist der zweite Tag der Woche.|Tuesday is the second day of the week.','sie: Hast du am Dienstag Zeit?|Are you free on Tuesday?','dienstags heißt: jeden Dienstag. Ich habe dienstags Deutschkurs.|dienstags means every Tuesday.'],
+ mittwoch:['der Mittwoch|Wednesday','die Mittwoche','Der Mittwoch ist in der Mitte der Woche.|Wednesday is in the middle of the week.','er: Mittwoch! Die halbe Woche ist geschafft.|Wednesday! Half the week is done.','Mittwoch kommt von „Mitte der Woche“.|Mittwoch comes from "middle of the week".'],
+ donnerstag:['der Donnerstag|Thursday','die Donnerstage','Der Donnerstag ist der vierte Tag der Woche.|Thursday is the fourth day of the week.','sie: Am Donnerstag habe ich einen Termin beim Arzt.|On Thursday I have a doctor’s appointment.','Donnerstag kommt von Donar, dem alten Gott des Donners.|Thursday comes from Donar, the old god of thunder.'],
+ freitag:['der Freitag|Friday','die Freitage','Am Freitag ist die Arbeitswoche fast vorbei.|On Friday the working week is almost over.','er: Endlich Freitag! Schönes Wochenende!|Finally Friday! Have a nice weekend!','Am Freitagabend gehen viele Leute aus: ins Kino, ins Restaurant oder zu Freunden.|On Friday evening many people go out.'],
+ samstag:['der Samstag|Saturday','die Samstage','Am Samstag sind die Geschäfte offen.|On Saturday the shops are open.','sie: Am Samstag gehe ich einkaufen.|On Saturday I go shopping.','Im Norden sagt man oft Sonnabend, im Süden Samstag.|In the north people often say Sonnabend, in the south Samstag.'],
+ sonntag:['der Sonntag|Sunday','die Sonntage','Am Sonntag haben die meisten Leute frei.|On Sunday most people have the day off.','er: Was machst du am Sonntag?|What are you doing on Sunday?','Am Sonntag sind fast alle Geschäfte zu. Bäckereien sind oft am Morgen offen.|On Sunday almost all shops are closed. Bakeries are often open in the morning.'],
+ wochenende:['das Wochenende|the weekend','die Wochenenden','Samstag und Sonntag sind das Wochenende.|Saturday and Sunday are the weekend.','sie: Schönes Wochenende!|Have a nice weekend!','Am Freitag sagt man zum Abschied oft: Schönes Wochenende!|On Friday people often say goodbye with: Have a nice weekend!'],
+ feiertag:['der Feiertag|the public holiday','die Feiertage','Der dritte Oktober ist ein Feiertag.|The third of October is a public holiday.','er: Morgen ist Feiertag. Ich muss nicht arbeiten!|Tomorrow is a holiday. I don’t have to work!','An Feiertagen sind die Geschäfte und Ämter geschlossen.|On public holidays shops and offices are closed.'],
+ geburtstag:['der Geburtstag|the birthday','die Geburtstage','Der Kuchen ist für einen Geburtstag.|The cake is for a birthday.',['sie: Alles Gute zum Geburtstag!|Happy birthday!','er: Wann hast du Geburtstag?|When is your birthday? // sie: Am zwölften Mai.|On the twelfth of May.'],['Ordinalzahlen: am ersten, am zweiten, am dritten, am zwölften Mai.|Ordinal numbers for dates: on the first, second, third, twelfth of May.','In Deutschland gratuliert man nicht vor dem Geburtstag. Das bringt Unglück.|In Germany you don’t congratulate someone before their birthday. It brings bad luck.']],
+ },
+ groups:[['Finde die drei Wintermonate!|Find the three winter months!','dezember januar februar'],['Finde die drei Sommermonate!|Find the three summer months!','juni juli august'],['Finde die zwei Tage vom Wochenende!|Find the two weekend days!','samstag sonntag'],['Finde die drei Frühlingsmonate!|Find the three spring months!','maerz april mai'],['Finde die drei Herbstmonate!|Find the three autumn months!','september oktober november'],['Finde die drei Monate mit J!|Find the three months with J!','januar juni juli']],
+ tf:[['Ein Jahr hat zwölf Monate.|A year has twelve months.',1,'jahr'],['Der Februar hat einunddreißig Tage.|February has thirty-one days.',0,'februar','Nein. Der Februar hat achtundzwanzig oder neunundzwanzig Tage.|No. February has twenty-eight or twenty-nine days.'],['Nach dem Dienstag kommt der Mittwoch.|After Tuesday comes Wednesday.',1,'mittwoch'],['Der Juli ist ein Wintermonat.|July is a winter month.',0,'juli','Nein. Der Juli ist ein Sommermonat.|No. July is a summer month.'],['Der dritte Oktober ist ein Feiertag in Deutschland.|The third of October is a public holiday in Germany.',1,'feiertag'],['Die Woche hat acht Tage.|The week has eight days.',0,'','Nein. Die Woche hat sieben Tage.|No. The week has seven days.'],['Der Frühling beginnt im März.|Spring starts in March.',1,'fruehling']],
+ hoer:[['Dieser Monat kommt nach dem April und vor dem Juni.|This month comes after April and before June.','mai'],['An diesem Tag sagt man: Alles Gute! Es gibt Kuchen mit Kerzen.|On this day people say: All the best! There is cake with candles.','geburtstag'],['Diese Jahreszeit ist kalt. Oft liegt Schnee.|This season is cold. There is often snow.','winter'],['Das ist der erste Tag der Woche. Viele Leute fangen wieder an zu arbeiten.|This is the first day of the week. Many people start work again.','montag'],['In diesem Monat ist Weihnachten. Es ist der letzte Monat im Jahr.|Christmas is in this month. It is the last month of the year.','dezember'],['Dieser Tag ist zwischen Mittwoch und Freitag.|This day is between Wednesday and Friday.','donnerstag'],['In diesem Monat fängt die Schule wieder an, und der Herbst kommt.|In this month school starts again and autumn comes.','september']]},
+
+{id:'fruehling',title:'Im Frühling',en:'In spring',focus:'Wetter · Natur · Ostern',
+ story:['Im Frühling wird es wärmer. Die Tage werden länger.|In spring it gets warmer. The days get longer.','Die Bäume blühen, die Vögel bauen Nester, und im Garten wachsen Blumen.|The trees blossom, birds build nests and flowers grow in the garden.','Das Wetter wechselt oft: Sonne, Regen und manchmal ein Regenbogen.|The weather changes often: sun, rain and sometimes a rainbow.'],
+ hs:{
+ _bg:['der Garten|the garden','die Gärten','Im Garten wachsen Blumen, Obst und Gemüse.|Flowers, fruit and vegetables grow in the garden.','sie: Im Frühling arbeite ich gern im Garten.|In spring I like working in the garden.','In der Stadt mieten viele Leute einen kleinen Garten. Er heißt Schrebergarten.|In the city many people rent a small garden plot called a Schrebergarten.'],
+ sonne:['die Sonne|the sun','','Die Sonne scheint schon wärmer.|The sun is already warmer.','er: Heute ist es schön warm. Endlich keine dicke Jacke mehr!|It’s nice and warm today. Finally no more thick jacket!','Im Frühling steht die Sonne jeden Tag ein bisschen höher.|In spring the sun climbs a little higher every day.'],
+ regen:['der Regen|the rain','','Aus der Wolke kommt Regen.|Rain is coming out of the cloud.','er: Es regnet schon wieder! Gut, dass ich einen Regenschirm habe.|It’s raining again! Good thing I have an umbrella.','Beim Wetter benutzt man „es“: Es regnet, es schneit, es donnert.|For weather you use "es": it rains, it snows, it thunders.'],
+ regenbogen:['der Regenbogen|the rainbow','die Regenbögen','Der Regenbogen hat sieben Farben.|The rainbow has seven colours.','kind: Schau mal, ein Regenbogen! Wie schön!|Look, a rainbow! How beautiful!','Einen Regenbogen sieht man, wenn die Sonne scheint und es gleichzeitig regnet.|You see a rainbow when the sun shines and it rains at the same time.'],
+ baum:['der Kirschbaum|the cherry tree','die Kirschbäume','Der Kirschbaum blüht rosa und weiß.|The cherry tree blossoms pink and white.','sie: Riech mal! Die Blüten duften so gut.|Smell that! The blossoms smell so good.','Aus den Blüten werden im Sommer Kirschen.|In summer the blossoms turn into cherries.'],
+ nest:['das Nest|the nest','die Nester','Im Nest liegen zwei blaue Eier.|There are two blue eggs in the nest.','kind: Bald schlüpfen die Vogelbabys!|Soon the baby birds will hatch!','Vögel bauen ihre Nester im Frühling aus kleinen Ästen und Gras.|Birds build their nests in spring from little twigs and grass.'],
+ vogel:['der Vogel|the bird','die Vögel','Der Vogel fliegt zum Nest.|The bird flies to the nest.','kind: Hör mal, der Vogel singt!|Listen, the bird is singing!','Viele Vögel fliegen im Herbst in den Süden und kommen im Frühling zurück.|Many birds fly south in autumn and come back in spring.'],
+ tulpen:['die Tulpe|the tulip','die Tulpen','Die Tulpen sind rot, gelb und lila.|The tulips are red, yellow and purple.','sie: Ich kaufe einen Strauß Tulpen für meine Mutter.|I’ll buy a bunch of tulips for my mother.','Tulpen sind typische Frühlingsblumen. Viele kommen aus den Niederlanden.|Tulips are typical spring flowers. Many come from the Netherlands.'],
+ biene:['die Biene|the bee','die Bienen','Die Biene sammelt Nektar von den Blumen.|The bee collects nectar from the flowers.','kind: Hilfe, eine Biene!|Help, a bee! // sie: Keine Angst, sie tut dir nichts.|Don’t be afraid, it won’t hurt you.','Bienen machen Honig. Ohne Bienen gibt es auch weniger Obst.|Bees make honey. Without bees there is also less fruit.'],
+ schmetterling:['der Schmetterling|the butterfly','die Schmetterlinge','Der Schmetterling hat bunte Flügel.|The butterfly has colourful wings.','kind: Der Schmetterling fliegt von Blume zu Blume.|The butterfly flies from flower to flower.','Ein Schmetterling war zuerst eine Raupe.|A butterfly was a caterpillar first.'],
+ ostereier:['das Osterei|the Easter egg','die Ostereier','Die Ostereier sind bunt bemalt.|The Easter eggs are painted in bright colours.','kind: Ich habe drei Ostereier gefunden!|I’ve found three Easter eggs!','Zu Ostern bemalt man Eier und versteckt sie im Garten. Die Kinder suchen sie.|At Easter people paint eggs and hide them in the garden. The children look for them.'],
+ osterhase:['der Osterhase|the Easter bunny','die Osterhasen','Der Osterhase bringt die Eier.|The Easter bunny brings the eggs.','sie: Frohe Ostern!|Happy Easter!','Ostern ist im März oder im April. Das Datum ist jedes Jahr anders.|Easter is in March or April. The date is different every year.'],
+ nachbar:['der Nachbar|the neighbour','die Nachbarn','Der Nachbar steht im Regen.|The neighbour is standing in the rain.','er: Guten Morgen! Schönes Wetter heute, oder? Na ja, ein bisschen nass.|Good morning! Nice weather today, isn’t it? Well, a bit wet.','der Nachbar, die Nachbarin: die Person, die neben dir wohnt.|The person who lives next to you.'],
+ regenschirm:['der Regenschirm|the umbrella','die Regenschirme','Der Regenschirm ist rot und offen.|The umbrella is red and open.','sie: Nimm einen Regenschirm mit! Im April weiß man nie.|Take an umbrella! In April you never know.','der Regen und der Schirm: der Regenschirm. Gegen die Sonne gibt es den Sonnenschirm.|rain + shade = umbrella. Against the sun there is the parasol.'],
+ gummistiefel:['der Gummistiefel|the rubber boot','die Gummistiefel','Die Gummistiefel sind gelb.|The rubber boots are yellow.','kind: Juhu, Pfützen! Mit Gummistiefeln kann ich springen.|Yay, puddles! With rubber boots I can jump.','Für zwei Schuhe sagt man „ein Paar“: ein Paar Gummistiefel, ein Paar Socken.|For two shoes you say "a pair".'],
+ oma:['die Oma|the grandma','die Omas','Die Oma gießt die Blumen.|Grandma is watering the flowers.','sie: Die Blumen haben Durst. Ich gieße sie jeden Morgen.|The flowers are thirsty. I water them every morning.','Die Oma heißt auch Großmutter. Der Opa heißt auch Großvater.|Oma is also called grandmother. Opa is grandfather.'],
+ giesskanne:['die Gießkanne|the watering can','die Gießkannen','Die Gießkanne ist voll Wasser.|The watering can is full of water.','sie: Kannst du mir bitte die Gießkanne geben?|Can you please give me the watering can?','gießen und die Kanne: die Gießkanne. Mit der Gießkanne gießt man Blumen.|water + can = watering can.'],
+ },
+ groups:[['Finde vier Tiere!|Find four animals!','vogel biene schmetterling osterhase'],['Finde zwei Dinge für Ostern!|Find two things for Easter!','ostereier osterhase'],['Finde zwei Dinge für den Regen!|Find two things for the rain!','regenschirm gummistiefel'],['Finde drei Dinge zum Wetter!|Find three weather things!','sonne regen regenbogen'],['Finde zwei Personen!|Find two people!','nachbar oma']],
+ tf:[['Im Frühling werden die Tage länger.|In spring the days get longer.',1,'sonne'],['Der Regenbogen hat drei Farben.|The rainbow has three colours.',0,'regenbogen','Nein. Der Regenbogen hat sieben Farben.|No. The rainbow has seven colours.'],['Ostern ist immer im Dezember.|Easter is always in December.',0,'osterhase','Nein. Ostern ist im März oder im April.|No. Easter is in March or April.'],['Bienen machen Honig.|Bees make honey.',1,'biene'],['Aus den Blüten werden im Sommer Kirschen.|The blossoms turn into cherries in summer.',1,'baum'],['Ein Schmetterling war zuerst ein Vogel.|A butterfly was a bird first.',0,'schmetterling','Nein. Ein Schmetterling war zuerst eine Raupe.|No. A butterfly was a caterpillar first.'],['Mit Gummistiefeln bleiben die Füße trocken.|With rubber boots your feet stay dry.',1,'gummistiefel']],
+ hoer:[['Sie ist klein, gelb und schwarz. Sie fliegt von Blume zu Blume und macht Honig.|It is small, yellow and black. It flies from flower to flower and makes honey.','biene'],['Er hat lange Ohren und bringt zu Ostern die Eier.|He has long ears and brings the eggs at Easter.','osterhase'],['Man braucht ihn, wenn es regnet. Man hält ihn über den Kopf.|You need it when it rains. You hold it over your head.','regenschirm'],['Damit gießt man die Blumen im Garten.|You water the flowers in the garden with it.','giesskanne'],['Er hat sieben Farben. Man sieht ihn nach dem Regen am Himmel.|It has seven colours. You see it in the sky after the rain.','regenbogen'],['Darin liegen kleine blaue Eier. Ein Vogel hat es gebaut.|Small blue eggs lie in it. A bird built it.','nest']]},
+
+{id:'sommer',title:'Im Sommer',en:'In summer',focus:'Temperatur · Freizeit · Imperativ',
+ story:['Im Sommer ist es warm, oft sogar heiß.|In summer it is warm, often even hot.','Viele Leute gehen ins Freibad, essen Eis und liegen in der Sonne.|Many people go to the outdoor pool, eat ice cream and lie in the sun.','Aber Vorsicht: Am Nachmittag kommt manchmal ein Gewitter.|But be careful: in the afternoon a thunderstorm sometimes comes.'],
+ hs:{
+ _bg:['das Freibad|the outdoor pool','die Freibäder','Das Freibad ist im Sommer geöffnet.|The outdoor pool is open in summer.','er: Zwei Erwachsene und ein Kind, bitte.|Two adults and one child, please.','Ein Freibad ist draußen, ein Hallenbad ist drinnen.|An outdoor pool is outside, an indoor pool is inside.'],
+ sonne:['die Sonne|the sun','','Die Sonne ist heute sehr stark.|The sun is very strong today.','sie: Bleib im Schatten! Die Sonne ist zu stark.|Stay in the shade! The sun is too strong.','Zwischen zwölf und drei Uhr ist die Sonne am stärksten.|Between twelve and three o’clock the sun is strongest.'],
+ gewitter:['das Gewitter|the thunderstorm','die Gewitter','Dunkle Wolken, Blitz und Donner: Ein Gewitter kommt.|Dark clouds, lightning and thunder: a storm is coming.','er: Alle raus aus dem Wasser! Ein Gewitter kommt!|Everybody out of the water! A storm is coming!','Bei Gewitter muss man sofort aus dem Wasser gehen.|In a thunderstorm you must get out of the water at once.'],
+ becken:['das Schwimmbecken|the swimming pool','die Schwimmbecken','Das Wasser im Becken ist blau und kühl.|The water in the pool is blue and cool.','kind: Das Wasser ist kalt! Aber super!|The water is cold! But great!','In Deutschland lernen Kinder oft in der Grundschule schwimmen.|In Germany children often learn to swim at primary school.'],
+ sprungbrett:['das Sprungbrett|the diving board','die Sprungbretter','Vom Sprungbrett springt man ins Wasser.|You jump into the water from the diving board.','kind: Eins, zwei, drei … und los!|One, two, three … and go!','springen bildet das Perfekt mit „sein“: Ich bin ins Wasser gesprungen.|springen forms the perfect tense with "sein".'],
+ bademeister:['der Bademeister|the lifeguard','die Bademeister','Der Bademeister passt auf alle auf.|The lifeguard watches everyone.','er: Bitte nicht vom Beckenrand springen!|Please don’t jump from the edge of the pool!','Der Bademeister hat eine Pfeife. Wenn er pfeift, muss man hören.|The lifeguard has a whistle. When he blows it, you must listen.'],
+ sonnenschirm:['der Sonnenschirm|the parasol','die Sonnenschirme','Unter dem Sonnenschirm ist Schatten.|There is shade under the parasol.','sie: Komm unter den Sonnenschirm, hier ist es kühler.|Come under the parasol, it’s cooler here.','Komm unter den Schirm! Wohin? Akkusativ. Ich sitze unter dem Schirm. Wo? Dativ.|Come under the parasol (accusative). I sit under the parasol (dative).'],
+ liegestuhl:['der Liegestuhl|the deckchair','die Liegestühle','Auf dem Liegestuhl kann man sich ausruhen.|You can rest on the deckchair.','er: Ah, jetzt erst mal ausruhen.|Ah, now first a little rest.','liegen und der Stuhl: der Liegestuhl.|lie + chair = deckchair.'],
+ handtuch:['das Handtuch|the towel','die Handtücher','Das Handtuch liegt auf der Wiese.|The towel is lying on the grass.','sie: Vergiss dein Handtuch nicht!|Don’t forget your towel!','das Handtuch, die Handtücher: Aus u wird im Plural ü.|In the plural u becomes ü.'],
+ sonnenbrille:['die Sonnenbrille|the sunglasses','die Sonnenbrillen','Die Sonnenbrille liegt auf dem Handtuch.|The sunglasses are lying on the towel.','kind: Wo ist meine Sonnenbrille?|Where are my sunglasses?','Achtung: „die Brille“ ist im Deutschen Singular. Auf Englisch sagt man „glasses“, im Plural.|Careful: "die Brille" is singular in German, "glasses" is plural in English.'],
+ sonnencreme:['die Sonnencreme|the sun cream','','Die Sonnencreme schützt die Haut.|Sun cream protects the skin.','sie: Hast du dich schon eingecremt?|Have you put on sun cream yet?','Man soll sich alle zwei Stunden neu eincremen, besonders nach dem Schwimmen.|You should put on sun cream every two hours, especially after swimming.'],
+ wassermelone:['die Wassermelone|the watermelon','die Wassermelonen','Die Wassermelone ist rot, süß und saftig.|The watermelon is red, sweet and juicy.','kind: Darf ich noch ein Stück Melone?|May I have another piece of melon?','Eine Wassermelone besteht zu über neunzig Prozent aus Wasser.|A watermelon is over ninety percent water.'],
+ kiosk:['der Kiosk|the kiosk','die Kioske','Am Kiosk gibt es Eis, Pommes und Getränke.|At the kiosk there is ice cream, fries and drinks.','kind: Eine Portion Pommes mit Ketchup, bitte!|One portion of fries with ketchup, please!','Pommes kommt von „Pommes frites“. Das ist Französisch.|Pommes comes from the French "pommes frites".'],
+ wasserball:['der Wasserball|the beach ball','die Wasserbälle','Der Wasserball schwimmt im Becken.|The beach ball is floating in the pool.','kind: Wirf den Ball zu mir!|Throw the ball to me!','werfen: ich werfe, du wirfst, er wirft. Der Imperativ ist: Wirf!|The imperative of werfen is: Wirf!'],
+ schwimmreifen:['der Schwimmreifen|the swim ring','die Schwimmreifen','Das Kind schwimmt mit einem Schwimmreifen.|The child is swimming with a swim ring.','kind: Ich kann schon ein bisschen schwimmen!|I can already swim a little!','Kleine Kinder tragen oft Schwimmflügel an den Armen.|Small children often wear armbands.'],
+ thermometer:['das Thermometer|the thermometer','die Thermometer','Das Thermometer zeigt zweiunddreißig Grad.|The thermometer shows thirty-two degrees.','er: Puh, zweiunddreißig Grad! Das ist ja eine Hitze!|Phew, thirty-two degrees! What heat!','In Deutschland misst man die Temperatur in Grad Celsius.|In Germany temperature is measured in degrees Celsius.'],
+ },
+ groups:[['Finde drei Dinge gegen die Sonne!|Find three things that protect against the sun!','sonnenschirm sonnenbrille sonnencreme'],['Finde zwei Dinge im Wasser!|Find two things in the water!','wasserball schwimmreifen'],['Finde zwei Dinge zum Liegen!|Find two things to lie on!','liegestuhl handtuch'],['Finde drei Dinge zum Wetter!|Find three weather things!','sonne gewitter thermometer']],
+ tf:[['Im Sommer ist es in Deutschland oft heiß.|In summer it is often hot in Germany.',1,'thermometer'],['Bei Gewitter darf man weiter schwimmen.|In a thunderstorm you may keep swimming.',0,'gewitter','Nein. Bei Gewitter muss man sofort aus dem Wasser gehen.|No. In a thunderstorm you must get out of the water at once.'],['Die Sonnencreme schützt die Haut.|Sun cream protects the skin.',1,'sonnencreme'],['Ein Hallenbad ist draußen.|An indoor pool is outside.',0,'','Nein. Ein Hallenbad ist drinnen. Das Freibad ist draußen.|No. An indoor pool is inside. The outdoor pool is outside.'],['Eine Wassermelone besteht fast nur aus Wasser.|A watermelon is almost all water.',1,'wassermelone'],['Der Bademeister verkauft Eis.|The lifeguard sells ice cream.',0,'bademeister','Nein. Der Bademeister passt auf. Eis gibt es am Kiosk.|No. The lifeguard keeps watch. Ice cream is at the kiosk.'],['Unter dem Sonnenschirm ist Schatten.|There is shade under the parasol.',1,'sonnenschirm']],
+ hoer:[['Er sitzt hoch oben und passt auf die Schwimmer auf.|He sits up high and watches the swimmers.','bademeister'],['Man trägt sie vor den Augen, wenn die Sonne scheint.|You wear them over your eyes when the sun shines.','sonnenbrille'],['Hier kann man Pommes, Eis und Getränke kaufen.|Here you can buy fries, ice cream and drinks.','kiosk'],['Es zeigt, wie warm oder kalt es ist. Heute zeigt es zweiunddreißig Grad.|It shows how warm or cold it is. Today it shows thirty-two degrees.','thermometer'],['Von hier springt man ins Wasser. Es ist hoch und lang.|You jump into the water from here. It is high and long.','sprungbrett'],['Sie ist groß, grün und rund. Innen ist sie rot und süß.|It is big, green and round. Inside it is red and sweet.','wassermelone']]},
+
+{id:'herbst',title:'Im Herbst',en:'In autumn',focus:'Natur · Ernte · Sankt Martin',
+ story:['Im Herbst werden die Tage kürzer und kühler.|In autumn the days get shorter and cooler.','Die Blätter werden bunt und fallen von den Bäumen. Auf den Feldern ist Erntezeit.|The leaves turn colourful and fall from the trees. In the fields it’s harvest time.','Viele Tiere sammeln jetzt Futter für den Winter.|Many animals now collect food for the winter.'],
+ hs:{
+ _bg:['die Wiese|the meadow','die Wiesen','Auf der Wiese liegen viele bunte Blätter.|Lots of colourful leaves are lying on the meadow.','er: Komm, wir machen einen Herbstspaziergang!|Come on, let’s go for an autumn walk!','Wenn im Oktober noch die Sonne scheint, sagt man: der goldene Oktober.|When the sun still shines in October, people say: golden October.'],
+ zugvoegel:['der Zugvogel|the migratory bird','die Zugvögel','Die Zugvögel fliegen nach Süden.|The migratory birds fly south.','kind: Tschüss, Vögel! Bis zum Frühling!|Bye, birds! See you in spring!','Störche und Kraniche fliegen im Herbst nach Afrika. Dort ist es warm.|Storks and cranes fly to Africa in autumn. It’s warm there.'],
+ wind:['der Wind|the wind','die Winde','Der Wind weht die Blätter durch die Luft.|The wind blows the leaves through the air.','sie: Heute ist es aber windig! Halt deine Mütze fest!|It’s really windy today! Hold on to your hat!','der Wind wird zu windig. Ein Sturm ist ein sehr starker Wind.|wind → windy. A storm is a very strong wind.'],
+ nebel:['der Nebel|the fog','','Am Morgen liegt Nebel über dem Feld.|In the morning there is fog over the field.','er: Fahr vorsichtig! Bei Nebel sieht man nicht viel.|Drive carefully! In fog you can’t see much.','der Nebel wird zu neblig: Heute ist es neblig.|fog → foggy.'],
+ baum:['der Baum|the tree','die Bäume','Der Baum hat rote, gelbe und orange Blätter.|The tree has red, yellow and orange leaves.','kind: Der Baum sieht aus wie Feuer!|The tree looks like fire!','Im Herbst bekommen die Bäume weniger Licht. Darum werden die Blätter bunt.|In autumn trees get less light. That’s why the leaves change colour.'],
+ blaetter:['das Blatt|the leaf','die Blätter','Die Blätter liegen auf dem Boden.|The leaves are lying on the ground.','kind: Hurra! Ich springe in den Blätterhaufen!|Hooray! I’m jumping into the pile of leaves!','das Blatt, die Blätter. Ein Blatt Papier ist auch ein Blatt!|A sheet of paper is also a "Blatt"!'],
+ eichhoernchen:['das Eichhörnchen|the squirrel','die Eichhörnchen','Das Eichhörnchen hat eine Nuss.|The squirrel has a nut.','kind: Schau, das Eichhörnchen versteckt Nüsse!|Look, the squirrel is hiding nuts!','Eichhörnchen verstecken im Herbst Nüsse. Im Winter suchen sie sie wieder.|Squirrels hide nuts in autumn and look for them again in winter.'],
+ pilz:['der Pilz|the mushroom','die Pilze','Der Pilz ist rot mit weißen Punkten.|The mushroom is red with white dots.','sie: Nicht anfassen! Der Pilz ist giftig.|Don’t touch! The mushroom is poisonous.','Der rote Pilz mit Punkten heißt Fliegenpilz. Er ist giftig.|The red mushroom with dots is called fly agaric. It’s poisonous.'],
+ kastanien:['die Kastanie|the chestnut','die Kastanien','Die Kastanien sind braun und glänzen.|The chestnuts are brown and shiny.','kind: Ich sammle Kastanien. Daraus bastle ich Tiere.|I’m collecting chestnuts. I make animals out of them.','Im Herbst basteln Kinder in Deutschland gern Figuren aus Kastanien.|In autumn German children like making figures out of chestnuts.'],
+ igel:['der Igel|the hedgehog','die Igel','Der Igel hat viele Stacheln.|The hedgehog has lots of spines.','kind: Psst, leise! Da ist ein Igel.|Shh, quiet! There’s a hedgehog.','Igel schlafen im Winter. Das nennt man Winterschlaf.|Hedgehogs sleep through the winter. It’s called hibernation.'],
+ kuerbis:['der Kürbis|the pumpkin','die Kürbisse','Die Kürbisse sind groß und orange.|The pumpkins are big and orange.','sie: Heute koche ich Kürbissuppe.|Today I’m making pumpkin soup.','der Kürbis, die Kürbisse: Nach kurzem i verdoppelt man das s im Plural.|In the plural the s is doubled.'],
+ traktor:['der Traktor|the tractor','die Traktoren','Der Traktor fährt über das Feld.|The tractor drives across the field.','er: Die Ernte ist fast fertig.|The harvest is almost done.','Im Herbst feiern viele Dörfer Erntedank. Man sagt Danke für die Ernte.|In autumn many villages celebrate a harvest festival to say thank you for the harvest.'],
+ kind:['das Kind|the child','die Kinder','Das Kind hält eine Laterne.|The child is holding a lantern.','kind: Laterne, Laterne, Sonne, Mond und Sterne!|Lantern, lantern, sun, moon and stars!','Das ist ein bekanntes Laternenlied. Kinder singen es an Sankt Martin.|That’s a well-known lantern song. Children sing it on St Martin’s Day.'],
+ laterne:['die Laterne|the lantern','die Laternen','In der Laterne ist ein kleines Licht.|There is a small light in the lantern.','kind: Meine Laterne habe ich selbst gebastelt.|I made my lantern myself.','Am elften November ist Sankt Martin. Kinder gehen mit Laternen durch die Straßen.|On the eleventh of November it’s St Martin’s Day. Children walk through the streets with lanterns.'],
+ apfelbaum:['der Apfelbaum|the apple tree','die Apfelbäume','Am Apfelbaum hängen rote Äpfel.|Red apples are hanging on the apple tree.','er: Die Äpfel sind reif. Wir können sie pflücken.|The apples are ripe. We can pick them.','Im Herbst ist Erntezeit: Äpfel, Birnen, Kürbisse und Kartoffeln.|Autumn is harvest time: apples, pears, pumpkins and potatoes.'],
+ leiter:['die Leiter|the ladder','die Leitern','Die Leiter steht am Apfelbaum.|The ladder is leaning against the apple tree.','sie: Halt bitte die Leiter fest!|Please hold the ladder!','Achtung: die Leiter ist die Leiter zum Steigen. Der Leiter ist der Chef!|Careful: die Leiter = ladder, der Leiter = the boss!'],
+ korb:['der Korb|the basket','die Körbe','Der Korb ist voller Äpfel.|The basket is full of apples.','er: Ein Korb voll Äpfel! Daraus backen wir einen Apfelkuchen.|A basket full of apples! We’ll bake an apple cake with them.','voller Äpfel heißt: voll mit Äpfeln.|"voller Äpfel" means full of apples.'],
+ },
+ groups:[['Finde drei Tiere!|Find three animals!','zugvoegel eichhoernchen igel'],['Finde zwei Dinge zum Wetter!|Find two weather things!','wind nebel'],['Was kann man im Wald sammeln? Finde drei Dinge!|What can you collect in the woods? Find three things!','pilz kastanien blaetter'],['Finde drei Dinge für die Apfelernte!|Find three things for the apple harvest!','apfelbaum leiter korb'],['Finde zwei Dinge für Sankt Martin!|Find two things for St Martin’s Day!','kind laterne']],
+ tf:[['Im Herbst werden die Tage länger.|In autumn the days get longer.',0,'','Nein. Im Herbst werden die Tage kürzer.|No. In autumn the days get shorter.'],['Igel schlafen im Winter.|Hedgehogs sleep in winter.',1,'igel'],['Der Fliegenpilz ist gesund und lecker.|The fly agaric is healthy and tasty.',0,'pilz','Nein. Der Fliegenpilz ist giftig.|No. The fly agaric is poisonous.'],['Sankt Martin ist am elften November.|St Martin’s Day is on the eleventh of November.',1,'laterne'],['Die Zugvögel fliegen im Herbst nach Norden.|Migratory birds fly north in autumn.',0,'zugvoegel','Nein. Sie fliegen nach Süden, zum Beispiel nach Afrika.|No. They fly south, for example to Africa.'],['Im Herbst werden die Blätter bunt.|In autumn the leaves change colour.',1,'baum blaetter'],['Eichhörnchen verstecken Nüsse für den Winter.|Squirrels hide nuts for the winter.',1,'eichhoernchen']],
+ hoer:[['Er ist klein und hat viele Stacheln. Im Winter hält er Winterschlaf.|It is small and has lots of spines. In winter it hibernates.','igel'],['Man steigt darauf, um die Äpfel oben am Baum zu pflücken.|You climb on it to pick the apples at the top of the tree.','leiter'],['Sie hat ein kleines Licht. Kinder tragen sie im November durch die Straßen.|It has a small light. Children carry it through the streets in November.','laterne'],['Er ist groß, rund und orange. Man kann Suppe daraus kochen.|It is big, round and orange. You can make soup from it.','kuerbis'],['Es hat einen langen, buschigen Schwanz und sammelt Nüsse.|It has a long bushy tail and collects nuts.','eichhoernchen'],['Er ist grau, und man sieht nicht weit. Am Morgen liegt er über dem Feld.|It is grey and you can’t see far. In the morning it lies over the field.','nebel']]},
+
+{id:'winter',title:'Im Winter',en:'In winter',focus:'Kleidung · Feste · Akkusativ',
+ story:['Im Winter ist es kalt. Manchmal schneit es.|In winter it is cold. Sometimes it snows.','Im Dezember gibt es in vielen Städten einen Weihnachtsmarkt.|In December many towns have a Christmas market.','Und an Silvester, am einunddreißigsten Dezember, feiert man mit Feuerwerk das neue Jahr.|And on New Year’s Eve, the thirty-first of December, people celebrate the new year with fireworks.'],
+ hs:{
+ _bg:['der Weihnachtsmarkt|the Christmas market','die Weihnachtsmärkte','Auf dem Weihnachtsmarkt riecht es nach Zimt und Plätzchen.|The Christmas market smells of cinnamon and biscuits.','sie: Wollen wir heute Abend auf den Weihnachtsmarkt gehen?|Shall we go to the Christmas market tonight?','Den Weihnachtsmarkt in Dresden gibt es schon seit fast sechshundert Jahren.|The Christmas market in Dresden has existed for almost six hundred years.'],
+ weihnachtsbaum:['der Weihnachtsbaum|the Christmas tree','die Weihnachtsbäume','Der Weihnachtsbaum hat Kugeln, Lichter und einen Stern.|The Christmas tree has baubles, lights and a star.','kind: Oh, ist der Baum schön!|Oh, the tree is beautiful!','Der Weihnachtsbaum kommt aus Deutschland. Heute gibt es ihn auf der ganzen Welt.|The Christmas tree tradition comes from Germany. Today it is all over the world.'],
+ geschenke:['das Geschenk|the present','die Geschenke','Unter dem Baum liegen Geschenke.|Presents are lying under the tree.','kind: Ist das Geschenk für mich?|Is the present for me? // sie: Ja, aber du darfst es erst an Heiligabend öffnen.|Yes, but you can only open it on Christmas Eve.','In Deutschland öffnet man die Geschenke meistens am Abend vom vierundzwanzigsten Dezember.|In Germany presents are usually opened on the evening of the twenty-fourth of December.'],
+ schneemann:['der Schneemann|the snowman','die Schneemänner','Der Schneemann hat eine Karottennase.|The snowman has a carrot nose.','kind: Komm, wir bauen einen Schneemann!|Come on, let’s build a snowman!','der Mann, die Männer. Der Schneemann, die Schneemänner.|man → men, snowman → snowmen.'],
+ schneeflocke:['die Schneeflocke|the snowflake','die Schneeflocken','Die Schneeflocken fallen leise vom Himmel.|The snowflakes fall quietly from the sky.','kind: Es schneit! Es schneit!|It’s snowing! It’s snowing!','Jede Schneeflocke hat sechs Spitzen.|Every snowflake has six points.'],
+ stand:['die Bude|the stall','die Buden','In der Bude gibt es Plätzchen und Punsch.|There are biscuits and punch in the stall.','er: Was darf es sein?|What can I get you? // sie: Zwei Kinderpunsch, bitte.|Two children’s punches, please.','Auf dem Weihnachtsmarkt heißen die kleinen Holzhäuser Buden.|At the Christmas market the little wooden huts are called Buden.'],
+ plaetzchen:['das Plätzchen|the Christmas biscuit','die Plätzchen','Die Plätzchen haben die Form von Sternen.|The biscuits are star-shaped.','kind: Darf ich ein Plätzchen probieren?|May I try a biscuit?','Im Advent backen viele Familien zusammen Plätzchen.|In Advent many families bake biscuits together.'],
+ punsch:['der Kinderpunsch|the children’s punch','','Der Punsch ist heiß und süß.|The punch is hot and sweet.','sie: Vorsicht, heiß!|Careful, hot!','Erwachsene trinken oft Glühwein. Für Kinder gibt es Kinderpunsch ohne Alkohol.|Adults often drink mulled wine. For children there is punch without alcohol.'],
+ adventskranz:['der Adventskranz|the Advent wreath','die Adventskränze','Der Adventskranz hat vier Kerzen.|The Advent wreath has four candles.','sie: Heute ist der zweite Advent. Wir zünden zwei Kerzen an.|Today is the second Sunday of Advent. We light two candles.','Der Advent sind die vier Sonntage vor Weihnachten. Jeden Sonntag brennt eine Kerze mehr.|Advent is the four Sundays before Christmas. Each Sunday one more candle burns.'],
+ feuerwerk:['das Feuerwerk|the fireworks','die Feuerwerke','Das Feuerwerk ist bunt und laut.|The fireworks are colourful and loud.','er: Drei, zwei, eins … Frohes neues Jahr!|Three, two, one … Happy New Year!','An Silvester, am einunddreißigsten Dezember, feiert man um Mitternacht mit Feuerwerk.|On New Year’s Eve people celebrate at midnight with fireworks.'],
+ kind:['das Kind|the child','die Kinder','Das Kind ist warm angezogen.|The child is dressed warmly.','kind: Mir ist überhaupt nicht kalt!|I’m not cold at all!','„Mir ist kalt“: Bei kalt und warm benutzt man den Dativ.|For feeling cold or warm German uses the dative: mir ist kalt.'],
+ muetze:['die Mütze|the hat','die Mützen','Die Mütze ist rot und warm.|The hat is red and warm.','sie: Setz deine Mütze auf! Es ist kalt.|Put your hat on! It’s cold.','Kleidung im Akkusativ: Ich trage einen Schal, eine Mütze und ein Paar Handschuhe.|Clothes in the accusative: I wear a scarf, a hat and a pair of gloves.'],
+ schal:['der Schal|the scarf','die Schals','Der Schal ist lang und gestreift.|The scarf is long and striped.','kind: Mama, mein Schal kratzt!|Mum, my scarf is itchy!','der Schal, die Schals: Einige Wörter bekommen im Plural ein s.|Some words get an s in the plural.'],
+ handschuhe:['der Handschuh|the glove','die Handschuhe','Die Handschuhe halten die Hände warm.|The gloves keep the hands warm.','sie: Zieh die Handschuhe an, sonst frieren deine Finger.|Put your gloves on, otherwise your fingers will freeze.','die Hand und der Schuh: der Handschuh. Ein Schuh für die Hand!|hand + shoe = glove: a shoe for the hand!'],
+ stiefel:['der Stiefel|the boot','die Stiefel','Die Stiefel sind warm und wasserdicht.|The boots are warm and waterproof.','kind: Meine Stiefel sind voller Schnee!|My boots are full of snow!','anziehen und ausziehen sind trennbar: Ich ziehe die Stiefel an. Ich ziehe sie aus.|anziehen and ausziehen are separable verbs.'],
+ schlitten:['der Schlitten|the sledge','die Schlitten','Der Schlitten ist aus Holz.|The sledge is made of wood.','kind: Ich will Schlitten fahren! Zieh mich, bitte!|I want to go sledging! Pull me, please!','Man sagt „Schlitten fahren“, auch ohne Motor.|You say "Schlitten fahren" (drive a sledge), even without an engine.'],
+ },
+ groups:[['Finde vier Dinge zum Anziehen!|Find four things to wear!','muetze schal handschuhe stiefel'],['Finde zwei Dinge zum Essen und Trinken!|Find two things to eat and drink!','plaetzchen punsch'],['Finde drei Dinge für Weihnachten!|Find three things for Christmas!','weihnachtsbaum geschenke adventskranz'],['Finde zwei Dinge aus Schnee!|Find two things made of snow!','schneemann schneeflocke']],
+ tf:[['Der Adventskranz hat vier Kerzen.|The Advent wreath has four candles.',1,'adventskranz'],['Silvester ist am ersten Januar.|New Year’s Eve is on the first of January.',0,'feuerwerk','Nein. Silvester ist am einunddreißigsten Dezember.|No. New Year’s Eve is on the thirty-first of December.'],['Jede Schneeflocke hat sechs Spitzen.|Every snowflake has six points.',1,'schneeflocke'],['Kinderpunsch hat Alkohol.|Children’s punch contains alcohol.',0,'punsch','Nein. Kinderpunsch hat keinen Alkohol.|No. Children’s punch has no alcohol.'],['In Deutschland öffnet man die Geschenke meistens am vierundzwanzigsten Dezember.|In Germany presents are usually opened on the twenty-fourth of December.',1,'geschenke'],['Handschuhe trägt man an den Füßen.|You wear gloves on your feet.',0,'handschuhe','Nein. Handschuhe trägt man an den Händen.|No. Gloves are worn on the hands.'],['Der Weihnachtsbaum kommt aus Deutschland.|The Christmas tree comes from Germany.',1,'weihnachtsbaum']],
+ hoer:[['Er ist weiß, hat eine Karottennase und schmilzt in der Sonne.|He is white, has a carrot nose and melts in the sun.','schneemann'],['Er hat vier Kerzen. Jeden Sonntag im Advent zündet man eine mehr an.|It has four candles. Every Sunday in Advent you light one more.','adventskranz'],['Man setzt sie auf den Kopf, damit die Ohren warm bleiben.|You put it on your head to keep your ears warm.','muetze'],['Darauf sitzt man und fährt den Berg hinunter.|You sit on it and slide down the hill.','schlitten'],['Es ist bunt und laut. Man sieht es an Silvester am Himmel.|It is colourful and loud. You see it in the sky on New Year’s Eve.','feuerwerk'],['Sie sind klein und süß und haben oft die Form von Sternen.|They are small and sweet and often star-shaped.','plaetzchen']]},
+]});
 /* ---------- Tipp-Buch: voices, parsing ---------- */
 // speaker: [name, pitch, rate, colour]
 const SPK={erz:['Erzähler',1,.9,'var(--muted)'],stift:['Zauberstift',1.1,.95,'var(--violet)'],shruti:['Shruti',1.3,.95,'var(--shruti)'],sijan:['Sijan',.8,.9,'var(--sijan)'],lena:['Lena',1.45,1,'var(--leaf)'],
  huber:['Frau Huber',1.15,.9,'var(--teal)'],wagner:['Herr Wagner',.65,.85,'var(--red)'],frau:['Passantin',1.2,.95,'var(--ginger)'],durchsage:['Durchsage',.95,.85,'var(--r5)'],tim:['Tim',1.6,1.05,'var(--sun)'],
- eismann:['Eisverkäufer',.75,.95,'var(--cheek)'],katze:['Minka',1.9,.8,'var(--ginger)'],hund:['Hund',.6,.9,'var(--brown)'],taube:['Taube',1.4,.8,'var(--grey)'],ente:['Ente',1.7,.9,'var(--leaf)']};
+ eismann:['Eisverkäufer',.75,.95,'var(--cheek)'],katze:['Minka',1.9,.8,'var(--ginger)'],hund:['Hund',.6,.9,'var(--brown)'],taube:['Taube',1.4,.8,'var(--grey)'],ente:['Ente',1.7,.9,'var(--leaf)'],
+ sie:['Frau',1.15,.95,'var(--shruti)'],er:['Mann',.85,.92,'var(--sijan)'],kind:['Kind',1.5,1.02,'var(--sun)']};
 const ln=(str,dflt='erz')=>{const m=str.match(/^([a-z]+): ([\s\S]*)$/),own=m&&SPK[m[1]];const [de,en='']=(own?m[2]:str).split('|');return {s:own?m[1]:dflt,de,en}};
 const asList=x=>Array.isArray(x)?x:[x];
+const qOf=x=>{const [q,en='']=x.split('|');return {q,en}};
 TIPBOOKS.forEach(b=>b.scenes.forEach(sc=>{
-  sc.story=sc.story.map(x=>ln(x));
+  sc.story=(sc.story||[]).map(x=>ln(x));
   for(const id in sc.hs){const [w,pl,d,e,k]=sc.hs[id],[wd,we]=w.split('|');
-    sc.hs[id]={w:wd,en:we,pl,d:asList(d).map(x=>ln(x,'stift')),e:asList(e).map(x=>x.split(' // ').map(y=>ln(y))),k:asList(k).map(x=>ln(x,'stift'))}}
-  sc.qs=sc.qs.map(([q,a])=>{const [de,en]=q.split('|');return {q:de,en,a:a.split(' ')}});
+    sc.hs[id]={w:wd,en:we,pl,d:asList(d).map(x=>ln(x,'stift')),e:asList(e).map(x=>x.split(' // ').map(y=>ln(y,b.voice||'erz'))),k:asList(k).map(x=>ln(x,'stift'))}}
+  sc.qs=(sc.qs||[]).map(([q,a])=>({...qOf(q),a:a.split(' ')}));
+  sc.groups=(sc.groups||[]).map(([q,a])=>({...qOf(q),a:a.split(' ')}));
+  sc.tf=(sc.tf||[]).map(([q,t,a,why])=>({...qOf(q),t:!!t,a:a?a.split(' '):[],why:why?ln(why,'stift'):null}));
+  sc.hoer=(sc.hoer||[]).map(([q,a])=>({...qOf(q),a:a.split(' ')}));
 }));
 const ART=w=>{const m=/^(der|die|das) /.exec(w);return m&&m[1]};
 const nounsOf=sc=>Object.keys(sc.hs).filter(id=>id[0]!=='_'&&ART(sc.hs[id].w));
 const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
 
-const T={mode:'entdecken',game:null,last:null,seq:0,cnt:{},found:store.get('a2.tip.found')||{},best:store.get('a2.tip.best')||{}};
+const T={mode:'entdecken',game:null,last:null,seq:0,cnt:{},found:store.get('a2.tip.found')||{},best:store.get('a2.tip.best2')||{}};
 const TB=()=>TIPBOOKS[S.tip];
 const scene=id=>TB().scenes.find(s=>s.id===id);
 
-/* ---------- symbols ---------- */
+/* ---------- modes, games and their symbols ----------
+   Each book picks three modes and three games from these. */
 const DOTS={1:[[12,12]],2:[[9,9],[15,15]],3:[[8,8],[12,12],[16,16]]};
 const dice=n=>'<rect x="4" y="4" width="16" height="16" rx="4"/>'+DOTS[n].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.7" fill="currentColor"/>`).join('');
-const ICON={
- entdecken:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
- erzaehlen:'<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/>',
- wissen:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>',
- g1:dice(1),g2:dice(2),g3:dice(3),
+const IC={
+ eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+ bubble:'<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/>',
+ bulb:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>',
+ mouth:'<path d="M3 12c3-3 6-4 9-2 3-2 6-1 9 2-3 4-6 6-9 6s-6-2-9-6z"/><path d="M3 12h18"/>',
+ basket:'<path d="M4 10h16l-2 10H6z"/><path d="M8 10l3-6M16 10l-3-6M9 14v3M12 14v3M15 14v3"/>',
+ checkx:'<path d="M3 13l3 3 6-7"/><path d="M14 9l7 7M21 9l-7 7"/>',
+ ear:'<path d="M7 9a5 5 0 1 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"/><path d="M10 9a2 2 0 1 1 4 0c0 1.5-2 2-2 3.5"/>',
  stopp:'<rect x="7" y="7" width="10" height="10" rx="1.5" fill="currentColor"/>',
  start:'<path d="M9 6l9 6-9 6z" fill="currentColor"/>'};
-const SYM=[{k:'entdecken',n:'Entdecken',c:'var(--r5)'},{k:'erzaehlen',n:'Erzählen',c:'var(--r4)'},{k:'wissen',n:'Wissen',c:'var(--r2)'},
- {k:'g1',n:'Spiel 1',c:'var(--r1)'},{k:'g2',n:'Spiel 2',c:'var(--r6)'},{k:'g3',n:'Spiel 3',c:'var(--teal)'},{k:'stopp',n:'Stopp',c:'var(--shadow-ink)'}];
-const symOf=k=>SYM.find(s=>s.k===k);
-const ico=k=>`<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>`;
-const MODE={
- entdecken:'Entdecken! Tippe auf alles, was du siehst. Tippe noch einmal, dann hörst du mehr.|Discover! Tap everything you see. Tap again to hear more.',
- erzaehlen:'Erzählen! Hör die Geschichte. Dann tippe auf die Personen und Dinge.|Story! Listen to the story. Then tap the people and things.',
- wissen:'Wissen! Tippe auf ein Bild. Ich erkläre dir Grammatik und Kultur.|Knowledge! Tap a picture. I explain grammar and culture.'};
-const GAME={1:{n:'Finde es!',intro:'Spiel eins: Finde es! Ich sage ein Wort. Tippe auf das richtige Bild.|Game 1: Find it! I say a word. Tap the right picture.'},
- 2:{n:'Der, die, das',intro:'Spiel zwei: Der, die oder das? Ich sage einen Artikel. Finde ein passendes Wort.|Game 2: der, die or das? I say an article. Find a word that matches.'},
- 3:{n:'Rätsel',intro:'Spiel drei: Rätsel! Hör gut zu und tippe auf die Antwort.|Game 3: Riddles! Listen carefully and tap the answer.'}};
-const HELP={entdecken:'Wörter mit Artikel und Plural',erzaehlen:'Geschichte und Dialoge',wissen:'Grammatik und Kultur',g1:'Finde das Wort im Bild',g2:'Der, die oder das?',g3:'Rätsel und Fragen',stopp:'Der Stift ist still'};
-const HELPSAY={g1:'Spiel eins: Ich sage ein Wort, und du findest es im Bild.|Game 1: I say a word and you find it in the picture.',
- g2:'Spiel zwei: Ich sage der, die oder das. Du findest ein passendes Wort.|Game 2: I say der, die or das. You find a matching word.',
- g3:'Spiel drei: Ich stelle eine Frage oder ein Rätsel. Du tippst auf die Antwort.|Game 3: I ask a question or a riddle. You tap the answer.',
- stopp:'Mit Stopp bin ich sofort still.|With Stop I am quiet straight away.'};
+const MODES={
+ entdecken:{n:'Entdecken',ic:IC.eye,help:'Wörter mit Artikel und Plural',intro:'Entdecken! Tippe auf alles, was du siehst. Tippe noch einmal, dann hörst du mehr.|Discover! Tap everything you see. Tap again to hear more.'},
+ erzaehlen:{n:'Erzählen',ic:IC.bubble,help:'Geschichte und Dialoge',intro:'Erzählen! Hör die Geschichte. Dann tippe auf die Personen und Dinge.|Story! Listen to the story. Then tap the people and things.'},
+ wissen:{n:'Wissen',ic:IC.bulb,help:'Grammatik, Fakten und Kultur',intro:'Wissen! Tippe auf ein Bild. Ich erkläre dir Grammatik und Kultur.|Knowledge! Tap a picture. I explain grammar and culture.'},
+ sagen:{n:'Sagen',ic:IC.mouth,help:'Sätze für den Alltag',intro:'Sagen! Tippe auf ein Bild. Du hörst, was man im Alltag dazu sagt.|Say it! Tap a picture. You hear what people say about it in everyday life.'},
+};
+const GAMES={
+ finde:{n:'Finde es!',ic:dice(1),help:'Finde das Wort im Bild',intro:'Finde es! Ich sage ein Wort. Tippe auf das richtige Bild.|Find it! I say a word. Tap the right picture.',
+   items:sc=>shuffle(nounsOf(sc)).slice(0,5).map(id=>({q:`Wo ist ${sc.hs[id].w}?`,en:`Where is ${sc.hs[id].en}?`,a:[id]}))},
+ artikel:{n:'Der, die, das',ic:dice(2),help:'Finde ein Wort mit dem richtigen Artikel',intro:'Der, die oder das? Ich sage einen Artikel. Finde ein passendes Wort.|der, die or das? I say an article. Find a word that matches.',
+   items:()=>[...Array(5)].map(()=>({}))},
+ raetsel:{n:'Rätsel',ic:dice(3),help:'Rätsel und Fragen',intro:'Rätsel! Hör gut zu und tippe auf die Antwort.|Riddles! Listen carefully and tap the answer.',
+   items:sc=>shuffle(sc.qs).slice(0,5).map(x=>({...x}))},
+ sammeln:{n:'Sammle alle!',ic:IC.basket,help:'Finde alle Dinge einer Gruppe',round:'Runde',intro:'Sammle alle! Ich nenne eine Gruppe. Finde alle Dinge, die dazu gehören.|Collect them all! I name a group. Find all the things that belong to it.',
+   items:sc=>shuffle(sc.groups).slice(0,4).map(x=>({...x,got:new Set(),miss:0}))},
+ wahr:{n:'Richtig oder falsch?',ic:IC.checkx,help:'Stimmt der Satz? Du entscheidest',intro:'Richtig oder falsch? Hör den Satz gut an. Dann tippe unten auf Richtig oder Falsch.|True or false? Listen to the sentence. Then tap True or False below.',
+   items:sc=>shuffle(sc.tf).slice(0,5).map(x=>({...x}))},
+ hoeren:{n:'Hör genau!',ic:IC.ear,help:'Nur hören, ohne Text, dann finden',intro:'Hör genau! Ich beschreibe etwas, aber du siehst den Text nicht. Tippe auf das richtige Bild.|Listen closely! I describe something, but you can’t see the text. Tap the right picture.',
+   items:sc=>shuffle(sc.hoer).slice(0,5).map(x=>({...x}))},
+};
+const SLOT_C=['var(--r5)','var(--r4)','var(--r2)','var(--r1)','var(--r6)','var(--teal)'];
+const STOP={k:'stopp',n:'Stopp',c:'var(--shadow-ink)',ic:IC.stopp,help:'Der Stift ist still'};
+const symsOf=b=>[...b.modes.map((k,i)=>({k,n:MODES[k].n,c:SLOT_C[i],ic:MODES[k].ic,help:MODES[k].help})),
+  ...b.games.map((g,i)=>({k:'g'+(i+1),g,n:`Spiel ${i+1}`,c:SLOT_C[3+i],ic:GAMES[g].ic,help:`${GAMES[g].n} ${GAMES[g].help}`})),STOP];
+const symOf=k=>symsOf(TB()).find(s=>s.k===k);
+const icoSvg=m=>`<svg viewBox="0 0 24 24" aria-hidden="true">${m}</svg>`;
+const STOPSAY='Mit Stopp bin ich sofort still.|With Stop I am quiet straight away.';
+const AGAIN='Tippe noch einmal auf das Spiel, dann spielst du noch einmal.|Tap the game again to play once more.';
 const pchip=(t,c)=>`<span class="pchip" style="--k:${c||'var(--c)'}">${t}</span>`;
-const starsOf=s=>s==null?0:s>=5?3:s>=3?2:s>=1?1:0;
-const starStr=s=>{const n=starsOf(s);return '<b>'+'★'.repeat(n)+'</b>'+'☆'.repeat(3-n)};
+// best results are stored in percent, so games with 4 or 5 rounds compare fairly
+const starsOf=p=>p==null?0:p>=100?3:p>=60?2:p>0?1:0;
+const starStr=p=>{const n=starsOf(p);return '<b>'+'★'.repeat(n)+'</b>'+'☆'.repeat(3-n)};
 function modeHead(){const m=symOf(T.mode);return pchip(m.n,m.c)}
-function gameHead(){const G=T.game,m=symOf('g'+G.g);return pchip(`Spiel ${G.g} · ${GAME[G.g].n}`,m.c)+pchip(`Frage ${Math.min(G.n+1,G.items.length)} / ${G.items.length}`)+pchip(`Punkte: ${G.score}`)}
+function gameHead(){const G=T.game,m=symOf('g'+G.g),r=GAMES[G.type].round||'Frage';
+  return pchip(`Spiel ${G.g} · ${GAMES[G.type].n}`,m.c)+pchip(`${r} ${Math.min(G.n+1,G.items.length)} / ${G.items.length}`)+pchip(`Punkte: ${G.score}`)}
 
 /* ---------- sound + speech ---------- */
 function tone(kind){
@@ -1063,40 +1380,45 @@ function playClips(keys,onend,onfail){
   step();
 }
 function sayLine(L,onend){
+  if(L.mute){onend();return}
   const keys=(L.say||[L.de]).map(t=>clipKey(L.s,t));
   if(keys.some(k=>PL.bad.has(k))){sayAs(L.de,L.s,onend);return}
   playClips(keys,onend,()=>sayAs(L.de,L.s,onend));
 }
 function tipHush(){T.seq++;PL.tok++;try{PL.el.pause()}catch(e){}penTalk(-1)}
-function speakSeq(lines,head,done){
+function speakSeq(lines,head,done,extra){
   tipHush();if('speechSynthesis' in window)speechSynthesis.cancel();
-  const my=++T.seq;T.last={lines,head};penShow(lines,head);let i=0;
+  const my=++T.seq;T.last={lines,head,extra};penShow(lines,head,extra);let i=0;
   const next=()=>{if(my!==T.seq)return;if(i>=lines.length){penTalk(-1);done&&done();return}penTalk(i);const L=lines[i++];sayLine(L,next)};
   next();
 }
-// Every spoken piece of a tip book (speaker + text). The voice generator reads this list.
+// Every spoken piece of every tip book (speaker + text). The voice generator reads this list.
 const PRAISE=['Richtig!','Super!','Toll!','Genau!','Prima!'];
+const NOCH={1:'Noch eins!',2:'Noch zwei!',3:'Noch drei!',4:'Noch vier!'};
 const FINISH={all:['Fantastisch! Alles richtig!','Fantastic! All correct!'],good:['Sehr gut!','Very good!'],ok:['Gut gemacht!','Well done!']};
 const ptsSay=(s,len)=>`Du hast ${s===0?'keinen Punkt':s===1?'einen Punkt':`${s} Punkte`} von ${len}.`;
+const SAYS={tf:'Tippe unten auf Richtig oder Falsch!|Tap True or False below!',have:'Das hast du schon.|You already have that.',all:'Super! Alle gefunden.|Great! All found.',
+ nope:'Leider nicht.|Not quite.',true:'Das stimmt.|That’s true.',done:'Super! Du hast alles auf dieser Seite entdeckt!|Great! You have discovered everything on this page!'};
 function tipAllLines(){
   const out=new Map(),add=(s,t)=>{const k=clipKey(s,t);if(!out.has(k))out.set(k,{key:k,s,text:speakable(t).replace(/\s+/g,' ').trim()})};
   const lineOf=L=>(L.say||[L.de]).forEach(t=>add(L.s,t));
   TIPBOOKS.forEach(b=>{
-    [`Wir lesen zusammen das Buch: ${b.title}.`].forEach(t=>add('stift',t));
+    add('stift',`Wir lesen zusammen das Buch: ${b.title}.`);
     b.scenes.forEach(sc=>{
       sc.story.forEach(lineOf);
       for(const id in sc.hs){const h=sc.hs[id];
         add('stift',h.w);add('stift',`Das ist ${h.w}.`);if(h.pl)add('stift',`${h.w}, ${h.pl}`);
-        if(ART(h.w)&&id[0]!=='_')add('stift',`Wo ist ${h.w}?`);
+        if(ART(h.w)&&id[0]!=='_'&&b.games.includes('finde'))add('stift',`Wo ist ${h.w}?`);
         h.d.forEach(lineOf);h.k.forEach(lineOf);h.e.forEach(x=>x.forEach(lineOf))}
-      sc.qs.forEach(q=>add('stift',q.q));
+      [...sc.qs,...sc.groups,...sc.tf,...sc.hoer].forEach(q=>add('stift',q.q));
+      sc.tf.forEach(x=>x.why&&lineOf(x.why));
     });
   });
   ['Hallo! Ich bin dein Zauberstift.','Wähle oben auf der Seite ein Symbol und tippe dann auf die Bilder. Viel Spaß!',
-   ...PRAISE,'Nein.','Schau mal, hier!','Das hatten wir schon.','Super! Du hast alles auf dieser Seite entdeckt!','Tippe auf einen Würfel, dann spielst du noch einmal.',
-   ...Object.values(FINISH).map(x=>x[0]),...[0,1,2,3,4,5].map(s=>ptsSay(s,5)),
+   ...PRAISE,'Nein.','Ja!','Schau mal, hier!','Das hatten wir schon.',...Object.values(NOCH),
+   ...Object.values(FINISH).map(x=>x[0]),...[3,4,5].flatMap(len=>[...Array(len+1)].map((_,s)=>ptsSay(s,len))),
    ...['der','die','das'].flatMap(a=>[`Finde etwas mit „${a}“!`,`Finde etwas anderes mit „${a}“!`])].forEach(t=>add('stift',t));
-  Object.values(MODE).forEach(x=>lineOf(ln(x,'stift')));Object.values(GAME).forEach(x=>lineOf(ln(x.intro,'stift')));Object.values(HELPSAY).forEach(x=>lineOf(ln(x,'stift')));
+  [...Object.values(SAYS),STOPSAY,AGAIN,...Object.values(MODES).map(m=>m.intro),...Object.values(GAMES).map(g=>g.intro)].forEach(x=>lineOf(ln(x,'stift')));
   return [...out.values()];
 }
 
@@ -1104,17 +1426,20 @@ function tipAllLines(){
 const PENSVG=`<svg viewBox="0 0 32 32" aria-hidden="true"><g transform="rotate(35 16 16)"><path d="M12 21 L16 30 L20 21Z" fill="#FFE07A" stroke="#2B2340" stroke-width="2" stroke-linejoin="round"/><rect x="11" y="1" width="10" height="22" rx="5" fill="#fff" stroke="#2B2340" stroke-width="2"/><rect x="11.5" y="9" width="9" height="4" fill="#FFC933"/></g></svg>`;
 document.body.insertAdjacentHTML('beforeend',`<div class="sheet pen" id="pen" role="region" aria-label="Zauberstift" aria-live="polite"><div class="in">
   <div class="penic">${PENSVG}<span class="led"></span></div>
-  <div class="body"><div class="p-head" id="p-head"></div><div class="p-lines" id="p-lines"></div></div>
+  <div class="body"><div class="p-head" id="p-head"></div><div class="p-lines" id="p-lines"></div><div id="p-extra"></div></div>
   <button class="icon" id="p-again" aria-label="Noch einmal hören"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v5h5"/></svg></button>
   <button class="icon" id="p-close" aria-label="Stift stoppen"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>`);
 const pen=document.getElementById('pen');
+const ANSWERS=`<div class="p-ans"><button class="ansbtn yes" data-ans="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg>Richtig</button><button class="ansbtn no" data-ans="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Falsch</button></div>`;
 function lineHTML(L,i){
+  if(L.hide)return `<div class="ln hidden" data-i="${i}"><span class="de">${icoSvg(IC.ear)} Hör genau zu …</span></div>`;
   const who=L.s!=='erz'&&L.s!=='stift'?`<span class="who" style="--k:${SPK[L.s][3]}">${SPK[L.s][0]}</span>`:'';
   const de=L.w?esc(L.de).replace(/(^|[\s(,])(der|die|das)(?=\s)/g,'$1<b class="a-$2">$2</b>'):esc(L.de);
-  return `<div class="ln${L.w?' word':''}" data-i="${i}">${who}<span class="de" lang="de">${de}</span>${S.en&&L.en?`<span class="en" lang="en">${esc(L.en)}</span>`:''}</div>`}
-function penShow(lines,head){
+  return `<div class="ln${L.w?' word':''}${L.mute?' reveal':''}" data-i="${i}">${who}<span class="de" lang="de">${de}</span>${S.en&&L.en?`<span class="en" lang="en">${esc(L.en)}</span>`:''}</div>`}
+function penShow(lines,head,extra){
   document.getElementById('p-head').innerHTML=head||'';
   document.getElementById('p-lines').innerHTML=lines.map(lineHTML).join('');
+  document.getElementById('p-extra').innerHTML=extra||'';
   pen.classList.add('open');document.body.classList.add('pen-open');
 }
 function penTalk(i){
@@ -1126,7 +1451,8 @@ function penHide(){pen.classList.remove('open','talk');document.body.classList.r
 function penClose(){stopSay();endGame();penHide()}
 function penRefresh(){if(pen.classList.contains('open')&&T.last)document.getElementById('p-lines').innerHTML=T.last.lines.map(lineHTML).join('')}
 document.getElementById('p-close').onclick=penClose;
-document.getElementById('p-again').onclick=()=>{if(T.game)ask();else if(T.last)speakSeq(T.last.lines,T.last.head)};
+document.getElementById('p-again').onclick=()=>{if(T.game)ask();else if(T.last)speakSeq(T.last.lines,T.last.head,null,T.last.extra)};
+pen.addEventListener('click',e=>{const b=e.target.closest('[data-ans]');if(b)wahrAnswer(b.dataset.ans==='1')});
 
 /* ---------- discovering ---------- */
 function markFound(sid,id){
@@ -1138,7 +1464,7 @@ const countFound=sid=>{const sc=scene(sid);return (T.found[sid]||[]).filter(id=>
 const totalOf=sid=>Object.keys(scene(sid).hs).length;
 function flash(id,cls){
   document.querySelectorAll(`#spread .hs[data-h="${id}"]`).forEach(g=>{g.classList.remove(cls);g.getBoundingClientRect();g.classList.add(cls)});
-  setTimeout(()=>document.querySelectorAll(`.hs.${cls}`).forEach(g=>g.classList.remove(cls)),cls==='hint'?2100:750);
+  clearTimeout(flash[cls]);flash[cls]=setTimeout(()=>document.querySelectorAll(`.hs.${cls}`).forEach(g=>g.classList.remove(cls)),cls==='hint'?2100:750);
 }
 function ripple(ev,el){
   const fig=el.closest('.tipfig');if(!fig)return;
@@ -1155,10 +1481,10 @@ function tipTap(el,ev){
   tone('tap');
   const key=`${sid}.${id}.${T.mode}`,c=T.cnt[key]||0;T.cnt[key]=c+1;
   let lines;
-  if(T.mode==='erzaehlen')lines=h.e[c%h.e.length];
+  if(T.mode==='erzaehlen'||T.mode==='sagen')lines=h.e[c%h.e.length];
   else if(T.mode==='wissen')lines=[h.k[c%h.k.length]];
   else{const opts=[{s:'stift',de:h.w,en:h.en,w:1},...h.d];if(h.pl)opts.push({s:'stift',de:`${h.w}, ${h.pl}`,en:`${h.en} – one and many`,w:1});lines=[opts[c%opts.length]]}
-  if(fresh&&countFound(sid)===totalOf(sid)){lines=[...lines,{s:'stift',de:'Super! Du hast alles auf dieser Seite entdeckt!',en:'Great! You have discovered everything on this page!'}];setTimeout(()=>tone('win'),180)}
+  if(fresh&&countFound(sid)===totalOf(sid)){lines=[...lines,ln(SAYS.done,'stift')];setTimeout(()=>tone('win'),180)}
   speakSeq(lines,modeHead());
 }
 function refreshSyms(){
@@ -1168,62 +1494,82 @@ function symTap(k,sid){
   if(k==='stopp'){penClose();return}
   if(k[0]==='g'){if(sid)startGame(sid,+k[1]);return}
   endGame();T.mode=k;refreshSyms();tone('tap');
-  const intro=ln(MODE[k],'stift');
-  speakSeq(k==='erzaehlen'&&sid?[intro,...scene(sid).story]:[intro],modeHead());
+  const intro=ln(MODES[k].intro,'stift');
+  speakSeq(k===TB().storyMode&&sid?[intro,...scene(sid).story]:[intro],modeHead());
 }
 
 /* ---------- games ---------- */
-function startGame(sid,g){
-  const sc=scene(sid);let items;
-  if(g===1)items=shuffle(nounsOf(sc)).slice(0,5).map(id=>({q:`Wo ist ${sc.hs[id].w}?`,en:`Where is ${sc.hs[id].en}?`,a:[id]}));
-  else if(g===2)items=[...Array(5)].map(()=>({}));
-  else items=shuffle(sc.qs).slice(0,5).map(x=>({...x}));
+function startGame(sid,slot){
+  const sc=scene(sid),type=TB().games[slot-1],items=GAMES[type].items(sc);
+  if(!items.length)return;
   stopSay();
-  T.game={sid,g,items,n:0,score:0,tries:0,asked:-1,used:new Set(),wait:false};
+  T.game={sid,g:slot,type,items,n:0,score:0,tries:0,asked:-1,used:new Set(),wait:false};
   refreshSyms();tone('start');
-  speakSeq([ln(GAME[g].intro,'stift')],gameHead(),ask);
+  speakSeq([ln(GAMES[type].intro,'stift')],gameHead(),ask);
 }
 function endGame(){if(T.game){T.game=null;refreshSyms()}}
 function ask(){
   const G=T.game;if(!G)return;
   if(G.n>=G.items.length){finishGame();return}
   const it=G.items[G.n];
-  if(G.g===2&&!it.art){const sc=scene(G.sid),left=['der','die','das'].filter(a=>nounsOf(sc).some(id=>ART(sc.hs[id].w)===a&&!G.used.has(id))),a=left[Math.random()*left.length|0];
+  if(G.type==='artikel'&&!it.art){const sc=scene(G.sid),left=['der','die','das'].filter(a=>nounsOf(sc).some(id=>ART(sc.hs[id].w)===a&&!G.used.has(id))),a=left[Math.random()*left.length|0];
     Object.assign(it,{art:a,q:`Finde etwas mit „${a}“!`,en:`Find something with "${a}"!`})}
   if(G.asked!==G.n){G.tries=0;G.asked=G.n}
   G.wait=true;
-  speakSeq([{s:'stift',de:it.q,en:it.en}],gameHead());
+  if(G.type==='wahr'){it.a.forEach(id=>flash(id,'hit'));speakSeq([{s:'stift',de:it.q,en:it.en}],gameHead(),null,ANSWERS);return}
+  speakSeq([{s:'stift',de:it.q,en:it.en,hide:G.type==='hoeren'}],gameHead());
 }
+const revealOf=it=>({s:'stift',de:it.q,en:it.en,mute:1});
 function gameTap(id){
   const G=T.game;if(!G.wait){tone('tap');return}
   const sc=scene(G.sid),h=sc.hs[id],it=G.items[G.n],what=`Das ist ${h.w}.`,whatEn=`That is ${h.en}.`;
+  if(G.type==='wahr'){speakSeq([ln(SAYS.tf,'stift')],gameHead(),null,ANSWERS);return}
+  if(G.type==='sammeln'){
+    if(it.a.includes(id)){
+      if(it.got.has(id)){tone('no');speakSeq([ln(SAYS.have,'stift'),{s:'stift',de:it.q,en:it.en}],gameHead());return}
+      it.got.add(id);tone('ok');const left=it.a.length-it.got.size;
+      if(left>0){speakSeq([{s:'stift',de:`Ja! ${what} ${NOCH[left]}`,say:['Ja!',what,NOCH[left]],en:`Yes! ${whatEn} ${left} more!`,w:1}],gameHead());return}
+      if(it.miss===0)G.score++;G.n++;G.wait=false;
+      speakSeq([{s:'stift',de:`Ja! ${what}`,say:['Ja!',what],en:`Yes! ${whatEn}`,w:1},ln(SAYS.all,'stift')],gameHead(),ask);return}
+    it.miss++;G.tries++;tone('no');
+    if(G.tries<3){speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,say:['Nein.',what,it.q],en:`No. ${whatEn} ${it.en}`,w:1}],gameHead());return}
+    const rest=it.a.filter(x=>!it.got.has(x));rest.forEach(x=>flash(x,'hint'));G.n++;G.wait=false;
+    speakSeq([{s:'stift',de:'Schau mal, hier!',en:'Look, here!'},...rest.map(x=>({s:'stift',de:`Das ist ${sc.hs[x].w}.`,en:`That is ${sc.hs[x].en}.`,w:1}))],gameHead(),ask);return;
+  }
   let ok;
-  if(G.g===2){ok=ART(h.w)===it.art;
+  if(G.type==='artikel'){ok=ART(h.w)===it.art;
     if(ok&&G.used.has(id)){tone('no');const a=`Finde etwas anderes mit „${it.art}“!`;speakSeq([{s:'stift',de:`Das hatten wir schon. ${a}`,say:['Das hatten wir schon.',a],en:`We already had that. Find something else with "${it.art}"!`}],gameHead());return}}
   else ok=it.a.includes(id);
+  const reveal=G.type==='hoeren'?[revealOf(it)]:[];
   if(ok){
     if(G.tries===0)G.score++;
     G.used.add(id);G.n++;G.wait=false;tone('ok');
     const p=shuffle(PRAISE)[0];
-    speakSeq([{s:'stift',de:`${p} ${what}`,say:[p,what],en:`Right! ${whatEn}`,w:1}],gameHead(),ask);
+    speakSeq([{s:'stift',de:`${p} ${what}`,say:[p,what],en:`Right! ${whatEn}`,w:1},...reveal],gameHead(),ask);
   }else{
     G.tries++;tone('no');
-    if(G.tries<3)speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,say:['Nein.',what,it.q],en:`No. ${whatEn} ${it.en}`,w:1}],gameHead());
+    if(G.tries<3)speakSeq([{s:'stift',de:`Nein. ${what} ${it.q}`,say:['Nein.',what,it.q],en:`No. ${whatEn} ${it.en}`,w:1,hide:G.type==='hoeren'}],gameHead());
     else{
-      const ans=G.g===2?nounsOf(sc).find(x=>ART(sc.hs[x].w)===it.art&&!G.used.has(x)):it.a[0];
+      const ans=G.type==='artikel'?nounsOf(sc).find(x=>ART(sc.hs[x].w)===it.art&&!G.used.has(x)):it.a[0];
       G.used.add(ans);G.n++;G.wait=false;flash(ans,'hint');
-      speakSeq([{s:'stift',de:`Schau mal, hier! Das ist ${sc.hs[ans].w}.`,say:['Schau mal, hier!',`Das ist ${sc.hs[ans].w}.`],en:`Look, here! That is ${sc.hs[ans].en}.`,w:1}],gameHead(),ask);
+      speakSeq([{s:'stift',de:`Schau mal, hier! Das ist ${sc.hs[ans].w}.`,say:['Schau mal, hier!',`Das ist ${sc.hs[ans].w}.`],en:`Look, here! That is ${sc.hs[ans].en}.`,w:1},...reveal],gameHead(),ask);
     }
   }
 }
+function wahrAnswer(yes){
+  const G=T.game;if(!G||G.type!=='wahr'||!G.wait)return;
+  const it=G.items[G.n],ok=yes===it.t;G.wait=false;G.n++;if(ok)G.score++;tone(ok?'ok':'no');
+  const p=ok?{s:'stift',de:shuffle(PRAISE)[0],en:'Right!'}:ln(SAYS.nope,'stift');
+  speakSeq([p,it.t?ln(SAYS.true,'stift'):it.why],gameHead(),ask);
+}
 function finishGame(){
   const G=T.game;T.game=null;refreshSyms();
-  const k=`${G.sid}.${G.g}`,s=G.score,len=G.items.length;
-  if(!(k in T.best)||s>T.best[k]){T.best[k]=s;store.set('a2.tip.best',T.best)}
-  const [de,en]=s===len?FINISH.all:s>=3?FINISH.good:FINISH.ok,pts=ptsSay(s,len);
+  const k=`${G.sid}.${G.g}`,s=G.score,len=G.items.length,pct=Math.round(s/len*100);
+  if(!(k in T.best)||pct>T.best[k]){T.best[k]=pct;store.set('a2.tip.best2',T.best)}
+  const [de,en]=s===len?FINISH.all:s/len>=.6?FINISH.good:FINISH.ok,pts=ptsSay(s,len);
   tone('win');
-  speakSeq([{s:'stift',de:`${de} ${pts}`,say:[de,pts],en:`${en} You got ${s} of ${len} points.`},{s:'stift',de:'Tippe auf einen Würfel, dann spielst du noch einmal.',en:'Tap a dice to play again.'}],
-    pchip(`Spiel ${G.g} · ${GAME[G.g].n}`,symOf('g'+G.g).c)+`<span class="pstars">${starStr(s)}</span>`);
+  speakSeq([{s:'stift',de:`${de} ${pts}`,say:[de,pts],en:`${en} You got ${s} of ${len} points.`},ln(AGAIN,'stift')],
+    pchip(`Spiel ${G.g} · ${GAMES[G.type].n}`,symOf('g'+G.g).c)+`<span class="pstars">${starStr(pct)}</span>`);
 }
 
 /* ---------- pages ----------
@@ -1233,26 +1579,26 @@ function tipN(){return TB().scenes.length+2}
 function tipLast(){return wideMQ.matches?tipN()-1:tipN()*2-1}
 function tipAt(p,wide){if(wide)return [p,null];const sp=p>>1,first=!(p&1);return [sp,sp===0?(first?'R':'L'):(first?'L':'R')]}
 function curSceneId(){const [sp]=tipAt(S.page,wideMQ.matches),n=TB().scenes.length;return sp>0&&sp<=n?TB().scenes[sp-1].id:null}
-const symBtn=(s,sid)=>`<button class="sym" data-act="sym" data-k="${s.k}" data-s="${sid}" style="--k:${s.c}" aria-label="${s.n}" title="${s.n}"><span class="ic">${ico(s.k)}</span><span class="lb">${s.n}</span></button>`;
-const strip=(sid,side)=>`<div class="strip${side?'':' all'}">${(side==='L'?SYM.slice(0,3):side==='R'?SYM.slice(3):SYM).map(s=>symBtn(s,sid)).join('')}</div>`;
+const symBtn=(s,sid)=>`<button class="sym" data-act="sym" data-k="${s.k}" data-s="${sid}" style="--k:${s.c}" aria-label="${s.k[0]==='g'?`${s.n}: ${GAMES[s.g].n}`:s.n}" title="${s.k[0]==='g'?`${s.n}: ${GAMES[s.g].n}`:s.n}"><span class="ic">${icoSvg(s.ic)}</span><span class="lb">${s.n}</span></button>`;
+const strip=(sid,side)=>{const all=symsOf(TB());return `<div class="strip${side?'':' all'}">${(side==='L'?all.slice(0,3):side==='R'?all.slice(3):all).map(s=>symBtn(s,sid)).join('')}</div>`};
 function tipFig(sc,half){
   const vb=half==='L'?'0 0 400 440':half==='R'?'400 0 400 440':'0 0 800 440';
   const body=TIPART[sc.id]().replace(/<g class="hs" data-h="(\w+)">/g,(m,id)=>`<g class="hs" data-h="${id}" tabindex="0" role="button" aria-label="${esc(sc.hs[id]?sc.hs[id].w:id)}">`);
   return `<div class="tipfig"><svg viewBox="${vb}" data-s="${sc.id}" role="group" aria-label="${esc(sc.title)}">${body}</svg></div>`}
 function howtoHTML(){
   return `<div class="intro tiphow"><h3>So spielst du</h3><p>Der Zauberstift liest dir vor. Wähle oben auf der Seite ein Symbol und tippe dann auf das Bild. Hier kannst du jedes Symbol ausprobieren:</p>
-    <div class="howlist">${SYM.map(s=>`<button class="howrow" data-act="help" data-k="${s.k}" style="--k:${s.c}"><span class="ic">${ico(s.k)}</span><span><b>${s.n}</b><small>${HELP[s.k]}</small></span></button>`).join('')}</div></div>`}
+    <div class="howlist">${symsOf(TB()).map(s=>`<button class="howrow" data-act="help" data-k="${s.k}" style="--k:${s.c}"><span class="ic">${icoSvg(s.ic)}</span><span><b>${s.k[0]==='g'?`${s.n}: ${GAMES[s.g].n}`:s.n}</b><small>${s.k[0]==='g'?GAMES[s.g].help:s.help}</small></span></button>`).join('')}</div></div>`}
 function titleHTML(){const b=TB();
   return `<div class="titlepage"><div class="num">Tipp-Buch ${S.tip+1} · Niveau A2</div><h2 class="booktitle">${b.title}</h2><div class="sub">${b.titleEn}</div>
-    <div class="figure">${TIPCOVER()}</div><button class="startbtn" data-act="start"><span class="ic">${ico('start')}</span>Start</button><div class="by">mit ${b.cast}</div></div>`}
+    <div class="figure">${TIPCOVERS[b.id]()}</div><button class="startbtn" data-act="start"><span class="ic">${icoSvg(IC.start)}</span>Start</button><div class="by">${b.by}</div></div>`}
 function albumHTML(){
-  const sc=TB().scenes;let f=0,t=0,st=0;
-  const rows=sc.map((s,i)=>{const a=countFound(s.id),b=totalOf(s.id);f+=a;t+=b;[1,2,3].forEach(g=>st+=starsOf(T.best[s.id+'.'+g]));
-    return `<div class="arow"><div class="at"><b>${i+1} · ${s.title}</b><span>${a} / ${b}</span></div><div class="bar"><i style="width:${a/b*100}%"></i></div>
-      <div class="astars">${[1,2,3].map(g=>`<span>Spiel ${g} <span class="st">${starStr(T.best[s.id+'.'+g])}</span></span>`).join('')}</div></div>`}).join('');
+  const b=TB(),sc=b.scenes;let f=0,t=0,st=0;
+  const rows=sc.map((s,i)=>{const a=countFound(s.id),n=totalOf(s.id);f+=a;t+=n;[1,2,3].forEach(g=>st+=starsOf(T.best[s.id+'.'+g]));
+    return `<div class="arow"><div class="at"><b>${i+1} · ${s.title}</b><span>${a} / ${n}</span></div><div class="bar"><i style="width:${a/n*100}%"></i></div>
+      <div class="astars">${b.games.map((g,j)=>`<span>${GAMES[g].n} <span class="st">${starStr(T.best[s.id+'.'+(j+1)])}</span></span>`).join('')}</div></div>`}).join('');
   const max=sc.length*9,done=f===t&&st>=sc.length*6;
   return `<h3>Mein Sammelalbum</h3><div class="album">${rows}</div>
-    <div class="cert${done?' on':''}">${done?`<b>Urkunde</b>Du kennst dich in der Stadt aus! Herzlichen Glückwunsch!`:`<b>Deine Urkunde</b>Entdecke alles und hol in jedem Spiel zwei Sterne.<br>Entdeckt: ${f} / ${t} · Sterne: ${st} / ${max}`}</div>
+    <div class="cert${done?' on':''}">${done?`<b>Urkunde</b>${b.cert} Herzlichen Glückwunsch!`:`<b>Deine Urkunde</b>Entdecke alles und hol in jedem Spiel zwei Sterne.<br>Entdeckt: ${f} / ${t} · Sterne: ${st} / ${max}`}</div>
     <div class="finish"><button class="btn" data-act="tipreset">Neu anfangen</button></div>`}
 function wordsHTML(){
   return `<h3>Meine Wörter</h3><p class="wnote">Tippe auf ein Wort und hör zu. Neue Wörter findest du mit „Entdecken“.</p>${TB().scenes.map(sc=>`<div class="wgroup"><b>${sc.title}</b><div class="wchips">${nounsOf(sc).map(id=>{const h=sc.hs[id];
@@ -1286,22 +1632,23 @@ function renderTip(){
       <div class="dots">${[...Array(last+1)].map((_,j)=>`<button class="dot ${j===idx?'cur':''}" data-act="go" data-p="${j}" aria-label="Seite ${j+1}"></button>`).join('')}</div>
       <button class="round" data-act="next" aria-label="Umblättern" ${idx===last?'disabled':''}>${ARROW(1)}</button>
     </div>`;
+  pen.style.setProperty('--c',b.color);
   // a hotspot that lies outside this half-page's viewBox leaves the tab order
   document.querySelectorAll('#spread svg[data-s]').forEach(svg=>{const [x0,,w]=svg.getAttribute('viewBox').split(' ').map(Number);
     svg.querySelectorAll('.hs').forEach(g=>{try{const bb=g.getBBox();if(bb.x+bb.width<x0+10||bb.x>x0+w-10)g.setAttribute('tabindex','-1')}catch(e){}})});
   refreshSyms();
 }
-function openTip(i){S.tip=i;S.story=null;S.page=0;T.mode='entdecken';T.game=null;closeSheet();stopSay();penHide();renderTip();window.scrollTo(0,0)}
+function openTip(i){S.tip=i;S.story=null;S.page=0;T.mode=TB().modes[0];T.game=null;closeSheet();stopSay();penHide();renderTip();window.scrollTo(0,0)}
 function tipShelf(){
   return `<section class="tipsec" aria-labelledby="tiph">
     <div class="sechead"><span class="pill">Neu · mit Zauberstift</span><h2 class="sectitle" id="tiph">Tipp-Bücher</h2>
-      <p>Bücher zum Antippen: Wähle ein Symbol, tippe auf die Bilder und hör zu. Wörter, Geschichten, Wissen und drei Spiele auf jeder Seite.</p></div>
+      <p>Bücher zum Antippen: Wähle ein Symbol, tippe auf die Bilder und hör zu. Jedes Buch hat eigene Spiele.</p></div>
     <div class="shelf">${TIPBOOKS.map((b,i)=>`
       <button class="cover" data-act="opentip" data-i="${i}" style="--c:${b.color}">
         <span class="spine"></span>
-        <span class="art">${TIPCOVER()}</span>
-        <span class="label"><span class="num">Tipp-Buch ${i+1}</span><span class="t">${b.title}</span><span class="en">${b.titleEn}</span></span>
-        <span class="chips"><span class="chip">${b.scenes.length} Bildseiten</span><span class="chip">3 Spiele pro Seite</span><span class="chip">${b.scenes.reduce((a,s)=>a+Object.keys(s.hs).length,0)} Dinge zum Antippen</span></span>
+        <span class="art">${TIPCOVERS[b.id]()}</span>
+        <span class="label"><span class="num">Tipp-Buch ${i+1} · ${b.kind}</span><span class="t">${b.title}</span><span class="en">${b.titleEn}</span></span>
+        <span class="chips"><span class="chip">${b.scenes.length} Bildseiten</span>${b.games.map(g=>`<span class="chip">${GAMES[g].n}</span>`).join('')}<span class="chip">${b.scenes.reduce((a,s)=>a+Object.keys(s.hs).length,0)} Dinge zum Antippen</span></span>
       </button>`).join('')}
       <div class="cover soon" aria-hidden="true"><span class="spine"></span><span class="label"><span class="num">Tipp-Buch ${TIPBOOKS.length+1}</span><span class="t">Kommt bald …</span></span></div>
     </div>
@@ -1309,20 +1656,22 @@ function tipShelf(){
 function tipAct(act,b){
   if(act==='opentip')openTip(+b.dataset.i);
   else if(act==='sym')symTap(b.dataset.k,b.dataset.s);
-  else if(act==='help'){const k=b.dataset.k;if(MODE[k])symTap(k,null);else if(k==='stopp')penClose();else{endGame();tone('tap');speakSeq([ln(HELPSAY[k],'stift')],pchip(symOf(k).n,symOf(k).c))}}
-  else if(act==='start'){endGame();T.mode='entdecken';refreshSyms();tone('start');
+  else if(act==='help'){const k=b.dataset.k;
+    if(MODES[k])symTap(k,null);
+    else if(k==='stopp'){penClose();speakSeq([ln(STOPSAY,'stift')],pchip('Stopp',STOP.c))}
+    else{endGame();tone('tap');const s=symOf(k);speakSeq([ln(GAMES[s.g].intro,'stift')],pchip(`${s.n} · ${GAMES[s.g].n}`,s.c))}}
+  else if(act==='start'){endGame();T.mode=TB().modes[0];refreshSyms();tone('start');
     speakSeq(['Hallo! Ich bin dein Zauberstift.|Hello! I am your magic pen.',`Wir lesen zusammen das Buch: ${TB().title}.|Let’s read the book together: ${TB().titleEn}.`,'Wähle oben auf der Seite ein Symbol und tippe dann auf die Bilder. Viel Spaß!|Choose a symbol at the top of the page and then tap the pictures. Have fun!'].map(x=>ln(x,'stift')),pchip('Start','var(--leaf)'))}
   else if(act==='sayw'){tone('tap');speakSeq([{s:'stift',de:b.dataset.t,en:b.dataset.e,w:1}],pchip('Meine Wörter'))}
   else if(act==='tipreset'){
-    if(!b.dataset.sure){b.dataset.sure='1';b.textContent='Wirklich alles löschen?';return}
-    T.found={};T.best={};store.set('a2.tip.found',{});store.set('a2.tip.best',{});renderTip();
+    if(!b.dataset.sure){b.dataset.sure='1';b.textContent='Wirklich alles löschen?';return true}
+    T.found={};T.best={};store.set('a2.tip.found',{});store.set('a2.tip.best2',{});renderTip();
   }
   else return false;
   return true;
 }
 // after a page turn: a game keeps going while the same scene is open, otherwise it ends
 function tipTurned(was){const now=curSceneId();if(now!==was){endGame();penHide()}else if(T.game)setTimeout(ask,350)}
-
 S.en=!!store.get('a2.en');
 library();
 </script>
