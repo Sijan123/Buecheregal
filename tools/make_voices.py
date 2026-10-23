@@ -43,6 +43,14 @@ VOICES = {
     "kind":      ("de-DE-KillianNeural",               "+8%",  "+45Hz"),
     # Tipp-Buch 3: your own answers in the dialogues
     "ich":       ("de-DE-AmalaNeural",                 "+0%",  "+0Hz"),
+    # Tipp-Buch 6: Familie Bär
+    "mila":      ("de-DE-KatjaNeural",                 "+6%",  "+35Hz"),
+    "ben":       ("de-DE-KillianNeural",               "+10%", "+60Hz"),
+    "mama":      ("de-DE-AmalaNeural",                 "-2%",  "-4Hz"),
+    "papa":      ("de-DE-ConradNeural",                "-2%",  "+0Hz"),
+    "oma":       ("de-AT-IngridNeural",                "-10%", "-6Hz"),
+    "reh":       ("de-CH-LeniNeural",                  "+0%",  "+0Hz"),
+    "igel":      ("de-AT-JonasNeural",                 "-8%",  "-12Hz"),
 }
 
 

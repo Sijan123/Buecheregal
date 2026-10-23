@@ -1,0 +1,10 @@
+# Reviewed question/answer alignment warnings that are fine (see buildbook.md, "Questions and answers").
+# One per line: <book>/<scene> <word>  # why it is fine
+jahr/kalender Sommermonat        # the year wheel shows Juli inside the Sommer ring
+jahr/fruehling Füße              # everyday knowledge; the wellies are in the picture
+wohnen/haus zehn                 # free reply with a time; the moving van it is about is in the picture
+wohnen/wohnzimmer Glas           # polite reply to "Möchten Sie etwas trinken?"
+wohnen/wohnzimmer Wasser         # polite reply to "Möchten Sie etwas trinken?"
+wohnen/kueche Minuten            # free reply about the cooking time
+wohnen/kueche Plastik            # explains the yellow compartment of the bin drawn in this kitchen
+wohnen/bad Hausmeister           # what you do when something breaks, not a fact from another page

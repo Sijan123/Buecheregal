@@ -9395,9 +9395,9 @@
   "text": "Hast du ein Handtuch für mich?"
  },
  {
-  "key": "306b0f0c",
+  "key": "7693555e",
   "s": "ich",
-  "text": "Ja, im Regal liegen frische Handtücher."
+  "text": "Ja, das orange Handtuch hängt am Heizkörper."
  },
  {
   "key": "d430aa85",
@@ -10125,14 +10125,14 @@
   "text": "Am Freitag um acht."
  },
  {
-  "key": "58426c47",
+  "key": "60c461d4",
   "s": "er",
-  "text": "Wann wird der Müll abgeholt?"
+  "text": "Wo kann ich mein Fahrrad abstellen?"
  },
  {
-  "key": "677243c2",
+  "key": "c6e2b6e9",
   "s": "ich",
-  "text": "Jeden Dienstag am Morgen."
+  "text": "Dort links, im Fahrradständer."
  },
  {
   "key": "e0d3bd8c",
@@ -10140,9 +10140,9 @@
   "text": "In der Gelben Tonne."
  },
  {
-  "key": "06c2922d",
+  "key": "fe7d43d5",
   "s": "ich",
-  "text": "Mit dem Fahrrad."
+  "text": "Um zwei Uhr."
  },
  {
   "key": "2f4400aa",
@@ -16633,6 +16633,3351 @@
   "key": "44d7e7be",
   "s": "stift",
   "text": "So stößt niemand aus Versehen gegen ein Kunstwerk."
+ },
+ {
+  "key": "84ebdb50",
+  "s": "stift",
+  "text": "Wir lesen zusammen das Buch: Omas Geburtstag."
+ },
+ {
+  "key": "44f5ef4f",
+  "s": "erz",
+  "text": "Das ist Familie Bär: Mama, Papa, Mila und der kleine Ben."
+ },
+ {
+  "key": "6dbff503",
+  "s": "erz",
+  "text": "Morgen, am Sonntag, wird Oma Erna siebzig Jahre alt."
+ },
+ {
+  "key": "e9e9f6ae",
+  "s": "erz",
+  "text": "Mila hat eine Idee: Wir machen eine Überraschungsparty für Oma!"
+ },
+ {
+  "key": "4457fc28",
+  "s": "stift",
+  "text": "Im Wohnzimmer sitzt die Familie zusammen."
+ },
+ {
+  "key": "f8f7c0f9",
+  "s": "stift",
+  "text": "wohnen und das Zimmer: das Wohnzimmer. Das letzte Wort bestimmt den Artikel."
+ },
+ {
+  "key": "2326c59d",
+  "s": "erz",
+  "text": "Heute ist Samstag. Familie Bär plant etwas Besonderes."
+ },
+ {
+  "key": "8268a007",
+  "s": "stift",
+  "text": "Wo ist der Kalender?"
+ },
+ {
+  "key": "9e7c8ec3",
+  "s": "stift",
+  "text": "Im Kalender ist ein roter Kreis um den vierzehnten Mai."
+ },
+ {
+  "key": "d07f020f",
+  "s": "stift",
+  "text": "Das Datum: Heute ist der dreizehnte Mai. Morgen ist der vierzehnte Mai."
+ },
+ {
+  "key": "92fe13fe",
+  "s": "mila",
+  "text": "Schau mal, Papa! Morgen ist Omas Geburtstag!"
+ },
+ {
+  "key": "66e5ba57",
+  "s": "stift",
+  "text": "das Foto"
+ },
+ {
+  "key": "ca36442f",
+  "s": "stift",
+  "text": "Das ist das Foto."
+ },
+ {
+  "key": "e356a9f8",
+  "s": "stift",
+  "text": "das Foto, die Fotos"
+ },
+ {
+  "key": "e6ad3210",
+  "s": "stift",
+  "text": "Wo ist das Foto?"
+ },
+ {
+  "key": "8646f403",
+  "s": "stift",
+  "text": "Auf dem Foto ist Oma Erna mit ihrer Gießkanne."
+ },
+ {
+  "key": "63e7c542",
+  "s": "stift",
+  "text": "das Foto, die Fotos: Wörter aus anderen Sprachen haben oft ein s im Plural."
+ },
+ {
+  "key": "34683f6b",
+  "s": "papa",
+  "text": "Oma liebt ihren Garten und ihre Rosen."
+ },
+ {
+  "key": "f0f2c9e3",
+  "s": "stift",
+  "text": "Wo ist das Sofa?"
+ },
+ {
+  "key": "62b25a6b",
+  "s": "stift",
+  "text": "Das Sofa ist grün und hat zwei Kissen."
+ },
+ {
+  "key": "a4eea1f3",
+  "s": "stift",
+  "text": "das Sofa, die Couch: Beide Wörter sind richtig."
+ },
+ {
+  "key": "7f05a18b",
+  "s": "erz",
+  "text": "Auf dem Sofa macht Ben später ein Nickerchen."
+ },
+ {
+  "key": "901ead3e",
+  "s": "stift",
+  "text": "der Teddy"
+ },
+ {
+  "key": "126499e4",
+  "s": "stift",
+  "text": "Das ist der Teddy."
+ },
+ {
+  "key": "808395a3",
+  "s": "stift",
+  "text": "der Teddy, die Teddys"
+ },
+ {
+  "key": "6345820b",
+  "s": "stift",
+  "text": "Wo ist der Teddy?"
+ },
+ {
+  "key": "d6965691",
+  "s": "stift",
+  "text": "Der Teddy sitzt auf dem Sofa."
+ },
+ {
+  "key": "adba2681",
+  "s": "stift",
+  "text": "Der Teddy sitzt auf dem Sofa. Wo? Auf dem Sofa: Dativ."
+ },
+ {
+  "key": "ddd0d669",
+  "s": "ben",
+  "text": "Mein Teddy kommt auch mit zu Oma!"
+ },
+ {
+  "key": "6f0bcbcc",
+  "s": "stift",
+  "text": "Auf dem Tisch liegen Papier, Stifte und eine Schere."
+ },
+ {
+  "key": "8ef1618a",
+  "s": "stift",
+  "text": "Das Papier liegt auf dem Tisch: Wo? Dativ. Ich lege das Papier auf den Tisch: Wohin? Akkusativ."
+ },
+ {
+  "key": "b29f457d",
+  "s": "mama",
+  "text": "Kommt, wir planen alles zusammen am Tisch."
+ },
+ {
+  "key": "6925b691",
+  "s": "stift",
+  "text": "die Geburtstagskarte"
+ },
+ {
+  "key": "846d5eb9",
+  "s": "stift",
+  "text": "Das ist die Geburtstagskarte."
+ },
+ {
+  "key": "0c33d8b5",
+  "s": "stift",
+  "text": "die Geburtstagskarte, die Geburtstagskarten"
+ },
+ {
+  "key": "7051f402",
+  "s": "stift",
+  "text": "Wo ist die Geburtstagskarte?"
+ },
+ {
+  "key": "f10d38e5",
+  "s": "stift",
+  "text": "Mila malt eine Karte mit einem Herzen und einer Siebzig."
+ },
+ {
+  "key": "aeef9d7b",
+  "s": "stift",
+  "text": "Wem? Ich schreibe der Oma eine Karte. Der Oma ist Dativ, eine Karte ist Akkusativ."
+ },
+ {
+  "key": "04b1dfdd",
+  "s": "mila",
+  "text": "Die Karte ist für Oma. Ich schreibe: Alles Gute zum Siebzigsten!"
+ },
+ {
+  "key": "723a26d5",
+  "s": "stift",
+  "text": "der Buntstift"
+ },
+ {
+  "key": "58110da5",
+  "s": "stift",
+  "text": "Das ist der Buntstift."
+ },
+ {
+  "key": "116407c3",
+  "s": "stift",
+  "text": "der Buntstift, die Buntstifte"
+ },
+ {
+  "key": "10e6b166",
+  "s": "stift",
+  "text": "Wo ist der Buntstift?"
+ },
+ {
+  "key": "123f8eb8",
+  "s": "stift",
+  "text": "Die Buntstifte sind rot, gelb, grün und blau."
+ },
+ {
+  "key": "44bba519",
+  "s": "stift",
+  "text": "Gib mir den Stift! Mir ist Dativ, den Stift ist Akkusativ."
+ },
+ {
+  "key": "989a41c4",
+  "s": "mila",
+  "text": "Ben, gib mir bitte den roten Buntstift!"
+ },
+ {
+  "key": "ca2fe407",
+  "s": "stift",
+  "text": "die Schere"
+ },
+ {
+  "key": "a719bda7",
+  "s": "stift",
+  "text": "Das ist die Schere."
+ },
+ {
+  "key": "89c80bfd",
+  "s": "stift",
+  "text": "die Schere, die Scheren"
+ },
+ {
+  "key": "4a1fcb80",
+  "s": "stift",
+  "text": "Wo ist die Schere?"
+ },
+ {
+  "key": "02c6d8f1",
+  "s": "stift",
+  "text": "Die Schere ist rot und liegt neben dem Papier."
+ },
+ {
+  "key": "fadf2f5d",
+  "s": "stift",
+  "text": "Achtung: die Schere ist Singular. Auf Englisch sagt man scissors, im Plural."
+ },
+ {
+  "key": "bc8c1cd3",
+  "s": "papa",
+  "text": "Vorsicht, Ben! Die Schere ist spitz."
+ },
+ {
+  "key": "12c9fe23",
+  "s": "stift",
+  "text": "der Kleber"
+ },
+ {
+  "key": "4e3aceab",
+  "s": "stift",
+  "text": "Das ist der Kleber."
+ },
+ {
+  "key": "753ddcfe",
+  "s": "stift",
+  "text": "der Kleber, die Kleber"
+ },
+ {
+  "key": "6ddbacac",
+  "s": "stift",
+  "text": "Wo ist der Kleber?"
+ },
+ {
+  "key": "7776e091",
+  "s": "stift",
+  "text": "Mit dem Kleber klebt Ben die Girlande."
+ },
+ {
+  "key": "2496c910",
+  "s": "stift",
+  "text": "kleben wird zu der Kleber. Aus vielen Verben wird ein Nomen mit -er."
+ },
+ {
+  "key": "a3817360",
+  "s": "ben",
+  "text": "Ich klebe ganz viel!"
+ },
+ {
+  "key": "932f90d5",
+  "s": "stift",
+  "text": "die Girlande"
+ },
+ {
+  "key": "22ea53d5",
+  "s": "stift",
+  "text": "Das ist die Girlande."
+ },
+ {
+  "key": "f40c670d",
+  "s": "stift",
+  "text": "die Girlande, die Girlanden"
+ },
+ {
+  "key": "0dac3376",
+  "s": "stift",
+  "text": "Wo ist die Girlande?"
+ },
+ {
+  "key": "81d92752",
+  "s": "stift",
+  "text": "Die Girlande ist bunt und schon sehr lang."
+ },
+ {
+  "key": "0496001a",
+  "s": "stift",
+  "text": "Für eine Party schmückt man den Raum mit Girlanden und Luftballons."
+ },
+ {
+  "key": "ee27641a",
+  "s": "ben",
+  "text": "Guck mal, meine Girlande! Die ist für Omas Garten."
+ },
+ {
+  "key": "6222e8db",
+  "s": "stift",
+  "text": "das Handy"
+ },
+ {
+  "key": "842796fb",
+  "s": "stift",
+  "text": "Das ist das Handy."
+ },
+ {
+  "key": "32770808",
+  "s": "stift",
+  "text": "das Handy, die Handys"
+ },
+ {
+  "key": "3baf8404",
+  "s": "stift",
+  "text": "Wo ist das Handy?"
+ },
+ {
+  "key": "f76560d1",
+  "s": "stift",
+  "text": "Papa hat ein Handy in der Hand."
+ },
+ {
+  "key": "d5af71af",
+  "s": "stift",
+  "text": "Handy klingt englisch, aber auf Englisch sagt man mobile phone."
+ },
+ {
+  "key": "59e920b9",
+  "s": "papa",
+  "text": "Hallo, Herr Igel! Können Sie uns morgen helfen? Es ist eine Überraschung."
+ },
+ {
+  "key": "95aa4feb",
+  "s": "stift",
+  "text": "der Notizblock"
+ },
+ {
+  "key": "b7cb1693",
+  "s": "stift",
+  "text": "Das ist der Notizblock."
+ },
+ {
+  "key": "b0b4612c",
+  "s": "stift",
+  "text": "der Notizblock, die Notizblöcke"
+ },
+ {
+  "key": "5b6e86e4",
+  "s": "stift",
+  "text": "Wo ist der Notizblock?"
+ },
+ {
+  "key": "f0c56145",
+  "s": "stift",
+  "text": "Auf dem Notizblock steht: Kuchen, Geschenk, Blumen."
+ },
+ {
+  "key": "3634872b",
+  "s": "stift",
+  "text": "brauchen + Akkusativ: einen Kuchen, ein Geschenk, Blumen."
+ },
+ {
+  "key": "043b93dc",
+  "s": "mama",
+  "text": "Wir brauchen einen Kuchen, ein Geschenk und Blumen."
+ },
+ {
+  "key": "05704ec3",
+  "s": "stift",
+  "text": "Wo ist die Stehlampe?"
+ },
+ {
+  "key": "f3c07323",
+  "s": "stift",
+  "text": "Die Stehlampe steht neben dem Sofa."
+ },
+ {
+  "key": "1a9658f6",
+  "s": "stift",
+  "text": "stehen und die Lampe: die Stehlampe. Sie steht auf dem Boden."
+ },
+ {
+  "key": "da7754dd",
+  "s": "erz",
+  "text": "Die Lampe ist aus. Draußen scheint die Sonne."
+ },
+ {
+  "key": "dc5eb2de",
+  "s": "stift",
+  "text": "Durch das Fenster sieht man einen Baum mit Blüten."
+ },
+ {
+  "key": "3948bb6d",
+  "s": "stift",
+  "text": "Im Mai ist Frühling. Viele Bäume blühen."
+ },
+ {
+  "key": "9d7420b1",
+  "s": "erz",
+  "text": "Draußen blüht der Baum. Es ist Mai."
+ },
+ {
+  "key": "acbfd67c",
+  "s": "stift",
+  "text": "Mila"
+ },
+ {
+  "key": "8dcc0262",
+  "s": "stift",
+  "text": "Das ist Mila."
+ },
+ {
+  "key": "4e204a0c",
+  "s": "stift",
+  "text": "Das ist Mila. Sie ist sieben Jahre alt."
+ },
+ {
+  "key": "305da6f2",
+  "s": "stift",
+  "text": "Überraschung heißt surprise. Eine Überraschungsparty ist ein Geheimnis."
+ },
+ {
+  "key": "1a027d88",
+  "s": "mila",
+  "text": "Ich habe eine Idee! Wir machen eine Überraschungsparty!"
+ },
+ {
+  "key": "f5178da1",
+  "s": "mila",
+  "text": "Aber psst! Oma darf nichts wissen."
+ },
+ {
+  "key": "49736ac2",
+  "s": "stift",
+  "text": "Ben"
+ },
+ {
+  "key": "7d7ef7e8",
+  "s": "stift",
+  "text": "Das ist Ben."
+ },
+ {
+  "key": "e3d255d8",
+  "s": "stift",
+  "text": "Das ist Ben. Er ist vier Jahre alt."
+ },
+ {
+  "key": "7f212a67",
+  "s": "stift",
+  "text": "Mila ist größer als Ben. Papa ist am größten."
+ },
+ {
+  "key": "0d387515",
+  "s": "ben",
+  "text": "Party! Gibt es auch Kuchen?"
+ },
+ {
+  "key": "188783e5",
+  "s": "stift",
+  "text": "Mama Bär"
+ },
+ {
+  "key": "85bea805",
+  "s": "stift",
+  "text": "Das ist Mama Bär."
+ },
+ {
+  "key": "583ec007",
+  "s": "stift",
+  "text": "Mama schreibt einen Plan."
+ },
+ {
+  "key": "dc29dc5b",
+  "s": "stift",
+  "text": "Mama sagen Kinder. Das neutrale Wort ist die Mutter."
+ },
+ {
+  "key": "c52ff94b",
+  "s": "mama",
+  "text": "Gute Idee, Mila! Ich backe einen Schokoladenkuchen. Oma liebt Schokolade."
+ },
+ {
+  "key": "6ffeb701",
+  "s": "stift",
+  "text": "Papa Bär"
+ },
+ {
+  "key": "ec13a0a1",
+  "s": "stift",
+  "text": "Das ist Papa Bär."
+ },
+ {
+  "key": "c1dc228d",
+  "s": "stift",
+  "text": "Papa telefoniert mit dem Nachbarn von Oma."
+ },
+ {
+  "key": "fd5aac2b",
+  "s": "stift",
+  "text": "schenken + Dativ: Wir schenken der Oma eine Tasse. Wem? Der Oma."
+ },
+ {
+  "key": "42c3eade",
+  "s": "papa",
+  "text": "Und wir kaufen ein Geschenk. Was schenken wir Oma?"
+ },
+ {
+  "key": "39ffee7d",
+  "s": "stift",
+  "text": "Oma wird morgen siebzig."
+ },
+ {
+  "key": "1bd1269a",
+  "s": "stift",
+  "text": "Die Party ist ein Geheimnis."
+ },
+ {
+  "key": "cb042d9f",
+  "s": "stift",
+  "text": "Mama backt einen Apfelkuchen."
+ },
+ {
+  "key": "938265a8",
+  "s": "stift",
+  "text": "Ben macht eine Girlande."
+ },
+ {
+  "key": "6e4e5981",
+  "s": "stift",
+  "text": "Der Teddy sitzt auf dem Tisch."
+ },
+ {
+  "key": "7ae85cd7",
+  "s": "stift",
+  "text": "Papa telefoniert mit Oma."
+ },
+ {
+  "key": "eabb3a52",
+  "s": "stift",
+  "text": "Mila malt eine Karte."
+ },
+ {
+  "key": "d00d90f5",
+  "s": "mila",
+  "text": "Morgen hat Oma Geburtstag. Kommst du mit?"
+ },
+ {
+  "key": "ed69b4a8",
+  "s": "ich",
+  "text": "Ja, gern! Ich komme mit."
+ },
+ {
+  "key": "ada92b55",
+  "s": "ich",
+  "text": "Es ist zehn Uhr."
+ },
+ {
+  "key": "0b228ce5",
+  "s": "papa",
+  "text": "Was schenken wir Oma?"
+ },
+ {
+  "key": "bf85623c",
+  "s": "ich",
+  "text": "Blumen und eine Karte von Mila!"
+ },
+ {
+  "key": "5c79da27",
+  "s": "ich",
+  "text": "Am Sonntag um drei."
+ },
+ {
+  "key": "4d78ed72",
+  "s": "ich",
+  "text": "Ich heiße Ben."
+ },
+ {
+  "key": "918cccce",
+  "s": "mama",
+  "text": "Wann ist die Party?"
+ },
+ {
+  "key": "812c9dbd",
+  "s": "ich",
+  "text": "Morgen, am Sonntag."
+ },
+ {
+  "key": "927d2944",
+  "s": "ich",
+  "text": "Mit Schokolade."
+ },
+ {
+  "key": "22fbf92f",
+  "s": "ich",
+  "text": "Sie ist grün."
+ },
+ {
+  "key": "14da6a92",
+  "s": "mila",
+  "text": "Wie alt wird Oma?"
+ },
+ {
+  "key": "144f0215",
+  "s": "ich",
+  "text": "Sie wird siebzig."
+ },
+ {
+  "key": "ac006823",
+  "s": "ich",
+  "text": "Sie ist im Garten."
+ },
+ {
+  "key": "be081575",
+  "s": "ich",
+  "text": "Sie heißt Erna."
+ },
+ {
+  "key": "0804978c",
+  "s": "ben",
+  "text": "Darf ich die Girlande machen?"
+ },
+ {
+  "key": "70a8f795",
+  "s": "ich",
+  "text": "Ja, klar! Gute Idee."
+ },
+ {
+  "key": "b54f4c47",
+  "s": "ich",
+  "text": "Nein danke, ich bin satt."
+ },
+ {
+  "key": "920194bc",
+  "s": "ich",
+  "text": "Ja, das kostet zwei Euro."
+ },
+ {
+  "key": "61815d98",
+  "s": "mama",
+  "text": "Kannst du mir bitte helfen?"
+ },
+ {
+  "key": "6755e7b9",
+  "s": "ich",
+  "text": "Ja, natürlich. Was soll ich machen?"
+ },
+ {
+  "key": "7f81349a",
+  "s": "ich",
+  "text": "Nein, das ist mein Teddy."
+ },
+ {
+  "key": "2a10868f",
+  "s": "ich",
+  "text": "Ich bin sieben Jahre alt."
+ },
+ {
+  "key": "145e9708",
+  "s": "stift",
+  "text": "Nein. Mama backt einen Schokoladenkuchen."
+ },
+ {
+  "key": "57c04c11",
+  "s": "stift",
+  "text": "Nein. Der Teddy sitzt auf dem Sofa."
+ },
+ {
+  "key": "a0121dc3",
+  "s": "stift",
+  "text": "Nein. Papa telefoniert mit Herrn Igel, Omas Nachbarn."
+ },
+ {
+  "key": "7ef4eada",
+  "s": "erz",
+  "text": "Am Samstagnachmittag gehen Papa, Mila und Ben in den Laden von Frau Reh."
+ },
+ {
+  "key": "683b6ef7",
+  "s": "erz",
+  "text": "Sie suchen ein Geschenk für Oma. Das ist gar nicht so einfach!"
+ },
+ {
+  "key": "d6bd3a0a",
+  "s": "erz",
+  "text": "Am Ende kaufen sie eine Tasse mit Rosen und einen Blumenstrauß."
+ },
+ {
+  "key": "e407835e",
+  "s": "stift",
+  "text": "der Laden"
+ },
+ {
+  "key": "dd77b684",
+  "s": "stift",
+  "text": "Das ist der Laden."
+ },
+ {
+  "key": "4a442f53",
+  "s": "stift",
+  "text": "der Laden, die Läden"
+ },
+ {
+  "key": "998ec75e",
+  "s": "stift",
+  "text": "Der Laden ist klein und voller schöner Dinge."
+ },
+ {
+  "key": "57c770c3",
+  "s": "stift",
+  "text": "der Laden, das Geschäft: Beide Wörter sind richtig."
+ },
+ {
+  "key": "53aca8cc",
+  "s": "reh",
+  "text": "Herzlich willkommen! Schauen Sie sich gern um."
+ },
+ {
+  "key": "fcbdf6ee",
+  "s": "stift",
+  "text": "Das ist Frau Reh. Ihr gehört der Laden."
+ },
+ {
+  "key": "40cde2a6",
+  "s": "stift",
+  "text": "gehören + Dativ: Wem gehört der Laden? Er gehört Frau Reh."
+ },
+ {
+  "key": "2c8a85b3",
+  "s": "reh",
+  "text": "Guten Tag! Kann ich Ihnen helfen?"
+ },
+ {
+  "key": "415b2d9f",
+  "s": "reh",
+  "text": "Soll ich die Tasse als Geschenk einpacken?"
+ },
+ {
+  "key": "08256615",
+  "s": "stift",
+  "text": "Wo ist das Regal?"
+ },
+ {
+  "key": "87b37a11",
+  "s": "stift",
+  "text": "Im Regal stehen Tassen, Bücher und Kerzen."
+ },
+ {
+  "key": "0132f06d",
+  "s": "stift",
+  "text": "Hohe Dinge stehen im Regal, flache Dinge liegen im Regal."
+ },
+ {
+  "key": "99de362c",
+  "s": "papa",
+  "text": "Schaut mal ins Regal. Da gibt es viele Sachen."
+ },
+ {
+  "key": "608bfba4",
+  "s": "stift",
+  "text": "Die Tasse ist weiß und hat rote Rosen."
+ },
+ {
+  "key": "2b8ddf09",
+  "s": "stift",
+  "text": "gefallen + Dativ: Die Tasse gefällt der Oma. Die Tasse gefällt ihr."
+ },
+ {
+  "key": "65378951",
+  "s": "mila",
+  "text": "Die Tasse mit den Rosen! Die gefällt Oma bestimmt."
+ },
+ {
+  "key": "18789e36",
+  "s": "stift",
+  "text": "die Teekanne"
+ },
+ {
+  "key": "a093c0a4",
+  "s": "stift",
+  "text": "Das ist die Teekanne."
+ },
+ {
+  "key": "d1b3589d",
+  "s": "stift",
+  "text": "die Teekanne, die Teekannen"
+ },
+ {
+  "key": "9d0d6103",
+  "s": "stift",
+  "text": "Wo ist die Teekanne?"
+ },
+ {
+  "key": "2251d474",
+  "s": "stift",
+  "text": "Die Teekanne ist blau und groß."
+ },
+ {
+  "key": "9cb1e888",
+  "s": "stift",
+  "text": "zu teuer heißt: Es kostet mehr, als man bezahlen möchte."
+ },
+ {
+  "key": "0aa80cd0",
+  "s": "papa",
+  "text": "Die Teekanne ist schön, aber zu teuer."
+ },
+ {
+  "key": "357bde0c",
+  "s": "stift",
+  "text": "Wo ist das Buch?"
+ },
+ {
+  "key": "4c5b6ac5",
+  "s": "stift",
+  "text": "Auf dem Buch sind Blumen. Es ist ein Gartenbuch."
+ },
+ {
+  "key": "0c302667",
+  "s": "stift",
+  "text": "das Buch, die Bücher: Aus u wird im Plural ü."
+ },
+ {
+  "key": "f2fe2fae",
+  "s": "mila",
+  "text": "Oma hat schon so viele Bücher."
+ },
+ {
+  "key": "b6cd2c90",
+  "s": "stift",
+  "text": "Wo ist der Schal?"
+ },
+ {
+  "key": "c12ce32a",
+  "s": "stift",
+  "text": "Der Schal ist lila und weich."
+ },
+ {
+  "key": "98b1995e",
+  "s": "stift",
+  "text": "passen: Das passt gut. Der Schal passt zu Omas Jacke."
+ },
+ {
+  "key": "f57b85eb",
+  "s": "papa",
+  "text": "Ein Schal im Mai? Das passt nicht so gut."
+ },
+ {
+  "key": "fad810e1",
+  "s": "stift",
+  "text": "die Duftkerze"
+ },
+ {
+  "key": "a20fa7b1",
+  "s": "stift",
+  "text": "Das ist die Duftkerze."
+ },
+ {
+  "key": "25165655",
+  "s": "stift",
+  "text": "die Duftkerze, die Duftkerzen"
+ },
+ {
+  "key": "fbb9a152",
+  "s": "stift",
+  "text": "Wo ist die Duftkerze?"
+ },
+ {
+  "key": "c60a75c6",
+  "s": "stift",
+  "text": "Die Duftkerze steht in einem Glas und riecht nach Rosen."
+ },
+ {
+  "key": "2d7f9728",
+  "s": "stift",
+  "text": "riechen nach + Dativ: Es riecht nach Rosen, nach Kuchen, nach Kaffee."
+ },
+ {
+  "key": "84784210",
+  "s": "ben",
+  "text": "Mmh, das riecht gut!"
+ },
+ {
+  "key": "e59764bb",
+  "s": "stift",
+  "text": "der Bilderrahmen"
+ },
+ {
+  "key": "da15969b",
+  "s": "stift",
+  "text": "Das ist der Bilderrahmen."
+ },
+ {
+  "key": "067756fa",
+  "s": "stift",
+  "text": "der Bilderrahmen, die Bilderrahmen"
+ },
+ {
+  "key": "1e93ea94",
+  "s": "stift",
+  "text": "Wo ist der Bilderrahmen?"
+ },
+ {
+  "key": "2c6256fd",
+  "s": "stift",
+  "text": "Im Bilderrahmen ist noch kein Foto."
+ },
+ {
+  "key": "4dbda707",
+  "s": "stift",
+  "text": "das Bild und der Rahmen: der Bilderrahmen."
+ },
+ {
+  "key": "c458df65",
+  "s": "papa",
+  "text": "Da passt ein Foto von euch Kindern hinein."
+ },
+ {
+  "key": "5ecd7578",
+  "s": "stift",
+  "text": "Der Ball ist rot und hat weiße Punkte."
+ },
+ {
+  "key": "6af5aebf",
+  "s": "stift",
+  "text": "für + Akkusativ: für Oma, für dich, für mich."
+ },
+ {
+  "key": "e71af99d",
+  "s": "ben",
+  "text": "Der Ball! Den will ich haben!"
+ },
+ {
+  "key": "a7fd39b5",
+  "s": "mila",
+  "text": "Ben, das Geschenk ist für Oma, nicht für dich!"
+ },
+ {
+  "key": "8f7cdf0d",
+  "s": "stift",
+  "text": "der Blumenstrauß"
+ },
+ {
+  "key": "d56764a5",
+  "s": "stift",
+  "text": "Das ist der Blumenstrauß."
+ },
+ {
+  "key": "68a261e0",
+  "s": "stift",
+  "text": "der Blumenstrauß, die Blumensträuße"
+ },
+ {
+  "key": "4953cc8e",
+  "s": "stift",
+  "text": "Wo ist der Blumenstrauß?"
+ },
+ {
+  "key": "2f80ee27",
+  "s": "stift",
+  "text": "Der Blumenstrauß hat gelbe Tulpen und weiße Margeriten."
+ },
+ {
+  "key": "ab2edf1a",
+  "s": "stift",
+  "text": "Zum Geburtstag schenkt man in Deutschland oft Blumen. Das Papier nimmt man vor der Tür ab."
+ },
+ {
+  "key": "62f50427",
+  "s": "reh",
+  "text": "Die Blumen sind ganz frisch. Ich binde Ihnen einen Strauß."
+ },
+ {
+  "key": "785c4a4f",
+  "s": "stift",
+  "text": "Wo ist die Vase?"
+ },
+ {
+  "key": "779087ae",
+  "s": "stift",
+  "text": "In der Vase aus Glas stehen rote Rosen."
+ },
+ {
+  "key": "ef33d2f7",
+  "s": "stift",
+  "text": "aus + Dativ: aus Glas, aus Holz, aus Papier."
+ },
+ {
+  "key": "2d623cc5",
+  "s": "reh",
+  "text": "Vorsicht, die Vase ist zerbrechlich!"
+ },
+ {
+  "key": "38cb3e68",
+  "s": "stift",
+  "text": "das Geschenkpapier"
+ },
+ {
+  "key": "0971c65e",
+  "s": "stift",
+  "text": "Das ist das Geschenkpapier."
+ },
+ {
+  "key": "263bdfde",
+  "s": "stift",
+  "text": "das Geschenkpapier, die Geschenkpapiere"
+ },
+ {
+  "key": "2030e3ed",
+  "s": "stift",
+  "text": "Wo ist das Geschenkpapier?"
+ },
+ {
+  "key": "1dfc911d",
+  "s": "stift",
+  "text": "Das Geschenkpapier ist rosa mit kleinen Herzen."
+ },
+ {
+  "key": "d94aa310",
+  "s": "stift",
+  "text": "das Geschenk und das Papier: das Geschenkpapier."
+ },
+ {
+  "key": "1f418cd6",
+  "s": "reh",
+  "text": "Welches Papier gefällt euch? Rosa oder blau?"
+ },
+ {
+  "key": "deae4bc6",
+  "s": "stift",
+  "text": "die Schleife"
+ },
+ {
+  "key": "e47e3c84",
+  "s": "stift",
+  "text": "Das ist die Schleife."
+ },
+ {
+  "key": "401635b9",
+  "s": "stift",
+  "text": "die Schleife, die Schleifen"
+ },
+ {
+  "key": "19772413",
+  "s": "stift",
+  "text": "Wo ist die Schleife?"
+ },
+ {
+  "key": "c080b941",
+  "s": "stift",
+  "text": "Die Schleife ist rot und glänzt."
+ },
+ {
+  "key": "8594fdce",
+  "s": "stift",
+  "text": "einpacken und auspacken sind trennbar: Frau Reh packt das Geschenk ein. Oma packt es aus."
+ },
+ {
+  "key": "dce5a3f1",
+  "s": "mila",
+  "text": "Darf ich die Schleife machen?"
+ },
+ {
+  "key": "620ff129",
+  "s": "stift",
+  "text": "Wo ist die Kasse?"
+ },
+ {
+  "key": "7b37a0de",
+  "s": "stift",
+  "text": "An der Kasse bezahlt man."
+ },
+ {
+  "key": "10f74bd0",
+  "s": "stift",
+  "text": "In kleinen Läden zahlen viele Leute in Deutschland noch bar."
+ },
+ {
+  "key": "64099e31",
+  "s": "reh",
+  "text": "Das macht zusammen vierundzwanzig Euro."
+ },
+ {
+  "key": "f8b9230b",
+  "s": "papa",
+  "text": "Kann ich mit Karte zahlen?"
+ },
+ {
+  "key": "092dab15",
+  "s": "stift",
+  "text": "Papa hat die Geldbörse in der Hand."
+ },
+ {
+  "key": "bbc0c093",
+  "s": "stift",
+  "text": "Im Laden heißt nehmen oft kaufen: Ich nehme die Tasse."
+ },
+ {
+  "key": "d2fe004e",
+  "s": "papa",
+  "text": "Also, was nehmen wir? Die Tasse oder das Buch?"
+ },
+ {
+  "key": "d9aca041",
+  "s": "stift",
+  "text": "Mila zeigt auf die Tasse."
+ },
+ {
+  "key": "60b9340c",
+  "s": "stift",
+  "text": "jeden Nachmittag: Zeitangaben ohne Präposition stehen im Akkusativ."
+ },
+ {
+  "key": "6de2ce5f",
+  "s": "mila",
+  "text": "Oma trinkt jeden Nachmittag Tee. Die Tasse ist perfekt!"
+ },
+ {
+  "key": "028146fa",
+  "s": "stift",
+  "text": "Ben hält den Ball fest."
+ },
+ {
+  "key": "97d4637a",
+  "s": "stift",
+  "text": "festhalten ist trennbar: Ben hält den Ball fest."
+ },
+ {
+  "key": "4f583361",
+  "s": "ben",
+  "text": "Bitte, Papa, nur ein kleiner Ball!"
+ },
+ {
+  "key": "1f08f097",
+  "s": "stift",
+  "text": "Der Laden gehört Frau Reh."
+ },
+ {
+  "key": "1c4ec8cf",
+  "s": "stift",
+  "text": "Die Tasse hat rote Rosen."
+ },
+ {
+  "key": "10cad5f6",
+  "s": "stift",
+  "text": "Ben möchte einen Teddy haben."
+ },
+ {
+  "key": "63f054e7",
+  "s": "stift",
+  "text": "Die Teekanne ist billig."
+ },
+ {
+  "key": "3dbc02ad",
+  "s": "stift",
+  "text": "Der Schal ist lila."
+ },
+ {
+  "key": "bfe0ca9b",
+  "s": "stift",
+  "text": "Das Geschenkpapier ist rosa mit Herzen."
+ },
+ {
+  "key": "736c9eaa",
+  "s": "stift",
+  "text": "Papa zahlt dreißig Euro."
+ },
+ {
+  "key": "60c988df",
+  "s": "ich",
+  "text": "Ja, bitte. Wir suchen ein Geschenk für unsere Oma."
+ },
+ {
+  "key": "96c11cad",
+  "s": "ich",
+  "text": "Ja, ich bin vier."
+ },
+ {
+  "key": "df642eb5",
+  "s": "reh",
+  "text": "Was mag Ihre Oma denn?"
+ },
+ {
+  "key": "d164daae",
+  "s": "ich",
+  "text": "Sie trinkt gern Tee und liebt ihren Garten."
+ },
+ {
+  "key": "6f91b0fe",
+  "s": "ich",
+  "text": "Sie kostet zehn Euro."
+ },
+ {
+  "key": "aa3a5d3a",
+  "s": "ich",
+  "text": "Sie ist am Sonntag."
+ },
+ {
+  "key": "a2da7a8f",
+  "s": "reh",
+  "text": "Die Tasse kostet vierzehn Euro. Ist das okay?"
+ },
+ {
+  "key": "b824e02d",
+  "s": "ich",
+  "text": "Ja, die nehmen wir."
+ },
+ {
+  "key": "175d01a1",
+  "s": "ich",
+  "text": "Nein, ich habe keinen Teddy."
+ },
+ {
+  "key": "83ee24e7",
+  "s": "ich",
+  "text": "Gute Nacht!"
+ },
+ {
+  "key": "b7884d5d",
+  "s": "ich",
+  "text": "Ja, gern. Das ist sehr nett."
+ },
+ {
+  "key": "dc01274d",
+  "s": "ich",
+  "text": "Nein, sie ist rund."
+ },
+ {
+  "key": "8bcb8913",
+  "s": "ich",
+  "text": "Ja, um drei Uhr."
+ },
+ {
+  "key": "6891c72d",
+  "s": "reh",
+  "text": "Möchten Sie auch Blumen?"
+ },
+ {
+  "key": "bd4e5bf5",
+  "s": "ich",
+  "text": "Ja, einen kleinen Strauß Tulpen, bitte."
+ },
+ {
+  "key": "cfc5ba58",
+  "s": "ich",
+  "text": "Nein, ich spiele Fußball."
+ },
+ {
+  "key": "695f54d5",
+  "s": "ich",
+  "text": "Ja, sie ist blau."
+ },
+ {
+  "key": "f651c7d9",
+  "s": "ich",
+  "text": "Hier, bitte. Kann ich mit Karte zahlen?"
+ },
+ {
+  "key": "4815718a",
+  "s": "ich",
+  "text": "Danke, mir geht es gut."
+ },
+ {
+  "key": "cfbf5ead",
+  "s": "ich",
+  "text": "Das ist mein Ball."
+ },
+ {
+  "key": "6e8094df",
+  "s": "reh",
+  "text": "Vielen Dank und viel Spaß bei der Party!"
+ },
+ {
+  "key": "9199434d",
+  "s": "ich",
+  "text": "Danke! Auf Wiedersehen!"
+ },
+ {
+  "key": "2b3d59c8",
+  "s": "ich",
+  "text": "Die Schere ist rot."
+ },
+ {
+  "key": "7b4821b4",
+  "s": "ich",
+  "text": "Ich habe Hunger."
+ },
+ {
+  "key": "e6fc45d5",
+  "s": "stift",
+  "text": "Nein. Ben möchte den roten Ball haben."
+ },
+ {
+  "key": "794c0968",
+  "s": "stift",
+  "text": "Nein. Die Teekanne ist zu teuer."
+ },
+ {
+  "key": "c7ab3407",
+  "s": "stift",
+  "text": "Nein. Es kostet vierundzwanzig Euro."
+ },
+ {
+  "key": "74c01b87",
+  "s": "erz",
+  "text": "Am Sonntagmorgen backen Mama, Mila und Ben den Geburtstagskuchen."
+ },
+ {
+  "key": "be3cfc9d",
+  "s": "erz",
+  "text": "Mama liest das Rezept vor, Mila wiegt und Ben rührt."
+ },
+ {
+  "key": "3f989dbf",
+  "s": "erz",
+  "text": "Nach fünfzig Minuten riecht die ganze Wohnung nach Schokolade."
+ },
+ {
+  "key": "93a94783",
+  "s": "stift",
+  "text": "In der Küche ist es warm und es riecht gut."
+ },
+ {
+  "key": "2b498718",
+  "s": "stift",
+  "text": "backen, Perfekt: Wir haben gebacken."
+ },
+ {
+  "key": "77e679bb",
+  "s": "erz",
+  "text": "Heute ist Backtag bei Familie Bär."
+ },
+ {
+  "key": "b53b2a15",
+  "s": "stift",
+  "text": "das Rezept"
+ },
+ {
+  "key": "343e24ed",
+  "s": "stift",
+  "text": "Das ist das Rezept."
+ },
+ {
+  "key": "67308876",
+  "s": "stift",
+  "text": "das Rezept, die Rezepte"
+ },
+ {
+  "key": "413e3746",
+  "s": "stift",
+  "text": "Wo ist das Rezept?"
+ },
+ {
+  "key": "88c04bc3",
+  "s": "stift",
+  "text": "Das Rezept liegt offen auf dem Tisch."
+ },
+ {
+  "key": "c61e142c",
+  "s": "stift",
+  "text": "Im Rezept steht der Imperativ: Nimm! Rühr! Gib! Für zwei Personen: Nehmt! Rührt!"
+ },
+ {
+  "key": "869f5f0f",
+  "s": "mama",
+  "text": "Hört zu: Nehmt zweihundert Gramm Mehl und drei Eier."
+ },
+ {
+  "key": "c7ac7c63",
+  "s": "stift",
+  "text": "das Mehl"
+ },
+ {
+  "key": "08858bc3",
+  "s": "stift",
+  "text": "Das ist das Mehl."
+ },
+ {
+  "key": "d438e67c",
+  "s": "stift",
+  "text": "Wo ist das Mehl?"
+ },
+ {
+  "key": "b4687aa8",
+  "s": "stift",
+  "text": "Das Mehl ist in einer Tüte. Es ist weiß."
+ },
+ {
+  "key": "43d5c552",
+  "s": "stift",
+  "text": "Mehl hat keinen Plural: ein Kilo Mehl, zweihundert Gramm Mehl."
+ },
+ {
+  "key": "f5cb63d7",
+  "s": "mila",
+  "text": "Zweihundert Gramm Mehl. Ich wiege es ab."
+ },
+ {
+  "key": "bd4fd2d4",
+  "s": "stift",
+  "text": "der Zucker"
+ },
+ {
+  "key": "42222f0a",
+  "s": "stift",
+  "text": "Das ist der Zucker."
+ },
+ {
+  "key": "eadabe89",
+  "s": "stift",
+  "text": "Wo ist der Zucker?"
+ },
+ {
+  "key": "55fbf81a",
+  "s": "stift",
+  "text": "Der Zucker ist in einem Glas."
+ },
+ {
+  "key": "d4a02e72",
+  "s": "stift",
+  "text": "dazugeben ist trennbar: Gib den Zucker dazu!"
+ },
+ {
+  "key": "01cb31cf",
+  "s": "mama",
+  "text": "Gib bitte hundertfünfzig Gramm Zucker dazu."
+ },
+ {
+  "key": "dd6b1f6b",
+  "s": "stift",
+  "text": "das Ei"
+ },
+ {
+  "key": "8fa645cb",
+  "s": "stift",
+  "text": "Das ist das Ei."
+ },
+ {
+  "key": "d750d748",
+  "s": "stift",
+  "text": "das Ei, die Eier"
+ },
+ {
+  "key": "4b8c7a24",
+  "s": "stift",
+  "text": "Wo ist das Ei?"
+ },
+ {
+  "key": "065cd88e",
+  "s": "stift",
+  "text": "Im Eierkarton sind noch drei Eier."
+ },
+ {
+  "key": "22f42e5e",
+  "s": "stift",
+  "text": "das Ei, die Eier. Zwölf Eier sind ein Dutzend."
+ },
+ {
+  "key": "6c7bdc52",
+  "s": "ben",
+  "text": "Darf ich die Eier aufschlagen?"
+ },
+ {
+  "key": "e06418ed",
+  "s": "stift",
+  "text": "die Butter"
+ },
+ {
+  "key": "14197475",
+  "s": "stift",
+  "text": "Das ist die Butter."
+ },
+ {
+  "key": "9724817e",
+  "s": "stift",
+  "text": "Wo ist die Butter?"
+ },
+ {
+  "key": "9745a964",
+  "s": "stift",
+  "text": "Die Butter liegt auf einem Teller."
+ },
+ {
+  "key": "3cfc5d50",
+  "s": "stift",
+  "text": "weich und hart: Die Butter aus dem Kühlschrank ist hart."
+ },
+ {
+  "key": "8c383d06",
+  "s": "mama",
+  "text": "Die Butter muss weich sein."
+ },
+ {
+  "key": "dd90537c",
+  "s": "stift",
+  "text": "die Milch"
+ },
+ {
+  "key": "9f667cfa",
+  "s": "stift",
+  "text": "Das ist die Milch."
+ },
+ {
+  "key": "954ca471",
+  "s": "stift",
+  "text": "Wo ist die Milch?"
+ },
+ {
+  "key": "737062a6",
+  "s": "stift",
+  "text": "Die Milch ist in einer Flasche."
+ },
+ {
+  "key": "4115a8dd",
+  "s": "stift",
+  "text": "Für Flüssigkeiten sagt man Liter und Milliliter: ein Liter Milch."
+ },
+ {
+  "key": "81721bd8",
+  "s": "mama",
+  "text": "Jetzt noch hundert Milliliter Milch."
+ },
+ {
+  "key": "931a60e2",
+  "s": "stift",
+  "text": "die Schokolade"
+ },
+ {
+  "key": "d0362878",
+  "s": "stift",
+  "text": "Das ist die Schokolade."
+ },
+ {
+  "key": "df0f5b1f",
+  "s": "stift",
+  "text": "Wo ist die Schokolade?"
+ },
+ {
+  "key": "5a37337f",
+  "s": "stift",
+  "text": "Die Schokolade ist dunkel. Ein Stück fehlt schon!"
+ },
+ {
+  "key": "e16c952a",
+  "s": "stift",
+  "text": "eine Tafel Schokolade, ein Stück Schokolade: So zählt man Schokolade."
+ },
+ {
+  "key": "620c213f",
+  "s": "ben",
+  "text": "Mmh, ich probiere nur ein kleines Stück ,"
+ },
+ {
+  "key": "c713de92",
+  "s": "mama",
+  "text": "Ben! Die Schokolade ist für den Kuchen!"
+ },
+ {
+  "key": "6170b1fa",
+  "s": "stift",
+  "text": "die Schüssel"
+ },
+ {
+  "key": "570fcc90",
+  "s": "stift",
+  "text": "Das ist die Schüssel."
+ },
+ {
+  "key": "d858b2e5",
+  "s": "stift",
+  "text": "die Schüssel, die Schüsseln"
+ },
+ {
+  "key": "348c9ef7",
+  "s": "stift",
+  "text": "Wo ist die Schüssel?"
+ },
+ {
+  "key": "486e53d4",
+  "s": "stift",
+  "text": "Die Schüssel ist groß und gelb."
+ },
+ {
+  "key": "0548be3a",
+  "s": "stift",
+  "text": "In die Schüssel: Wohin? Akkusativ. In der Schüssel: Wo? Dativ."
+ },
+ {
+  "key": "d9c1b127",
+  "s": "ben",
+  "text": "Darf ich nachher die Schüssel auslecken?"
+ },
+ {
+  "key": "01926812",
+  "s": "stift",
+  "text": "der Kochlöffel"
+ },
+ {
+  "key": "23801c48",
+  "s": "stift",
+  "text": "Das ist der Kochlöffel."
+ },
+ {
+  "key": "9bfa80aa",
+  "s": "stift",
+  "text": "der Kochlöffel, die Kochlöffel"
+ },
+ {
+  "key": "c55dbc9f",
+  "s": "stift",
+  "text": "Wo ist der Kochlöffel?"
+ },
+ {
+  "key": "618632f2",
+  "s": "stift",
+  "text": "Ben rührt mit einem Kochlöffel."
+ },
+ {
+  "key": "8e9f65f6",
+  "s": "stift",
+  "text": "Rühr den Teig! Der Teig ist die Masse für den Kuchen."
+ },
+ {
+  "key": "f330989f",
+  "s": "ben",
+  "text": "Ich rühre ganz schnell!"
+ },
+ {
+  "key": "039d6427",
+  "s": "stift",
+  "text": "die Küchenwaage"
+ },
+ {
+  "key": "26566def",
+  "s": "stift",
+  "text": "Das ist die Küchenwaage."
+ },
+ {
+  "key": "5f5bf531",
+  "s": "stift",
+  "text": "die Küchenwaage, die Küchenwaagen"
+ },
+ {
+  "key": "64f98a00",
+  "s": "stift",
+  "text": "Wo ist die Küchenwaage?"
+ },
+ {
+  "key": "45b332b4",
+  "s": "stift",
+  "text": "Auf der Waage steht: zweihundert Gramm."
+ },
+ {
+  "key": "a39f2b7b",
+  "s": "stift",
+  "text": "Ein Kilo hat tausend Gramm. Ein Pfund hat fünfhundert Gramm."
+ },
+ {
+  "key": "1af83db1",
+  "s": "mila",
+  "text": "Genau zweihundert Gramm! Fertig."
+ },
+ {
+  "key": "5e840b22",
+  "s": "stift",
+  "text": "die Backform"
+ },
+ {
+  "key": "4d797ad8",
+  "s": "stift",
+  "text": "Das ist die Backform."
+ },
+ {
+  "key": "11c84ebe",
+  "s": "stift",
+  "text": "die Backform, die Backformen"
+ },
+ {
+  "key": "11191a9f",
+  "s": "stift",
+  "text": "Wo ist die Backform?"
+ },
+ {
+  "key": "e82c4155",
+  "s": "stift",
+  "text": "Die Backform ist rund."
+ },
+ {
+  "key": "41e5a131",
+  "s": "stift",
+  "text": "rund, eckig, oval: Die Backform ist rund."
+ },
+ {
+  "key": "13709f12",
+  "s": "mama",
+  "text": "Jetzt kommt der Teig in die Backform."
+ },
+ {
+  "key": "28a9f3d6",
+  "s": "stift",
+  "text": "Wo ist der Backofen?"
+ },
+ {
+  "key": "3347f02a",
+  "s": "stift",
+  "text": "Der Backofen ist an. Er hat hundertachtzig Grad."
+ },
+ {
+  "key": "845d5f93",
+  "s": "stift",
+  "text": "Backofen oder Ofen: Beide Wörter sind richtig."
+ },
+ {
+  "key": "3effdd8c",
+  "s": "mama",
+  "text": "Der Kuchen bleibt fünfzig Minuten im Ofen."
+ },
+ {
+  "key": "bd8bfcc8",
+  "s": "stift",
+  "text": "die Schürze"
+ },
+ {
+  "key": "cd23f8e6",
+  "s": "stift",
+  "text": "Das ist die Schürze."
+ },
+ {
+  "key": "3ecb9967",
+  "s": "stift",
+  "text": "die Schürze, die Schürzen"
+ },
+ {
+  "key": "7803635d",
+  "s": "stift",
+  "text": "Wo ist die Schürze?"
+ },
+ {
+  "key": "67c91ff6",
+  "s": "stift",
+  "text": "Mila trägt eine Schürze mit Punkten."
+ },
+ {
+  "key": "85ea7452",
+  "s": "stift",
+  "text": "tragen: ich trage, du trägst, sie trägt eine Schürze."
+ },
+ {
+  "key": "eb334816",
+  "s": "mila",
+  "text": "Mit der Schürze bleibt mein Kleid sauber."
+ },
+ {
+  "key": "fe155f36",
+  "s": "stift",
+  "text": "die Kerze"
+ },
+ {
+  "key": "e70d46fc",
+  "s": "stift",
+  "text": "Das ist die Kerze."
+ },
+ {
+  "key": "06cce977",
+  "s": "stift",
+  "text": "die Kerze, die Kerzen"
+ },
+ {
+  "key": "21ea9123",
+  "s": "stift",
+  "text": "Wo ist die Kerze?"
+ },
+ {
+  "key": "6641d1d6",
+  "s": "stift",
+  "text": "Auf dem Tisch liegen zwei Kerzen: eine Sieben und eine Null."
+ },
+ {
+  "key": "b41484f9",
+  "s": "stift",
+  "text": "Achtung: siebzehn ist 17, siebzig ist 70."
+ },
+ {
+  "key": "c939b9ab",
+  "s": "mila",
+  "text": "Siebzig! Die Kerzen kommen später auf den Kuchen."
+ },
+ {
+  "key": "ea89d67a",
+  "s": "stift",
+  "text": "Mama liest das Rezept."
+ },
+ {
+  "key": "f6a03fdc",
+  "s": "stift",
+  "text": "zuerst, dann, danach, zum Schluss: So sagt man die Reihenfolge."
+ },
+ {
+  "key": "2aaad288",
+  "s": "mama",
+  "text": "Zuerst die Butter und den Zucker, dann die Eier."
+ },
+ {
+  "key": "42eeedbc",
+  "s": "stift",
+  "text": "Mila wiegt das Mehl."
+ },
+ {
+  "key": "f9bbf66c",
+  "s": "stift",
+  "text": "genug: Ist das genug? Nein, wir brauchen noch mehr."
+ },
+ {
+  "key": "edc00de1",
+  "s": "mila",
+  "text": "Mama, ist das genug Mehl?"
+ },
+ {
+  "key": "160b381c",
+  "s": "stift",
+  "text": "Ben rührt den Teig. Er hat Mehl auf der Nase."
+ },
+ {
+  "key": "0b149ba3",
+  "s": "stift",
+  "text": "Wenn jemand niest, sagt man: Gesundheit!"
+ },
+ {
+  "key": "69d4ae2f",
+  "s": "ben",
+  "text": "Hatschi! Mehl in der Nase!"
+ },
+ {
+  "key": "635aad7f",
+  "s": "mama",
+  "text": "Gesundheit, Ben!"
+ },
+ {
+  "key": "98354eb2",
+  "s": "stift",
+  "text": "In den Kuchen kommt Schokolade."
+ },
+ {
+  "key": "597e4cd7",
+  "s": "stift",
+  "text": "Mila wiegt zweihundert Gramm Mehl."
+ },
+ {
+  "key": "51341f54",
+  "s": "stift",
+  "text": "Der Backofen hat hundert Grad."
+ },
+ {
+  "key": "e79412eb",
+  "s": "stift",
+  "text": "Im Eierkarton sind zehn Eier."
+ },
+ {
+  "key": "4560ab0a",
+  "s": "stift",
+  "text": "Ben rührt mit dem Kochlöffel."
+ },
+ {
+  "key": "a5d446db",
+  "s": "stift",
+  "text": "Die Backform ist eckig."
+ },
+ {
+  "key": "47c4bde1",
+  "s": "stift",
+  "text": "Mila trägt eine Schürze."
+ },
+ {
+  "key": "aa1311b0",
+  "s": "mama",
+  "text": "Kannst du mir bitte die Eier geben?"
+ },
+ {
+  "key": "b5b9d0ab",
+  "s": "ich",
+  "text": "Ja, klar. Hier sind die Eier."
+ },
+ {
+  "key": "4afa16b9",
+  "s": "ich",
+  "text": "Nein, ich habe Durst."
+ },
+ {
+  "key": "878a905a",
+  "s": "ich",
+  "text": "Die Eier sind am Sonntag."
+ },
+ {
+  "key": "14d9f344",
+  "s": "mila",
+  "text": "Wie viel Mehl brauchen wir?"
+ },
+ {
+  "key": "1b01b54e",
+  "s": "ich",
+  "text": "Zweihundert Gramm."
+ },
+ {
+  "key": "3b5fbfad",
+  "s": "ich",
+  "text": "Mit dem Bus."
+ },
+ {
+  "key": "f54128cf",
+  "s": "mama",
+  "text": "Wie lange bleibt der Kuchen im Ofen?"
+ },
+ {
+  "key": "e41d3d05",
+  "s": "ich",
+  "text": "Fünfzig Minuten."
+ },
+ {
+  "key": "26cff04f",
+  "s": "ich",
+  "text": "Hundert Gramm."
+ },
+ {
+  "key": "20e89a60",
+  "s": "ich",
+  "text": "In der Küche."
+ },
+ {
+  "key": "648f8a0e",
+  "s": "ben",
+  "text": "Darf ich die Schüssel auslecken?"
+ },
+ {
+  "key": "7b6cdb26",
+  "s": "ich",
+  "text": "Ja, aber erst nach dem Backen."
+ },
+ {
+  "key": "1a96d314",
+  "s": "ich",
+  "text": "Ja, sie ist rund."
+ },
+ {
+  "key": "0f372e21",
+  "s": "ich",
+  "text": "Nein, ich bin Mila."
+ },
+ {
+  "key": "ab8014e9",
+  "s": "mama",
+  "text": "Riechst du das?"
+ },
+ {
+  "key": "86c01815",
+  "s": "ich",
+  "text": "Ja! Es riecht nach Schokolade."
+ },
+ {
+  "key": "488623ce",
+  "s": "ich",
+  "text": "Ja, es ist kalt."
+ },
+ {
+  "key": "b31fd51b",
+  "s": "ich",
+  "text": "Nein, das ist mein Ball."
+ },
+ {
+  "key": "ec08386e",
+  "s": "mila",
+  "text": "Ist der Kuchen schon fertig?"
+ },
+ {
+  "key": "28af976c",
+  "s": "ich",
+  "text": "Noch nicht. Noch zehn Minuten."
+ },
+ {
+  "key": "e5ddad25",
+  "s": "ich",
+  "text": "Ja, er ist blau."
+ },
+ {
+  "key": "9a2c0c0a",
+  "s": "stift",
+  "text": "Nein. Der Backofen hat hundertachtzig Grad."
+ },
+ {
+  "key": "ae5b6244",
+  "s": "stift",
+  "text": "Nein. Im Eierkarton sind drei Eier."
+ },
+ {
+  "key": "d15529d5",
+  "s": "stift",
+  "text": "Nein. Die Backform ist rund."
+ },
+ {
+  "key": "05bc5159",
+  "s": "erz",
+  "text": "Um drei Uhr fährt Familie Bär zu Oma. Herr Igel öffnet leise das Gartentor."
+ },
+ {
+  "key": "fa0c9be3",
+  "s": "erz",
+  "text": "Mila klingelt, und alle verstecken sich schnell hinter der Hecke."
+ },
+ {
+  "key": "41c603c2",
+  "s": "erz",
+  "text": "Oma öffnet die Tür und alle rufen: Überraschung!"
+ },
+ {
+  "key": "ea238b8a",
+  "s": "stift",
+  "text": "der Vorgarten"
+ },
+ {
+  "key": "02540ba0",
+  "s": "stift",
+  "text": "Das ist der Vorgarten."
+ },
+ {
+  "key": "c082e269",
+  "s": "stift",
+  "text": "der Vorgarten, die Vorgärten"
+ },
+ {
+  "key": "84234c08",
+  "s": "stift",
+  "text": "Vor Omas Haus ist ein kleiner Garten."
+ },
+ {
+  "key": "c95b92f1",
+  "s": "stift",
+  "text": "vor + Dativ: Der Vorgarten ist vor dem Haus, der Garten ist hinter dem Haus."
+ },
+ {
+  "key": "716a85ed",
+  "s": "erz",
+  "text": "Es ist warm und die Sonne scheint. Ein perfekter Tag für eine Party!"
+ },
+ {
+  "key": "048d2392",
+  "s": "stift",
+  "text": "das Haus"
+ },
+ {
+  "key": "dbaff560",
+  "s": "stift",
+  "text": "Das ist das Haus."
+ },
+ {
+  "key": "2dc28807",
+  "s": "stift",
+  "text": "das Haus, die Häuser"
+ },
+ {
+  "key": "cb4ef4ff",
+  "s": "stift",
+  "text": "Wo ist das Haus?"
+ },
+ {
+  "key": "a254c352",
+  "s": "stift",
+  "text": "Omas Haus ist klein und hat ein rotes Dach."
+ },
+ {
+  "key": "ce6050cc",
+  "s": "stift",
+  "text": "seit + Dativ: seit vierzig Jahren, seit einem Jahr."
+ },
+ {
+  "key": "1d043833",
+  "s": "erz",
+  "text": "Hier wohnt Oma Erna schon seit vierzig Jahren."
+ },
+ {
+  "key": "cdf97777",
+  "s": "stift",
+  "text": "Wo ist die Haustür?"
+ },
+ {
+  "key": "db2fe9be",
+  "s": "stift",
+  "text": "Die Haustür ist grün und steht offen."
+ },
+ {
+  "key": "0455c6ae",
+  "s": "stift",
+  "text": "offen und zu: Die Tür ist offen. Am Abend ist die Tür zu."
+ },
+ {
+  "key": "e5cec708",
+  "s": "oma",
+  "text": "Nanu? Wer klingelt denn da?"
+ },
+ {
+  "key": "4127f7ee",
+  "s": "stift",
+  "text": "Wo ist die Klingel?"
+ },
+ {
+  "key": "3e79720c",
+  "s": "stift",
+  "text": "Die Klingel ist neben der Tür."
+ },
+ {
+  "key": "9716f9e6",
+  "s": "stift",
+  "text": "neben + Dativ: neben der Tür, neben dem Fenster."
+ },
+ {
+  "key": "9534d31d",
+  "s": "erz",
+  "text": "Ding, dong! Mila hat geklingelt."
+ },
+ {
+  "key": "f0b0db5e",
+  "s": "stift",
+  "text": "Am Gartentor hängt ein Briefkasten."
+ },
+ {
+  "key": "561c1514",
+  "s": "stift",
+  "text": "Auf deutschen Briefkästen steht der Name. So kommt die Post an."
+ },
+ {
+  "key": "5d55834d",
+  "s": "erz",
+  "text": "Auf dem Briefkasten steht: E. Bär."
+ },
+ {
+  "key": "d10c7d0d",
+  "s": "stift",
+  "text": "die Hecke"
+ },
+ {
+  "key": "3d3a1a9d",
+  "s": "stift",
+  "text": "Das ist die Hecke."
+ },
+ {
+  "key": "8528b15d",
+  "s": "stift",
+  "text": "die Hecke, die Hecken"
+ },
+ {
+  "key": "177a9fae",
+  "s": "stift",
+  "text": "Wo ist die Hecke?"
+ },
+ {
+  "key": "dc0c9d4f",
+  "s": "stift",
+  "text": "Die Hecke ist hoch und grün."
+ },
+ {
+  "key": "3fed9b98",
+  "s": "stift",
+  "text": "hinter + Dativ: Die Familie steht hinter der Hecke."
+ },
+ {
+  "key": "0e1dd302",
+  "s": "ben",
+  "text": "Psst! Ich bin ganz leise."
+ },
+ {
+  "key": "e817a917",
+  "s": "mila",
+  "text": "Hinter der Hecke sieht Oma uns nicht."
+ },
+ {
+  "key": "09961b0d",
+  "s": "stift",
+  "text": "das Gartentor"
+ },
+ {
+  "key": "637d6595",
+  "s": "stift",
+  "text": "Das ist das Gartentor."
+ },
+ {
+  "key": "6da20d56",
+  "s": "stift",
+  "text": "das Gartentor, die Gartentore"
+ },
+ {
+  "key": "6e5112be",
+  "s": "stift",
+  "text": "Wo ist das Gartentor?"
+ },
+ {
+  "key": "a4c9794e",
+  "s": "stift",
+  "text": "Das Gartentor ist aus Holz und steht offen."
+ },
+ {
+  "key": "d2692f67",
+  "s": "stift",
+  "text": "Ein Tor ist groß, eine Tür ist kleiner: das Gartentor, aber die Haustür."
+ },
+ {
+  "key": "a268f743",
+  "s": "igel",
+  "text": "Kommt rein, aber leise!"
+ },
+ {
+  "key": "b8bc820a",
+  "s": "stift",
+  "text": "der Zaun"
+ },
+ {
+  "key": "00283ee8",
+  "s": "stift",
+  "text": "Das ist der Zaun."
+ },
+ {
+  "key": "389bde50",
+  "s": "stift",
+  "text": "der Zaun, die Zäune"
+ },
+ {
+  "key": "8814db27",
+  "s": "stift",
+  "text": "Wo ist der Zaun?"
+ },
+ {
+  "key": "6721f92c",
+  "s": "stift",
+  "text": "Der Zaun ist weiß."
+ },
+ {
+  "key": "39af349b",
+  "s": "stift",
+  "text": "über den Zaun schauen: Wohin? Akkusativ."
+ },
+ {
+  "key": "8df3e615",
+  "s": "erz",
+  "text": "Über den Zaun schaut Herr Igel und lacht."
+ },
+ {
+  "key": "4fa96aa8",
+  "s": "stift",
+  "text": "die Rose"
+ },
+ {
+  "key": "e949a3ee",
+  "s": "stift",
+  "text": "Das ist die Rose."
+ },
+ {
+  "key": "051719d5",
+  "s": "stift",
+  "text": "die Rose, die Rosen"
+ },
+ {
+  "key": "bb73710d",
+  "s": "stift",
+  "text": "Wo ist die Rose?"
+ },
+ {
+  "key": "ca3593d3",
+  "s": "stift",
+  "text": "Die Rosen sind rot und rosa."
+ },
+ {
+  "key": "c920d612",
+  "s": "stift",
+  "text": "Die Rose ist Omas Lieblingsblume."
+ },
+ {
+  "key": "f14ceee9",
+  "s": "oma",
+  "text": "Meine Rosen blühen dieses Jahr so schön!"
+ },
+ {
+  "key": "29ad6173",
+  "s": "stift",
+  "text": "Wo ist das Auto?"
+ },
+ {
+  "key": "b2a214c4",
+  "s": "stift",
+  "text": "Das Auto von Familie Bär ist blau."
+ },
+ {
+  "key": "a04a0131",
+  "s": "stift",
+  "text": "mit + Dativ: Wir fahren mit dem Auto."
+ },
+ {
+  "key": "50b358ab",
+  "s": "papa",
+  "text": "Ich parke um die Ecke. Oma darf das Auto nicht sehen!"
+ },
+ {
+  "key": "b85b27d1",
+  "s": "stift",
+  "text": "der Luftballon"
+ },
+ {
+  "key": "8ccd7e69",
+  "s": "stift",
+  "text": "Das ist der Luftballon."
+ },
+ {
+  "key": "d13ecf7f",
+  "s": "stift",
+  "text": "der Luftballon, die Luftballons"
+ },
+ {
+  "key": "8c320f92",
+  "s": "stift",
+  "text": "Wo ist der Luftballon?"
+ },
+ {
+  "key": "4997d75a",
+  "s": "stift",
+  "text": "Ben hält drei Luftballons: rot, gelb und blau."
+ },
+ {
+  "key": "1daf5bd0",
+  "s": "stift",
+  "text": "die Luft und der Ballon: der Luftballon."
+ },
+ {
+  "key": "6085a671",
+  "s": "ben",
+  "text": "Ich halte die Luftballons ganz fest!"
+ },
+ {
+  "key": "a2744774",
+  "s": "stift",
+  "text": "Wo ist das Geschenk?"
+ },
+ {
+  "key": "83edaf2c",
+  "s": "stift",
+  "text": "Mila hält das Geschenk mit der roten Schleife."
+ },
+ {
+  "key": "8e94918d",
+  "s": "stift",
+  "text": "hoffentlich heißt: I hope. Hoffentlich scheint die Sonne!"
+ },
+ {
+  "key": "9f983304",
+  "s": "mila",
+  "text": "Hoffentlich gefällt Oma die Tasse!"
+ },
+ {
+  "key": "2b1176c6",
+  "s": "stift",
+  "text": "Mama trägt den Kuchen auf einer Kuchenplatte."
+ },
+ {
+  "key": "2bb1d9dc",
+  "s": "stift",
+  "text": "der Kuchen, die Kuchen: Singular und Plural sind gleich."
+ },
+ {
+  "key": "c2dac070",
+  "s": "mama",
+  "text": "Vorsicht mit dem Kuchen! Er ist noch warm."
+ },
+ {
+  "key": "1adfd48b",
+  "s": "stift",
+  "text": "Papa versteckt den Blumenstrauß hinter dem Rücken."
+ },
+ {
+  "key": "cd315db1",
+  "s": "stift",
+  "text": "Papa sagt zu Oma Mama, denn sie ist seine Mutter."
+ },
+ {
+  "key": "6157aca2",
+  "s": "papa",
+  "text": "Die Tulpen sind für dich, Mama!"
+ },
+ {
+  "key": "bc4982ec",
+  "s": "stift",
+  "text": "Wo ist der Nachbar?"
+ },
+ {
+  "key": "abbfefbc",
+  "s": "stift",
+  "text": "Herr Igel ist Omas Nachbar. Er hat einen Strohhut."
+ },
+ {
+  "key": "76f5f3db",
+  "s": "stift",
+  "text": "der Nachbar, die Nachbarin: Nachbarn wohnen neben uns."
+ },
+ {
+  "key": "d070c8aa",
+  "s": "igel",
+  "text": "Ich habe nichts gesagt! Es ist ein Geheimnis."
+ },
+ {
+  "key": "0d0ed06e",
+  "s": "stift",
+  "text": "Oma Erna"
+ },
+ {
+  "key": "4c90dfac",
+  "s": "stift",
+  "text": "Das ist Oma Erna."
+ },
+ {
+  "key": "6b24c5b1",
+  "s": "stift",
+  "text": "Oma steht in der Tür und lacht."
+ },
+ {
+  "key": "29fe3a11",
+  "s": "stift",
+  "text": "Oma ist die Mutter von Papa. Papa ist ihr Sohn."
+ },
+ {
+  "key": "0593a6f8",
+  "s": "oma",
+  "text": "Nein! Das ist ja eine Überraschung!"
+ },
+ {
+  "key": "4a4e8aae",
+  "s": "oma",
+  "text": "Meine Lieben! Kommt herein!"
+ },
+ {
+  "key": "498fd69c",
+  "s": "stift",
+  "text": "Mila springt hinter der Hecke hervor."
+ },
+ {
+  "key": "276c9fbb",
+  "s": "stift",
+  "text": "Alles Gute zum Geburtstag! So gratuliert man in Deutschland."
+ },
+ {
+  "key": "6be964f9",
+  "s": "mila",
+  "text": "Überraschung! Alles Gute zum Geburtstag, Oma!"
+ },
+ {
+  "key": "e41a2ec0",
+  "s": "stift",
+  "text": "Ben hat drei Luftballons in der Hand."
+ },
+ {
+  "key": "8f98fd17",
+  "s": "stift",
+  "text": "Kinder sagen zu ihrer Großmutter oft Oma und zum Großvater Opa."
+ },
+ {
+  "key": "53942dc4",
+  "s": "ben",
+  "text": "Überraschung! Oma, du bist jetzt siebzig!"
+ },
+ {
+  "key": "c23bb821",
+  "s": "stift",
+  "text": "Mama trägt den Kuchen."
+ },
+ {
+  "key": "ab99f4b7",
+  "s": "stift",
+  "text": "Herzlichen Glückwunsch zum Geburtstag! Das sagt man auch zu Erwachsenen."
+ },
+ {
+  "key": "114897d9",
+  "s": "mama",
+  "text": "Herzlichen Glückwunsch, Erna!"
+ },
+ {
+  "key": "0de197a5",
+  "s": "stift",
+  "text": "Papa steht hinter der Hecke und lacht."
+ },
+ {
+  "key": "6a65d1c7",
+  "s": "stift",
+  "text": "hinter dem Rücken: hinter + Dativ."
+ },
+ {
+  "key": "3ce3bd50",
+  "s": "papa",
+  "text": "Alles Gute, Mama!"
+ },
+ {
+  "key": "7abbae67",
+  "s": "stift",
+  "text": "Die Familie versteckt sich hinter der Hecke."
+ },
+ {
+  "key": "ffe9b24b",
+  "s": "stift",
+  "text": "Omas Haustür ist rot."
+ },
+ {
+  "key": "4829c31c",
+  "s": "stift",
+  "text": "Herr Igel ist Omas Nachbar."
+ },
+ {
+  "key": "03e10008",
+  "s": "stift",
+  "text": "Ben hält fünf Luftballons."
+ },
+ {
+  "key": "0cd75746",
+  "s": "stift",
+  "text": "Oma ist die Mutter von Mama."
+ },
+ {
+  "key": "5b60b930",
+  "s": "stift",
+  "text": "Das Auto ist blau."
+ },
+ {
+  "key": "d1d33d1e",
+  "s": "oma",
+  "text": "Nanu! Was macht ihr denn hier?"
+ },
+ {
+  "key": "35450ba1",
+  "s": "ich",
+  "text": "Überraschung! Wir feiern deinen Geburtstag!"
+ },
+ {
+  "key": "708c4f6b",
+  "s": "ich",
+  "text": "Wir kaufen Brötchen."
+ },
+ {
+  "key": "4dd2b870",
+  "s": "ich",
+  "text": "Es regnet."
+ },
+ {
+  "key": "5f408a5c",
+  "s": "oma",
+  "text": "Ist das Geschenk für mich?"
+ },
+ {
+  "key": "2f717143",
+  "s": "ich",
+  "text": "Ja, das ist für dich. Alles Gute!"
+ },
+ {
+  "key": "e037e920",
+  "s": "ich",
+  "text": "Nein, das ist ein Hund."
+ },
+ {
+  "key": "fcd5d3f3",
+  "s": "ich",
+  "text": "Ja, um halb vier."
+ },
+ {
+  "key": "f015bab8",
+  "s": "igel",
+  "text": "Hat Oma etwas gemerkt?"
+ },
+ {
+  "key": "c78e5838",
+  "s": "ich",
+  "text": "Nein, sie hat nichts gemerkt!"
+ },
+ {
+  "key": "7ad8be2d",
+  "s": "ich",
+  "text": "Ja, der Zaun ist weiß."
+ },
+ {
+  "key": "2907621b",
+  "s": "ich",
+  "text": "Nein, ich esse keinen Kuchen."
+ },
+ {
+  "key": "93532d6b",
+  "s": "oma",
+  "text": "Wer hat denn geklingelt?"
+ },
+ {
+  "key": "9b8f45aa",
+  "s": "ich",
+  "text": "Mila hat geklingelt!"
+ },
+ {
+  "key": "740eac60",
+  "s": "ich",
+  "text": "Mit dem Auto."
+ },
+ {
+  "key": "0c6137ef",
+  "s": "ich",
+  "text": "Drei Luftballons."
+ },
+ {
+  "key": "05bf4d1d",
+  "s": "mama",
+  "text": "Wo ist denn Herr Igel?"
+ },
+ {
+  "key": "1b1bea67",
+  "s": "ich",
+  "text": "Dort, hinter dem Zaun!"
+ },
+ {
+  "key": "cb1cf231",
+  "s": "ich",
+  "text": "Am Sonntag."
+ },
+ {
+  "key": "699714cd",
+  "s": "ich",
+  "text": "Er ist rund."
+ },
+ {
+  "key": "534e500a",
+  "s": "oma",
+  "text": "Kommt doch herein!"
+ },
+ {
+  "key": "91c52085",
+  "s": "ich",
+  "text": "Danke schön, gern!"
+ },
+ {
+  "key": "b966d296",
+  "s": "ich",
+  "text": "Gute Nacht, Oma!"
+ },
+ {
+  "key": "67496640",
+  "s": "ich",
+  "text": "Ich habe keine Zeit, tschüss!"
+ },
+ {
+  "key": "95e89ba5",
+  "s": "stift",
+  "text": "Nein. Die Haustür ist grün."
+ },
+ {
+  "key": "a2f0bab2",
+  "s": "stift",
+  "text": "Nein. Ben hält drei Luftballons."
+ },
+ {
+  "key": "a3f120ba",
+  "s": "stift",
+  "text": "Nein. Oma ist die Mutter von Papa."
+ },
+ {
+  "key": "ad37fade",
+  "s": "erz",
+  "text": "Im Garten hinter dem Haus decken alle zusammen den Tisch."
+ },
+ {
+  "key": "7fb68f96",
+  "s": "erz",
+  "text": "Alle singen: Zum Geburtstag viel Glück! Oma pustet die Kerzen aus."
+ },
+ {
+  "key": "4383c107",
+  "s": "erz",
+  "text": "Oma packt die Tasse aus und trinkt sofort einen Tee daraus. Was für ein schöner Tag!"
+ },
+ {
+  "key": "2d1c0c4d",
+  "s": "stift",
+  "text": "Hinter dem Haus ist ein großer Garten."
+ },
+ {
+  "key": "3398188a",
+  "s": "stift",
+  "text": "Bei schönem Wetter feiert man in Deutschland gern draußen im Garten."
+ },
+ {
+  "key": "7a8ee8cf",
+  "s": "erz",
+  "text": "Die Sonne scheint, die Vögel singen. Alle sind fröhlich."
+ },
+ {
+  "key": "bab7e265",
+  "s": "stift",
+  "text": "der Geburtstagskuchen"
+ },
+ {
+  "key": "5cade4fd",
+  "s": "stift",
+  "text": "Das ist der Geburtstagskuchen."
+ },
+ {
+  "key": "c297c62c",
+  "s": "stift",
+  "text": "der Geburtstagskuchen, die Geburtstagskuchen"
+ },
+ {
+  "key": "deeb68a6",
+  "s": "stift",
+  "text": "Wo ist der Geburtstagskuchen?"
+ },
+ {
+  "key": "e45f5669",
+  "s": "stift",
+  "text": "Der Schokoladenkuchen steht in der Mitte vom Tisch."
+ },
+ {
+  "key": "3834d0af",
+  "s": "stift",
+  "text": "selbst gebacken heißt homemade. Perfekt: Wir haben den Kuchen gebacken."
+ },
+ {
+  "key": "44dfda9f",
+  "s": "oma",
+  "text": "Der Kuchen ist so lecker! Habt ihr ihn selbst gebacken?"
+ },
+ {
+  "key": "0ee5ec14",
+  "s": "stift",
+  "text": "Auf dem Kuchen stehen zwei Kerzen: eine Sieben und eine Null."
+ },
+ {
+  "key": "ae93d572",
+  "s": "stift",
+  "text": "Man pustet die Kerzen aus und wünscht sich etwas. Den Wunsch verrät man nicht!"
+ },
+ {
+  "key": "8118a3c2",
+  "s": "erz",
+  "text": "Alle singen: Zum Geburtstag viel Glück!"
+ },
+ {
+  "key": "02d58600",
+  "s": "oma",
+  "text": "Pfff! Alle Kerzen sind aus!"
+ },
+ {
+  "key": "224796a8",
+  "s": "stift",
+  "text": "der Gartentisch"
+ },
+ {
+  "key": "1f71560e",
+  "s": "stift",
+  "text": "Das ist der Gartentisch."
+ },
+ {
+  "key": "035bcdf1",
+  "s": "stift",
+  "text": "der Gartentisch, die Gartentische"
+ },
+ {
+  "key": "196e0e8d",
+  "s": "stift",
+  "text": "Wo ist der Gartentisch?"
+ },
+ {
+  "key": "543a769c",
+  "s": "stift",
+  "text": "Auf dem Tisch liegt eine weiße Tischdecke."
+ },
+ {
+  "key": "d117d57b",
+  "s": "stift",
+  "text": "den Tisch decken heißt to set the table. Nach dem Essen räumt man den Tisch ab."
+ },
+ {
+  "key": "9d061314",
+  "s": "mama",
+  "text": "Kommt, wir decken den Tisch!"
+ },
+ {
+  "key": "7fd21e40",
+  "s": "stift",
+  "text": "der Teller"
+ },
+ {
+  "key": "f2a6479e",
+  "s": "stift",
+  "text": "Das ist der Teller."
+ },
+ {
+  "key": "82fc8672",
+  "s": "stift",
+  "text": "der Teller, die Teller"
+ },
+ {
+  "key": "fcbee7e5",
+  "s": "stift",
+  "text": "Wo ist der Teller?"
+ },
+ {
+  "key": "305d484e",
+  "s": "stift",
+  "text": "Auf jedem Teller liegt ein Stück Kuchen."
+ },
+ {
+  "key": "7bbc7332",
+  "s": "stift",
+  "text": "groß, größer, am größten: das größte Stück."
+ },
+ {
+  "key": "171fb1dc",
+  "s": "ben",
+  "text": "Ich möchte das größte Stück!"
+ },
+ {
+  "key": "d6b63b6c",
+  "s": "stift",
+  "text": "die Kaffeekanne"
+ },
+ {
+  "key": "eaee80c2",
+  "s": "stift",
+  "text": "Das ist die Kaffeekanne."
+ },
+ {
+  "key": "3cc9ac8f",
+  "s": "stift",
+  "text": "die Kaffeekanne, die Kaffeekannen"
+ },
+ {
+  "key": "c942c281",
+  "s": "stift",
+  "text": "Wo ist die Kaffeekanne?"
+ },
+ {
+  "key": "e916cccf",
+  "s": "stift",
+  "text": "Die Kaffeekanne ist weiß und dampft."
+ },
+ {
+  "key": "1984e325",
+  "s": "stift",
+  "text": "Am Sonntagnachmittag gibt es in Deutschland oft Kaffee und Kuchen."
+ },
+ {
+  "key": "d4a1b1cd",
+  "s": "papa",
+  "text": "Wer möchte noch Kaffee?"
+ },
+ {
+  "key": "00c7d372",
+  "s": "stift",
+  "text": "der Saft"
+ },
+ {
+  "key": "b6d1ee20",
+  "s": "stift",
+  "text": "Das ist der Saft."
+ },
+ {
+  "key": "85f563a0",
+  "s": "stift",
+  "text": "der Saft, die Säfte"
+ },
+ {
+  "key": "91413d0f",
+  "s": "stift",
+  "text": "Wo ist der Saft?"
+ },
+ {
+  "key": "3ab048ce",
+  "s": "stift",
+  "text": "Der Apfelsaft ist in einem Krug."
+ },
+ {
+  "key": "5e9da9e3",
+  "s": "stift",
+  "text": "Viele Kinder in Deutschland trinken Apfelschorle: Apfelsaft mit Wasser."
+ },
+ {
+  "key": "063fb8b6",
+  "s": "mila",
+  "text": "Für mich bitte Apfelsaft!"
+ },
+ {
+  "key": "8ed09775",
+  "s": "stift",
+  "text": "Das Geschenk ist ausgepackt: Es ist die Tasse mit den Rosen."
+ },
+ {
+  "key": "4d6ee205",
+  "s": "stift",
+  "text": "auspacken, Perfekt: Oma hat das Geschenk ausgepackt."
+ },
+ {
+  "key": "3159d2e1",
+  "s": "oma",
+  "text": "Oh, eine Tasse mit Rosen! Die ist wunderschön. Vielen Dank!"
+ },
+ {
+  "key": "278e2429",
+  "s": "stift",
+  "text": "Bens Girlande hängt zwischen zwei Bäumen."
+ },
+ {
+  "key": "aa462610",
+  "s": "stift",
+  "text": "zwischen + Dativ: zwischen den Bäumen."
+ },
+ {
+  "key": "b1085c88",
+  "s": "ben",
+  "text": "Die habe ich gemacht! Ganz allein!"
+ },
+ {
+  "key": "29d63874",
+  "s": "stift",
+  "text": "der Lampion"
+ },
+ {
+  "key": "dfee6162",
+  "s": "stift",
+  "text": "Das ist der Lampion."
+ },
+ {
+  "key": "d74f371b",
+  "s": "stift",
+  "text": "der Lampion, die Lampions"
+ },
+ {
+  "key": "fce3e4c9",
+  "s": "stift",
+  "text": "Wo ist der Lampion?"
+ },
+ {
+  "key": "b874d9b4",
+  "s": "stift",
+  "text": "Die Lampions sind bunt und hängen über dem Tisch."
+ },
+ {
+  "key": "9f5edd90",
+  "s": "stift",
+  "text": "über + Dativ: Die Lampions hängen über dem Tisch."
+ },
+ {
+  "key": "40dd7cf5",
+  "s": "erz",
+  "text": "Am Abend leuchten die Lampions."
+ },
+ {
+  "key": "f790c088",
+  "s": "stift",
+  "text": "Die Luftballons sind an einem Stuhl festgebunden. Einer fliegt weg!"
+ },
+ {
+  "key": "ecbf4a77",
+  "s": "stift",
+  "text": "festbinden ist trennbar: Wir binden die Luftballons fest."
+ },
+ {
+  "key": "797c5eaa",
+  "s": "ben",
+  "text": "Tschüss, Luftballon!"
+ },
+ {
+  "key": "0fa6fa3e",
+  "s": "stift",
+  "text": "Milas Karte steht neben Omas Teller."
+ },
+ {
+  "key": "1f3451eb",
+  "s": "stift",
+  "text": "stellen, Wohin? ins Regal (Akkusativ). stehen, Wo? im Regal (Dativ)."
+ },
+ {
+  "key": "bb660641",
+  "s": "oma",
+  "text": "Mila, die Karte ist so schön! Die stelle ich ins Regal."
+ },
+ {
+  "key": "95ac31ed",
+  "s": "stift",
+  "text": "der Gartenstuhl"
+ },
+ {
+  "key": "4abb89e5",
+  "s": "stift",
+  "text": "Das ist der Gartenstuhl."
+ },
+ {
+  "key": "c9da01e6",
+  "s": "stift",
+  "text": "der Gartenstuhl, die Gartenstühle"
+ },
+ {
+  "key": "2ac9c1ee",
+  "s": "stift",
+  "text": "Wo ist der Gartenstuhl?"
+ },
+ {
+  "key": "f7656b80",
+  "s": "stift",
+  "text": "Die Gartenstühle sind aus Holz."
+ },
+ {
+  "key": "f4dcf9c2",
+  "s": "stift",
+  "text": "sich setzen, Wohin? Ich setze mich auf den Stuhl."
+ },
+ {
+  "key": "469005cf",
+  "s": "oma",
+  "text": "Setzt euch, setzt euch!"
+ },
+ {
+  "key": "2e9da6b4",
+  "s": "stift",
+  "text": "Wo ist der Apfelbaum?"
+ },
+ {
+  "key": "33a300f9",
+  "s": "stift",
+  "text": "Der Apfelbaum blüht weiß und rosa."
+ },
+ {
+  "key": "ec696a36",
+  "s": "stift",
+  "text": "vor fünfzig Jahren heißt fifty years ago."
+ },
+ {
+  "key": "33b31c3d",
+  "s": "oma",
+  "text": "Den Baum hat Opa vor fünfzig Jahren gepflanzt."
+ },
+ {
+  "key": "960ae0e9",
+  "s": "stift",
+  "text": "Herr Igel hat Erdbeeren aus seinem Garten mitgebracht."
+ },
+ {
+  "key": "1b19bf7f",
+  "s": "stift",
+  "text": "mitbringen, Perfekt: Er hat Erdbeeren mitgebracht."
+ },
+ {
+  "key": "f6f51d9e",
+  "s": "igel",
+  "text": "Herzlichen Glückwunsch, Erna! Die Erdbeeren sind für dich."
+ },
+ {
+  "key": "2341a6fd",
+  "s": "stift",
+  "text": "Oma sitzt am Tisch und hält ihre neue Tasse."
+ },
+ {
+  "key": "be89dd03",
+  "s": "stift",
+  "text": "sich freuen, Perfekt: Ich habe mich gefreut."
+ },
+ {
+  "key": "43f8b3a7",
+  "s": "oma",
+  "text": "Das ist der schönste Geburtstag seit Jahren!"
+ },
+ {
+  "key": "82ca6ae7",
+  "s": "oma",
+  "text": "Danke, ihr Lieben. Ich habe mich so gefreut!"
+ },
+ {
+  "key": "15af9c43",
+  "s": "stift",
+  "text": "Mila sitzt neben Oma."
+ },
+ {
+  "key": "8709fb58",
+  "s": "stift",
+  "text": "war ist das Präteritum von sein: Das war meine Idee."
+ },
+ {
+  "key": "d9bb790b",
+  "s": "mila",
+  "text": "Das war meine Idee, Oma!"
+ },
+ {
+  "key": "02c2894f",
+  "s": "stift",
+  "text": "Ben hat Schokolade im Gesicht."
+ },
+ {
+  "key": "58aadf8c",
+  "s": "stift",
+  "text": "noch ein Stück heißt one more piece. Und nicht vergessen: bitte und danke!"
+ },
+ {
+  "key": "5fd35b4c",
+  "s": "ben",
+  "text": "Noch ein Stück Kuchen, bitte!"
+ },
+ {
+  "key": "0706314f",
+  "s": "stift",
+  "text": "Mama schneidet den Kuchen."
+ },
+ {
+  "key": "6213a8d9",
+  "s": "stift",
+  "text": "schneiden, Perfekt: Mama hat den Kuchen geschnitten."
+ },
+ {
+  "key": "9d72b868",
+  "s": "mama",
+  "text": "Wer möchte ein Stück Kuchen?"
+ },
+ {
+  "key": "b5502661",
+  "s": "stift",
+  "text": "Papa macht ein Foto mit seiner Kamera."
+ },
+ {
+  "key": "5d9b88d5",
+  "s": "stift",
+  "text": "ein Foto machen, Perfekt: Papa hat ein Foto gemacht. Es kommt in den Bilderrahmen."
+ },
+ {
+  "key": "4b0ca8f3",
+  "s": "papa",
+  "text": "Alle lächeln! Eins, zwei, drei!"
+ },
+ {
+  "key": "17b32702",
+  "s": "stift",
+  "text": "Auf dem Kuchen stehen eine Sieben und eine Null."
+ },
+ {
+  "key": "c6395af2",
+  "s": "stift",
+  "text": "Oma packt einen Schal aus."
+ },
+ {
+  "key": "0142552a",
+  "s": "stift",
+  "text": "Herr Igel hat Erdbeeren mitgebracht."
+ },
+ {
+  "key": "225c659f",
+  "s": "stift",
+  "text": "Die Girlande hängt zwischen zwei Bäumen."
+ },
+ {
+  "key": "84668663",
+  "s": "stift",
+  "text": "Der Apfelbaum blüht blau."
+ },
+ {
+  "key": "2bc9c9f2",
+  "s": "stift",
+  "text": "Papa macht ein Foto."
+ },
+ {
+  "key": "7ba584a2",
+  "s": "stift",
+  "text": "Mila trinkt Kaffee."
+ },
+ {
+  "key": "2ca31249",
+  "s": "oma",
+  "text": "Möchtest du ein Stück Kuchen?"
+ },
+ {
+  "key": "5b69f1fc",
+  "s": "ich",
+  "text": "Ja, gern! Danke schön."
+ },
+ {
+  "key": "92f99f54",
+  "s": "ich",
+  "text": "Ja, ich bin siebzig."
+ },
+ {
+  "key": "81194a8e",
+  "s": "ich",
+  "text": "Nein, das ist ein Baum."
+ },
+ {
+  "key": "3250952f",
+  "s": "papa",
+  "text": "Möchtest du Kaffee oder Saft?"
+ },
+ {
+  "key": "e78805fd",
+  "s": "ich",
+  "text": "Saft, bitte."
+ },
+ {
+  "key": "29ce4ab6",
+  "s": "ich",
+  "text": "Im Garten."
+ },
+ {
+  "key": "73f5718c",
+  "s": "ich",
+  "text": "Seit gestern."
+ },
+ {
+  "key": "dd70ec97",
+  "s": "oma",
+  "text": "Wie findest du den Kuchen?"
+ },
+ {
+  "key": "0e6fd02c",
+  "s": "ich",
+  "text": "Er ist super lecker!"
+ },
+ {
+  "key": "cca52aeb",
+  "s": "ich",
+  "text": "Er ist mein Bruder."
+ },
+ {
+  "key": "7af1fc18",
+  "s": "ich",
+  "text": "Er wohnt hier."
+ },
+ {
+  "key": "f2ce7d85",
+  "s": "igel",
+  "text": "Wer hat den Kuchen gebacken?"
+ },
+ {
+  "key": "4bb73eeb",
+  "s": "ich",
+  "text": "Mama, Mila und Ben haben ihn gebacken."
+ },
+ {
+  "key": "1eb658b7",
+  "s": "ich",
+  "text": "Im Supermarkt."
+ },
+ {
+  "key": "2adcf51c",
+  "s": "oma",
+  "text": "Noch ein Stück?"
+ },
+ {
+  "key": "c06a2083",
+  "s": "ich",
+  "text": "Ja, die Tür ist grün."
+ },
+ {
+  "key": "2bd342b8",
+  "s": "ich",
+  "text": "Nein, ich heiße Ben."
+ },
+ {
+  "key": "15e8fd12",
+  "s": "oma",
+  "text": "Danke, dass ihr gekommen seid!"
+ },
+ {
+  "key": "806e83ef",
+  "s": "ich",
+  "text": "Gern geschehen! Es war ein schöner Tag."
+ },
+ {
+  "key": "d31719cb",
+  "s": "ich",
+  "text": "Bitte, die Kerzen sind aus."
+ },
+ {
+  "key": "1feef8c0",
+  "s": "ich",
+  "text": "Ich habe keinen Ball."
+ },
+ {
+  "key": "92c29d0f",
+  "s": "papa",
+  "text": "Wer hat die Erdbeeren mitgebracht?"
+ },
+ {
+  "key": "97fd0bbb",
+  "s": "ich",
+  "text": "Herr Igel hat sie mitgebracht."
+ },
+ {
+  "key": "ab61d9f7",
+  "s": "ich",
+  "text": "Mit Apfelsaft."
+ },
+ {
+  "key": "04aa7ce0",
+  "s": "ich",
+  "text": "Neben dem Baum."
+ },
+ {
+  "key": "3cac377e",
+  "s": "stift",
+  "text": "Nein. Oma packt die Tasse mit den Rosen aus."
+ },
+ {
+  "key": "91d72d79",
+  "s": "stift",
+  "text": "Nein. Der Apfelbaum blüht weiß und rosa."
+ },
+ {
+  "key": "4bd08752",
+  "s": "stift",
+  "text": "Nein. Mila trinkt Apfelsaft."
  },
  {
   "key": "fd17daec",
