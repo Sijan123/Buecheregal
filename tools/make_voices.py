@@ -41,6 +41,8 @@ VOICES = {
     "sie":       ("de-DE-KatjaNeural",                 "+0%",  "+0Hz"),
     "er":        ("de-DE-ConradNeural",                "+0%",  "+0Hz"),
     "kind":      ("de-DE-KillianNeural",               "+8%",  "+45Hz"),
+    # Tipp-Buch 3: your own answers in the dialogues
+    "ich":       ("de-DE-AmalaNeural",                 "+0%",  "+0Hz"),
 }
 
 

@@ -6470,6 +6470,3761 @@
   "text": "Nein. Handschuhe trägt man an den Händen."
  },
  {
+  "key": "4e6d48c9",
+  "s": "stift",
+  "text": "Wir lesen zusammen das Buch: Wohnen in Deutschland."
+ },
+ {
+  "key": "a453bfa1",
+  "s": "erz",
+  "text": "Das ist ein Mehrfamilienhaus. Hier wohnen viele Familien."
+ },
+ {
+  "key": "d0bca1f8",
+  "s": "erz",
+  "text": "Es hat einen Keller, ein Erdgeschoss, zwei Stockwerke und einen Dachboden."
+ },
+ {
+  "key": "30901bc1",
+  "s": "erz",
+  "text": "Heute zieht eine neue Mieterin ein. Der Umzugswagen steht schon vor dem Haus."
+ },
+ {
+  "key": "57daa4c5",
+  "s": "stift",
+  "text": "die Straße"
+ },
+ {
+  "key": "07fda0b5",
+  "s": "stift",
+  "text": "Das ist die Straße."
+ },
+ {
+  "key": "9f6dc1dd",
+  "s": "stift",
+  "text": "die Straße, die Straßen"
+ },
+ {
+  "key": "702c5478",
+  "s": "stift",
+  "text": "Das Haus steht an einer ruhigen Straße."
+ },
+ {
+  "key": "5e9760a2",
+  "s": "stift",
+  "text": "Für einen Umzugswagen braucht man manchmal eine Halteverbotszone. Die beantragt man bei der Stadt."
+ },
+ {
+  "key": "ac4a6176",
+  "s": "stift",
+  "text": "Der Umzugswagen parkt auf der Straße vor dem Haus."
+ },
+ {
+  "key": "7ca1cb3d",
+  "s": "stift",
+  "text": "das Mehrfamilienhaus"
+ },
+ {
+  "key": "97d8d80d",
+  "s": "stift",
+  "text": "Das ist das Mehrfamilienhaus."
+ },
+ {
+  "key": "45ce225b",
+  "s": "stift",
+  "text": "das Mehrfamilienhaus, die Mehrfamilienhäuser"
+ },
+ {
+  "key": "8d6d0d7c",
+  "s": "stift",
+  "text": "In einem Mehrfamilienhaus gibt es viele Wohnungen."
+ },
+ {
+  "key": "51209504",
+  "s": "stift",
+  "text": "In Deutschland wohnen viele Menschen zur Miete. Die Wohnung gehört dem Vermieter."
+ },
+ {
+  "key": "33acc8b0",
+  "s": "stift",
+  "text": "Das Haus steht zwischen einem Baum und dem Umzugswagen."
+ },
+ {
+  "key": "0cd3b1c5",
+  "s": "stift",
+  "text": "das Dach"
+ },
+ {
+  "key": "9235ef8d",
+  "s": "stift",
+  "text": "Das ist das Dach."
+ },
+ {
+  "key": "be4af753",
+  "s": "stift",
+  "text": "das Dach, die Dächer"
+ },
+ {
+  "key": "20848c42",
+  "s": "stift",
+  "text": "Das Dach ist rot und hat ein kleines Fenster."
+ },
+ {
+  "key": "2187c651",
+  "s": "stift",
+  "text": "das Dach, die Dächer: Im Plural kommt ein Umlaut dazu."
+ },
+ {
+  "key": "ee2aaf82",
+  "s": "stift",
+  "text": "Das Dach ist ganz oben auf dem Haus."
+ },
+ {
+  "key": "ebc8c3c0",
+  "s": "stift",
+  "text": "der Schornstein"
+ },
+ {
+  "key": "fb1faeb6",
+  "s": "stift",
+  "text": "Das ist der Schornstein."
+ },
+ {
+  "key": "b96184c1",
+  "s": "stift",
+  "text": "der Schornstein, die Schornsteine"
+ },
+ {
+  "key": "f3cda7a1",
+  "s": "stift",
+  "text": "Aus dem Schornstein kommt Rauch."
+ },
+ {
+  "key": "ea3272ab",
+  "s": "stift",
+  "text": "Der Schornsteinfeger bringt Glück, sagt man in Deutschland."
+ },
+ {
+  "key": "638c50ea",
+  "s": "stift",
+  "text": "Der Schornstein steht auf dem Dach."
+ },
+ {
+  "key": "788b12de",
+  "s": "stift",
+  "text": "der Dachboden"
+ },
+ {
+  "key": "2899180c",
+  "s": "stift",
+  "text": "Das ist der Dachboden."
+ },
+ {
+  "key": "e64a48d7",
+  "s": "stift",
+  "text": "der Dachboden, die Dachböden"
+ },
+ {
+  "key": "99b8e75d",
+  "s": "stift",
+  "text": "Auf dem Dachboden stehen alte Kisten und ein Schaukelstuhl."
+ },
+ {
+  "key": "d7e7ff99",
+  "s": "stift",
+  "text": "Auf dem Dachboden oder im Keller lagert man Sachen, die man nicht oft braucht."
+ },
+ {
+  "key": "996436a4",
+  "s": "stift",
+  "text": "Der Dachboden ist unter dem Dach."
+ },
+ {
+  "key": "8f09312c",
+  "s": "stift",
+  "text": "der zweite Stock"
+ },
+ {
+  "key": "7783f9e2",
+  "s": "stift",
+  "text": "Das ist der zweite Stock."
+ },
+ {
+  "key": "178cd6eb",
+  "s": "stift",
+  "text": "Im zweiten Stock wohnt eine ältere Dame."
+ },
+ {
+  "key": "37add04f",
+  "s": "stift",
+  "text": "In Deutschland zählt man so: Erdgeschoss, erster Stock, zweiter Stock. Das Erdgeschoss ist nicht der erste Stock!"
+ },
+ {
+  "key": "6a7987aa",
+  "s": "stift",
+  "text": "Der zweite Stock ist über dem ersten Stock."
+ },
+ {
+  "key": "6c277cc9",
+  "s": "stift",
+  "text": "die Nachbarin"
+ },
+ {
+  "key": "08713329",
+  "s": "stift",
+  "text": "Das ist die Nachbarin."
+ },
+ {
+  "key": "6097241a",
+  "s": "stift",
+  "text": "die Nachbarin, die Nachbarinnen"
+ },
+ {
+  "key": "65dea614",
+  "s": "stift",
+  "text": "Die Nachbarin ist sehr nett."
+ },
+ {
+  "key": "2774a1b9",
+  "s": "stift",
+  "text": "Wenn man neu einzieht, stellt man sich den Nachbarn vor."
+ },
+ {
+  "key": "f39f89aa",
+  "s": "stift",
+  "text": "Die Nachbarin steht in ihrem Wohnzimmer, neben dem Sofa."
+ },
+ {
+  "key": "600f56bd",
+  "s": "stift",
+  "text": "der erste Stock"
+ },
+ {
+  "key": "660afec5",
+  "s": "stift",
+  "text": "Das ist der erste Stock."
+ },
+ {
+  "key": "4c336b90",
+  "s": "stift",
+  "text": "Im ersten Stock ist eine leere Wohnung. Hier zieht die neue Mieterin ein."
+ },
+ {
+  "key": "4b731f2f",
+  "s": "stift",
+  "text": "Eine leere Wohnung hat in Deutschland oft keine Küche und keine Lampen. Die bringt man selbst mit."
+ },
+ {
+  "key": "7e7e7e7a",
+  "s": "stift",
+  "text": "Im ersten Stock stehen Kartons und eine Leiter."
+ },
+ {
+  "key": "a8062743",
+  "s": "stift",
+  "text": "das Erdgeschoss"
+ },
+ {
+  "key": "0ec5f5db",
+  "s": "stift",
+  "text": "Das ist das Erdgeschoss."
+ },
+ {
+  "key": "acfb9c6a",
+  "s": "stift",
+  "text": "das Erdgeschoss, die Erdgeschosse"
+ },
+ {
+  "key": "94624792",
+  "s": "stift",
+  "text": "Im Erdgeschoss ist der Hausflur mit den Briefkästen."
+ },
+ {
+  "key": "78d78713",
+  "s": "stift",
+  "text": "Im Hausflur darf man meistens nichts abstellen. Das steht in der Hausordnung."
+ },
+ {
+  "key": "0c924122",
+  "s": "stift",
+  "text": "Im Hausflur steht ein Kinderwagen."
+ },
+ {
+  "key": "15b7f927",
+  "s": "stift",
+  "text": "die Treppe"
+ },
+ {
+  "key": "34193a0f",
+  "s": "stift",
+  "text": "Das ist die Treppe."
+ },
+ {
+  "key": "01f7c94d",
+  "s": "stift",
+  "text": "die Treppe, die Treppen"
+ },
+ {
+  "key": "101a334d",
+  "s": "stift",
+  "text": "Die Treppe geht vom Erdgeschoss bis in den zweiten Stock."
+ },
+ {
+  "key": "c19f10bd",
+  "s": "stift",
+  "text": "Viele alte Häuser haben keinen Aufzug. Dann muss man die Treppe nehmen."
+ },
+ {
+  "key": "1e6802e4",
+  "s": "stift",
+  "text": "Die Treppe ist im Treppenhaus, links im Haus."
+ },
+ {
+  "key": "e84c75bd",
+  "s": "stift",
+  "text": "Jede Wohnung hat einen Briefkasten."
+ },
+ {
+  "key": "27657f89",
+  "s": "stift",
+  "text": "Auf den Briefkasten und an die Klingel schreibt man seinen Namen. Sonst kommt keine Post an."
+ },
+ {
+  "key": "498612be",
+  "s": "stift",
+  "text": "Die Briefkästen hängen im Hausflur an der Wand."
+ },
+ {
+  "key": "9c10567b",
+  "s": "stift",
+  "text": "der Keller"
+ },
+ {
+  "key": "b622351b",
+  "s": "stift",
+  "text": "Das ist der Keller."
+ },
+ {
+  "key": "9bd44c3e",
+  "s": "stift",
+  "text": "der Keller, die Keller"
+ },
+ {
+  "key": "59c0b820",
+  "s": "stift",
+  "text": "Im Keller stehen Waschmaschinen, ein Fahrrad und Kartons."
+ },
+ {
+  "key": "8175cea6",
+  "s": "stift",
+  "text": "Zu vielen Wohnungen gehört ein Kellerraum. Dort kann man Sachen lagern."
+ },
+ {
+  "key": "0ca88c2e",
+  "s": "stift",
+  "text": "Der Keller ist unter dem Erdgeschoss, unter der Erde."
+ },
+ {
+  "key": "31cea60e",
+  "s": "stift",
+  "text": "Das Fenster hat einen weißen Rahmen."
+ },
+ {
+  "key": "7ca46f38",
+  "s": "stift",
+  "text": "Viele deutsche Fenster kann man auf zwei Arten öffnen: ganz auf oder gekippt."
+ },
+ {
+  "key": "e4379e3f",
+  "s": "stift",
+  "text": "Das Fenster ist im zweiten Stock, links."
+ },
+ {
+  "key": "96581cd1",
+  "s": "stift",
+  "text": "der Balkon"
+ },
+ {
+  "key": "3553c8b1",
+  "s": "stift",
+  "text": "Das ist der Balkon."
+ },
+ {
+  "key": "92769c2d",
+  "s": "stift",
+  "text": "der Balkon, die Balkone"
+ },
+ {
+  "key": "d6b3a222",
+  "s": "stift",
+  "text": "Auf dem Balkon wachsen rote und rosa Blumen."
+ },
+ {
+  "key": "48ce3181",
+  "s": "stift",
+  "text": "Viele Deutsche haben Blumen auf dem Balkon, zum Beispiel Geranien."
+ },
+ {
+  "key": "72e7ee1d",
+  "s": "stift",
+  "text": "Der Balkon ist im ersten Stock, rechts."
+ },
+ {
+  "key": "f99e6efa",
+  "s": "stift",
+  "text": "die Haustür"
+ },
+ {
+  "key": "7fa54678",
+  "s": "stift",
+  "text": "Das ist die Haustür."
+ },
+ {
+  "key": "92ca2e1c",
+  "s": "stift",
+  "text": "die Haustür, die Haustüren"
+ },
+ {
+  "key": "fc846518",
+  "s": "stift",
+  "text": "Die Haustür ist aus Holz. Die Hausnummer ist zwölf."
+ },
+ {
+  "key": "72ce42f9",
+  "s": "stift",
+  "text": "In Deutschland ist die Haustür oft abgeschlossen. Man braucht einen Schlüssel."
+ },
+ {
+  "key": "9d872ac4",
+  "s": "stift",
+  "text": "Die Haustür ist im Erdgeschoss, rechts neben der Klingel."
+ },
+ {
+  "key": "42321ffd",
+  "s": "stift",
+  "text": "die Klingel"
+ },
+ {
+  "key": "29e6e0e5",
+  "s": "stift",
+  "text": "Das ist die Klingel."
+ },
+ {
+  "key": "ad2f3315",
+  "s": "stift",
+  "text": "die Klingel, die Klingeln"
+ },
+ {
+  "key": "85821dd8",
+  "s": "stift",
+  "text": "An der Klingel stehen die Namen von allen Mietern."
+ },
+ {
+  "key": "46eab5d0",
+  "s": "stift",
+  "text": "klingeln: Ich klingle bei meiner Nachbarin. Ding, dong!"
+ },
+ {
+  "key": "18c7d17c",
+  "s": "stift",
+  "text": "Die Klingel ist links neben der Haustür."
+ },
+ {
+  "key": "a4417345",
+  "s": "stift",
+  "text": "der Umzugswagen"
+ },
+ {
+  "key": "ad16b415",
+  "s": "stift",
+  "text": "Das ist der Umzugswagen."
+ },
+ {
+  "key": "16ad22bc",
+  "s": "stift",
+  "text": "der Umzugswagen, die Umzugswagen"
+ },
+ {
+  "key": "c89a2953",
+  "s": "stift",
+  "text": "Im Umzugswagen sind Möbel und Kartons."
+ },
+ {
+  "key": "c2eb766b",
+  "s": "stift",
+  "text": "umziehen ist trennbar: Ich ziehe um. Ich bin umgezogen."
+ },
+ {
+  "key": "d62bc745",
+  "s": "stift",
+  "text": "Der Umzugswagen steht rechts neben dem Haus."
+ },
+ {
+  "key": "d189d4d2",
+  "s": "stift",
+  "text": "der Umzugskarton"
+ },
+ {
+  "key": "b2576e88",
+  "s": "stift",
+  "text": "Das ist der Umzugskarton."
+ },
+ {
+  "key": "5a92c03b",
+  "s": "stift",
+  "text": "der Umzugskarton, die Umzugskartons"
+ },
+ {
+  "key": "3a305d6b",
+  "s": "stift",
+  "text": "Auf dem Karton steht: Küche."
+ },
+ {
+  "key": "7d90a4de",
+  "s": "stift",
+  "text": "Schreib auf jeden Karton das Zimmer. Dann weißt du beim Auspacken, wohin er gehört."
+ },
+ {
+  "key": "8cac6c53",
+  "s": "stift",
+  "text": "Die Kartons stehen auf dem Gehweg vor dem Haus."
+ },
+ {
+  "key": "397d9844",
+  "s": "stift",
+  "text": "die Mieterin"
+ },
+ {
+  "key": "977976e2",
+  "s": "stift",
+  "text": "Das ist die Mieterin."
+ },
+ {
+  "key": "c6cce9c2",
+  "s": "stift",
+  "text": "die Mieterin, die Mieterinnen"
+ },
+ {
+  "key": "6bf92e3a",
+  "s": "stift",
+  "text": "Die neue Mieterin trägt einen Karton."
+ },
+ {
+  "key": "51a14f36",
+  "s": "stift",
+  "text": "der Mieter, die Mieterin: Man zahlt jeden Monat Miete an den Vermieter."
+ },
+ {
+  "key": "a56ecbf7",
+  "s": "stift",
+  "text": "Die Mieterin steht vor dem Haus, neben den Kartons."
+ },
+ {
+  "key": "fd666038",
+  "s": "stift",
+  "text": "der Hausmeister"
+ },
+ {
+  "key": "807954fe",
+  "s": "stift",
+  "text": "Das ist der Hausmeister."
+ },
+ {
+  "key": "da30d86e",
+  "s": "stift",
+  "text": "der Hausmeister, die Hausmeister"
+ },
+ {
+  "key": "4b8a5b38",
+  "s": "stift",
+  "text": "Der Hausmeister fegt den Gehweg."
+ },
+ {
+  "key": "7eae7da1",
+  "s": "stift",
+  "text": "Der Hausmeister repariert Sachen im Haus und hält alles sauber."
+ },
+ {
+  "key": "0fa79f6c",
+  "s": "stift",
+  "text": "Der Hausmeister steht links vor dem Haus, unter dem Baum."
+ },
+ {
+  "key": "51351e0d",
+  "s": "stift",
+  "text": "In vielen deutschen Städten stehen Bäume an der Straße. Sie geben im Sommer Schatten."
+ },
+ {
+  "key": "f497e8df",
+  "s": "stift",
+  "text": "Der Baum steht links neben dem Haus."
+ },
+ {
+  "key": "f67ad183",
+  "s": "stift",
+  "text": "Wohin bringst du dein Fahrrad?"
+ },
+ {
+  "key": "b94add43",
+  "s": "stift",
+  "text": "Wohin wirft der Postbote die Briefe?"
+ },
+ {
+  "key": "e9c48247",
+  "s": "stift",
+  "text": "Wohin bringst du die alten Sachen?"
+ },
+ {
+  "key": "0dd37bc4",
+  "s": "stift",
+  "text": "Wohin stellst du die Blumen?"
+ },
+ {
+  "key": "aea0f5eb",
+  "s": "stift",
+  "text": "Wohin trägt die Mieterin die Kartons?"
+ },
+ {
+  "key": "f8b4e885",
+  "s": "stift",
+  "text": "Wohin schreibst du deinen Namen?"
+ },
+ {
+  "key": "fc52cbf3",
+  "s": "stift",
+  "text": "Das Fahrrad bringe ich in den Keller."
+ },
+ {
+  "key": "3ffe98fd",
+  "s": "stift",
+  "text": "Der Postbote wirft die Briefe in den Briefkasten."
+ },
+ {
+  "key": "5ee7e2f3",
+  "s": "stift",
+  "text": "Die alten Sachen bringe ich auf den Dachboden."
+ },
+ {
+  "key": "712b1efb",
+  "s": "stift",
+  "text": "Die Blumen stelle ich auf den Balkon."
+ },
+ {
+  "key": "d188a1f4",
+  "s": "stift",
+  "text": "Sie trägt die Kartons in den ersten Stock."
+ },
+ {
+  "key": "13757e6e",
+  "s": "stift",
+  "text": "Meinen Namen schreibe ich an die Klingel."
+ },
+ {
+  "key": "a81c321e",
+  "s": "er",
+  "text": "Guten Tag! Sind Sie die neue Mieterin?"
+ },
+ {
+  "key": "ac5df22d",
+  "s": "ich",
+  "text": "Ja, ich wohne jetzt im ersten Stock."
+ },
+ {
+  "key": "2e635aec",
+  "s": "ich",
+  "text": "Nein, ich habe keinen Hunger."
+ },
+ {
+  "key": "a28ed062",
+  "s": "ich",
+  "text": "Um halb acht."
+ },
+ {
+  "key": "b64856a7",
+  "s": "er",
+  "text": "Brauchen Sie Hilfe mit den Kartons?"
+ },
+ {
+  "key": "f356d9f2",
+  "s": "ich",
+  "text": "Ja, gern! Das ist sehr nett."
+ },
+ {
+  "key": "b3dfed62",
+  "s": "ich",
+  "text": "Ja, die Kartons sind blau."
+ },
+ {
+  "key": "243acd93",
+  "s": "ich",
+  "text": "Nein, ich heiße Anna."
+ },
+ {
+  "key": "03fc07fe",
+  "s": "sie",
+  "text": "Herzlich willkommen im Haus!"
+ },
+ {
+  "key": "6aac2111",
+  "s": "ich",
+  "text": "Vielen Dank! Ich freue mich."
+ },
+ {
+  "key": "6c1c36af",
+  "s": "ich",
+  "text": "Bis zum Bahnhof, bitte."
+ },
+ {
+  "key": "4ddfa1f9",
+  "s": "ich",
+  "text": "Das kostet zehn Euro."
+ },
+ {
+  "key": "dbb798c0",
+  "s": "er",
+  "text": "Wo ist denn der Keller?"
+ },
+ {
+  "key": "f7915c08",
+  "s": "ich",
+  "text": "Unten, die Treppe hinunter."
+ },
+ {
+  "key": "b7589933",
+  "s": "ich",
+  "text": "Am Montag um neun."
+ },
+ {
+  "key": "ee25acbc",
+  "s": "ich",
+  "text": "Er ist sehr lecker."
+ },
+ {
+  "key": "4d00ef4a",
+  "s": "sie",
+  "text": "Ihr Name steht noch nicht an der Klingel."
+ },
+ {
+  "key": "5917101b",
+  "s": "ich",
+  "text": "Danke, ich mache das heute noch."
+ },
+ {
+  "key": "828654f6",
+  "s": "ich",
+  "text": "Die Klingel ist grün."
+ },
+ {
+  "key": "1966b084",
+  "s": "ich",
+  "text": "Ich trinke gern Tee."
+ },
+ {
+  "key": "d55ce001",
+  "s": "er",
+  "text": "Wann kommt der Umzugswagen?"
+ },
+ {
+  "key": "06a30095",
+  "s": "ich",
+  "text": "Um zehn Uhr. Er steht schon vor dem Haus."
+ },
+ {
+  "key": "3142463a",
+  "s": "ich",
+  "text": "Im Keller, neben dem Fahrrad."
+ },
+ {
+  "key": "b9d5234d",
+  "s": "ich",
+  "text": "Drei Zimmer und ein Bad."
+ },
+ {
+  "key": "7ff2e1ed",
+  "s": "erz",
+  "text": "Das ist das Wohnzimmer. Hier sitzt man zusammen, liest oder sieht fern."
+ },
+ {
+  "key": "e5ab4db3",
+  "s": "erz",
+  "text": "Im Wohnzimmer gibt es ein Sofa, einen Sessel, einen Couchtisch und ein Regal."
+ },
+ {
+  "key": "9a07a250",
+  "s": "erz",
+  "text": "Tippe auf die Möbel und lerne: stehen, liegen, hängen."
+ },
+ {
+  "key": "204ded4d",
+  "s": "stift",
+  "text": "das Wohnzimmer"
+ },
+ {
+  "key": "1082b7ad",
+  "s": "stift",
+  "text": "Das ist das Wohnzimmer."
+ },
+ {
+  "key": "a3fba7a3",
+  "s": "stift",
+  "text": "das Wohnzimmer, die Wohnzimmer"
+ },
+ {
+  "key": "0858b710",
+  "s": "stift",
+  "text": "Das Wohnzimmer ist hell und gemütlich."
+ },
+ {
+  "key": "76a748a5",
+  "s": "stift",
+  "text": "Bei Wohnungen zählt man die Zimmer. Küche und Bad zählt man nicht mit."
+ },
+ {
+  "key": "928dbef9",
+  "s": "stift",
+  "text": "Das Wohnzimmer hat ein großes Fenster an der linken Wand."
+ },
+ {
+  "key": "9db568e0",
+  "s": "stift",
+  "text": "Durch das Fenster kommt viel Licht."
+ },
+ {
+  "key": "ffb49213",
+  "s": "stift",
+  "text": "Stoßlüften: Man öffnet das Fenster ein paar Minuten ganz und macht es dann wieder zu."
+ },
+ {
+  "key": "81691a29",
+  "s": "stift",
+  "text": "Das Fenster ist an der linken Wand."
+ },
+ {
+  "key": "49c208cb",
+  "s": "stift",
+  "text": "der Vorhang"
+ },
+ {
+  "key": "a69a8eb3",
+  "s": "stift",
+  "text": "Das ist der Vorhang."
+ },
+ {
+  "key": "570198ca",
+  "s": "stift",
+  "text": "der Vorhang, die Vorhänge"
+ },
+ {
+  "key": "29d4d73f",
+  "s": "stift",
+  "text": "Die Vorhänge sind rot."
+ },
+ {
+  "key": "1613f438",
+  "s": "stift",
+  "text": "Der Vorhang hängt am Fenster: Wo? Dativ. Ich hänge den Vorhang ans Fenster: Wohin? Akkusativ."
+ },
+ {
+  "key": "4306c960",
+  "s": "stift",
+  "text": "Die Vorhänge hängen links und rechts neben dem Fenster."
+ },
+ {
+  "key": "0156e29d",
+  "s": "stift",
+  "text": "die Heizung"
+ },
+ {
+  "key": "6cfe59ed",
+  "s": "stift",
+  "text": "Das ist die Heizung."
+ },
+ {
+  "key": "21c8fe66",
+  "s": "stift",
+  "text": "die Heizung, die Heizungen"
+ },
+ {
+  "key": "9e6e80df",
+  "s": "stift",
+  "text": "Die Heizung ist weiß und warm."
+ },
+ {
+  "key": "5575f149",
+  "s": "stift",
+  "text": "In Mietwohnungen bezahlt man die Heizung oft extra. Das sind die Nebenkosten."
+ },
+ {
+  "key": "a185237c",
+  "s": "stift",
+  "text": "Die Heizung ist an der Wand, hinter dem Sofa."
+ },
+ {
+  "key": "064a45fa",
+  "s": "stift",
+  "text": "der Lichtschalter"
+ },
+ {
+  "key": "c9f43648",
+  "s": "stift",
+  "text": "Das ist der Lichtschalter."
+ },
+ {
+  "key": "df565f2a",
+  "s": "stift",
+  "text": "der Lichtschalter, die Lichtschalter"
+ },
+ {
+  "key": "4ec5eb9f",
+  "s": "stift",
+  "text": "Mit dem Lichtschalter macht man das Licht an und aus."
+ },
+ {
+  "key": "07e20072",
+  "s": "stift",
+  "text": "das Licht anmachen, das Licht ausmachen: Beide Verben sind trennbar."
+ },
+ {
+  "key": "ea52c1ad",
+  "s": "stift",
+  "text": "Der Lichtschalter ist an der Wand, neben der Heizung."
+ },
+ {
+  "key": "ee803e74",
+  "s": "stift",
+  "text": "das Bild"
+ },
+ {
+  "key": "bbe8f752",
+  "s": "stift",
+  "text": "Das ist das Bild."
+ },
+ {
+  "key": "94250440",
+  "s": "stift",
+  "text": "das Bild, die Bilder"
+ },
+ {
+  "key": "299e5ce5",
+  "s": "stift",
+  "text": "Auf dem Bild sieht man Berge und einen See."
+ },
+ {
+  "key": "7c697660",
+  "s": "stift",
+  "text": "In Mietwohnungen darf man meistens Löcher für Bilder bohren. Beim Auszug macht man sie wieder zu."
+ },
+ {
+  "key": "c5f378ab",
+  "s": "stift",
+  "text": "Das Bild hängt über dem Sofa."
+ },
+ {
+  "key": "11885710",
+  "s": "stift",
+  "text": "das Regal"
+ },
+ {
+  "key": "d7adcb1e",
+  "s": "stift",
+  "text": "Das ist das Regal."
+ },
+ {
+  "key": "aeccca54",
+  "s": "stift",
+  "text": "das Regal, die Regale"
+ },
+ {
+  "key": "62a58a78",
+  "s": "stift",
+  "text": "Das Regal ist aus Holz und hat fünf Fächer."
+ },
+ {
+  "key": "b7f5f7b1",
+  "s": "stift",
+  "text": "Viele Leute kaufen Möbel im Möbelhaus und bauen sie zu Hause selbst auf."
+ },
+ {
+  "key": "c90778c7",
+  "s": "stift",
+  "text": "Das Regal steht rechts an der Wand, neben der Stehlampe."
+ },
+ {
+  "key": "76dae513",
+  "s": "stift",
+  "text": "das Buch"
+ },
+ {
+  "key": "4ab074e3",
+  "s": "stift",
+  "text": "Das ist das Buch."
+ },
+ {
+  "key": "55a4347f",
+  "s": "stift",
+  "text": "das Buch, die Bücher"
+ },
+ {
+  "key": "f9aabaf8",
+  "s": "stift",
+  "text": "Im Regal stehen viele bunte Bücher."
+ },
+ {
+  "key": "c128469c",
+  "s": "stift",
+  "text": "Ein Buch steht, wenn es hoch ist. Es liegt, wenn es flach ist."
+ },
+ {
+  "key": "b1b49c5d",
+  "s": "stift",
+  "text": "Die Bücher stehen im Regal. Ein Buch steht schief."
+ },
+ {
+  "key": "4b4441a6",
+  "s": "stift",
+  "text": "die Stehlampe"
+ },
+ {
+  "key": "87a38db4",
+  "s": "stift",
+  "text": "Das ist die Stehlampe."
+ },
+ {
+  "key": "ed71d743",
+  "s": "stift",
+  "text": "die Stehlampe, die Stehlampen"
+ },
+ {
+  "key": "dd6b0c11",
+  "s": "stift",
+  "text": "Die Stehlampe gibt warmes Licht."
+ },
+ {
+  "key": "db68c174",
+  "s": "stift",
+  "text": "stehen und die Lampe: die Stehlampe. Die Lampe oben heißt Deckenlampe."
+ },
+ {
+  "key": "005ca5e6",
+  "s": "stift",
+  "text": "Die Stehlampe steht zwischen dem Sofa und dem Regal."
+ },
+ {
+  "key": "214ee566",
+  "s": "stift",
+  "text": "das Sofa"
+ },
+ {
+  "key": "1c2757fc",
+  "s": "stift",
+  "text": "Das ist das Sofa."
+ },
+ {
+  "key": "4655f5e0",
+  "s": "stift",
+  "text": "das Sofa, die Sofas"
+ },
+ {
+  "key": "2d04a382",
+  "s": "stift",
+  "text": "Das Sofa ist blau und bequem."
+ },
+ {
+  "key": "a92d582c",
+  "s": "stift",
+  "text": "Man sagt Sofa oder Couch. Beide Wörter sind richtig."
+ },
+ {
+  "key": "27a3c4ab",
+  "s": "stift",
+  "text": "Das Sofa steht an der Wand, unter dem Bild."
+ },
+ {
+  "key": "9a142ae8",
+  "s": "stift",
+  "text": "das Kissen"
+ },
+ {
+  "key": "393b6ca6",
+  "s": "stift",
+  "text": "Das ist das Kissen."
+ },
+ {
+  "key": "af7cd983",
+  "s": "stift",
+  "text": "das Kissen, die Kissen"
+ },
+ {
+  "key": "409a6989",
+  "s": "stift",
+  "text": "Auf dem Sofa liegen zwei Kissen: ein gelbes und ein orangefarbenes."
+ },
+ {
+  "key": "6d7e2a57",
+  "s": "stift",
+  "text": "das Kissen, die Kissen: Wörter auf -en haben im Plural oft keine Endung."
+ },
+ {
+  "key": "199fd5ab",
+  "s": "stift",
+  "text": "Die Kissen liegen auf dem Sofa."
+ },
+ {
+  "key": "0ee844a3",
+  "s": "stift",
+  "text": "die Kommode"
+ },
+ {
+  "key": "90ebfc6b",
+  "s": "stift",
+  "text": "Das ist die Kommode."
+ },
+ {
+  "key": "41ad2cc1",
+  "s": "stift",
+  "text": "die Kommode, die Kommoden"
+ },
+ {
+  "key": "f28553d7",
+  "s": "stift",
+  "text": "Die Kommode hat drei Schubladen."
+ },
+ {
+  "key": "4ef11658",
+  "s": "stift",
+  "text": "In der Schublade liegen oft Kabel, Batterien und Kerzen."
+ },
+ {
+  "key": "17829dca",
+  "s": "stift",
+  "text": "Die Kommode steht an der rechten Wand, unter dem Fernseher."
+ },
+ {
+  "key": "719e54b8",
+  "s": "stift",
+  "text": "der Fernseher"
+ },
+ {
+  "key": "98fdc12e",
+  "s": "stift",
+  "text": "Das ist der Fernseher."
+ },
+ {
+  "key": "2a374e26",
+  "s": "stift",
+  "text": "der Fernseher, die Fernseher"
+ },
+ {
+  "key": "883f0bd6",
+  "s": "stift",
+  "text": "Der Fernseher ist groß und schwarz."
+ },
+ {
+  "key": "f19b87dc",
+  "s": "stift",
+  "text": "In Deutschland zahlt jede Wohnung einen Rundfunkbeitrag für Fernsehen und Radio."
+ },
+ {
+  "key": "b9204a8a",
+  "s": "stift",
+  "text": "Der Fernseher hängt an der rechten Wand, über der Kommode."
+ },
+ {
+  "key": "5c0dff72",
+  "s": "stift",
+  "text": "die Deckenlampe"
+ },
+ {
+  "key": "cff5b020",
+  "s": "stift",
+  "text": "Das ist die Deckenlampe."
+ },
+ {
+  "key": "28ae230b",
+  "s": "stift",
+  "text": "die Deckenlampe, die Deckenlampen"
+ },
+ {
+  "key": "5fce4958",
+  "s": "stift",
+  "text": "Die Deckenlampe ist weiß und rund."
+ },
+ {
+  "key": "25141f3a",
+  "s": "stift",
+  "text": "Die Decke ist oben im Zimmer. Aber die Decke ist auch das warme Ding zum Zudecken!"
+ },
+ {
+  "key": "3ec196c6",
+  "s": "stift",
+  "text": "Die Deckenlampe hängt in der Mitte an der Decke."
+ },
+ {
+  "key": "06134a25",
+  "s": "stift",
+  "text": "der Teppich"
+ },
+ {
+  "key": "22e0fe35",
+  "s": "stift",
+  "text": "Das ist der Teppich."
+ },
+ {
+  "key": "98c29aa3",
+  "s": "stift",
+  "text": "der Teppich, die Teppiche"
+ },
+ {
+  "key": "a5bf069c",
+  "s": "stift",
+  "text": "Der Teppich ist rot und hat ein Muster."
+ },
+ {
+  "key": "b87b0e67",
+  "s": "stift",
+  "text": "Der Teppich liegt auf dem Boden: Dativ. Ich lege den Teppich auf den Boden: Akkusativ."
+ },
+ {
+  "key": "e73bebc2",
+  "s": "stift",
+  "text": "Der Teppich liegt auf dem Boden, vor dem Sofa."
+ },
+ {
+  "key": "d1f14919",
+  "s": "stift",
+  "text": "der Couchtisch"
+ },
+ {
+  "key": "aee6e4a9",
+  "s": "stift",
+  "text": "Das ist der Couchtisch."
+ },
+ {
+  "key": "6b6f1f31",
+  "s": "stift",
+  "text": "der Couchtisch, die Couchtische"
+ },
+ {
+  "key": "0cbe4be6",
+  "s": "stift",
+  "text": "Der Couchtisch ist niedrig und aus Holz."
+ },
+ {
+  "key": "d3db2e79",
+  "s": "stift",
+  "text": "die Couch und der Tisch: der Couchtisch. Der letzte Teil bestimmt den Artikel."
+ },
+ {
+  "key": "f4531c6e",
+  "s": "stift",
+  "text": "Der Couchtisch steht auf dem Teppich."
+ },
+ {
+  "key": "f4048f62",
+  "s": "stift",
+  "text": "die Vase"
+ },
+ {
+  "key": "d4f6e6e0",
+  "s": "stift",
+  "text": "Das ist die Vase."
+ },
+ {
+  "key": "2b6a9d5d",
+  "s": "stift",
+  "text": "die Vase, die Vasen"
+ },
+ {
+  "key": "49c9fe4d",
+  "s": "stift",
+  "text": "In der Vase sind bunte Blumen."
+ },
+ {
+  "key": "2e35813a",
+  "s": "stift",
+  "text": "Wenn man eingeladen ist, bringt man oft Blumen mit. Die stellt man in eine Vase."
+ },
+ {
+  "key": "c42f8bbb",
+  "s": "stift",
+  "text": "Die Vase steht auf dem Couchtisch."
+ },
+ {
+  "key": "fe1bddc5",
+  "s": "stift",
+  "text": "die Fernbedienung"
+ },
+ {
+  "key": "3cf7a265",
+  "s": "stift",
+  "text": "Das ist die Fernbedienung."
+ },
+ {
+  "key": "4868a296",
+  "s": "stift",
+  "text": "die Fernbedienung, die Fernbedienungen"
+ },
+ {
+  "key": "79b3e7a3",
+  "s": "stift",
+  "text": "Die Fernbedienung ist klein und schwarz."
+ },
+ {
+  "key": "8002d127",
+  "s": "stift",
+  "text": "Mit der Fernbedienung macht man den Fernseher an und aus."
+ },
+ {
+  "key": "676a18f1",
+  "s": "stift",
+  "text": "Die Fernbedienung liegt auf dem Couchtisch, neben der Vase."
+ },
+ {
+  "key": "c17fe753",
+  "s": "stift",
+  "text": "der Sessel"
+ },
+ {
+  "key": "604a925b",
+  "s": "stift",
+  "text": "Das ist der Sessel."
+ },
+ {
+  "key": "c2440f32",
+  "s": "stift",
+  "text": "der Sessel, die Sessel"
+ },
+ {
+  "key": "fee21237",
+  "s": "stift",
+  "text": "Der Sessel ist rot und weich."
+ },
+ {
+  "key": "ad25bf64",
+  "s": "stift",
+  "text": "Ein Sessel ist für eine Person. Ein Sofa ist für zwei oder drei Personen."
+ },
+ {
+  "key": "b4895ec2",
+  "s": "stift",
+  "text": "Der Sessel steht rechts vorne, vor der Kommode."
+ },
+ {
+  "key": "bde2ea11",
+  "s": "stift",
+  "text": "die Decke"
+ },
+ {
+  "key": "cad30bc9",
+  "s": "stift",
+  "text": "Das ist die Decke."
+ },
+ {
+  "key": "085b0325",
+  "s": "stift",
+  "text": "die Decke, die Decken"
+ },
+ {
+  "key": "7d9c6fef",
+  "s": "stift",
+  "text": "Die Decke ist weich und gestreift."
+ },
+ {
+  "key": "ebdb50ef",
+  "s": "stift",
+  "text": "Achtung: die Decke zum Zudecken und die Decke oben im Zimmer. Ein Wort, zwei Bedeutungen!"
+ },
+ {
+  "key": "408107d5",
+  "s": "stift",
+  "text": "Die Decke liegt auf dem Sessel."
+ },
+ {
+  "key": "39838571",
+  "s": "stift",
+  "text": "die Zimmerpflanze"
+ },
+ {
+  "key": "aed8f199",
+  "s": "stift",
+  "text": "Das ist die Zimmerpflanze."
+ },
+ {
+  "key": "e88e5965",
+  "s": "stift",
+  "text": "die Zimmerpflanze, die Zimmerpflanzen"
+ },
+ {
+  "key": "85aa542b",
+  "s": "stift",
+  "text": "Die Zimmerpflanze ist groß und hat grüne Blätter."
+ },
+ {
+  "key": "c597868a",
+  "s": "stift",
+  "text": "Zimmerpflanzen gießt man ein- oder zweimal pro Woche."
+ },
+ {
+  "key": "2200a7ee",
+  "s": "stift",
+  "text": "Die Pflanze steht vorne links, vor dem Fenster."
+ },
+ {
+  "key": "b4da2a37",
+  "s": "stift",
+  "text": "Wohin stellst du die Bücher?"
+ },
+ {
+  "key": "bb7a8e94",
+  "s": "stift",
+  "text": "Wohin legst du die Kissen?"
+ },
+ {
+  "key": "7f2cee1e",
+  "s": "stift",
+  "text": "Wohin stellst du die Vase?"
+ },
+ {
+  "key": "2dddd67b",
+  "s": "stift",
+  "text": "Wohin legst du die Decke?"
+ },
+ {
+  "key": "4700721b",
+  "s": "stift",
+  "text": "Wohin stellst du die Pflanze? Sie braucht viel Licht."
+ },
+ {
+  "key": "e82c295b",
+  "s": "stift",
+  "text": "Wohin legst du die Fernbedienung?"
+ },
+ {
+  "key": "b5e2a82d",
+  "s": "stift",
+  "text": "Die Bücher stelle ich ins Regal."
+ },
+ {
+  "key": "002cbee9",
+  "s": "stift",
+  "text": "Die Kissen lege ich aufs Sofa."
+ },
+ {
+  "key": "8cec2a65",
+  "s": "stift",
+  "text": "Die Vase stelle ich auf den Couchtisch."
+ },
+ {
+  "key": "76781e70",
+  "s": "stift",
+  "text": "Die Decke lege ich auf den Sessel."
+ },
+ {
+  "key": "ca3af957",
+  "s": "stift",
+  "text": "Die Pflanze stelle ich ans Fenster."
+ },
+ {
+  "key": "0717d13e",
+  "s": "stift",
+  "text": "Die Fernbedienung lege ich auf den Couchtisch."
+ },
+ {
+  "key": "cf3d7cab",
+  "s": "sie",
+  "text": "Wie groß ist das Wohnzimmer?"
+ },
+ {
+  "key": "5295e4b6",
+  "s": "ich",
+  "text": "Ungefähr fünfundzwanzig Quadratmeter."
+ },
+ {
+  "key": "bbc2dffd",
+  "s": "ich",
+  "text": "Es ist blau und grün."
+ },
+ {
+  "key": "b99bc353",
+  "s": "ich",
+  "text": "Am Wochenende."
+ },
+ {
+  "key": "bd19b984",
+  "s": "er",
+  "text": "Darf ich mich setzen?"
+ },
+ {
+  "key": "34f3b527",
+  "s": "ich",
+  "text": "Natürlich, setz dich aufs Sofa!"
+ },
+ {
+  "key": "a6a55ee6",
+  "s": "ich",
+  "text": "Nein, das ist mein Fahrrad."
+ },
+ {
+  "key": "e775a009",
+  "s": "ich",
+  "text": "Ich wohne in Berlin."
+ },
+ {
+  "key": "3ae10b2d",
+  "s": "sie",
+  "text": "Möchtest du etwas trinken?"
+ },
+ {
+  "key": "1b4d982a",
+  "s": "ich",
+  "text": "Ja, gern ein Glas Wasser."
+ },
+ {
+  "key": "081c96fe",
+  "s": "ich",
+  "text": "Ich lese ein Buch."
+ },
+ {
+  "key": "3e43bb5a",
+  "s": "ich",
+  "text": "Das Regal ist neu."
+ },
+ {
+  "key": "83624d76",
+  "s": "er",
+  "text": "Die Lampe ist schön! Wo hast du sie gekauft?"
+ },
+ {
+  "key": "167e237d",
+  "s": "ich",
+  "text": "Im Möbelhaus. Sie war im Angebot."
+ },
+ {
+  "key": "6b541f9b",
+  "s": "ich",
+  "text": "Seit zwei Jahren."
+ },
+ {
+  "key": "32a76a11",
+  "s": "ich",
+  "text": "Mit dem Zug."
+ },
+ {
+  "key": "07a29c4a",
+  "s": "sie",
+  "text": "Kannst du bitte das Fenster aufmachen?"
+ },
+ {
+  "key": "6d8c08b9",
+  "s": "ich",
+  "text": "Klar, kein Problem."
+ },
+ {
+  "key": "a69c6b93",
+  "s": "ich",
+  "text": "Das Fenster ist ein Möbelstück."
+ },
+ {
+  "key": "4e4a93a7",
+  "s": "ich",
+  "text": "Ich mache Hausaufgaben."
+ },
+ {
+  "key": "a1fb7645",
+  "s": "er",
+  "text": "Was machst du am Abend?"
+ },
+ {
+  "key": "0982bf92",
+  "s": "ich",
+  "text": "Ich sehe fern oder lese."
+ },
+ {
+  "key": "7bf53676",
+  "s": "ich",
+  "text": "Unter dem Tisch."
+ },
+ {
+  "key": "9629d886",
+  "s": "ich",
+  "text": "Fünf Euro."
+ },
+ {
+  "key": "c890814c",
+  "s": "erz",
+  "text": "Das ist die Küche. Hier kocht man, isst man und spült ab."
+ },
+ {
+  "key": "5be164a5",
+  "s": "erz",
+  "text": "Viele deutsche Küchen sind Einbauküchen: Herd, Spüle und Schränke sind in einer Reihe."
+ },
+ {
+  "key": "3f0e7953",
+  "s": "erz",
+  "text": "Unter der Spüle ist der Mülleimer mit drei Fächern für die Mülltrennung."
+ },
+ {
+  "key": "e2d0cb5f",
+  "s": "stift",
+  "text": "Die Küche ist hell und hat Fliesen auf dem Boden."
+ },
+ {
+  "key": "6c0786f9",
+  "s": "stift",
+  "text": "Wenn man umzieht, nimmt man in Deutschland die Küche oft mit!"
+ },
+ {
+  "key": "0a2bb1c0",
+  "s": "stift",
+  "text": "In der Küche stehen ein Tisch und zwei Stühle."
+ },
+ {
+  "key": "7a096de3",
+  "s": "stift",
+  "text": "die Tür"
+ },
+ {
+  "key": "7fe2927b",
+  "s": "stift",
+  "text": "Das ist die Tür."
+ },
+ {
+  "key": "44a802ca",
+  "s": "stift",
+  "text": "die Tür, die Türen"
+ },
+ {
+  "key": "dd532f26",
+  "s": "stift",
+  "text": "Die Tür ist aus Holz und hat einen Griff."
+ },
+ {
+  "key": "bfe48fe7",
+  "s": "stift",
+  "text": "die Tür aufmachen, die Tür zumachen: Beide Verben sind trennbar."
+ },
+ {
+  "key": "d301bcac",
+  "s": "stift",
+  "text": "Die Tür ist an der linken Wand."
+ },
+ {
+  "key": "ba2d4c3d",
+  "s": "stift",
+  "text": "Der Kühlschrank ist groß und weiß. Oben ist das Gefrierfach."
+ },
+ {
+  "key": "be286742",
+  "s": "stift",
+  "text": "Im Kühlschrank sind es etwa sieben Grad. Im Gefrierfach sind es minus achtzehn Grad."
+ },
+ {
+  "key": "e7babb58",
+  "s": "stift",
+  "text": "Der Kühlschrank steht links in der Ecke."
+ },
+ {
+  "key": "26921f36",
+  "s": "stift",
+  "text": "der Hängeschrank"
+ },
+ {
+  "key": "a42a2fac",
+  "s": "stift",
+  "text": "Das ist der Hängeschrank."
+ },
+ {
+  "key": "1f21c540",
+  "s": "stift",
+  "text": "der Hängeschrank, die Hängeschränke"
+ },
+ {
+  "key": "60f271e5",
+  "s": "stift",
+  "text": "In den Hängeschränken sind Teller, Tassen und Gläser."
+ },
+ {
+  "key": "e2484ee5",
+  "s": "stift",
+  "text": "hängen und der Schrank: der Hängeschrank. Unten stehen die Unterschränke."
+ },
+ {
+  "key": "ce67a125",
+  "s": "stift",
+  "text": "Die Hängeschränke hängen oben an der Wand."
+ },
+ {
+  "key": "3e051e7b",
+  "s": "stift",
+  "text": "Auf der Fensterbank steht ein Topf mit Kräutern."
+ },
+ {
+  "key": "29edf3bf",
+  "s": "stift",
+  "text": "Beim Kochen öffnet man das Fenster oder macht die Dunstabzugshaube an."
+ },
+ {
+  "key": "c5f98508",
+  "s": "stift",
+  "text": "Das Fenster ist über der Spüle."
+ },
+ {
+  "key": "440ba9ef",
+  "s": "stift",
+  "text": "die Spüle"
+ },
+ {
+  "key": "5c362d0f",
+  "s": "stift",
+  "text": "Das ist die Spüle."
+ },
+ {
+  "key": "a8a8e091",
+  "s": "stift",
+  "text": "die Spüle, die Spülen"
+ },
+ {
+  "key": "1d42b7c2",
+  "s": "stift",
+  "text": "In der Spüle wäscht man das Geschirr ab."
+ },
+ {
+  "key": "3104d09b",
+  "s": "stift",
+  "text": "spülen heißt abwaschen. Die Spülmaschine spült für dich!"
+ },
+ {
+  "key": "ea617b44",
+  "s": "stift",
+  "text": "Die Spüle ist unter dem Fenster."
+ },
+ {
+  "key": "6c8cdef0",
+  "s": "stift",
+  "text": "der Wasserhahn"
+ },
+ {
+  "key": "808d252e",
+  "s": "stift",
+  "text": "Das ist der Wasserhahn."
+ },
+ {
+  "key": "7953d61c",
+  "s": "stift",
+  "text": "der Wasserhahn, die Wasserhähne"
+ },
+ {
+  "key": "c75033bd",
+  "s": "stift",
+  "text": "Aus dem Wasserhahn kommt kaltes und warmes Wasser."
+ },
+ {
+  "key": "59b95879",
+  "s": "stift",
+  "text": "Das Leitungswasser in Deutschland kann man trinken. Es wird sehr gut kontrolliert."
+ },
+ {
+  "key": "db3c9ef8",
+  "s": "stift",
+  "text": "Der Wasserhahn ist an der Spüle."
+ },
+ {
+  "key": "48dfaf66",
+  "s": "stift",
+  "text": "die Spülmaschine"
+ },
+ {
+  "key": "d600cbfc",
+  "s": "stift",
+  "text": "Das ist die Spülmaschine."
+ },
+ {
+  "key": "81744199",
+  "s": "stift",
+  "text": "die Spülmaschine, die Spülmaschinen"
+ },
+ {
+  "key": "44e0c362",
+  "s": "stift",
+  "text": "Die Spülmaschine wäscht die Teller und Tassen."
+ },
+ {
+  "key": "b51b4248",
+  "s": "stift",
+  "text": "Man sagt Spülmaschine oder Geschirrspüler. Beides ist richtig."
+ },
+ {
+  "key": "13c4f023",
+  "s": "stift",
+  "text": "Die Spülmaschine ist unter der Arbeitsplatte, links neben dem Mülleimer."
+ },
+ {
+  "key": "bb79f169",
+  "s": "stift",
+  "text": "der Mülleimer"
+ },
+ {
+  "key": "b64a99c1",
+  "s": "stift",
+  "text": "Das ist der Mülleimer."
+ },
+ {
+  "key": "1c7d3920",
+  "s": "stift",
+  "text": "der Mülleimer, die Mülleimer"
+ },
+ {
+  "key": "88c27570",
+  "s": "stift",
+  "text": "Der Mülleimer hat drei Fächer: gelb, braun und grau."
+ },
+ {
+  "key": "903802bd",
+  "s": "stift",
+  "text": "Gelb ist für Verpackungen, braun für Bioabfall und grau für Restmüll."
+ },
+ {
+  "key": "eb57301c",
+  "s": "stift",
+  "text": "Der Mülleimer ist im Schrank unter der Spüle."
+ },
+ {
+  "key": "119db201",
+  "s": "stift",
+  "text": "Der Herd hat vier Kochplatten."
+ },
+ {
+  "key": "1d8a8b91",
+  "s": "stift",
+  "text": "Ein Herd aus Glas heißt Ceranfeld. Man darf ihn nicht mit Metall kratzen."
+ },
+ {
+  "key": "6533c5e7",
+  "s": "stift",
+  "text": "Der Herd ist rechts neben dem Wasserkocher."
+ },
+ {
+  "key": "346fff87",
+  "s": "stift",
+  "text": "die Pfanne"
+ },
+ {
+  "key": "5d7f0437",
+  "s": "stift",
+  "text": "Das ist die Pfanne."
+ },
+ {
+  "key": "053fcf6d",
+  "s": "stift",
+  "text": "die Pfanne, die Pfannen"
+ },
+ {
+  "key": "43cf85c4",
+  "s": "stift",
+  "text": "In der Pfanne sind zwei Spiegeleier."
+ },
+ {
+  "key": "d6426146",
+  "s": "stift",
+  "text": "Das Spiegelei heißt so, weil das Ei aussieht wie ein kleiner Spiegel."
+ },
+ {
+  "key": "19f24a36",
+  "s": "stift",
+  "text": "Die Pfanne steht auf dem Herd."
+ },
+ {
+  "key": "bb9e2d25",
+  "s": "stift",
+  "text": "der Backofen"
+ },
+ {
+  "key": "3f6394dd",
+  "s": "stift",
+  "text": "Das ist der Backofen."
+ },
+ {
+  "key": "67251c37",
+  "s": "stift",
+  "text": "der Backofen, die Backöfen"
+ },
+ {
+  "key": "9bf052c0",
+  "s": "stift",
+  "text": "Im Backofen backt man Kuchen, Brot oder Pizza."
+ },
+ {
+  "key": "78fc4815",
+  "s": "stift",
+  "text": "Der Backofen braucht viel Strom. Darum soll man ihn nicht zu lange vorheizen."
+ },
+ {
+  "key": "09449c24",
+  "s": "stift",
+  "text": "Der Backofen ist unter dem Herd."
+ },
+ {
+  "key": "421702d4",
+  "s": "stift",
+  "text": "die Dunstabzugshaube"
+ },
+ {
+  "key": "aff9912a",
+  "s": "stift",
+  "text": "Das ist die Dunstabzugshaube."
+ },
+ {
+  "key": "2d941f25",
+  "s": "stift",
+  "text": "die Dunstabzugshaube, die Dunstabzugshauben"
+ },
+ {
+  "key": "db3e3514",
+  "s": "stift",
+  "text": "Die Dunstabzugshaube saugt den Dampf ab."
+ },
+ {
+  "key": "7391bf39",
+  "s": "stift",
+  "text": "Ein langes Wort: der Dunst, der Abzug und die Haube. Der Artikel kommt vom letzten Wort."
+ },
+ {
+  "key": "9704110d",
+  "s": "stift",
+  "text": "Die Dunstabzugshaube hängt über dem Herd."
+ },
+ {
+  "key": "18934ab0",
+  "s": "stift",
+  "text": "die Mikrowelle"
+ },
+ {
+  "key": "e61b82be",
+  "s": "stift",
+  "text": "Das ist die Mikrowelle."
+ },
+ {
+  "key": "a26837f5",
+  "s": "stift",
+  "text": "die Mikrowelle, die Mikrowellen"
+ },
+ {
+  "key": "daac8a36",
+  "s": "stift",
+  "text": "Mit der Mikrowelle macht man Essen schnell warm."
+ },
+ {
+  "key": "55d45bf7",
+  "s": "stift",
+  "text": "In die Mikrowelle darf kein Metall. Das ist gefährlich!"
+ },
+ {
+  "key": "1973ec3c",
+  "s": "stift",
+  "text": "Die Mikrowelle steht links auf der Arbeitsplatte."
+ },
+ {
+  "key": "cb36ae23",
+  "s": "stift",
+  "text": "der Wasserkocher"
+ },
+ {
+  "key": "1c40a2a3",
+  "s": "stift",
+  "text": "Das ist der Wasserkocher."
+ },
+ {
+  "key": "73018f3a",
+  "s": "stift",
+  "text": "der Wasserkocher, die Wasserkocher"
+ },
+ {
+  "key": "2ee2bef0",
+  "s": "stift",
+  "text": "Der Wasserkocher ist rot."
+ },
+ {
+  "key": "02e5fed5",
+  "s": "stift",
+  "text": "Mit dem Wasserkocher kocht man Wasser für Tee. Das spart Strom."
+ },
+ {
+  "key": "0bb7e661",
+  "s": "stift",
+  "text": "Der Wasserkocher steht zwischen dem Geschirr und dem Herd."
+ },
+ {
+  "key": "3af75f28",
+  "s": "stift",
+  "text": "das Geschirr"
+ },
+ {
+  "key": "c79c2206",
+  "s": "stift",
+  "text": "Das ist das Geschirr."
+ },
+ {
+  "key": "dc3d4120",
+  "s": "stift",
+  "text": "Die sauberen Teller stehen im Abtropfgitter."
+ },
+ {
+  "key": "3d2b70a0",
+  "s": "stift",
+  "text": "Geschirr ist ein Sammelwort für Teller, Tassen und Schüsseln. Es hat keinen Plural."
+ },
+ {
+  "key": "09dd4e18",
+  "s": "stift",
+  "text": "Das Geschirr steht rechts neben der Spüle."
+ },
+ {
+  "key": "f6faf89c",
+  "s": "stift",
+  "text": "der Toaster"
+ },
+ {
+  "key": "4988369a",
+  "s": "stift",
+  "text": "Das ist der Toaster."
+ },
+ {
+  "key": "85390f9e",
+  "s": "stift",
+  "text": "der Toaster, die Toaster"
+ },
+ {
+  "key": "214546fd",
+  "s": "stift",
+  "text": "Im Toaster wird das Brot knusprig."
+ },
+ {
+  "key": "caf55590",
+  "s": "stift",
+  "text": "Manche Wörter sind im Deutschen und Englischen gleich: der Toaster, der Computer, das Baby."
+ },
+ {
+  "key": "fc03ee8a",
+  "s": "stift",
+  "text": "Der Toaster steht rechts auf der Arbeitsplatte."
+ },
+ {
+  "key": "ce721c7e",
+  "s": "stift",
+  "text": "das Gewürz"
+ },
+ {
+  "key": "17297944",
+  "s": "stift",
+  "text": "Das ist das Gewürz."
+ },
+ {
+  "key": "8f66ac56",
+  "s": "stift",
+  "text": "das Gewürz, die Gewürze"
+ },
+ {
+  "key": "0d792b09",
+  "s": "stift",
+  "text": "Im Gewürzregal stehen fünf Gläser."
+ },
+ {
+  "key": "616e831d",
+  "s": "stift",
+  "text": "Salz und Pfeffer findet man in jeder deutschen Küche."
+ },
+ {
+  "key": "e8b1ab51",
+  "s": "stift",
+  "text": "Das Gewürzregal hängt an der rechten Wand."
+ },
+ {
+  "key": "a0cd74e3",
+  "s": "stift",
+  "text": "Der Tisch ist aus Holz."
+ },
+ {
+  "key": "0623de63",
+  "s": "stift",
+  "text": "den Tisch decken: Teller, Besteck und Gläser auf den Tisch stellen."
+ },
+ {
+  "key": "576c9539",
+  "s": "stift",
+  "text": "Der Tisch steht rechts vorne in der Küche."
+ },
+ {
+  "key": "bebdeeba",
+  "s": "stift",
+  "text": "der Stuhl"
+ },
+ {
+  "key": "a8990018",
+  "s": "stift",
+  "text": "Das ist der Stuhl."
+ },
+ {
+  "key": "1bc10dc8",
+  "s": "stift",
+  "text": "der Stuhl, die Stühle"
+ },
+ {
+  "key": "d1377778",
+  "s": "stift",
+  "text": "Am Tisch stehen zwei Stühle."
+ },
+ {
+  "key": "769257b6",
+  "s": "stift",
+  "text": "der Stuhl, die Stühle: Im Plural kommt ein Umlaut dazu."
+ },
+ {
+  "key": "c01df11b",
+  "s": "stift",
+  "text": "Die Stühle stehen hinter dem Tisch."
+ },
+ {
+  "key": "836d896b",
+  "s": "stift",
+  "text": "die Obstschale"
+ },
+ {
+  "key": "536e20db",
+  "s": "stift",
+  "text": "Das ist die Obstschale."
+ },
+ {
+  "key": "04e86fcd",
+  "s": "stift",
+  "text": "die Obstschale, die Obstschalen"
+ },
+ {
+  "key": "d03601a3",
+  "s": "stift",
+  "text": "In der Obstschale sind Äpfel, eine Orange und Bananen."
+ },
+ {
+  "key": "99b07148",
+  "s": "stift",
+  "text": "Bananen mögen keine Kälte. Darum liegen sie in der Obstschale, nicht im Kühlschrank."
+ },
+ {
+  "key": "163d9756",
+  "s": "stift",
+  "text": "Die Obstschale steht auf dem Tisch."
+ },
+ {
+  "key": "80374966",
+  "s": "stift",
+  "text": "Wohin kommt die Milch?"
+ },
+ {
+  "key": "8638b20d",
+  "s": "stift",
+  "text": "Wohin kommt das schmutzige Geschirr?"
+ },
+ {
+  "key": "8a267f37",
+  "s": "stift",
+  "text": "Wohin schiebst du die Pizza?"
+ },
+ {
+  "key": "8c14de49",
+  "s": "stift",
+  "text": "Wohin stellst du die Obstschale?"
+ },
+ {
+  "key": "332f5116",
+  "s": "stift",
+  "text": "Wohin wirfst du die Bananenschale?"
+ },
+ {
+  "key": "ef8fb93c",
+  "s": "stift",
+  "text": "Wohin stellst du die sauberen Tassen?"
+ },
+ {
+  "key": "5f7317ad",
+  "s": "stift",
+  "text": "Wohin stellst du die Pfanne?"
+ },
+ {
+  "key": "b282fe39",
+  "s": "stift",
+  "text": "Die Milch kommt in den Kühlschrank."
+ },
+ {
+  "key": "94961633",
+  "s": "stift",
+  "text": "Das schmutzige Geschirr kommt in die Spülmaschine."
+ },
+ {
+  "key": "373698c7",
+  "s": "stift",
+  "text": "Die Pizza schiebe ich in den Backofen."
+ },
+ {
+  "key": "33dc9efe",
+  "s": "stift",
+  "text": "Die Obstschale stelle ich auf den Tisch."
+ },
+ {
+  "key": "d15b4585",
+  "s": "stift",
+  "text": "Die Bananenschale werfe ich in den Mülleimer, ins braune Fach."
+ },
+ {
+  "key": "687bfd99",
+  "s": "stift",
+  "text": "Die sauberen Tassen stelle ich in den Schrank."
+ },
+ {
+  "key": "b37ca6c6",
+  "s": "stift",
+  "text": "Die Pfanne stelle ich auf den Herd."
+ },
+ {
+  "key": "abeb8b96",
+  "s": "sie",
+  "text": "Was kochst du heute?"
+ },
+ {
+  "key": "1a9393a7",
+  "s": "ich",
+  "text": "Ich koche Nudeln mit Tomatensoße."
+ },
+ {
+  "key": "40a46289",
+  "s": "ich",
+  "text": "Der Herd ist neu."
+ },
+ {
+  "key": "aaae8b1e",
+  "s": "ich",
+  "text": "Ich wohne hier."
+ },
+ {
+  "key": "e0908ca9",
+  "s": "er",
+  "text": "Wo sind die Teller?"
+ },
+ {
+  "key": "02987e82",
+  "s": "ich",
+  "text": "Im Schrank, oben links."
+ },
+ {
+  "key": "535fab66",
+  "s": "ich",
+  "text": "Sie sind lecker."
+ },
+ {
+  "key": "669399aa",
+  "s": "ich",
+  "text": "Um sieben Uhr."
+ },
+ {
+  "key": "64a84fd5",
+  "s": "sie",
+  "text": "Kannst du bitte den Tisch decken?"
+ },
+ {
+  "key": "9cb061e3",
+  "s": "ich",
+  "text": "Ja, mache ich sofort."
+ },
+ {
+  "key": "099c08b3",
+  "s": "ich",
+  "text": "Der Tisch ist braun."
+ },
+ {
+  "key": "96ec259d",
+  "s": "ich",
+  "text": "Ich habe kein Auto."
+ },
+ {
+  "key": "b987d6a2",
+  "s": "er",
+  "text": "Ist die Spülmaschine schon fertig?"
+ },
+ {
+  "key": "609ceb52",
+  "s": "ich",
+  "text": "Nein, noch zehn Minuten."
+ },
+ {
+  "key": "261a7bf8",
+  "s": "ich",
+  "text": "Ja, ich spüle gern Fahrräder."
+ },
+ {
+  "key": "fced512c",
+  "s": "ich",
+  "text": "Im Sommer."
+ },
+ {
+  "key": "60db23b3",
+  "s": "sie",
+  "text": "Wohin kommt der Joghurtbecher?"
+ },
+ {
+  "key": "38c7b15d",
+  "s": "ich",
+  "text": "In das gelbe Fach. Er ist aus Plastik."
+ },
+ {
+  "key": "316e2f71",
+  "s": "ich",
+  "text": "In den Kühlschrank, er ist leer."
+ },
+ {
+  "key": "b2293c1e",
+  "s": "ich",
+  "text": "Ins Bett."
+ },
+ {
+  "key": "56c6dd1c",
+  "s": "er",
+  "text": "Das riecht aber gut!"
+ },
+ {
+  "key": "e574b396",
+  "s": "ich",
+  "text": "Danke! Das Essen ist gleich fertig."
+ },
+ {
+  "key": "ed72abcc",
+  "s": "ich",
+  "text": "Ja, das Fenster ist zu."
+ },
+ {
+  "key": "488073ec",
+  "s": "ich",
+  "text": "Nein, ich bin müde."
+ },
+ {
+  "key": "57b95b93",
+  "s": "erz",
+  "text": "Das ist das Badezimmer. Hier duscht oder badet man und putzt sich die Zähne."
+ },
+ {
+  "key": "9c501dff",
+  "s": "erz",
+  "text": "In vielen deutschen Wohnungen steht die Waschmaschine im Bad."
+ },
+ {
+  "key": "3c426bcd",
+  "s": "erz",
+  "text": "Nach dem Duschen ist es feucht. Darum muss man lüften."
+ },
+ {
+  "key": "3ff6bc6f",
+  "s": "stift",
+  "text": "das Badezimmer"
+ },
+ {
+  "key": "c8c6514f",
+  "s": "stift",
+  "text": "Das ist das Badezimmer."
+ },
+ {
+  "key": "288cfdd3",
+  "s": "stift",
+  "text": "das Badezimmer, die Badezimmer"
+ },
+ {
+  "key": "67f8410f",
+  "s": "stift",
+  "text": "Das Badezimmer hat blaue Fliesen."
+ },
+ {
+  "key": "85a27e4d",
+  "s": "stift",
+  "text": "Kurz sagt man: das Bad. Die Toilette heißt auch WC oder Klo."
+ },
+ {
+  "key": "4e8ade91",
+  "s": "stift",
+  "text": "Im Badezimmer sind eine Badewanne, ein Waschbecken und eine Toilette."
+ },
+ {
+  "key": "02d2cb33",
+  "s": "stift",
+  "text": "Das Fenster ist klein. Das Glas ist milchig."
+ },
+ {
+  "key": "9c840e45",
+  "s": "stift",
+  "text": "Lüfte nach dem Duschen! Sonst kommt Schimmel an die Wand."
+ },
+ {
+  "key": "398156b1",
+  "s": "stift",
+  "text": "Das Fenster ist oben an der Wand, über der Badewanne."
+ },
+ {
+  "key": "940c0afe",
+  "s": "stift",
+  "text": "der Duschvorhang"
+ },
+ {
+  "key": "7140db7c",
+  "s": "stift",
+  "text": "Das ist der Duschvorhang."
+ },
+ {
+  "key": "b84b9680",
+  "s": "stift",
+  "text": "der Duschvorhang, die Duschvorhänge"
+ },
+ {
+  "key": "c54a38c8",
+  "s": "stift",
+  "text": "Der Duschvorhang ist blau."
+ },
+ {
+  "key": "c43cb90f",
+  "s": "stift",
+  "text": "Beim Duschen zieht man den Vorhang zu. Dann bleibt der Boden trocken."
+ },
+ {
+  "key": "abb62dd4",
+  "s": "stift",
+  "text": "Der Duschvorhang hängt an der Stange über der Badewanne."
+ },
+ {
+  "key": "c20b9b6d",
+  "s": "stift",
+  "text": "die Dusche"
+ },
+ {
+  "key": "2b6b69ed",
+  "s": "stift",
+  "text": "Das ist die Dusche."
+ },
+ {
+  "key": "5b71c9cd",
+  "s": "stift",
+  "text": "die Dusche, die Duschen"
+ },
+ {
+  "key": "af234951",
+  "s": "stift",
+  "text": "Aus der Dusche kommt warmes Wasser."
+ },
+ {
+  "key": "bc914bce",
+  "s": "stift",
+  "text": "Duschen spart Wasser. Ein Bad braucht etwa dreimal so viel Wasser."
+ },
+ {
+  "key": "3f64554f",
+  "s": "stift",
+  "text": "Der Duschkopf hängt an der Wand über der Badewanne."
+ },
+ {
+  "key": "23d78f3c",
+  "s": "stift",
+  "text": "die Badewanne"
+ },
+ {
+  "key": "f7ce591a",
+  "s": "stift",
+  "text": "Das ist die Badewanne."
+ },
+ {
+  "key": "fba0b873",
+  "s": "stift",
+  "text": "die Badewanne, die Badewannen"
+ },
+ {
+  "key": "3505b40f",
+  "s": "stift",
+  "text": "Die Badewanne ist weiß und lang."
+ },
+ {
+  "key": "e04ec1a7",
+  "s": "stift",
+  "text": "baden: Ich bade gern am Abend. Badest du auch gern?"
+ },
+ {
+  "key": "539fba99",
+  "s": "stift",
+  "text": "Die Badewanne steht links an der Wand."
+ },
+ {
+  "key": "42ee6a66",
+  "s": "stift",
+  "text": "das Shampoo"
+ },
+ {
+  "key": "9fde811c",
+  "s": "stift",
+  "text": "Das ist das Shampoo."
+ },
+ {
+  "key": "0c1cfdfa",
+  "s": "stift",
+  "text": "das Shampoo, die Shampoos"
+ },
+ {
+  "key": "e3d351de",
+  "s": "stift",
+  "text": "Auf dem Rand stehen zwei Flaschen."
+ },
+ {
+  "key": "54e32a8b",
+  "s": "stift",
+  "text": "Shampoo ist für die Haare, Duschgel ist für den Körper."
+ },
+ {
+  "key": "d1c2b527",
+  "s": "stift",
+  "text": "Das Shampoo steht auf dem Rand der Badewanne."
+ },
+ {
+  "key": "35cbf7fe",
+  "s": "stift",
+  "text": "die Badematte"
+ },
+ {
+  "key": "477af424",
+  "s": "stift",
+  "text": "Das ist die Badematte."
+ },
+ {
+  "key": "75a971ab",
+  "s": "stift",
+  "text": "die Badematte, die Badematten"
+ },
+ {
+  "key": "dea8f7ef",
+  "s": "stift",
+  "text": "Die Badematte ist blau und weich."
+ },
+ {
+  "key": "fa16c41c",
+  "s": "stift",
+  "text": "Nach dem Duschen stellt man sich auf die Badematte. So rutscht man nicht."
+ },
+ {
+  "key": "be1311c8",
+  "s": "stift",
+  "text": "Die Badematte liegt vor der Badewanne."
+ },
+ {
+  "key": "695d5cbb",
+  "s": "stift",
+  "text": "der Spiegel"
+ },
+ {
+  "key": "edcfac13",
+  "s": "stift",
+  "text": "Das ist der Spiegel."
+ },
+ {
+  "key": "8fea618c",
+  "s": "stift",
+  "text": "der Spiegel, die Spiegel"
+ },
+ {
+  "key": "f9d8a8ae",
+  "s": "stift",
+  "text": "Im Spiegel kann man sich sehen."
+ },
+ {
+  "key": "f6826a18",
+  "s": "stift",
+  "text": "sich ansehen: Ich sehe mich im Spiegel an. Das ist ein reflexives Verb."
+ },
+ {
+  "key": "8fc0797b",
+  "s": "stift",
+  "text": "Der Spiegel hängt über dem Waschbecken."
+ },
+ {
+  "key": "cb89e349",
+  "s": "stift",
+  "text": "das Waschbecken"
+ },
+ {
+  "key": "5ccc9461",
+  "s": "stift",
+  "text": "Das ist das Waschbecken."
+ },
+ {
+  "key": "d46d9cc7",
+  "s": "stift",
+  "text": "das Waschbecken, die Waschbecken"
+ },
+ {
+  "key": "00040954",
+  "s": "stift",
+  "text": "Am Waschbecken wäscht man sich die Hände."
+ },
+ {
+  "key": "dbdd76cf",
+  "s": "stift",
+  "text": "Ich wasche mir die Hände. Hier sagt man mir, nicht mich."
+ },
+ {
+  "key": "b5027954",
+  "s": "stift",
+  "text": "Das Waschbecken ist zwischen der Badewanne und der Toilette."
+ },
+ {
+  "key": "953589b6",
+  "s": "stift",
+  "text": "die Zahnbürste"
+ },
+ {
+  "key": "e273c6e4",
+  "s": "stift",
+  "text": "Das ist die Zahnbürste."
+ },
+ {
+  "key": "b53fbbc5",
+  "s": "stift",
+  "text": "die Zahnbürste, die Zahnbürsten"
+ },
+ {
+  "key": "29f27c9d",
+  "s": "stift",
+  "text": "Im Becher stehen zwei Zahnbürsten: eine rote und eine blaue."
+ },
+ {
+  "key": "fe223625",
+  "s": "stift",
+  "text": "Man soll sich zweimal am Tag die Zähne putzen, morgens und abends."
+ },
+ {
+  "key": "775877e8",
+  "s": "stift",
+  "text": "Die Zahnbürsten stehen im Becher am Waschbecken."
+ },
+ {
+  "key": "5b97e663",
+  "s": "stift",
+  "text": "die Seife"
+ },
+ {
+  "key": "f79f5fa3",
+  "s": "stift",
+  "text": "Das ist die Seife."
+ },
+ {
+  "key": "ac9cfc6d",
+  "s": "stift",
+  "text": "die Seife, die Seifen"
+ },
+ {
+  "key": "636216ce",
+  "s": "stift",
+  "text": "Die Seife ist rosa und riecht gut."
+ },
+ {
+  "key": "6e3cc72e",
+  "s": "stift",
+  "text": "Hände waschen: mindestens zwanzig Sekunden mit Seife."
+ },
+ {
+  "key": "7db72636",
+  "s": "stift",
+  "text": "Die Seife steht rechts am Waschbecken."
+ },
+ {
+  "key": "0b57b1b5",
+  "s": "stift",
+  "text": "die Toilette"
+ },
+ {
+  "key": "2806f3f5",
+  "s": "stift",
+  "text": "Das ist die Toilette."
+ },
+ {
+  "key": "405deeed",
+  "s": "stift",
+  "text": "die Toilette, die Toiletten"
+ },
+ {
+  "key": "b4dbc633",
+  "s": "stift",
+  "text": "Die Toilette ist weiß."
+ },
+ {
+  "key": "628c04fa",
+  "s": "stift",
+  "text": "Höflich fragt man: Entschuldigung, wo ist die Toilette?"
+ },
+ {
+  "key": "e3ffc6c0",
+  "s": "stift",
+  "text": "Die Toilette steht rechts in der Ecke."
+ },
+ {
+  "key": "e79f52fc",
+  "s": "stift",
+  "text": "das Toilettenpapier"
+ },
+ {
+  "key": "60a2711a",
+  "s": "stift",
+  "text": "Das ist das Toilettenpapier."
+ },
+ {
+  "key": "ee0c61c1",
+  "s": "stift",
+  "text": "Das Toilettenpapier ist weiß und weich."
+ },
+ {
+  "key": "870e3aab",
+  "s": "stift",
+  "text": "Im Alltag sagt man oft Klopapier."
+ },
+ {
+  "key": "2667625d",
+  "s": "stift",
+  "text": "Das Toilettenpapier hängt an der rechten Wand, neben der Toilette."
+ },
+ {
+  "key": "640b13b1",
+  "s": "stift",
+  "text": "der Handtuchheizkörper"
+ },
+ {
+  "key": "e29f9391",
+  "s": "stift",
+  "text": "Das ist der Handtuchheizkörper."
+ },
+ {
+  "key": "5394b98e",
+  "s": "stift",
+  "text": "der Handtuchheizkörper, die Handtuchheizkörper"
+ },
+ {
+  "key": "74f233cf",
+  "s": "stift",
+  "text": "Der Heizkörper sieht aus wie eine Leiter."
+ },
+ {
+  "key": "88ca73f5",
+  "s": "stift",
+  "text": "Auf dem Heizkörper trocknen die Handtücher schnell."
+ },
+ {
+  "key": "f6c86cd1",
+  "s": "stift",
+  "text": "Der Handtuchheizkörper hängt an der rechten Wand."
+ },
+ {
+  "key": "e8e23f58",
+  "s": "stift",
+  "text": "Das Handtuch ist orange."
+ },
+ {
+  "key": "3e1bc88b",
+  "s": "stift",
+  "text": "Das Handtuch hängt am Heizkörper."
+ },
+ {
+  "key": "42fbfbdd",
+  "s": "stift",
+  "text": "die Waschmaschine"
+ },
+ {
+  "key": "a167742d",
+  "s": "stift",
+  "text": "Das ist die Waschmaschine."
+ },
+ {
+  "key": "57379e5d",
+  "s": "stift",
+  "text": "die Waschmaschine, die Waschmaschinen"
+ },
+ {
+  "key": "83010a34",
+  "s": "stift",
+  "text": "In der Waschmaschine wäscht man die Wäsche."
+ },
+ {
+  "key": "41e81e72",
+  "s": "stift",
+  "text": "In vielen Häusern soll man nachts und am Sonntag nicht waschen. Das ist zu laut."
+ },
+ {
+  "key": "5d501546",
+  "s": "stift",
+  "text": "Die Waschmaschine steht vorne links, neben dem Wäschekorb."
+ },
+ {
+  "key": "c009de60",
+  "s": "stift",
+  "text": "der Wäschekorb"
+ },
+ {
+  "key": "81002b36",
+  "s": "stift",
+  "text": "Das ist der Wäschekorb."
+ },
+ {
+  "key": "e4961b44",
+  "s": "stift",
+  "text": "der Wäschekorb, die Wäschekörbe"
+ },
+ {
+  "key": "d91b421d",
+  "s": "stift",
+  "text": "Im Wäschekorb liegt schmutzige Wäsche."
+ },
+ {
+  "key": "bb728c03",
+  "s": "stift",
+  "text": "die Wäsche waschen, aufhängen und bügeln."
+ },
+ {
+  "key": "6144d68b",
+  "s": "stift",
+  "text": "Der Wäschekorb steht neben der Waschmaschine."
+ },
+ {
+  "key": "ef32ea5d",
+  "s": "stift",
+  "text": "Wohin hängst du das nasse Handtuch?"
+ },
+ {
+  "key": "ae22d062",
+  "s": "stift",
+  "text": "Wohin kommen die schmutzigen Socken?"
+ },
+ {
+  "key": "5b839dc5",
+  "s": "stift",
+  "text": "Wohin kommt die schmutzige Wäsche zum Waschen?"
+ },
+ {
+  "key": "d55606ca",
+  "s": "stift",
+  "text": "Wohin stellst du die Zahnbürste?"
+ },
+ {
+  "key": "f168615c",
+  "s": "stift",
+  "text": "Wohin stellst du das Shampoo?"
+ },
+ {
+  "key": "362a90ff",
+  "s": "stift",
+  "text": "Wohin stellst du dich nach dem Duschen?"
+ },
+ {
+  "key": "2a550772",
+  "s": "stift",
+  "text": "Das nasse Handtuch hänge ich an den Heizkörper."
+ },
+ {
+  "key": "92684f10",
+  "s": "stift",
+  "text": "Die schmutzigen Socken kommen in den Wäschekorb."
+ },
+ {
+  "key": "202c5744",
+  "s": "stift",
+  "text": "Die Wäsche kommt in die Waschmaschine."
+ },
+ {
+  "key": "31353a68",
+  "s": "stift",
+  "text": "Die Zahnbürste stelle ich in den Becher am Waschbecken."
+ },
+ {
+  "key": "82838419",
+  "s": "stift",
+  "text": "Das Shampoo stelle ich auf den Rand der Badewanne."
+ },
+ {
+  "key": "3455d46a",
+  "s": "stift",
+  "text": "Ich stelle mich auf die Badematte."
+ },
+ {
+  "key": "b4426d7e",
+  "s": "er",
+  "text": "Ist das Bad frei?"
+ },
+ {
+  "key": "4534c2d6",
+  "s": "ich",
+  "text": "Moment, ich putze mir noch die Zähne."
+ },
+ {
+  "key": "184749b8",
+  "s": "ich",
+  "text": "Die Seife ist grün."
+ },
+ {
+  "key": "5a551a8c",
+  "s": "ich",
+  "text": "Es kostet nichts."
+ },
+ {
+  "key": "abaa2f5c",
+  "s": "sie",
+  "text": "Die Waschmaschine ist kaputt!"
+ },
+ {
+  "key": "45b29079",
+  "s": "ich",
+  "text": "Oh nein! Ich rufe den Hausmeister an."
+ },
+ {
+  "key": "2207ad35",
+  "s": "ich",
+  "text": "Super, ich habe Hunger."
+ },
+ {
+  "key": "f6848ad2",
+  "s": "ich",
+  "text": "Sie ist im Kalender."
+ },
+ {
+  "key": "53170128",
+  "s": "er",
+  "text": "Hast du ein Handtuch für mich?"
+ },
+ {
+  "key": "306b0f0c",
+  "s": "ich",
+  "text": "Ja, im Regal liegen frische Handtücher."
+ },
+ {
+  "key": "d430aa85",
+  "s": "ich",
+  "text": "Nein, ich dusche morgen im Park."
+ },
+ {
+  "key": "f3548ebb",
+  "s": "ich",
+  "text": "Das Handtuch heißt Max."
+ },
+ {
+  "key": "caa80b9d",
+  "s": "sie",
+  "text": "Warum machst du das Fenster auf?"
+ },
+ {
+  "key": "8b7635c4",
+  "s": "ich",
+  "text": "Weil ich lüften muss. Sonst kommt Schimmel."
+ },
+ {
+  "key": "f1964686",
+  "s": "ich",
+  "text": "Weil der Spiegel kalt ist."
+ },
+ {
+  "key": "72077be5",
+  "s": "ich",
+  "text": "Weil ich Brot kaufe."
+ },
+ {
+  "key": "f96a30fc",
+  "s": "er",
+  "text": "Wo ist das Klopapier?"
+ },
+ {
+  "key": "d155ea26",
+  "s": "ich",
+  "text": "An der Wand, neben der Toilette."
+ },
+ {
+  "key": "06c705d4",
+  "s": "ich",
+  "text": "Im Kühlschrank."
+ },
+ {
+  "key": "6e8af3e1",
+  "s": "ich",
+  "text": "Es ist sehr laut."
+ },
+ {
+  "key": "10b6734a",
+  "s": "sie",
+  "text": "Duschst du lieber oder badest du lieber?"
+ },
+ {
+  "key": "7e5ecb74",
+  "s": "ich",
+  "text": "Ich dusche lieber, das geht schneller."
+ },
+ {
+  "key": "8a810723",
+  "s": "ich",
+  "text": "Ich trinke lieber Kaffee."
+ },
+ {
+  "key": "42325311",
+  "s": "ich",
+  "text": "Am liebsten am Montag."
+ },
+ {
+  "key": "41719ca9",
+  "s": "erz",
+  "text": "Das ist der Hof hinter dem Haus. Hier stehen die Mülltonnen."
+ },
+ {
+  "key": "828e700d",
+  "s": "erz",
+  "text": "In Deutschland trennt man den Müll: Verpackungen, Papier, Bioabfall und Restmüll."
+ },
+ {
+  "key": "56b20b10",
+  "s": "erz",
+  "text": "Glasflaschen kommen in den Glascontainer. Pfandflaschen bringt man zurück in den Supermarkt."
+ },
+ {
+  "key": "b671ff81",
+  "s": "stift",
+  "text": "der Hof"
+ },
+ {
+  "key": "d1f96701",
+  "s": "stift",
+  "text": "Das ist der Hof."
+ },
+ {
+  "key": "36a47f24",
+  "s": "stift",
+  "text": "der Hof, die Höfe"
+ },
+ {
+  "key": "eef08231",
+  "s": "stift",
+  "text": "Im Hof ist es ruhig."
+ },
+ {
+  "key": "b01aabe3",
+  "s": "stift",
+  "text": "Im Hof soll man nicht laut sein. Die Nachbarn wollen ihre Ruhe."
+ },
+ {
+  "key": "69409738",
+  "s": "stift",
+  "text": "Der Hof ist hinter dem Haus."
+ },
+ {
+  "key": "0d336d05",
+  "s": "stift",
+  "text": "die Hintertür"
+ },
+ {
+  "key": "e2305f5d",
+  "s": "stift",
+  "text": "Das ist die Hintertür."
+ },
+ {
+  "key": "0d2ded3e",
+  "s": "stift",
+  "text": "die Hintertür, die Hintertüren"
+ },
+ {
+  "key": "7fd74e42",
+  "s": "stift",
+  "text": "Die Hintertür ist grün."
+ },
+ {
+  "key": "b7f659c3",
+  "s": "stift",
+  "text": "hinten und die Tür: die Hintertür. Vorne ist die Haustür."
+ },
+ {
+  "key": "94f34ff9",
+  "s": "stift",
+  "text": "Die Hintertür ist links, neben der Hausordnung."
+ },
+ {
+  "key": "5b4d1799",
+  "s": "stift",
+  "text": "die Hausordnung"
+ },
+ {
+  "key": "d4b503a1",
+  "s": "stift",
+  "text": "Das ist die Hausordnung."
+ },
+ {
+  "key": "11d7020e",
+  "s": "stift",
+  "text": "die Hausordnung, die Hausordnungen"
+ },
+ {
+  "key": "81d239fd",
+  "s": "stift",
+  "text": "In der Hausordnung stehen die Regeln für alle Mieter."
+ },
+ {
+  "key": "decd0cc6",
+  "s": "stift",
+  "text": "Die Ruhezeit ist meistens von zweiundzwanzig bis sechs Uhr und oft auch am Sonntag."
+ },
+ {
+  "key": "37d05df3",
+  "s": "stift",
+  "text": "Die Hausordnung hängt an der Wand, neben der Hintertür."
+ },
+ {
+  "key": "8adb90e9",
+  "s": "stift",
+  "text": "Im Fahrradständer stehen zwei Fahrräder."
+ },
+ {
+  "key": "391b1d7d",
+  "s": "stift",
+  "text": "Schließ dein Fahrrad immer ab! Fahrräder werden oft gestohlen."
+ },
+ {
+  "key": "71eb3d0b",
+  "s": "stift",
+  "text": "Die Fahrräder stehen links im Fahrradständer."
+ },
+ {
+  "key": "bb5b5934",
+  "s": "stift",
+  "text": "die Gelbe Tonne"
+ },
+ {
+  "key": "30e7351a",
+  "s": "stift",
+  "text": "Das ist die Gelbe Tonne."
+ },
+ {
+  "key": "93ae5b6b",
+  "s": "stift",
+  "text": "die Gelbe Tonne, die Gelben Tonnen"
+ },
+ {
+  "key": "c7cde190",
+  "s": "stift",
+  "text": "In die Gelbe Tonne kommen Verpackungen aus Plastik und Metall."
+ },
+ {
+  "key": "32a4b855",
+  "s": "stift",
+  "text": "In manchen Städten gibt es statt der Tonne einen Gelben Sack."
+ },
+ {
+  "key": "cc82678f",
+  "s": "stift",
+  "text": "Die Gelbe Tonne steht links neben der Papiertonne."
+ },
+ {
+  "key": "9171a2b4",
+  "s": "stift",
+  "text": "die Papiertonne"
+ },
+ {
+  "key": "c31ace92",
+  "s": "stift",
+  "text": "Das ist die Papiertonne."
+ },
+ {
+  "key": "874e5933",
+  "s": "stift",
+  "text": "die Papiertonne, die Papiertonnen"
+ },
+ {
+  "key": "58a2618b",
+  "s": "stift",
+  "text": "In die Papiertonne kommen Zeitungen, Kartons und Papier."
+ },
+ {
+  "key": "50ab5732",
+  "s": "stift",
+  "text": "Kartons macht man vorher klein. Dann passt mehr hinein."
+ },
+ {
+  "key": "ec3cb5e2",
+  "s": "stift",
+  "text": "Die blaue Tonne steht zwischen der gelben und der braunen Tonne."
+ },
+ {
+  "key": "c1a335a5",
+  "s": "stift",
+  "text": "die Biotonne"
+ },
+ {
+  "key": "61e9d9ad",
+  "s": "stift",
+  "text": "Das ist die Biotonne."
+ },
+ {
+  "key": "be8aa975",
+  "s": "stift",
+  "text": "die Biotonne, die Biotonnen"
+ },
+ {
+  "key": "871f2d87",
+  "s": "stift",
+  "text": "In die Biotonne kommen Essensreste, Obst und Gemüse."
+ },
+ {
+  "key": "bf9111c3",
+  "s": "stift",
+  "text": "Aus Bioabfall macht man Kompost oder Biogas."
+ },
+ {
+  "key": "47ef004c",
+  "s": "stift",
+  "text": "Die braune Tonne steht neben der Restmülltonne."
+ },
+ {
+  "key": "7537df78",
+  "s": "stift",
+  "text": "die Restmülltonne"
+ },
+ {
+  "key": "0cb156de",
+  "s": "stift",
+  "text": "Das ist die Restmülltonne."
+ },
+ {
+  "key": "67f6916b",
+  "s": "stift",
+  "text": "die Restmülltonne, die Restmülltonnen"
+ },
+ {
+  "key": "f4e2b0b1",
+  "s": "stift",
+  "text": "In die Restmülltonne kommt alles, was nicht in die anderen Tonnen gehört."
+ },
+ {
+  "key": "8539a089",
+  "s": "stift",
+  "text": "Zum Restmüll gehören zum Beispiel Windeln, Staubsaugerbeutel und Asche."
+ },
+ {
+  "key": "ef3d21a1",
+  "s": "stift",
+  "text": "Die graue Tonne steht rechts neben der Biotonne."
+ },
+ {
+  "key": "ed4f0aca",
+  "s": "stift",
+  "text": "der Glascontainer"
+ },
+ {
+  "key": "4aee61a8",
+  "s": "stift",
+  "text": "Das ist der Glascontainer."
+ },
+ {
+  "key": "3aaf9caa",
+  "s": "stift",
+  "text": "der Glascontainer, die Glascontainer"
+ },
+ {
+  "key": "e0218346",
+  "s": "stift",
+  "text": "Der Glascontainer hat drei Löcher: für weißes, grünes und braunes Glas."
+ },
+ {
+  "key": "14ba2941",
+  "s": "stift",
+  "text": "Glas darf man nur zu bestimmten Zeiten einwerfen, meistens von acht bis zwanzig Uhr. Sonntags nie!"
+ },
+ {
+  "key": "9a437648",
+  "s": "stift",
+  "text": "Der Glascontainer steht rechts hinten im Hof."
+ },
+ {
+  "key": "d74be827",
+  "s": "stift",
+  "text": "der Sperrmüll"
+ },
+ {
+  "key": "10bb22d7",
+  "s": "stift",
+  "text": "Das ist der Sperrmüll."
+ },
+ {
+  "key": "596f524c",
+  "s": "stift",
+  "text": "Der alte Sessel ist Sperrmüll."
+ },
+ {
+  "key": "04605130",
+  "s": "stift",
+  "text": "Für Sperrmüll macht man einen Termin bei der Stadt. Dann wird er abgeholt."
+ },
+ {
+  "key": "ef06ed31",
+  "s": "stift",
+  "text": "Der Sperrmüll steht rechts vorne im Hof."
+ },
+ {
+  "key": "e4fee2d0",
+  "s": "stift",
+  "text": "der Joghurtbecher"
+ },
+ {
+  "key": "34dc05ee",
+  "s": "stift",
+  "text": "Das ist der Joghurtbecher."
+ },
+ {
+  "key": "bbf5032e",
+  "s": "stift",
+  "text": "der Joghurtbecher, die Joghurtbecher"
+ },
+ {
+  "key": "da68996e",
+  "s": "stift",
+  "text": "Der Joghurtbecher ist leer."
+ },
+ {
+  "key": "c2487972",
+  "s": "stift",
+  "text": "Verpackungen muss man nicht spülen. Sie sollen nur leer sein."
+ },
+ {
+  "key": "af3f5227",
+  "s": "stift",
+  "text": "Der Joghurtbecher steht vor der Gelben Tonne."
+ },
+ {
+  "key": "9ddf53a5",
+  "s": "stift",
+  "text": "die Zeitung"
+ },
+ {
+  "key": "0054ca4d",
+  "s": "stift",
+  "text": "Das ist die Zeitung."
+ },
+ {
+  "key": "b58c645e",
+  "s": "stift",
+  "text": "die Zeitung, die Zeitungen"
+ },
+ {
+  "key": "b5044ade",
+  "s": "stift",
+  "text": "Die Zeitung ist von gestern."
+ },
+ {
+  "key": "90c612e0",
+  "s": "stift",
+  "text": "Altpapier wird recycelt. Daraus macht man neues Papier."
+ },
+ {
+  "key": "b635b10c",
+  "s": "stift",
+  "text": "Die Zeitungen liegen auf dem Boden, neben dem Joghurtbecher."
+ },
+ {
+  "key": "a1101486",
+  "s": "stift",
+  "text": "die Bananenschale"
+ },
+ {
+  "key": "fb53f45c",
+  "s": "stift",
+  "text": "Das ist die Bananenschale."
+ },
+ {
+  "key": "4391a93f",
+  "s": "stift",
+  "text": "die Bananenschale, die Bananenschalen"
+ },
+ {
+  "key": "099553f9",
+  "s": "stift",
+  "text": "Die Bananenschale ist gelb und braun."
+ },
+ {
+  "key": "03512100",
+  "s": "stift",
+  "text": "die Banane und die Schale: die Bananenschale. Obstschalen sind Bioabfall."
+ },
+ {
+  "key": "bd8cd886",
+  "s": "stift",
+  "text": "Die Bananenschale liegt in der Mitte auf dem Boden."
+ },
+ {
+  "key": "e652622e",
+  "s": "stift",
+  "text": "die Dose"
+ },
+ {
+  "key": "7e47fd44",
+  "s": "stift",
+  "text": "Das ist die Dose."
+ },
+ {
+  "key": "b3d38e59",
+  "s": "stift",
+  "text": "die Dose, die Dosen"
+ },
+ {
+  "key": "17701d59",
+  "s": "stift",
+  "text": "In der Dose waren Tomaten."
+ },
+ {
+  "key": "941fae6e",
+  "s": "stift",
+  "text": "Dosen sind aus Metall. Sie kommen in die Gelbe Tonne."
+ },
+ {
+  "key": "9a474f7c",
+  "s": "stift",
+  "text": "Die Dose steht neben der Bananenschale."
+ },
+ {
+  "key": "154a2575",
+  "s": "stift",
+  "text": "der Pizzakarton"
+ },
+ {
+  "key": "28b4186d",
+  "s": "stift",
+  "text": "Das ist der Pizzakarton."
+ },
+ {
+  "key": "b64b26e9",
+  "s": "stift",
+  "text": "der Pizzakarton, die Pizzakartons"
+ },
+ {
+  "key": "13809e04",
+  "s": "stift",
+  "text": "Der Pizzakarton ist leer und sauber."
+ },
+ {
+  "key": "ee5ef615",
+  "s": "stift",
+  "text": "Ein sauberer Pizzakarton ist Altpapier. Ist er sehr fettig, kommt er in den Restmüll."
+ },
+ {
+  "key": "b1dea5a1",
+  "s": "stift",
+  "text": "Der Pizzakarton liegt auf dem Boden, vor der Restmülltonne."
+ },
+ {
+  "key": "482d9680",
+  "s": "stift",
+  "text": "die Eierschale"
+ },
+ {
+  "key": "da71e496",
+  "s": "stift",
+  "text": "Das ist die Eierschale."
+ },
+ {
+  "key": "a2f239c1",
+  "s": "stift",
+  "text": "die Eierschale, die Eierschalen"
+ },
+ {
+  "key": "65b756c5",
+  "s": "stift",
+  "text": "Die Eierschalen sind weiß und zerbrochen."
+ },
+ {
+  "key": "b4cb3a33",
+  "s": "stift",
+  "text": "Eierschalen sind Bioabfall. Sie kommen in die Biotonne."
+ },
+ {
+  "key": "3565d271",
+  "s": "stift",
+  "text": "Die Eierschalen liegen vor dem Glascontainer."
+ },
+ {
+  "key": "d2a20f28",
+  "s": "stift",
+  "text": "die Glasflasche"
+ },
+ {
+  "key": "505edfce",
+  "s": "stift",
+  "text": "Das ist die Glasflasche."
+ },
+ {
+  "key": "e098fb6b",
+  "s": "stift",
+  "text": "die Glasflasche, die Glasflaschen"
+ },
+ {
+  "key": "6cdc8e80",
+  "s": "stift",
+  "text": "Die Glasflasche ist grün und leer."
+ },
+ {
+  "key": "1a4e29e5",
+  "s": "stift",
+  "text": "Grünes Glas kommt in das grüne Loch. Blaues Glas kommt auch zum grünen Glas."
+ },
+ {
+  "key": "e62032ee",
+  "s": "stift",
+  "text": "Die Flasche steht vor dem Glascontainer."
+ },
+ {
+  "key": "6efcf3f6",
+  "s": "stift",
+  "text": "die Pfandflasche"
+ },
+ {
+  "key": "7c5761f4",
+  "s": "stift",
+  "text": "Das ist die Pfandflasche."
+ },
+ {
+  "key": "623e2dd5",
+  "s": "stift",
+  "text": "die Pfandflasche, die Pfandflaschen"
+ },
+ {
+  "key": "c814bfbd",
+  "s": "stift",
+  "text": "Auf der Flasche ist ein Pfandzeichen."
+ },
+ {
+  "key": "ecdc00a7",
+  "s": "stift",
+  "text": "Für eine Pfandflasche bekommt man im Supermarkt Geld zurück, oft fünfundzwanzig Cent."
+ },
+ {
+  "key": "2ddfa67c",
+  "s": "stift",
+  "text": "Die Pfandflasche steht vorne links, neben den Batterien."
+ },
+ {
+  "key": "2b44f87f",
+  "s": "stift",
+  "text": "die Batterie"
+ },
+ {
+  "key": "c41828cf",
+  "s": "stift",
+  "text": "Das ist die Batterie."
+ },
+ {
+  "key": "b09c9359",
+  "s": "stift",
+  "text": "die Batterie, die Batterien"
+ },
+ {
+  "key": "b570afa1",
+  "s": "stift",
+  "text": "Die Batterien sind leer."
+ },
+ {
+  "key": "50e07109",
+  "s": "stift",
+  "text": "Batterien gehören nicht in den Müll! Man bringt sie in den Supermarkt, in eine Sammelbox."
+ },
+ {
+  "key": "ad0bc55c",
+  "s": "stift",
+  "text": "Die Batterien liegen ganz links auf dem Boden."
+ },
+ {
+  "key": "31980db6",
+  "s": "stift",
+  "text": "Wohin kommt der Joghurtbecher?"
+ },
+ {
+  "key": "1912040f",
+  "s": "stift",
+  "text": "Wohin kommt die alte Zeitung?"
+ },
+ {
+  "key": "c931ee74",
+  "s": "stift",
+  "text": "Wohin kommt die Bananenschale?"
+ },
+ {
+  "key": "5b098491",
+  "s": "stift",
+  "text": "Wohin kommt die leere Dose?"
+ },
+ {
+  "key": "90bcb7b0",
+  "s": "stift",
+  "text": "Wohin kommt der saubere Pizzakarton?"
+ },
+ {
+  "key": "1d098bb5",
+  "s": "stift",
+  "text": "Wohin kommen die Eierschalen?"
+ },
+ {
+  "key": "cf453238",
+  "s": "stift",
+  "text": "Wohin kommt die grüne Glasflasche?"
+ },
+ {
+  "key": "b481e92e",
+  "s": "stift",
+  "text": "Der Joghurtbecher kommt in die Gelbe Tonne. Er ist eine Verpackung."
+ },
+ {
+  "key": "9872791f",
+  "s": "stift",
+  "text": "Die Zeitung kommt in die Papiertonne."
+ },
+ {
+  "key": "ec4eb813",
+  "s": "stift",
+  "text": "Die Bananenschale kommt in die Biotonne."
+ },
+ {
+  "key": "378612b9",
+  "s": "stift",
+  "text": "Die Dose kommt in die Gelbe Tonne. Sie ist aus Metall."
+ },
+ {
+  "key": "359476b8",
+  "s": "stift",
+  "text": "Der saubere Pizzakarton kommt in die Papiertonne."
+ },
+ {
+  "key": "39736b3e",
+  "s": "stift",
+  "text": "Die Eierschalen kommen in die Biotonne."
+ },
+ {
+  "key": "740618e4",
+  "s": "stift",
+  "text": "Die Glasflasche kommt in den Glascontainer, ins grüne Loch."
+ },
+ {
+  "key": "a16d2ceb",
+  "s": "sie",
+  "text": "Entschuldigung, wo ist die Biotonne?"
+ },
+ {
+  "key": "1d7e88e5",
+  "s": "ich",
+  "text": "Die braune Tonne dort, neben der Papiertonne."
+ },
+ {
+  "key": "00a87d79",
+  "s": "ich",
+  "text": "Sie ist im Bad."
+ },
+ {
+  "key": "e8b5c6ff",
+  "s": "ich",
+  "text": "Am Freitag um acht."
+ },
+ {
+  "key": "58426c47",
+  "s": "er",
+  "text": "Wann wird der Müll abgeholt?"
+ },
+ {
+  "key": "677243c2",
+  "s": "ich",
+  "text": "Jeden Dienstag am Morgen."
+ },
+ {
+  "key": "e0d3bd8c",
+  "s": "ich",
+  "text": "In der Gelben Tonne."
+ },
+ {
+  "key": "06c2922d",
+  "s": "ich",
+  "text": "Mit dem Fahrrad."
+ },
+ {
+  "key": "2f4400aa",
+  "s": "sie",
+  "text": "Kann ich den alten Sessel einfach hier stehen lassen?"
+ },
+ {
+  "key": "e2fd0d47",
+  "s": "ich",
+  "text": "Nein, für Sperrmüll braucht man einen Termin."
+ },
+ {
+  "key": "25300b12",
+  "s": "ich",
+  "text": "Ja, er ist sehr bequem."
+ },
+ {
+  "key": "deb9ede1",
+  "s": "ich",
+  "text": "Nein, ich habe keine Zeit."
+ },
+ {
+  "key": "60c5d06f",
+  "s": "er",
+  "text": "Wohin bringe ich die leeren Pfandflaschen?"
+ },
+ {
+  "key": "fa014203",
+  "s": "ich",
+  "text": "Zum Supermarkt, in den Automaten."
+ },
+ {
+  "key": "dd469f2c",
+  "s": "ich",
+  "text": "In die Biotonne."
+ },
+ {
+  "key": "d231e345",
+  "s": "ich",
+  "text": "Auf den Balkon."
+ },
+ {
+  "key": "cadfbb77",
+  "s": "sie",
+  "text": "Darf ich abends um elf noch Flaschen einwerfen?"
+ },
+ {
+  "key": "60c3793a",
+  "s": "ich",
+  "text": "Nein, nur bis zwanzig Uhr. Das ist zu laut."
+ },
+ {
+  "key": "03c47944",
+  "s": "ich",
+  "text": "Ja, der Container schläft nicht."
+ },
+ {
+  "key": "e959f090",
+  "s": "ich",
+  "text": "Nein, die Flaschen sind voll."
+ },
+ {
+  "key": "6691695c",
+  "s": "er",
+  "text": "Ist das Ihr Fahrrad? Es steht vor der Tür."
+ },
+ {
+  "key": "3eba10ca",
+  "s": "ich",
+  "text": "Oh, Entschuldigung! Ich stelle es in den Fahrradständer."
+ },
+ {
+  "key": "eac36112",
+  "s": "ich",
+  "text": "Ja, es ist sehr lecker."
+ },
+ {
+  "key": "2039edc7",
+  "s": "ich",
+  "text": "Nein, ich wohne im Keller."
+ },
+ {
   "key": "fd17daec",
   "s": "stift",
   "text": "Hallo! Ich bin dein Zauberstift."
@@ -6685,6 +10440,46 @@
   "text": "Leider nicht."
  },
  {
+  "key": "a02c7b5b",
+  "s": "stift",
+  "text": "Merk dir:"
+ },
+ {
+  "key": "0d14b36f",
+  "s": "stift",
+  "text": "Jetzt du! Tippe in der richtigen Reihenfolge."
+ },
+ {
+  "key": "4b28ac43",
+  "s": "stift",
+  "text": "Nein. Noch einmal von vorne!"
+ },
+ {
+  "key": "558dbd31",
+  "s": "stift",
+  "text": "Super! Alles in der richtigen Reihenfolge."
+ },
+ {
+  "key": "766aef87",
+  "s": "stift",
+  "text": "Schau, so war es richtig:"
+ },
+ {
+  "key": "fecb3102",
+  "s": "stift",
+  "text": "Wähle unten eine Antwort!"
+ },
+ {
+  "key": "b54f79f4",
+  "s": "stift",
+  "text": "Das passt nicht. Hör noch einmal."
+ },
+ {
+  "key": "b79e069f",
+  "s": "stift",
+  "text": "Die richtige Antwort ist:"
+ },
+ {
   "key": "469d6b49",
   "s": "stift",
   "text": "Das stimmt."
@@ -6720,6 +10515,11 @@
   "text": "Wissen! Tippe auf ein Bild. Ich erkläre dir Grammatik und Kultur."
  },
  {
+  "key": "f7d65f7b",
+  "s": "stift",
+  "text": "Wo ist das? Tippe auf ein Ding. Ich sage dir, wo es steht, liegt oder hängt."
+ },
+ {
   "key": "f78cfa12",
   "s": "stift",
   "text": "Sagen! Tippe auf ein Bild. Du hörst, was man im Alltag dazu sagt."
@@ -6748,6 +10548,21 @@
   "key": "165e141d",
   "s": "stift",
   "text": "Richtig oder falsch? Hör den Satz gut an. Dann tippe unten auf Richtig oder Falsch."
+ },
+ {
+  "key": "cbd87ef1",
+  "s": "stift",
+  "text": "Wohin damit? Ich frage, wohin etwas gehört. Tippe auf den richtigen Ort."
+ },
+ {
+  "key": "b4ec4542",
+  "s": "stift",
+  "text": "Im Gespräch! Hör gut zu und wähle unten die passende Antwort."
+ },
+ {
+  "key": "35c16fdc",
+  "s": "stift",
+  "text": "Merkspiel! Ich nenne ein paar Dinge. Merk sie dir und tippe sie in der gleichen Reihenfolge an."
  },
  {
   "key": "70b82273",
